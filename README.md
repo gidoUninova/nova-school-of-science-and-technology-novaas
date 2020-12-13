@@ -19,7 +19,7 @@ Once the image has been created the followig docker command can be used to start
 
 The docker-compose command is the following:
 
-``docker-compose up -d``
+`docker-compose up -d`
 
 To build and run the image. Furthermore, the command:
 
