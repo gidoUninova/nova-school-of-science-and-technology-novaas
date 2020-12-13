@@ -1,0 +1,7 @@
+version: '2.4'
+services:
+    novaas:
+        build: .
+        image: "novaas_festo_dpdm/dockerbase:2.0.0"
+        ports:
+            - "1880:1880"
