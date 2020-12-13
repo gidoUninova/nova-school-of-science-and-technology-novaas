@@ -31,5 +31,6 @@ can be used to build a new image.
 
 NOVAAS has been designed in order to be as generic as possible, if you want to run your own version of the NOVAAS you should perform the following steps:
 1. Add all the documentation files (datashees, user manuals, etc.) within the folder "file/aasx/docu";
-2.  
+2. Add an image of the concerned asset within the folder "files/images". Note that the name of the file **must** be kept -> novaas_concerned_asset.jpg;
+3. Add the Manifest file within the folder "files/manifest". Note that the name of the file **must** be kept -> AmI_as_manifest.json. In particular this file follows the data model provided in and can be created by using the aasx-package-explorer tool (https://github.com/admin-shell-io/aasx-package-explorer) 
 
