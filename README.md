@@ -15,7 +15,9 @@ Once the image has been created the followig docker command can be used to start
 
 `docker run -p 1880:1880 name_of_the_image:ver -d`
 
-After executing the above commands, the NOVAAS will be accessible at http://localhost:1880/ui 
+After executing the above commands, the NOVAAS will be accessible at the following link:
+
+http://localhost:1880/ui 
 
 ### Notes
 The NOVAAS embeds an MQTT client for pushing out data. This client needs to be configured. To do that it is possible to access the NOVAAS backend by using the following link:
