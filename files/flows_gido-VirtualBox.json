@@ -21,13 +21,6 @@
         "info": ""
     },
     {
-        "id": "1274e0ae.b2911f",
-        "type": "tab",
-        "label": "AAS - Bot Manager",
-        "disabled": true,
-        "info": ""
-    },
-    {
         "id": "670d9c89.6d0424",
         "type": "tab",
         "label": "AAS - SouthboundInterface",
@@ -270,7 +263,9 @@
             "f95cb914.7bb14"
         ],
         "x": 76,
-        "y": 105
+        "y": 105,
+        "w": 1902,
+        "h": 477
     },
     {
         "id": "daa90db5.798ca",
@@ -321,7 +316,9 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599
+        "y": 599,
+        "w": 1977,
+        "h": 1808
     },
     {
         "id": "66d3f26a.c296b4",
@@ -360,7 +357,9 @@
             "d42664b2.514808"
         ],
         "x": 74,
-        "y": 2439
+        "y": 2439,
+        "w": 1965,
+        "h": 642
     },
     {
         "id": "fd25b313.221798",
@@ -382,7 +381,9 @@
             "e0886cb3.b2a44"
         ],
         "x": 74,
-        "y": 3119
+        "y": 3119,
+        "w": 1912,
+        "h": 202
     },
     {
         "id": "16640da3.5a20ca",
@@ -403,7 +404,9 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3339
+        "y": 3339,
+        "w": 1932,
+        "h": 182
     },
     {
         "id": "4b4e4270.d440bc",
@@ -427,7 +430,9 @@
             "5c80f7ac.2fc2b8"
         ],
         "x": 374,
-        "y": 4119
+        "y": 4119,
+        "w": 2652,
+        "h": 322
     },
     {
         "id": "d366c10f.cbf158",
@@ -474,7 +479,9 @@
             "4db154dd.75a03c"
         ],
         "x": 194,
-        "y": 3374.22216796875
+        "y": 3374.22216796875,
+        "w": 2962,
+        "h": 606.77783203125
     },
     {
         "id": "8ba0dee2.7f7be8",
@@ -976,7 +983,9 @@
             "4599d634.2aa528"
         ],
         "x": 101,
-        "y": 1176
+        "y": 1176,
+        "w": 1925,
+        "h": 708
     },
     {
         "id": "c358a7e7.e264e",
@@ -1013,7 +1022,9 @@
             "9cae29d0.c4e968"
         ],
         "x": 111,
-        "y": 1909
+        "y": 1909,
+        "w": 1902,
+        "h": 472
     },
     {
         "id": "de00f046.a69e6",
@@ -1124,26 +1135,6 @@
         "collapse": false
     },
     {
-        "id": "7aaa6be.d3b6694",
-        "type": "ui_group",
-        "name": "numeric",
-        "tab": "",
-        "order": 2,
-        "disp": true,
-        "width": "4",
-        "collapse": false
-    },
-    {
-        "id": "cc86e09b.f91a4",
-        "type": "ui_group",
-        "name": "System Up Time",
-        "tab": "",
-        "order": 9,
-        "disp": true,
-        "width": "8",
-        "collapse": false
-    },
-    {
         "id": "6966bf45.2bd2c",
         "type": "ui_spacer",
         "name": "spacer",
@@ -1196,32 +1187,6 @@
         "order": 4,
         "width": "3",
         "height": "19"
-    },
-    {
-        "id": "2d3bbe1b.5323d2",
-        "type": "tls-config",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "cert.pem",
-        "keyname": "key.pem",
-        "caname": "",
-        "servername": "",
-        "verifyservercert": true
-    },
-    {
-        "id": "9161e544.c68b38",
-        "type": "tls-config",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "",
-        "keyname": "",
-        "caname": "",
-        "servername": "",
-        "verifyservercert": false
     },
     {
         "id": "1e533544.f40ceb",
@@ -1594,51 +1559,6 @@
         "disp": true,
         "width": "3",
         "collapse": false
-    },
-    {
-        "id": "91d259b0.82f278",
-        "type": "telegram bot",
-        "botname": "AASNodeRedBot",
-        "usernames": "",
-        "chatids": "",
-        "baseapiurl": "",
-        "updatemode": "polling",
-        "pollinterval": "300",
-        "usesocks": false,
-        "sockshost": "",
-        "socksport": "6667",
-        "socksusername": "anonymous",
-        "sockspassword": "",
-        "bothost": "",
-        "localbotport": "8443",
-        "publicbotport": "8443",
-        "privatekey": "",
-        "certificate": "",
-        "useselfsignedcertificate": false,
-        "verboselogging": false
-    },
-    {
-        "id": "ced8ce52.ff5f4",
-        "type": "telegram bot",
-        "z": "1274e0ae.b2911f",
-        "botname": "AASNodeRedBot",
-        "usernames": "",
-        "chatids": "",
-        "baseapiurl": "",
-        "updatemode": "polling",
-        "pollinterval": "300",
-        "usesocks": false,
-        "sockshost": "",
-        "socksport": "",
-        "socksusername": "",
-        "sockspassword": "",
-        "bothost": "",
-        "localbotport": "8443",
-        "publicbotport": "8443",
-        "privatekey": "",
-        "certificate": "",
-        "useselfsignedcertificate": false,
-        "verboselogging": false
     },
     {
         "id": "d61f3cdd.7e8e5",
@@ -2219,54 +2139,6 @@
         "height": 1
     },
     {
-        "id": "ddccf1e6.d0f5e",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "172.17.0.3",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": ""
-    },
-    {
-        "id": "2515ed13.ed0762",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "mytb",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": ""
-    },
-    {
         "id": "a67da331.7afbf8",
         "type": "swagger-doc",
         "summary": "Retrieve the current Manifest document",
@@ -2536,290 +2408,6 @@
         "x": 1075.5,
         "y": 398.5,
         "wires": []
-    },
-    {
-        "id": "9605740e.72fe68",
-        "type": "telegram command",
-        "z": "1274e0ae.b2911f",
-        "name": "/initialize",
-        "command": "/initialize",
-        "bot": "ced8ce52.ff5f4",
-        "strict": false,
-        "outputs": 2,
-        "x": 326.32904052734375,
-        "y": 191.53573608398438,
-        "wires": [
-            [
-                "d3657ed9.a6fbc"
-            ],
-            [
-                "53d9ec11.a932a4"
-            ]
-        ]
-    },
-    {
-        "id": "f32a2012.2553e",
-        "type": "telegram event",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "event": "callback_query",
-        "autoanswer": true,
-        "x": 345.750244140625,
-        "y": 2287.8333740234375,
-        "wires": [
-            [
-                "64d4ba87.5be224",
-                "2da9bc4.a7b4044"
-            ]
-        ]
-    },
-    {
-        "id": "ab8af19d.9fa36",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "answer callback query",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1578.260009765625,
-        "y": 2281.2476806640625,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "143db69a.265919",
-        "type": "telegram event",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "event": "inline_query",
-        "autoanswer": false,
-        "x": 335.7261657714844,
-        "y": 772.7144775390625,
-        "wires": [
-            [
-                "c661c4f3.e75688"
-            ]
-        ]
-    },
-    {
-        "id": "c661c4f3.e75688",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "create results",
-        "func": "// we have to set the results propery with the answer(s)\n// see https://core.telegram.org/bots/api#inlinequeryresult\nvar results = [\n    // result 1 is InlineQueryResultArticle\n    {\n        type : \"article\",\n        id : \"1\",\n        title : \"Initialize AAS\",\n        \n        // InputTextMessageContent see https://core.telegram.org/bots/api#inputmessagecontent\n        input_message_content : {\n            message_text : \"/initialize\",\n            parse_mode : \"Markdown\",\n            disable_web_page_preview : true\n        }\n    },\n    \n    // result 2 is InlineQueryResultArticle\n    {\n        type : \"article\",\n        id : \"2\",\n        title : \"AAS Manifest\",\n        \n        // InputTextMessageContent see https://core.telegram.org/bots/api#inputmessagecontent\n        input_message_content : {\n            message_text : \"/getManifest\",\n            parse_mode : \"Markdown\",\n            disable_web_page_preview : true\n        }\n    },\n    \n    {\n        type : \"article\",\n        id : \"3\",\n        title : \"AAS Location\",\n        \n        // InputTextMessageContent see https://core.telegram.org/bots/api#inputmessagecontent\n        input_message_content : {\n            message_text : \"/getLocation\",\n            parse_mode : \"Markdown\",\n            disable_web_page_preview : true\n        }\n    },\n    \n    {\n        type : \"article\",\n        id : \"4\",\n        title : \"AAS Submodels\",\n        \n        // InputTextMessageContent see https://core.telegram.org/bots/api#inputmessagecontent\n        input_message_content : {\n            message_text : \"/getSubmodels\",\n            parse_mode : \"Markdown\",\n            disable_web_page_preview : true\n        }\n    },\n    \n    {\n        type : \"article\",\n        id : \"5\",\n        title : \"AAS Properties\",\n        \n        // InputTextMessageContent see https://core.telegram.org/bots/api#inputmessagecontent\n        input_message_content : {\n            message_text : \"/getProperties\",\n            parse_mode : \"Markdown\",\n            disable_web_page_preview : true\n        }\n    }\n    ];\n\n\nmsg.payload.results = results;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 815.725830078125,
-        "y": 774.6193237304688,
-        "wires": [
-            [
-                "256e69ef.3f76c6"
-            ]
-        ]
-    },
-    {
-        "id": "256e69ef.3f76c6",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1093.226318359375,
-        "y": 772.5359497070312,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2da9bc4.a7b4044",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "evaluate callback query",
-        "func": "// This is a sample switch to demonstrate the handling of the user input.\nif(msg.payload.content === \"load yes really\")\n{\n    // Hide the keyboard and forget the messageId\n    msg.payload.type = 'deleteMessage';\n    msg.payload.options = context.global.keyboard.messageId\n    context.global.keyboard.messageId = null;\n    \n    // You could also send a editMessageReplyMarkup with an empty reply_markup here\n    return [ null, msg ];\n}\nelse\n{\n    var show_alert = false; // you can set this to true to open a dialog with the answer in the client.\n    \n    // msg.payload.content contains the callback data from the keyboard.\n    // You may change this value here.\n    msg.payload.options = show_alert;\n    \n    return [ msg, null ];\n}",
-        "outputs": "2",
-        "noerr": 0,
-        "x": 642.7599487304688,
-        "y": 2396.5809936523438,
-        "wires": [
-            [
-                "ab8af19d.9fa36"
-            ],
-            [
-                "99810fff.84ba3"
-            ]
-        ]
-    },
-    {
-        "id": "64d4ba87.5be224",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "edit inline keyboard message",
-        "func": "// This is the message id of the initial keyboard that is simply exchanged by a new one.\nvar messageId = context.global.keyboard.messageId;\n\n// This is a sample of how to send a second inline keyboard with modified buttons\nvar reply_markup = JSON.stringify({\n    \"inline_keyboard\": [[\n                {\n                    \"text\": \"Are you really sure?\",\n                    \"callback_data\": \"load yes really\"            \n                }, \n                {\n                    \"text\": \"No\",\n                    \"callback_data\": \"load no\"            \n                }]\n            ]\n  });\n\n\nvar options = {\n    chat_id : msg.payload.chatId,\n    reply_markup : reply_markup,\n    message_id : messageId\n};\n\nmsg.payload.type = 'editMessageReplyMarkup';\nmsg.payload.content = reply_markup;\nmsg.payload.options = options;\n\nreturn [ msg ];\n",
-        "outputs": "1",
-        "noerr": 0,
-        "x": 650.66748046875,
-        "y": 2289.2501220703125,
-        "wires": [
-            [
-                "ab8af19d.9fa36"
-            ]
-        ]
-    },
-    {
-        "id": "99810fff.84ba3",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "upload message",
-        "func": "msg.payload.type = 'message';\nmsg.payload.content = 'select the new Manifest';\nmsg.payload.options = {reply_to_message_id : msg.payload.messageId}\nreturn [ msg ];\n",
-        "outputs": "1",
-        "noerr": 0,
-        "x": 869.833251953125,
-        "y": 2403.2498779296875,
-        "wires": [
-            [
-                "39af518a.bb859e"
-            ]
-        ]
-    },
-    {
-        "id": "39af518a.bb859e",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "send question",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1054.83349609375,
-        "y": 2403.2500610351562,
-        "wires": [
-            [
-                "93fc3868.106fd8"
-            ]
-        ]
-    },
-    {
-        "id": "93fc3868.106fd8",
-        "type": "telegram reply",
-        "z": "1274e0ae.b2911f",
-        "name": "get reply",
-        "bot": "ced8ce52.ff5f4",
-        "x": 1223.1666259765625,
-        "y": 2403.2500610351562,
-        "wires": [
-            [
-                "1f36f58.3eb3f0b"
-            ]
-        ]
-    },
-    {
-        "id": "1f36f58.3eb3f0b",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "show upload",
-        "func": "if(msg.payload.type === 'document')\n{\n    return msg;   \n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1378.166748046875,
-        "y": 2401.5833740234375,
-        "wires": [
-            [
-                "40385ba5.2e52c4",
-                "ab8af19d.9fa36"
-            ]
-        ]
-    },
-    {
-        "id": "40385ba5.2e52c4",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1524.0000610351562,
-        "y": 2400.7499389648438,
-        "wires": []
-    },
-    {
-        "id": "3e1b4900.629ea8",
-        "type": "telegram command",
-        "z": "1274e0ae.b2911f",
-        "name": "/getManifest",
-        "command": "/getManifest",
-        "bot": "ced8ce52.ff5f4",
-        "strict": false,
-        "outputs": 2,
-        "x": 336.08331298828125,
-        "y": 414.1666259765625,
-        "wires": [
-            [
-                "ddd78d48.0b6a7"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "ddd78d48.0b6a7",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "send manifest",
-        "func": "msg.payload.content = context.global.get('ModelFilePath');\nmsg.payload.type = 'document';\n\n/* type can be one of the following\nphoto\naudio\nvideo\nsticker\nvoice\ndocument\n*/\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 697.4166259765625,
-        "y": 409.49993896484375,
-        "wires": [
-            [
-                "d25a2263.5ad1f",
-                "6265da92.6944c4"
-            ]
-        ]
-    },
-    {
-        "id": "d25a2263.5ad1f",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1025.7499389648438,
-        "y": 409.4998779296875,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1613ee34.2679d2",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 959.4998779296875,
-        "y": 867.6663818359375,
-        "wires": []
-    },
-    {
-        "id": "406f9f09.0bf35",
-        "type": "unsafe-function",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "func": "var hound = context.global.get('hound');\n\n//retrieve model directory to be watched\nvar modelFilepath = context.global.get(\"ModelDir\");\n\n// Create a file watcher.\nvar watcher = hound.watch(modelFilepath)\n\n// Add callbacks for file and directory events.  The change event only applies\n// to files.\n\n\nwatcher.on('create', function(file, stats) {\n  //console.log(file + ' was created');\n  node.send({payload:file});\n})\n//watcher.clear()\n\nnode.on('close', function() {\n    watcher.clear();\n});\n\nreturn null;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 695.333251953125,
-        "y": 866.4165649414062,
-        "wires": [
-            [
-                "1613ee34.2679d2"
-            ]
-        ]
     },
     {
         "id": "cac1db39.b04078",
@@ -3321,680 +2909,6 @@
         "wires": []
     },
     {
-        "id": "ddbdcb1c.09c438",
-        "type": "gate",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "controlTopic": "control",
-        "defaultState": "closed",
-        "openCmd": "open",
-        "closeCmd": "close",
-        "toggleCmd": "toggle",
-        "defaultCmd": "default",
-        "x": 527.5,
-        "y": 866.2499389648438,
-        "wires": [
-            [
-                "406f9f09.0bf35"
-            ]
-        ]
-    },
-    {
-        "id": "6265da92.6944c4",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 983.75,
-        "y": 372.5,
-        "wires": []
-    },
-    {
-        "id": "d3657ed9.a6fbc",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "confirmation message",
-        "func": "context.global.keyboard = { pending : true };\n\nvar opts = {\n  reply_to_message_id: msg.payload.messageId,\n  reply_markup: JSON.stringify({\n    keyboard: [\n      ['Yes'],\n      ['No']],\n      'resize_keyboard' : true, \n      'one_time_keyboard' : true\n  })\n};\n\nmsg.payload.content = 'Do you want to initialize the Asset Administration Shell?';\nmsg.payload.options = opts;\n\nreturn [ msg ];\n",
-        "outputs": "1",
-        "noerr": 0,
-        "x": 696.25,
-        "y": 186.2500228881836,
-        "wires": [
-            [
-                "5a3a89d7.1aafc8"
-            ]
-        ]
-    },
-    {
-        "id": "5a3a89d7.1aafc8",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "show keyboard",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1250,
-        "y": 187.5000228881836,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c2ef4a97.9f02f8",
-        "type": "actionflows",
-        "z": "1274e0ae.b2911f",
-        "info": "Describe your action API here.",
-        "untilproptype": "num",
-        "proptype": "msg",
-        "name": "initFromBot",
-        "prop": "loop",
-        "untilprop": 0,
-        "until": "gt",
-        "loop": "none",
-        "scope": "global",
-        "perf": false,
-        "seq": false,
-        "x": 980,
-        "y": 261.2500228881836,
-        "wires": [
-            [
-                "d492ec98.ba341"
-            ]
-        ]
-    },
-    {
-        "id": "d492ec98.ba341",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "send response",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1247.5,
-        "y": 260.0000228881836,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8f35ab33.00d6b8",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "send response",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1242.5,
-        "y": 307.5000228881836,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "53d9ec11.a932a4",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "create response",
-        "func": "if(context.global.keyboard.pending)\n{\n    context.global.keyboard.pending = false;\n    \n    if(msg.payload.content === 'Yes')\n    {\n        msg.payload.content = 'AAS Initialized';\n        return [msg, null];   \n    }\n    else\n    {\n        msg.payload.content = 'No Action';\n        return [null, msg];   \n    }\n}\n",
-        "outputs": "2",
-        "noerr": 0,
-        "x": 672.5,
-        "y": 266.2500228881836,
-        "wires": [
-            [
-                "c2ef4a97.9f02f8"
-            ],
-            [
-                "8f35ab33.00d6b8"
-            ]
-        ]
-    },
-    {
-        "id": "9254049d.de07a8",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_SubmodelUpdate in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 394.375,
-        "y": 987.5,
-        "wires": [
-            [
-                "dd540b81.381e88"
-            ]
-        ]
-    },
-    {
-        "id": "8f8ab89c.7ed728",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1086.25,
-        "y": 990,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dd540b81.381e88",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify submodel update",
-        "func": "msg.payload = {content : \"Submodel updated\", chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 783.75,
-        "y": 987.5,
-        "wires": [
-            [
-                "8f8ab89c.7ed728",
-                "b7a943cb.3809d",
-                "ae593389.9a43f"
-            ]
-        ]
-    },
-    {
-        "id": "b7a943cb.3809d",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_SubmodelUpdate out",
-        "links": [],
-        "x": 1136.875,
-        "y": 1045,
-        "wires": []
-    },
-    {
-        "id": "ae593389.9a43f",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1008.75,
-        "y": 931.25,
-        "wires": []
-    },
-    {
-        "id": "e78329fc.ff27a8",
-        "type": "telegram command",
-        "z": "1274e0ae.b2911f",
-        "name": "/getLocation",
-        "command": "/getLocation",
-        "bot": "ced8ce52.ff5f4",
-        "strict": false,
-        "outputs": 2,
-        "x": 337.1428527832031,
-        "y": 521.4285888671875,
-        "wires": [
-            [
-                "520ea838.571e78"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "520ea838.571e78",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "send manifest",
-        "func": "msg.payload.content = context.global.get('namespace');\nmsg.payload.type = 'message';\n\n/* type can be one of the following\nphoto\naudio\nvideo\nsticker\nvoice\ndocument\n*/\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 699.5238037109375,
-        "y": 515.9524536132812,
-        "wires": [
-            [
-                "635b0bae.4a4654"
-            ]
-        ]
-    },
-    {
-        "id": "635b0bae.4a4654",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1266.4285888671875,
-        "y": 517.3809814453125,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f49967d.2911098",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_SubmodelAdd in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 385,
-        "y": 1168.3333740234375,
-        "wires": [
-            [
-                "ff046b08.0da148"
-            ]
-        ]
-    },
-    {
-        "id": "744b9231.3e283c",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1086.875,
-        "y": 1170.8333740234375,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ff046b08.0da148",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify submodel add",
-        "func": "msg.payload = {content : \"Submodel added\", chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 774.375,
-        "y": 1168.3333740234375,
-        "wires": [
-            [
-                "744b9231.3e283c",
-                "e63872db.09648",
-                "73b19ad5.a76da4"
-            ]
-        ]
-    },
-    {
-        "id": "e63872db.09648",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_SubmodelAdd out",
-        "links": [],
-        "x": 1127.5,
-        "y": 1225.8333740234375,
-        "wires": []
-    },
-    {
-        "id": "73b19ad5.a76da4",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1009.375,
-        "y": 1112.0833740234375,
-        "wires": []
-    },
-    {
-        "id": "471465a5.f47a7c",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_SubmodelRemove in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 396.6666259765625,
-        "y": 1331.6666259765625,
-        "wires": [
-            [
-                "ebaa74a0.e21818"
-            ]
-        ]
-    },
-    {
-        "id": "fcd8ad90.fdb89",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1088.5416259765625,
-        "y": 1334.1666259765625,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ebaa74a0.e21818",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify submodel remove",
-        "func": "msg.payload = {content : \"Submodel removed\", chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 786.0416259765625,
-        "y": 1331.6666259765625,
-        "wires": [
-            [
-                "fcd8ad90.fdb89",
-                "85f85925.8f1ec8",
-                "62ced819.d6b648"
-            ]
-        ]
-    },
-    {
-        "id": "85f85925.8f1ec8",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_SubmodelRemove out",
-        "links": [],
-        "x": 1149.1666259765625,
-        "y": 1389.1666259765625,
-        "wires": []
-    },
-    {
-        "id": "62ced819.d6b648",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1011.0416259765625,
-        "y": 1275.4166259765625,
-        "wires": []
-    },
-    {
-        "id": "4480cf48.27fb2",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_PropertyUpdate in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 386.6666259765625,
-        "y": 1491.66650390625,
-        "wires": [
-            [
-                "53675a92.dbd8b4"
-            ]
-        ]
-    },
-    {
-        "id": "5ef038f2.1d88f8",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1088.5416259765625,
-        "y": 1494.16650390625,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "53675a92.dbd8b4",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify property update",
-        "func": "msg.payload = {content : \"Property updated\", chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 776.0416259765625,
-        "y": 1491.66650390625,
-        "wires": [
-            [
-                "5ef038f2.1d88f8",
-                "34c53c73.6fec54",
-                "ce750553.e02bc8"
-            ]
-        ]
-    },
-    {
-        "id": "34c53c73.6fec54",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_PropertyUpdate out",
-        "links": [],
-        "x": 1139.1666259765625,
-        "y": 1549.16650390625,
-        "wires": []
-    },
-    {
-        "id": "ce750553.e02bc8",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1011.0416259765625,
-        "y": 1435.41650390625,
-        "wires": []
-    },
-    {
-        "id": "8caffeec.b2c54",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_PropertyAdd in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 380,
-        "y": 1646.66650390625,
-        "wires": [
-            [
-                "ebd351db.906c1"
-            ]
-        ]
-    },
-    {
-        "id": "8ac2b390.a6101",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1091.875,
-        "y": 1649.16650390625,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ebd351db.906c1",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify property add",
-        "func": "msg.payload = {content : \"Property added\", chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 769.375,
-        "y": 1646.66650390625,
-        "wires": [
-            [
-                "8ac2b390.a6101",
-                "4367f045.a8dd8",
-                "676283a0.458a0c"
-            ]
-        ]
-    },
-    {
-        "id": "4367f045.a8dd8",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_PropertyAdd out",
-        "links": [],
-        "x": 1132.5,
-        "y": 1704.16650390625,
-        "wires": []
-    },
-    {
-        "id": "676283a0.458a0c",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1014.375,
-        "y": 1590.41650390625,
-        "wires": []
-    },
-    {
-        "id": "8367954f.428178",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_PropertyRemove in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 386.6666259765625,
-        "y": 1810,
-        "wires": [
-            [
-                "4cf82009.ee7a1"
-            ]
-        ]
-    },
-    {
-        "id": "cb02285e.439728",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1088.5416259765625,
-        "y": 1812.5,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4cf82009.ee7a1",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify property remove",
-        "func": "msg.payload = {content : \"Property removed\", chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 776.0416259765625,
-        "y": 1810,
-        "wires": [
-            [
-                "cb02285e.439728",
-                "a4411447.d27ed8",
-                "bd500aac.154518"
-            ]
-        ]
-    },
-    {
-        "id": "a4411447.d27ed8",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_PropertyRemove out",
-        "links": [],
-        "x": 1139.1666259765625,
-        "y": 1867.5,
-        "wires": []
-    },
-    {
-        "id": "bd500aac.154518",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1011.0416259765625,
-        "y": 1753.75,
-        "wires": []
-    },
-    {
-        "id": "4e0ad4ae.e982ec",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_AASInitialized in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 386.6666259765625,
-        "y": 1976.66650390625,
-        "wires": [
-            [
-                "5d52a257.2d522c"
-            ]
-        ]
-    },
-    {
-        "id": "381d1f97.57533",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1088.5416259765625,
-        "y": 1979.16650390625,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5d52a257.2d522c",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify property remove",
-        "func": "msg.payload = {content : \"AAS initialized\", chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 776.0416259765625,
-        "y": 1976.66650390625,
-        "wires": [
-            [
-                "381d1f97.57533",
-                "c98fed59.b7346",
-                "22df6994.427556"
-            ]
-        ]
-    },
-    {
-        "id": "c98fed59.b7346",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_AASInitialized out",
-        "links": [],
-        "x": 1129.1666259765625,
-        "y": 2034.16650390625,
-        "wires": []
-    },
-    {
-        "id": "22df6994.427556",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1011.0416259765625,
-        "y": 1920.41650390625,
-        "wires": []
-    },
-    {
         "id": "30451467.f03a8c",
         "type": "http in",
         "z": "c7caf96e.a31f98",
@@ -4038,77 +2952,6 @@
         "complete": "true",
         "x": 1110,
         "y": 2540,
-        "wires": []
-    },
-    {
-        "id": "2a121084.3fd02",
-        "type": "actionflows_in",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_NewLivedata in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 376.6666259765625,
-        "y": 2130,
-        "wires": [
-            [
-                "39338f50.d260b"
-            ]
-        ]
-    },
-    {
-        "id": "39338f50.d260b",
-        "type": "function",
-        "z": "1274e0ae.b2911f",
-        "name": "notify livedata available",
-        "func": "//msg.observation = msg.payload;\nmsg.payload = {content : \"New Livedata Available: \" + msg.payload[0].id, chatId : -330239092, type : \"message\"}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 781.6666259765625,
-        "y": 2131.333251953125,
-        "wires": [
-            [
-                "e11fcfe4.9b938",
-                "ea942065.8585d",
-                "5206e4b3.c816ac"
-            ]
-        ]
-    },
-    {
-        "id": "e11fcfe4.9b938",
-        "type": "actionflows_out",
-        "z": "1274e0ae.b2911f",
-        "name": "notifyBOT_NewLivedata out",
-        "links": [],
-        "x": 1126.6666259765625,
-        "y": 2171.66650390625,
-        "wires": []
-    },
-    {
-        "id": "ea942065.8585d",
-        "type": "telegram sender",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "bot": "ced8ce52.ff5f4",
-        "outputs": 1,
-        "x": 1096.6666259765625,
-        "y": 2131.66650390625,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5206e4b3.c816ac",
-        "type": "debug",
-        "z": "1274e0ae.b2911f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1010,
-        "y": 2088.333251953125,
         "wires": []
     },
     {
@@ -10076,29 +8919,6 @@
         ]
     },
     {
-        "id": "eae8475e.604048",
-        "type": "actionflows",
-        "z": "ef5eec.2b417118",
-        "info": "Describe your action API here.",
-        "untilproptype": "num",
-        "proptype": "msg",
-        "name": "ThingsBoardMQTT",
-        "prop": "loop",
-        "untilprop": 0,
-        "until": "gt",
-        "loop": "none",
-        "scope": "global",
-        "perf": false,
-        "seq": false,
-        "x": 1110,
-        "y": 180,
-        "wires": [
-            [
-                "3b6096b5.c413ba"
-            ]
-        ]
-    },
-    {
         "id": "4b095658.e7e918",
         "type": "actionflows",
         "z": "ef5eec.2b417118",
@@ -10113,8 +8933,8 @@
         "scope": "global",
         "perf": false,
         "seq": false,
-        "x": 1110,
-        "y": 240,
+        "x": 1150,
+        "y": 160,
         "wires": [
             [
                 "3b6096b5.c413ba"
@@ -10158,14 +8978,10 @@
         "y": 180,
         "wires": [
             [
-                "eae8475e.604048"
-            ],
-            [
                 "4b095658.e7e918"
             ],
-            [
-                "37a76fcd.8fbb7"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -10713,29 +9529,6 @@
         ]
     },
     {
-        "id": "37a76fcd.8fbb7",
-        "type": "actionflows",
-        "z": "ef5eec.2b417118",
-        "info": "Describe your action API here.",
-        "untilproptype": "num",
-        "proptype": "msg",
-        "name": "MindSphere",
-        "prop": "loop",
-        "untilprop": 0,
-        "until": "gt",
-        "loop": "none",
-        "scope": "global",
-        "perf": false,
-        "seq": false,
-        "x": 1130,
-        "y": 300,
-        "wires": [
-            [
-                "3b6096b5.c413ba"
-            ]
-        ]
-    },
-    {
         "id": "c89f9806.6c4c98",
         "type": "link in",
         "z": "c7caf96e.a31f98",
@@ -10827,185 +9620,6 @@
         "statusType": "auto",
         "x": 470,
         "y": 600,
-        "wires": []
-    },
-    {
-        "id": "3af4e0d.29aab2",
-        "type": "actionflows_in",
-        "z": "3db1c009.99d51",
-        "name": "ThingsBoardMQTT in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 240,
-        "y": 220,
-        "wires": [
-            [
-                "a334eb23.f6a158",
-                "3157577f.7d0198",
-                "d04d5db8.70509"
-            ]
-        ]
-    },
-    {
-        "id": "3157577f.7d0198",
-        "type": "actionflows_out",
-        "z": "3db1c009.99d51",
-        "name": "ThingsBoardMQTT out",
-        "links": [],
-        "x": 1820,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "a334eb23.f6a158",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 450,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "af59fe7a.c4bc7",
-        "type": "mqtt out",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "topic": "v1/devices/me/telemetry",
-        "qos": "",
-        "retain": "",
-        "broker": "ddccf1e6.d0f5e",
-        "x": 1230,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "d04d5db8.70509",
-        "type": "unsafe-function",
-        "z": "3db1c009.99d51",
-        "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nmsg1.payload = {};\n//var key = msg.payload.dataSourceManifestReferenceID;\nvar key = \"observation\";\n//msg1.payload[key] = JSON.stringify(msg.payload);\nmsg1.payload.ts = msg.payload.timestamp;\nvar values = {};\nvalues[key] = JSON.stringify(msg.payload);\nmsg1.payload.values = values;\n//msg1.payload = JSON.stringify(msg1[msg.payload.dataSourceManifestReferenceID]);\n//msg1.topic = context.global.get('AASIdentifier');\n//msg1.topic = msg.payload.dataSourceManifestReferenceID;\n//msg1.payload = msg.payload;\n\nreturn msg1;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 890,
-        "y": 300,
-        "wires": [
-            [
-                "f43b10fc.e0589",
-                "af59fe7a.c4bc7"
-            ]
-        ]
-    },
-    {
-        "id": "7bd9e155.73675",
-        "type": "comment",
-        "z": "3db1c009.99d51",
-        "name": "To MQTT within ThingsBoard",
-        "info": "",
-        "x": 900,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "20f4e303.597bac",
-        "type": "inject",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 320,
-        "y": 480,
-        "wires": [
-            [
-                "cb390a12.546978"
-            ]
-        ]
-    },
-    {
-        "id": "e2c25973.fc2b18",
-        "type": "http request",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": false,
-        "url": "http://10.172.67.130:9090/api/v1/xPqllfwzE2meQGxUbHYL/telemetry",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 770,
-        "y": 480,
-        "wires": [
-            [
-                "77d42abc.e705f4"
-            ]
-        ]
-    },
-    {
-        "id": "cb390a12.546978",
-        "type": "function",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "func": "msg.payload = {\"observation\":\"value1\"};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 580,
-        "y": 480,
-        "wires": [
-            [
-                "e2c25973.fc2b18"
-            ]
-        ]
-    },
-    {
-        "id": "77d42abc.e705f4",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 980,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "fd853682.d30b48",
-        "type": "comment",
-        "z": "3db1c009.99d51",
-        "name": "Tester",
-        "info": "",
-        "x": 230,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "f43b10fc.e0589",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1150,
-        "y": 260,
         "wires": []
     },
     {
@@ -17107,171 +15721,6 @@
         "complete": "true",
         "x": 810,
         "y": 140,
-        "wires": []
-    },
-    {
-        "id": "5fd6c333.d259ec",
-        "type": "actionflows_in",
-        "z": "3db1c009.99d51",
-        "name": "MindSphere in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 260,
-        "y": 1160,
-        "wires": [
-            [
-                "ef325bbb.28de08",
-                "8b366bdd.1404c8",
-                "6d6889fa.72dd68"
-            ]
-        ]
-    },
-    {
-        "id": "6d6889fa.72dd68",
-        "type": "actionflows_out",
-        "z": "3db1c009.99d51",
-        "name": "MindSphere out",
-        "links": [],
-        "x": 1780,
-        "y": 1160,
-        "wires": []
-    },
-    {
-        "id": "ef325bbb.28de08",
-        "type": "unsafe-function",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "func": "if(msg.payload.observableReference == \"OperationalData/CurrentOperatingPressure\"){\n    const currentValue = {\n            //\"timestamp\": new Date().toISOString(),\n            \"timestamp\": new Date(msg.payload.timestamp).toISOString(),\n            \"values\":[\n                {\n                    \"dataPointId\":\"1600378645409\",\n                    \"qualityCode\":\"0\",\n                    \"value\": msg.payload.payload.toString()\n                }\n            ]\n        };\n    msg.payload = currentValue;\n    return msg;\n} else if(msg.payload.observableReference == \"OperationalData/ResponseTime\"){\n    const currentValue = {\n            //\"timestamp\": new Date().toISOString(),\n            \"timestamp\": new Date(msg.payload.timestamp).toISOString(),\n            \"values\":[\n                {\n                    \"dataPointId\":\"1600378672841\",\n                    \"qualityCode\":\"0\",\n                    \"value\": msg.payload.payload.toString()\n                }\n            ]\n        };\n    msg.payload = currentValue;\n    return msg;\n} else if(msg.payload.observableReference == \"OperationalData/ValvePosition\"){\n    const currentValue = {\n            //\"timestamp\": new Date().toISOString(),\n            \"timestamp\": new Date(msg.payload.timestamp).toISOString(),\n            \"values\":[\n                {\n                    \"dataPointId\":\"1600378657242\",\n                    \"qualityCode\":\"0\",\n                    \"value\": msg.payload.payload.toString()\n                }\n            ]\n        };\n    msg.payload = currentValue;\n    return msg;\n}\n\nreturn null;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 620,
-        "y": 1260,
-        "wires": [
-            [
-                "87b11b6d.622e88",
-                "cc572e90.9cb17"
-            ]
-        ]
-    },
-    {
-        "id": "49f44bbe.a60484",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "87b11b6d.622e88",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 790,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "3d2f39c.2bb59c6",
-        "type": "mindconnect",
-        "z": "3db1c009.99d51",
-        "d": true,
-        "name": "",
-        "configtype": "SHARED_SECRET",
-        "agentconfig": "{  \"content\": {    \"baseUrl\": \"https://southgate.eu1.mindsphere.io\",    \"iat\": \"eyJraWQiOiJrZXktaWQtMSIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJpc3MiOiJTQ0kiLCJzdWIiOiI3MTEwOTRjMTQzMzQ0YWNkOWQ3YTI3ZWFmODkzZGYwNyIsImF1ZCI6IkFJQU0iLCJpYXQiOjE2MDAzNzg1OTIsIm5iZiI6MTYwMDM3ODU5MiwiZXhwIjoxNjAwOTgzMzkyLCJqdGkiOiI3MTRjNjM2Ny01NzJjLTRkYzktOGZjZi1hNzI3ZDA1YThlMzEiLCJzY29wZSI6IklBVCIsInRlbiI6ImZyZWVwY3JpIiwidGVuX2N0eCI6Im1haW4tdGVuYW50IiwiY2xpZW50X2NyZWRlbnRpYWxzX3Byb2ZpbGUiOlsiU0hBUkVEX1NFQ1JFVCJdLCJzY2hlbWFzIjpbInVybjpzaWVtZW5zOm1pbmRzcGhlcmU6djEiXX0.beuY_-sccHbUxMQ9LnmGD2h9gprc8DwzYZM2IgitHnVw3hx-XPuOC540wgqX7JB1swhzmS6k0ZnskMJ72CPPN_uR7jsTQWevoV3ehHj4cXcK7-0pcuwN6W-FnbYyYe9-Y_qXSE_MY7N2HNZexH64ExiusYsfoxTgKI47em8h9xtyuo3yQ7-EDmRdsK5bQ-d5pnxl4dsZDHkfp4AEwJTJbVZrKM8OVnVrihd1jqsLGw_v3JOpl8HuhG6BzxnYvndz16quQeNZNmjPIoQWFkINT05StwtDkAwn9_oJczRa3NbwhkyITaJq7ppBhFLt9zxUCqcH55gesUKp6alFAgkpbw\",    \"clientCredentialProfile\": [      \"SHARED_SECRET\"    ],    \"clientId\": \"711094c143344acd9d7a27eaf893df07\",    \"tenant\": \"freepcri\"  },  \"expiration\": \"2020-09-24T21:36:32.000Z\"}",
-        "privatekey": "",
-        "model": "",
-        "validate": true,
-        "validateevent": true,
-        "chunk": true,
-        "disablekeepalive": false,
-        "retry": 3,
-        "parallel": "4",
-        "asyncduration": 10,
-        "x": 1340,
-        "y": 1260,
-        "wires": [
-            [
-                "49f44bbe.a60484"
-            ]
-        ]
-    },
-    {
-        "id": "cc572e90.9cb17",
-        "type": "batcher",
-        "z": "3db1c009.99d51",
-        "name": "Batch Messages in batches of 10",
-        "maxTopics": 1,
-        "maxMessagesPerTopic": 10,
-        "maxDelay": -1,
-        "x": 920,
-        "y": 1260,
-        "wires": [
-            [
-                "3d2f39c.2bb59c6",
-                "9370ae92.6b09"
-            ]
-        ]
-    },
-    {
-        "id": "9370ae92.6b09",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "8b366bdd.1404c8",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 437.08331298828125,
-        "y": 1059.5833282470703,
-        "wires": []
-    },
-    {
-        "id": "4f51615e.21138",
-        "type": "comment",
-        "z": "3db1c009.99d51",
-        "name": "To MindSphere",
-        "info": "",
-        "x": 980,
-        "y": 1180,
         "wires": []
     },
     {
