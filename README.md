@@ -17,6 +17,15 @@ Once the image has been created the followig docker command can be used to start
 
 After executing the above commands, the NOVAAS will be accessible at http://localhost:1880/ui 
 
+### Notes
+The NOVAAS embeds an MQTT client for pushing out data. This client needs to be configured. To do that it is possible to access the NOVAAS backend by using the following link:
+
+http://localhost:1880
+
+To access the backend the user needs to insert username and password. These are the default username and password from the node-red settings file, namely:
+
+- username: admin
+- password: password
 
 ## Using Docker-compose
 
