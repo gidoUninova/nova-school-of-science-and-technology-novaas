@@ -26,6 +26,8 @@ The NOVAAS embeds an MQTT client for pushing out data. This client needs to be c
 
 http://localhost:1880
 
+![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.40.31.png)"NOVAAS Backend once user is logged in"
+
 To access the backend the user needs to insert username and password. These are the default username and password from the node-red settings file, namely:
 
 - username: admin
