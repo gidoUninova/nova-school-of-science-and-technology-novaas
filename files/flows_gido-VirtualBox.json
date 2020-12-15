@@ -430,9 +430,7 @@
             "5c80f7ac.2fc2b8"
         ],
         "x": 374,
-        "y": 4119,
-        "w": 2652,
-        "h": 322
+        "y": 4119
     },
     {
         "id": "d366c10f.cbf158",
@@ -479,9 +477,7 @@
             "4db154dd.75a03c"
         ],
         "x": 194,
-        "y": 3374.22216796875,
-        "w": 2962,
-        "h": 606.77783203125
+        "y": 3374.22216796875
     },
     {
         "id": "8ba0dee2.7f7be8",
@@ -525,7 +521,9 @@
             "234d668e.b04b9a"
         ],
         "x": 34,
-        "y": 3919
+        "y": 3919,
+        "w": 2872,
+        "h": 516
     },
     {
         "id": "e764eb53.6268c",
@@ -700,7 +698,9 @@
             "2b9d542a.16a2d4"
         ],
         "x": 14,
-        "y": 379
+        "y": 379,
+        "w": 2892,
+        "h": 3482
     },
     {
         "id": "a5ca466b.4777d8",
@@ -726,7 +726,9 @@
             "45db3a70.87fa04"
         ],
         "x": 64,
-        "y": 19
+        "y": 19,
+        "w": 1602,
+        "h": 322
     },
     {
         "id": "69ba9a0.96d9268",
@@ -2137,6 +2139,30 @@
         "order": 1,
         "width": "3",
         "height": 1
+    },
+    {
+        "id": "ddccf1e6.d0f5e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "172.17.0.3",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
     },
     {
         "id": "a67da331.7afbf8",
@@ -6278,7 +6304,7 @@
         "type": "debug",
         "z": "fd31082e.5487d8",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -8933,8 +8959,8 @@
         "scope": "global",
         "perf": false,
         "seq": false,
-        "x": 1150,
-        "y": 160,
+        "x": 1110,
+        "y": 240,
         "wires": [
             [
                 "3b6096b5.c413ba"
@@ -10087,7 +10113,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "0.1",
+        "onceDelay": "1",
         "topic": "",
         "payload": "",
         "payloadType": "date",
