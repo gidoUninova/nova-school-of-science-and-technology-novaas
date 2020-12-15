@@ -19,6 +19,8 @@ After executing the above commands, the NOVAAS will be accessible at the followi
 
 http://localhost:1880/ui 
 
+![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.20.37.png)"NOVAAS Main Screen"
+
 ### Notes
 The NOVAAS embeds an MQTT client for pushing out data. This client needs to be configured. To do that it is possible to access the NOVAAS backend by using the following link:
 
