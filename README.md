@@ -56,5 +56,9 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 
 ## NOVAAS in action
 
-
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png">
+    <source src="/suorce/images/Screen Recording 2020-12-16 at 12.40.00-2.mp4" type="video/mp4">
+  </video>
+</figure>
 
