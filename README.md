@@ -56,10 +56,4 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 
 ## NOVAAS in action
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true">
-    <source src="/suorce/videos/Screen_Recording_2020-12-16_at_12.40.00-2.mp4" type="video/mp4">
-  </video>
-</figure>
-
 [](https://gitlab.com/gidouninova/novaas/-/blob/master/source/videos/Screen_Recording_2020-12-16_at_12.40.00-2.mp4)
