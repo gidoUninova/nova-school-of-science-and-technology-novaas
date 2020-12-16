@@ -1,6 +1,7 @@
 # NOVA Asset Administration Shell
 
-The NOVA Asset Administration Shell (NOVAAS) is an open source reference implementation and execution environment - developed by NOVA School of Science and Technology - for the Asset Administration Shell (AAS) concept proposed by the Reference Architectural Model for Industrie 4.0 (RAMI4.0). The AAS is an implementation of the concept of Digital Twin for industrial applications - in the context of the Industrie 4.0 - and establishes the cornerstone for interoperability between production assets.
+The NOVA Asset Administration Shell (NOVAAS) is an open source reference implementation and execution environment - developed by NOVA School of Science and Technology - for the Asset Administration Shell (AAS) concept proposed by the Reference Architectural Model for Industrie 4.0 (RAMI4.0). 
+The AAS implements the concept of the Digital Twin of a physical object turning it into an Industrie 4.0 component that facilitates interoperability in industrial applications.
 
 This repository contains file that are needed to build a docker image for NOVAAS.
 In order to install and run it, dowload/clone the repository and build and run the dockerfile and/or the docker-compose file.
