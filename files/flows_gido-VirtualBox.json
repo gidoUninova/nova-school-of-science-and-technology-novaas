@@ -521,9 +521,7 @@
             "234d668e.b04b9a"
         ],
         "x": 34,
-        "y": 3919,
-        "w": 2872,
-        "h": 516
+        "y": 3919
     },
     {
         "id": "e764eb53.6268c",
@@ -695,12 +693,12 @@
             "67941dbe.bfde3c",
             "213d0113.03209e",
             "17d6c621.3b5ac2",
-            "2b9d542a.16a2d4"
+            "2b9d542a.16a2d4",
+            "30b0ab2a.1bf14c",
+            "83b9c94b.0ffa2"
         ],
         "x": 14,
-        "y": 379,
-        "w": 2892,
-        "h": 3482
+        "y": 379
     },
     {
         "id": "a5ca466b.4777d8",
@@ -723,12 +721,11 @@
             "53630693.cfe0a",
             "7d3815c0.7593f4",
             "57c2b84b.d79938",
-            "45db3a70.87fa04"
+            "45db3a70.87fa04",
+            "cec7e1d0.707e4"
         ],
         "x": 64,
-        "y": 19,
-        "w": 1602,
-        "h": 322
+        "y": 19
     },
     {
         "id": "69ba9a0.96d9268",
@@ -930,11 +927,13 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "6c321ed2.c0a71"
+            "6c321ed2.c0a71",
+            "4ba5baf3.471e2c",
+            "b8349ad2.6a14"
         ],
-        "x": 34,
-        "y": 1879,
-        "w": 232,
+        "x": 54,
+        "y": 1859,
+        "w": 652,
         "h": 82
     },
     {
@@ -15671,7 +15670,8 @@
             [
                 "2e73cb2c.6f8104",
                 "67286caa.6f122c",
-                "93e27c93.b14bf8"
+                "93e27c93.b14bf8",
+                "cec7e1d0.707e4"
             ]
         ]
     },
@@ -17106,10 +17106,10 @@
         "z": "44340bcc.3da454",
         "g": "a5ca466b.4777d8",
         "name": "Initialize Context",
-        "func": "context.flow.set(\"cylinderStatus\", 0);\ncontext.flow.set(\"valvePosition\", 0);\ncontext.flow.set(\"newCycle\", false);\ncontext.flow.set(\"cycle\", 0);\ncontext.flow.set(\"NrOfDataSources\", 7);\nreturn msg;",
+        "func": "context.flow.set(\"NrOfDataSources\", 7);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 690,
+        "x": 700,
         "y": 160,
         "wires": [
             []
@@ -17258,7 +17258,8 @@
         "wires": [
             [
                 "ac03f0ff.d7422",
-                "bbba0824.273ce"
+                "bbba0824.273ce",
+                "83b9c94b.0ffa2"
             ]
         ]
     },
@@ -17316,7 +17317,7 @@
         "z": "44340bcc.3da454",
         "g": "e764eb53.6268c",
         "name": "cyclinderStatus",
-        "func": "var outMsg = {};\noutMsg.topic = \"put\";\noutMsg.payload = {\n    tstamp: context.flow.get(\"timestamp\"),\n    data: context.flow.get(\"cylinderStatus\")\n};\nreturn outMsg;",
+        "func": "var outMsg = {};\noutMsg.topic = \"put\";\nvar cylinderStatus = context.flow.get(\"cylinderStatus\");\nif(cylinderStatus != \"undefined\"){\n    outMsg.payload = {\n        tstamp: context.flow.get(\"timestamp\"),\n        data: cylinderStatus\n    };\n    return outMsg;\n}\nreturn null;",
         "outputs": 1,
         "noerr": 0,
         "x": 520,
@@ -17324,7 +17325,8 @@
         "wires": [
             [
                 "d8540c7.46fecf",
-                "f09e6332.ee7f"
+                "f09e6332.ee7f",
+                "30b0ab2a.1bf14c"
             ]
         ]
     },
@@ -17399,11 +17401,11 @@
         "type": "iot-datasource",
         "z": "44340bcc.3da454",
         "g": "e764eb53.6268c",
-        "name": "valvePosition",
+        "name": "responseTimePred",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 790,
+        "x": 810,
         "y": 3600,
         "wires": [
             []
@@ -17419,10 +17421,10 @@
         "order": 1,
         "width": "30",
         "height": "25",
-        "url": "http://localhost:1880/dash",
+        "url": "",
         "origin": "*",
-        "x": 150,
-        "y": 1920,
+        "x": 590,
+        "y": 1900,
         "wires": [
             []
         ]
@@ -18619,6 +18621,105 @@
             [
                 "43d97d1d.9ee74c",
                 "93b0b41c.9bc748"
+            ]
+        ]
+    },
+    {
+        "id": "30b0ab2a.1bf14c",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "cec7e1d0.707e4",
+        "type": "unsafe-function",
+        "z": "44340bcc.3da454",
+        "g": "a5ca466b.4777d8",
+        "name": "Initialize Simulator",
+        "func": "context.flow.set(\"cylinderStatus\", 0);\ncontext.flow.set(\"valvePosition\", 0);\ncontext.flow.set(\"newCycle\", false);\ncontext.flow.set(\"cycle\", 0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83b9c94b.0ffa2",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "4ba5baf3.471e2c",
+        "type": "inject",
+        "z": "8433472b.714b98",
+        "g": "618135a3.0d2814",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "portfw",
+                "v": "PORT_FORWARDING",
+                "vt": "env"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 1900,
+        "wires": [
+            [
+                "b8349ad2.6a14"
+            ]
+        ]
+    },
+    {
+        "id": "b8349ad2.6a14",
+        "type": "unsafe-function",
+        "z": "8433472b.714b98",
+        "g": "618135a3.0d2814",
+        "name": "",
+        "func": "msg.url = \"http://localhost:\" + msg.portfw + \"/dash\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 1900,
+        "wires": [
+            [
+                "6c321ed2.c0a71"
             ]
         ]
     }

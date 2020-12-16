@@ -2,6 +2,8 @@ version: '2.4'
 services:
     novaas:
         build: .
-        image: "novaas_festo_dpdm/dockerbase:1.0.0"
+        image: "novaas_dev_festo_dpdm/dockerbase:1.0.0"
+        environment:
+            - "PORT_FORWARDING=${PORT_FORWARDING}" 
         ports:
-            - "1880:1880"
+            - "${PORT_FORWARDING}:1880"
