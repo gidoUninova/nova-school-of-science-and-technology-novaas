@@ -13,18 +13,18 @@ The docker command to create the NOVAAS image is the following:
 
 Once the image has been created the followig docker command can be used to start a new container that runs the NOVAAS image:
 
-`docker run -p 1880:1880 name_of_the_image:ver -d`
+`docker run --env PORT_FORWARDING=1870 -p 1870:1880 name_of_the_image:ver -d`
 
 After executing the above commands, the NOVAAS will be accessible at the following link:
 
-http://localhost:1880/ui 
+http://localhost:1870/ui 
 
 ![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.20.37.png)"NOVAAS Main Screen"
 
 ### Notes
 The NOVAAS embeds an MQTT client for pushing out data. This client needs to be configured. To do that it is possible to access the NOVAAS backend by using the following link:
 
-http://localhost:1880
+http://localhost:1870
 
 ![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.40.31.png)"NOVAAS Backend once user is logged in"
 
@@ -43,7 +43,7 @@ To build and run the image. Furthermore, the command:
 
 `docker-compose build`
 
-can be used to build a new image.
+can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variable PORT_FORWARDING in the .env file.
 
 ## Run another version of NOVAAS from this base folder
 
@@ -53,4 +53,8 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 1. Add the Manifest file within the folder "files/manifest". Note that the name of the file **must** be kept -> AmI_as_manifest.json. In particular this file follows the data model provided in https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part1_V3.html and can be created by using the aasx-package-explorer tool (https://github.com/admin-shell-io/aasx-package-explorer) ;
 1. Change the httpauth file in the folder "files/httpauth" properly;
 1. Run the docker and/0r docker-compose commands. 
+
+## NOVAAS in action (Click on the Image to Show the Video)
+
+[![Watch the video](/source/images/Screenshot_2020-12-15_at_22.20.37.png)](https://gitlab.com/gidouninova/novaas/-/blob/master/source/videos/Screen_Recording_2020-12-16_at_12.40.00-2.mp4)
 
