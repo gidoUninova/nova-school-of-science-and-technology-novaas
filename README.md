@@ -57,5 +57,5 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 
 ## NOVAAS in action (Click on the Image to Show the Video)
 
-[![Watch the video](/source/images/Screenshot_2020-12-15_at_22.20.37.png)](https://gitlab.com/gidouninova/novaas/-/blob/master/source/videos/NOVAAS_MyMovie.mp4)
+[![Watch the video](/source/images/Screenshot_2020-12-15_at_22.20.37.png)](https://gitlab.com/gidouninova/novaas/-/blob/master/source/videos/NOVAAS_myMovie.mp4)
 
