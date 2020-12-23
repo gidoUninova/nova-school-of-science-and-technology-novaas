@@ -529,9 +529,7 @@
             "234d668e.b04b9a"
         ],
         "x": 34,
-        "y": 4199,
-        "w": 2872,
-        "h": 516
+        "y": 4199
     },
     {
         "id": "e764eb53.6268c",
@@ -711,9 +709,7 @@
             "f39127de.44792"
         ],
         "x": 14,
-        "y": 379,
-        "w": 2892,
-        "h": 3642
+        "y": 379
     },
     {
         "id": "a5ca466b.4777d8",
@@ -740,9 +736,7 @@
             "cec7e1d0.707e4"
         ],
         "x": 64,
-        "y": 19,
-        "w": 1602,
-        "h": 322
+        "y": 19
     },
     {
         "id": "69ba9a0.96d9268",
@@ -1252,7 +1246,7 @@
         "order": 1,
         "disp": true,
         "width": "3",
-        "collapse": false
+        "collapse": true
     },
     {
         "id": "6966bf45.2bd2c",
@@ -1471,7 +1465,7 @@
         "order": 1,
         "disp": true,
         "width": "3",
-        "collapse": false
+        "collapse": true
     },
     {
         "id": "8fc17f5a.38023",
@@ -1668,7 +1662,7 @@
         "order": 1,
         "disp": true,
         "width": "3",
-        "collapse": false
+        "collapse": true
     },
     {
         "id": "d61f3cdd.7e8e5",
@@ -2193,7 +2187,7 @@
         "order": 1,
         "disp": true,
         "width": "6",
-        "collapse": false
+        "collapse": true
     },
     {
         "id": "f9f1bdc8.0e017",
@@ -6131,37 +6125,18 @@
         "wires": []
     },
     {
-        "id": "71c1cec7.cd889",
-        "type": "snmp",
-        "z": "fd31082e.5487d8",
-        "host": "localhost",
-        "community": "public",
-        "version": "1",
-        "oids": "1.3.6.1.2.1.1.1.0",
-        "timeout": 5,
-        "name": "sysDscr",
-        "x": 1840,
-        "y": 4896,
-        "wires": [
-            [
-                "828fc28d.a1a1e",
-                "d22cbdc2.49f9f"
-            ]
-        ]
-    },
-    {
         "id": "b5dc76bb.9a6d18",
         "type": "actionflows_in",
         "z": "fd31082e.5487d8",
-        "name": "snmpSysDscr in",
+        "name": "OSsysDscr in",
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 800,
+        "x": 790,
         "y": 4896,
         "wires": [
             [
-                "71c1cec7.cd889"
+                "3319bd2e.c8291a"
             ]
         ]
     },
@@ -6169,41 +6144,10 @@
         "id": "828fc28d.a1a1e",
         "type": "actionflows_out",
         "z": "fd31082e.5487d8",
-        "name": "snmpSysDscr out",
+        "name": "OSsysDscr out",
         "links": [],
-        "x": 2850,
+        "x": 2840,
         "y": 4896,
-        "wires": []
-    },
-    {
-        "id": "2cd24437.d704cc",
-        "type": "inject",
-        "z": "fd31082e.5487d8",
-        "name": "Test",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 1190,
-        "y": 4916,
-        "wires": [
-            [
-                "71c1cec7.cd889"
-            ]
-        ]
-    },
-    {
-        "id": "d22cbdc2.49f9f",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "console": "false",
-        "complete": "payload",
-        "x": 2050,
-        "y": 4916,
         "wires": []
     },
     {
@@ -9564,73 +9508,6 @@
         "wires": []
     },
     {
-        "id": "4497b89b.097e68",
-        "type": "exec",
-        "z": "fd31082e.5487d8",
-        "command": "cd ../ && etc/init.d/snmpd restart",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "",
-        "x": 1160,
-        "y": 4723,
-        "wires": [
-            [
-                "7d6a429.0f664bc"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "574a8b33.abd684",
-        "type": "inject",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 810,
-        "y": 4723,
-        "wires": [
-            [
-                "4497b89b.097e68"
-            ]
-        ]
-    },
-    {
-        "id": "7d6a429.0f664bc",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1510,
-        "y": 4703,
-        "wires": []
-    },
-    {
         "id": "8ce06b86.c8f5a8",
         "type": "link in",
         "z": "fd31082e.5487d8",
@@ -11460,7 +11337,7 @@
         "info": "Describe your action API here.",
         "untilproptype": "num",
         "proptype": "msg",
-        "name": "snmpSysDscr",
+        "name": "OSsysDscr",
         "prop": "loop",
         "untilprop": 0,
         "until": "gt",
@@ -11468,7 +11345,7 @@
         "scope": "global",
         "perf": false,
         "seq": false,
-        "x": 1360,
+        "x": 1350,
         "y": 300,
         "wires": [
             [
@@ -11639,7 +11516,7 @@
         "z": "8433472b.714b98",
         "g": "eae7782c.8caca8",
         "name": "SubmodelsProcessing",
-        "func": "var msg1 = {};\nvar payload = {};\n//var splitted = msg.payload[0].value[0].value.split(\" \");\n//var splitted = msg.payload.value[0].value.split(\" \");\nvar splitted = msg.payload[0].value.split(\" \");\npayload.type = splitted[0];\npayload.hostname = splitted[1];\npayload.release = splitted[2];\npayload.platform = splitted[3];\npayload.arch = splitted[11];\npayload.namespace = context.global.get('namespace');\nmsg1.payload = payload;\nreturn msg1;",
+        "func": "var msg1 = {};\nvar payload = {};\n//var splitted = msg.payload[0].value[0].value.split(\" \");\n//var splitted = msg.payload.value[0].value.split(\" \");\n//var splitted = msg.payload[0].value.split(\" \");\npayload.type = msg.payload.type;\npayload.hostname = msg.payload.hostname;;\npayload.release = msg.payload.release;;\npayload.platform = msg.payload.platform;\npayload.arch =msg.payload.arch;\npayload.namespace = context.global.get('namespace');\nmsg1.payload = payload;\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
         "x": 1740,
@@ -11882,7 +11759,7 @@
         "order": 1,
         "width": 15,
         "height": "20",
-        "format": "    <script>\n        this.scope.sendRequest = function(element){\n            this.send({payload:{virtualLocation:element.Attribute[1].Value[0]}});\n        }\n        this.scope.isVisible = function(element){\n            if(element.Attribute[0].Attribute[0].Value[0] == \"\" && element.Attribute[0].Attribute[0].Value[1] == \"\")\n                return false;\n            else return true;\n        }\n    </script>\n\n    <div id=\"deck\" class=\"card-group\">\n            <div class=\"card-body\">\n            <div class=\"card text-white bg-light mb-3\" style=\"max-width: 45rem;\">\n                <ul class=\"list-group list-group-flush\">\n                 <li class=\"list-group-item\">\n                     <a class=\"text-dark\">{{msg.identifier}} Running Platform</a>\n                     <ul class=\"list-group list-group-flush\">\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Type : <strong>{{msg.payload[0].type}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Platform : <strong>{{msg.payload[0].platform}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Architecture : <strong>{{msg.payload[0].arch}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Namespace : <strong>{{msg.payload[0].namespace}}</strong></a>\n                        </li>\n                    </ul>\n                 </li>\n                </ul>\n            </div>\n            </div>\n    </div>\n    <div id=\"deck\" class=\"card-group\">\n            <div class=\"card-body\">\n            <div class=\"card text-white bg-light mb-3\" style=\"max-width: 45rem;\">\n                <ul class=\"list-group list-group-flush\">\n                 <li class=\"list-group-item\">\n                     <a class=\"text-dark\">{{msg.identifier}} Overview</a>\n                     <ul class=\"list-group list-group-flush\">\n                        <li class=\"list-group-item list-group-item-info\" ng-repeat=\"shell in msg.payload[1].assetAdministrationShells\" ng-init=\"shellIndex=$index\">\n                        <a class=\"text-info\" aria-expanded=\"true\" >Administration Shell: {{shellIndex}} </a>\n                        <ul class=\"list-group list-group-flush\">\n                            <li class=\"list-group-item\">\n                                <a class=\"text-black-50\">Identififcation : <strong>{{shell.identification.id}}</strong></a>\n                            </li>\n                            <li class=\"list-group-item \">\n                                <a class=\"text-black-50\">Asset Identification : <strong>{{shell.asset.keys[0].value}}</strong></a>\n                            </li>\n                            <li class=\"list-group-item\">\n                                <a class=\"text-black-50\">Derived From : <strong>{{shell.derivedFrom.keys[0].value}}</strong></a>\n                            </li>\n                        </ul>\n                        </li>\n                    </ul>\n                 </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n\n\n",
+        "format": "    <script>\n        this.scope.sendRequest = function(element){\n            this.send({payload:{virtualLocation:element.Attribute[1].Value[0]}});\n        }\n        this.scope.isVisible = function(element){\n            if(element.Attribute[0].Attribute[0].Value[0] == \"\" && element.Attribute[0].Attribute[0].Value[1] == \"\")\n                return false;\n            else return true;\n        }\n    </script>\n\n    <div id=\"deck\" class=\"card-group\">\n            <div class=\"card-body\">\n            <div class=\"card text-white bg-light mb-3\" style=\"max-width: 45rem;\">\n                <ul class=\"list-group list-group-flush\">\n                 <li class=\"list-group-item\">\n                     <a class=\"text-dark\">{{msg.identifier}} Running Platform</a>\n                     <ul class=\"list-group list-group-flush\">\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Hostname : <strong>{{msg.payload[0].hostname}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Type : <strong>{{msg.payload[0].type}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Platform : <strong>{{msg.payload[0].platform}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Architecture : <strong>{{msg.payload[0].arch}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Release : <strong>{{msg.payload[0].release}}</strong></a>\n                        </li>\n                        <li class=\"list-group-item list-group-item-info\">\n                            <a class=\"text-info\">Namespace : <strong>{{msg.payload[0].namespace}}</strong></a>\n                        </li>\n                    </ul>\n                 </li>\n                </ul>\n            </div>\n            </div>\n    </div>\n    <div id=\"deck\" class=\"card-group\">\n            <div class=\"card-body\">\n            <div class=\"card text-white bg-light mb-3\" style=\"max-width: 45rem;\">\n                <ul class=\"list-group list-group-flush\">\n                 <li class=\"list-group-item\">\n                     <a class=\"text-dark\">{{msg.identifier}} Overview</a>\n                     <ul class=\"list-group list-group-flush\">\n                        <li class=\"list-group-item list-group-item-info\" ng-repeat=\"shell in msg.payload[1].assetAdministrationShells\" ng-init=\"shellIndex=$index\">\n                        <a class=\"text-info\" aria-expanded=\"true\" >Administration Shell: {{shellIndex}} </a>\n                        <ul class=\"list-group list-group-flush\">\n                            <li class=\"list-group-item\">\n                                <a class=\"text-black-50\">Identififcation : <strong>{{shell.identification.id}}</strong></a>\n                            </li>\n                            <li class=\"list-group-item \">\n                                <a class=\"text-black-50\">Asset Identification : <strong>{{shell.asset.keys[0].value}}</strong></a>\n                            </li>\n                            <li class=\"list-group-item\">\n                                <a class=\"text-black-50\">Derived From : <strong>{{shell.derivedFrom.keys[0].value}}</strong></a>\n                            </li>\n                        </ul>\n                        </li>\n                    </ul>\n                 </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n\n\n",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -18970,6 +18847,56 @@
         "name": "",
         "x": 1030,
         "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "3319bd2e.c8291a",
+        "type": "OS",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "x": 1850,
+        "y": 4900,
+        "wires": [
+            [
+                "713f7fd4.702168",
+                "828fc28d.a1a1e"
+            ]
+        ]
+    },
+    {
+        "id": "6f1b8422.f0673c",
+        "type": "inject",
+        "z": "fd31082e.5487d8",
+        "name": "Test",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1650,
+        "y": 4800,
+        "wires": [
+            [
+                "3319bd2e.c8291a"
+            ]
+        ]
+    },
+    {
+        "id": "713f7fd4.702168",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2240,
+        "y": 4820,
         "wires": []
     }
 ]
