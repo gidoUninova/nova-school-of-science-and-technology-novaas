@@ -708,7 +708,11 @@
             "83b9c94b.0ffa2",
             "2a8b8c53.ecd06c",
             "8703e42e.0d2a1",
-            "f39127de.44792"
+            "f39127de.44792",
+            "36c02cf0.16e164",
+            "2f27be24.91bbfa",
+            "15537900.06473f",
+            "f0c0f9f6.9fd9e8"
         ],
         "x": 14,
         "y": 379,
@@ -852,12 +856,13 @@
             "93b0b41c.9bc748",
             "7c2173ad.c0330c",
             "fd6b6025.786b98",
-            "c60a334a.e6abe"
+            "c60a334a.e6abe",
+            "1edc3edd.e51949"
         ],
         "x": 2504,
         "y": 2679,
         "w": 1272,
-        "h": 482
+        "h": 517
     },
     {
         "id": "f8a5fa67.bfe2e",
@@ -9465,7 +9470,7 @@
         "type": "debug",
         "z": "3db1c009.99d51",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -10142,7 +10147,7 @@
         "group": "63d120af.ce7f5",
         "name": "Log",
         "order": 0,
-        "width": "40",
+        "width": "35",
         "height": "20",
         "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }\n        })(scope)\n    </script>\n    <div id=\"deck\" ng-init=\"init()\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">AAS Id</th>\n                    <th scope=\"col\">Observable Reference</th>\n                    <th scope=\"col\">_msgId</th>\n                    <th scope=\"col\">Timestamp</th>\n                    <th scope=\"col\">Value</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-info\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.AASID}}</a></td>\n                <td><a class=\"text-dark\">{{i.observableReference}}</a></td>\n                <td><a class=\"text-dark\">{{i._msgid}}</a></td>\n                <td><a class=\"text-dark\">{{i.time}}</a></td>\n                <td ng-if='i.link'><a class=\"btn btn-link\" target=\"_blank\" rel=\"noopener noreferrer\" ng-href=\"{{i.link}}\">{{i.link}}</a></td>\n                <td ng-if='i.value'><a class=\"text-dark\">{{i.value}}</a></td>\n                \n                <!--<td><a class=\"text-dark\">{{i.value}}</a></td>!-->\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
         "storeOutMessages": true,
@@ -16362,8 +16367,8 @@
         "z": "8433472b.714b98",
         "g": "afda7d68.9f20b8",
         "name": "checkStats",
-        "func": "var statsNBI = context.global.get(\"statsNBI\") || 0;\nvar statsSBI = context.global.get(\"statsSBI\") || 0;\n\nif(statsNBI === 0){\n    var msg1 = {topic:\"Msg per minute\", payload:0, ui_control:{min:0,max:statsSBI.maxMsgs}};\n} else {\n    var msg1 = {topic:\"Msg per \" + statsNBI.IntervalAndFrequency, payload:statsNBI.msgSpeed, ui_control:{min:0,max:statsSBI.maxMsgs}};\n}\n\nif(statsSBI === 0){\n    var msg2 = {topic:\"Msg per minute\", payload:0};\n} else {\n    var msg2 = {topic:\"Msg per \" + statsSBI.IntervalAndFrequency, payload:statsSBI.msgSpeed, ui_control:{min:0,max:statsSBI.maxMsgs}};\n}\n\nreturn [msg1, msg2];",
-        "outputs": 2,
+        "func": "var statsNBI = context.global.get(\"statsNBI\") || 0;\nvar statsSBI = context.global.get(\"statsSBI\") || 0;\n\nif(statsNBI === 0){\n    var msg1 = {topic:\"Msg per minute\", payload:0, ui_control:{min:0,max:statsSBI.maxMsgs}};\n    var msg2 = {topic:\"Msg per minute\", payload:0};\n} else {\n    var msg1 = {topic:\"Msg per \" + statsNBI.IntervalAndFrequency, payload:statsNBI.msgSpeed, ui_control:{min:0,max:statsSBI.maxMsgs}};\n    var msg2 = {topic:\"Msg per \" + statsNBI.msgSizeIntervalAndFrequency, payload:statsNBI.msgSize};\n}\n\nif(statsSBI === 0){\n    var msg3 = {topic:\"Msg per minute\", payload:0};\n} else {\n    var msg3 = {topic:\"Msg per \" + statsSBI.IntervalAndFrequency, payload:statsSBI.msgSpeed, ui_control:{min:0,max:statsSBI.maxMsgs}};\n}\n\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
         "noerr": 0,
         "x": 3210,
         "y": 3000,
@@ -16373,8 +16378,11 @@
                 "637fdb3.bf934a4"
             ],
             [
-                "43d97d1d.9ee74c",
-                "93b0b41c.9bc748"
+                "1edc3edd.e51949"
+            ],
+            [
+                "93b0b41c.9bc748",
+                "43d97d1d.9ee74c"
             ]
         ]
     },
@@ -16475,11 +16483,11 @@
         "interval": "1",
         "estimation": true,
         "ignore": false,
-        "x": 880,
+        "x": 910,
         "y": 620,
         "wires": [
             [
-                "2c43db2c.fe9c9c"
+                "b0715b05.2c6488"
             ],
             [
                 "cf377a9a.6c438"
@@ -16491,10 +16499,10 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "stats",
-        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nif(subscriptions.length > 0){\n    var stats = {};\n    var msgSpeed = msg.payload;\n    var msgIntervalAndFrequency = msg.intervalAndFrequency;\n    stats.msgSpeed = msgSpeed;\n    stats.IntervalAndFrequency = msgIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n} else {\n    var stats = {};\n    var msgSpeed = 0;\n    var msgIntervalAndFrequency = \"n/a\";\n    stats.msgSpeed = msgSpeed;\n    stats.IntervalAndFrequency = msgIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n}\nreturn msg;",
+        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nif(subscriptions.length > 0){\n    var stats = context.global.get(\"statsNBI\");\n    var msgSize = msg.averageMsgSize;\n    var msgSizeIntervalAndFrequency = msg.intervalAndFrequency;\n    stats.msgSize = msgSize;\n    stats.msgSizeIntervalAndFrequency = msgSizeIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n} else {\n    var stats = context.global.get(\"statsNBI\");\n    var msgSize = 0;\n    var msgSizeIntervalAndFrequency = \"n/a\";\n    stats.msgSize = msgSize;\n    stats.msgSizeIntervalAndFrequency = msgSizeIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1110,
+        "x": 1810,
         "y": 580,
         "wires": [
             []
@@ -16655,7 +16663,8 @@
         "wires": [
             [
                 "2b9e3181.250df6",
-                "726c1fdf.5d7b08"
+                "726c1fdf.5d7b08",
+                "f0c0f9f6.9fd9e8"
             ]
         ]
     },
@@ -16688,7 +16697,8 @@
         "wires": [
             [
                 "a1e9ac51.a91f6",
-                "1d1bda6b.87f21e"
+                "1d1bda6b.87f21e",
+                "7009ab05.115a74"
             ]
         ]
     },
@@ -16755,7 +16765,8 @@
         "wires": [
             [
                 "b0be8914.9b46c8",
-                "5075892.d34fcf8"
+                "5075892.d34fcf8",
+                "15537900.06473f"
             ]
         ]
     },
@@ -16780,8 +16791,8 @@
         "z": "44340bcc.3da454",
         "g": "e764eb53.6268c",
         "name": "cyclinderStatus",
-        "func": "var outMsg = {};\noutMsg.topic = \"put\";\nvar cylinderStatus = context.flow.get(\"cylinderStatus\");\nif(cylinderStatus != \"undefined\"){\n    outMsg.payload = {\n        tstamp: context.flow.get(\"timestamp\"),\n        data: cylinderStatus\n    };\n    return outMsg;\n}\nreturn null;",
-        "outputs": 1,
+        "func": "var outMsg = {};\noutMsg.topic = \"put\";\nvar cylinderStatus = context.flow.get(\"cylinderStatus\");\nif(cylinderStatus != \"undefined\"){\n    outMsg.payload = {\n        tstamp: context.flow.get(\"timestamp\"),\n        data: cylinderStatus\n    };\n    return [outMsg, null];\n}\nreturn [null, outMsg];",
+        "outputs": 2,
         "noerr": 0,
         "x": 520,
         "y": 2660,
@@ -16790,6 +16801,9 @@
                 "d8540c7.46fecf",
                 "f09e6332.ee7f",
                 "30b0ab2a.1bf14c"
+            ],
+            [
+                "f09e6332.ee7f"
             ]
         ]
     },
@@ -16822,7 +16836,8 @@
         "wires": [
             [
                 "1e19ff37.ef2b41",
-                "a416219d.558d98"
+                "a416219d.558d98",
+                "2f27be24.91bbfa"
             ]
         ]
     },
@@ -16855,7 +16870,8 @@
         "wires": [
             [
                 "d7b765a9.bab59",
-                "9ab51c01.289f5"
+                "9ab51c01.289f5",
+                "36c02cf0.16e164"
             ]
         ]
     },
@@ -17649,7 +17665,7 @@
         "g": "e764eb53.6268c",
         "topic": "driver/metrics",
         "name": "",
-        "x": 700,
+        "x": 800,
         "y": 2700,
         "wires": []
     },
@@ -17699,7 +17715,7 @@
         "seg1": "",
         "seg2": "",
         "x": 3540,
-        "y": 3080,
+        "y": 3118,
         "wires": []
     },
     {
@@ -17740,7 +17756,7 @@
         ],
         "outputs": 1,
         "x": 3600,
-        "y": 3120,
+        "y": 3155,
         "wires": [
             []
         ]
@@ -18052,8 +18068,8 @@
         "z": "8433472b.714b98",
         "g": "afda7d68.9f20b8",
         "name": "checkStats",
-        "func": "var statsSBI = context.global.get(\"statsSBI\");\nvar msg1 = {topic:\"Msg per minute\", payload:0, ui_control:{min:0,max:statsSBI.maxMsgs}};\nvar msg2 = {topic:\"Msg per minute\", payload:0};\n\nreturn [msg1, msg2];",
-        "outputs": 2,
+        "func": "var statsSBI = context.global.get(\"statsSBI\");\nvar msg1 = {topic:\"Msg per minute\", payload:0, ui_control:{min:0,max:statsSBI.maxMsgs}};\nvar msg2 = {topic:\"Msg Size per minute\", payload:0};\nvar msg3 = {topic:\"Msg per minute\", payload:0};\n\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
         "noerr": 0,
         "x": 3210,
         "y": 3060,
@@ -18061,6 +18077,9 @@
             [
                 "b9f13fac.8e8dd",
                 "637fdb3.bf934a4"
+            ],
+            [
+                "1edc3edd.e51949"
             ],
             [
                 "43d97d1d.9ee74c",
@@ -18402,7 +18421,7 @@
         "wires": [
             [
                 "4fc7fe8f.a5bc58",
-                "e05fcd52.be3ca8"
+                "35ab961d.d6237a"
             ]
         ]
     },
@@ -18429,7 +18448,7 @@
             "3e11fc1c.d74334"
         ],
         "x": 1875,
-        "y": 640,
+        "y": 660,
         "wires": []
     },
     {
@@ -18903,6 +18922,175 @@
         "statusType": "auto",
         "x": 2240,
         "y": 4820,
+        "wires": []
+    },
+    {
+        "id": "35ab961d.d6237a",
+        "type": "msg-size",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "frequency": "min",
+        "interval": 1,
+        "statusContent": "avg",
+        "estimation": false,
+        "ignore": false,
+        "pauseAtStartup": false,
+        "humanReadableStatus": true,
+        "x": 1660,
+        "y": 640,
+        "wires": [
+            [
+                "2c43db2c.fe9c9c"
+            ],
+            [
+                "e05fcd52.be3ca8"
+            ]
+        ]
+    },
+    {
+        "id": "b0715b05.2c6488",
+        "type": "unsafe-function",
+        "z": "670d9c89.6d0424",
+        "name": "stats",
+        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nif(subscriptions.length > 0){\n    var stats = context.global.get(\"statsNBI\") || {};\n    var msgSpeed = msg.payload;\n    var msgIntervalAndFrequency = msg.intervalAndFrequency;\n    stats.msgSpeed = msgSpeed;\n    stats.IntervalAndFrequency = msgIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n} else {\n    var stats = context.global.get(\"statsNBI\") || {};\n    var msgSpeed = 0;\n    var msgIntervalAndFrequency = \"n/a\";\n    stats.msgSpeed = msgSpeed;\n    stats.IntervalAndFrequency = msgIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1130,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1edc3edd.e51949",
+        "type": "ui_chart",
+        "z": "8433472b.714b98",
+        "g": "afda7d68.9f20b8",
+        "name": "",
+        "group": "d8770726.1a10d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Msg Size over time chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 3601,
+        "y": 3080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36c02cf0.16e164",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 3540,
+        "wires": []
+    },
+    {
+        "id": "2f27be24.91bbfa",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 3060,
+        "wires": []
+    },
+    {
+        "id": "15537900.06473f",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "7009ab05.115a74",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 748.75,
+        "y": 1164.5833740234375,
+        "wires": []
+    },
+    {
+        "id": "f0c0f9f6.9fd9e8",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 600,
         "wires": []
     }
 ]
