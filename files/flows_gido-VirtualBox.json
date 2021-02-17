@@ -430,7 +430,9 @@
             "1f1ce2c5.9cb5cd"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 322
     },
     {
         "id": "d366c10f.cbf158",
@@ -481,7 +483,9 @@
             "b88a92c6.fb547"
         ],
         "x": 194,
-        "y": 3374.22216796875
+        "y": 3374.22216796875,
+        "w": 2962,
+        "h": 686.77783203125
     },
     {
         "id": "8ba0dee2.7f7be8",
@@ -525,9 +529,7 @@
             "234d668e.b04b9a"
         ],
         "x": 34,
-        "y": 4199,
-        "w": 2872,
-        "h": 516
+        "y": 4199
     },
     {
         "id": "e764eb53.6268c",
@@ -711,9 +713,7 @@
             "f0c0f9f6.9fd9e8"
         ],
         "x": 14,
-        "y": 379,
-        "w": 2892,
-        "h": 3642
+        "y": 379
     },
     {
         "id": "a5ca466b.4777d8",
@@ -740,9 +740,7 @@
             "cec7e1d0.707e4"
         ],
         "x": 64,
-        "y": 19,
-        "w": 1602,
-        "h": 322
+        "y": 19
     },
     {
         "id": "69ba9a0.96d9268",
@@ -786,9 +784,7 @@
             "c0c852c.b2a68b"
         ],
         "x": 55.54718017578125,
-        "y": 2333.094940185547,
-        "w": 1270.4528198242188,
-        "h": 431.99999809265137
+        "y": 2333.094940185547
     },
     {
         "id": "765dc1ff.c7dec",
@@ -816,9 +812,7 @@
             "7e9fdc28.3f20dc"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 242
+        "y": 2679
     },
     {
         "id": "afda7d68.9f20b8",
@@ -856,9 +850,7 @@
             "1edc3edd.e51949"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "f8a5fa67.bfe2e",
@@ -928,9 +920,7 @@
             "a7149c2a.caa5a"
         ],
         "x": 1584,
-        "y": 1479,
-        "w": 2222,
-        "h": 866.25
+        "y": 1479
     },
     {
         "id": "618135a3.0d2814",
@@ -951,9 +941,7 @@
             "b8349ad2.6a14"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "e511710e.7c7f18",
@@ -979,9 +967,7 @@
             "8ff0382e.7b1738"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "eae7782c.8caca8",
@@ -1052,9 +1038,7 @@
             "f0e55403.a549a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3372,
-        "h": 962
+        "y": 99
     },
     {
         "id": "37a4080e.40ed9",
@@ -7123,49 +7107,6 @@
         ]
     },
     {
-        "id": "193ea7ef.5b58b8",
-        "type": "actionflows_in",
-        "z": "7585249f.880c0c",
-        "name": "readSubmodelElement in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 380,
-        "y": 1100,
-        "wires": [
-            [
-                "abf1d24d.7e581"
-            ]
-        ]
-    },
-    {
-        "id": "ea49a028.95bea",
-        "type": "actionflows_out",
-        "z": "7585249f.880c0c",
-        "name": "readSubmodelElement out",
-        "links": [],
-        "x": 2300,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "e3345420.a32068",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "ReadSubmodelElement",
-        "func": "var submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif(msg.jsonataStatus == \"Success\"){\n    var submodels = msg.jsonataResult;\n    for(var index1 in submodels){\n        var submodelElements = submodels[index1].submodelElements;\n        for(var index2 in submodelElements){\n            var submodelElement = submodelElements[index2];\n            if(submodelElement.idShort === submodelElementId){\n                selectedSubmodels.push(submodels[index1]);\n                selctedSubmodelElements.push(submodelElement);\n            }\n        }\n    }\n    if(selectedSubmodels.length > 0){\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for(var index3 in shells){\n            if(shells[index3].identification.id === ShellId){\n                var submodelRefs = shells[index3].submodels;\n                for(var index4 in submodelRefs){\n                    var ref = submodelRefs[index4];\n                    for(var index5 in selectedSubmodels){\n                        if(ref.keys[0].value === selectedSubmodels[index5].identification.id){\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                        }\n                    }\n                }\n            }\n        }\n    } else {\n        msg.statusCode = \"404\";\n        msg.payload = \"SubmodelElement with id:\" + submodelElementId + \" not found\";\n    }\n    \n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1250,
-        "y": 1100,
-        "wires": [
-            [
-                "ea49a028.95bea",
-                "343c6bc9.91ae14"
-            ]
-        ]
-    },
-    {
         "id": "e879f7c2.1f9498",
         "type": "actionflows_in",
         "z": "7585249f.880c0c",
@@ -7881,38 +7822,6 @@
         "wires": [
             [
                 "4b7901f0.6bbe8"
-            ]
-        ]
-    },
-    {
-        "id": "abf1d24d.7e581",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "BuildingJsonataQuery...",
-        "func": "var submodelId = msg.req.params.submodelId;\n\njsonataQuery = \"[$[idShort=\\\"\" + submodelId + \"\\\"]]\";\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\nmsg.submodelsJsonStr = JSON.stringify(submodels);\nmsg.jsonata = jsonataQuery;\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 730,
-        "y": 1100,
-        "wires": [
-            [
-                "67187eda.52d97"
-            ]
-        ]
-    },
-    {
-        "id": "67187eda.52d97",
-        "type": "jsonata",
-        "z": "7585249f.880c0c",
-        "name": "jsonata",
-        "property": "submodelsJsonStr",
-        "jsonata": "",
-        "jsonataOpts": "",
-        "x": 980,
-        "y": 1100,
-        "wires": [
-            [
-                "e3345420.a32068"
             ]
         ]
     },
@@ -15957,21 +15866,6 @@
         ]
     },
     {
-        "id": "343c6bc9.91ae14",
-        "type": "debug",
-        "z": "7585249f.880c0c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1510,
-        "y": 1040,
-        "wires": []
-    },
-    {
         "id": "a3ec15bc.b3e59",
         "type": "http in",
         "z": "c7caf96e.a31f98",
@@ -19111,5 +19005,127 @@
                 "ebc9e870.a00398"
             ]
         ]
+    },
+    {
+        "id": "18128767.2b8b71",
+        "type": "actionflows_in",
+        "z": "7585249f.880c0c",
+        "name": "readSubmodelElement in",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 390,
+        "y": 1100,
+        "wires": [
+            [
+                "84f391fb.1b9108"
+            ]
+        ]
+    },
+    {
+        "id": "dbe4655.3217798",
+        "type": "actionflows_out",
+        "z": "7585249f.880c0c",
+        "name": "readSubmodelElement out",
+        "links": [],
+        "x": 2310,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "a79e8fc6.edc59",
+        "type": "unsafe-function",
+        "z": "7585249f.880c0c",
+        "name": "ReadSubmodelElement",
+        "func": "var iterate = function(submodelElementId, collectionIds, submodelElements){\n    for(var index in submodelElements){\n        var submodelElement = submodelElements[index];\n        if(submodelElement.modelType.name !== \"SubmodelElementCollection\"){\n                if(submodelElement.idShort === submodelElementId){\n                    return submodelElement;\n                    \n                }\n            }  else {\n                for(var collIndex in collectionIds){\n                    var collectionId = collectionIds[collIndex];\n                    if(submodelElement.idShort === collectionId){\n                        collectionIds.splice(collIndex, 1);\n                        var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                        return result;\n                }\n                }\n                \n            }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelId.split(\"/\");\nsubmodelId = splittedSubmodel[0];\n\nif(splittedSubmodel.length > 1){\n    for(var index in splittedSubmodel){\n        if(index > 0){\n            submodelCollectionId.push(splittedSubmodel[index]);\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif(msg.jsonataStatus == \"Success\"){\n    var submodels = msg.jsonataResult;\n    for(var index1 in submodels){\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\"){\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if(selectedSubmodels.length > 0){\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for(var index3 in shells){\n            if(shells[index3].identification.id === ShellId){\n                var submodelRefs = shells[index3].submodels;\n                for(var index4 in submodelRefs){\n                    var ref = submodelRefs[index4];\n                    for(var index5 in selectedSubmodels){\n                        if(ref.keys[0].value === selectedSubmodels[index5].identification.id){\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                        }\n                    }\n                }\n            }\n        }\n    } else {\n        msg.statusCode = \"404\";\n        msg.payload = \"SubmodelElement with id:\" + submodelElementId + \" not found\";\n    }\n    \n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1260,
+        "y": 1100,
+        "wires": [
+            [
+                "dbe4655.3217798",
+                "5891422c.8306cc"
+            ]
+        ]
+    },
+    {
+        "id": "84f391fb.1b9108",
+        "type": "unsafe-function",
+        "z": "7585249f.880c0c",
+        "name": "BuildingJsonataQuery...",
+        "func": "var submodelId = msg.req.params.submodelId;\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelId.split(\"/\");\nvar jsonataQuery = \"[$[idShort=\\\"\" + splittedSubmodel[0] + \"\\\"]]\";\n\nvar manifest = context.flow.get('manifest');\n    \nvar submodels = manifest.submodels;\nmsg.submodelsJsonStr = JSON.stringify(submodels);\nmsg.jsonata = jsonataQuery;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 1100,
+        "wires": [
+            [
+                "130b9e71.df3e8a",
+                "e11cc9ff.59b02"
+            ]
+        ]
+    },
+    {
+        "id": "130b9e71.df3e8a",
+        "type": "jsonata",
+        "z": "7585249f.880c0c",
+        "name": "jsonata",
+        "property": "submodelsJsonStr",
+        "jsonata": "",
+        "jsonataOpts": "",
+        "x": 990,
+        "y": 1100,
+        "wires": [
+            [
+                "a79e8fc6.edc59",
+                "b0af427b.0e7ea8"
+            ]
+        ]
+    },
+    {
+        "id": "5891422c.8306cc",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1520,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "e11cc9ff.59b02",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1040,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "b0af427b.0e7ea8",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1300,
+        "y": 1060,
+        "wires": []
     }
 ]
