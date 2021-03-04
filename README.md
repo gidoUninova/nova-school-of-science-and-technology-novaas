@@ -36,10 +36,6 @@ To access the backend the user needs to insert username and password. These are 
 - username: admin
 - password: password
 
-An already built image is part of the repository and can be accessed here:
-
-https://gitlab.com/gidouninova/novaas/container_registry
-
 ## Using Docker-compose
 
 The docker-compose command is the following:
@@ -52,6 +48,11 @@ To build and run the image. Furthermore, the command:
 
 can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING and HOST in the .env file.
 
+## Using the pre-built image
+
+An already built image is part of the repository and can be accessed here:
+
+https://gitlab.com/gidouninova/novaas/container_registry
 
 ## Run another version of NOVAAS from this base folder
 
