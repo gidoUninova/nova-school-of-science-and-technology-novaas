@@ -777,11 +777,12 @@
             "779ff867.94293",
             "f31795b7.8000d",
             "309b8128.737fce",
-            "28ed3c82.06228c"
+            "28ed3c82.06228c",
+            "983208d5.9b5e"
         ],
-        "x": 55.54718017578125,
+        "x": 54,
         "y": 2333.094940185547,
-        "w": 1270.4528198242188,
+        "w": 1272,
         "h": 431.99999809265137
     },
     {
@@ -15865,10 +15866,10 @@
         "type": "comment",
         "z": "2164c119.f88826",
         "g": "d7076418.bb51d8",
-        "name": "Session Management - 15 secs for this demo",
+        "name": "Session Management - 30 secs for this demo",
         "info": "",
-        "x": 263.04718017578125,
-        "y": 2557.094946861267,
+        "x": 250,
+        "y": 2520,
         "wires": []
     },
     {
@@ -17641,6 +17642,7 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 1700,
         "y": 1860,
         "wires": [
@@ -19143,5 +19145,33 @@
         "x": 3270,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "983208d5.9b5e",
+        "type": "ui_button",
+        "z": "2164c119.f88826",
+        "g": "d7076418.bb51d8",
+        "name": " Logout button",
+        "group": "5b380ea4.54d28",
+        "order": 22,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Logout",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "logout",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 2580,
+        "wires": [
+            [
+                "4e98c9a7.ddc0e8"
+            ]
+        ]
     }
 ]
