@@ -1549,15 +1549,6 @@
         "collapse": false
     },
     {
-        "id": "bebd1a76.551ec8",
-        "type": "node-red-contrib-httpauthfile",
-        "name": "",
-        "authType": "Basic",
-        "realm": "myRealm",
-        "filePath": "/app/.node-red/httpauth/httpauthfile.txt",
-        "hashed": false
-    },
-    {
         "id": "7a30c02.5d2894",
         "type": "ui_group",
         "name": "Information",
@@ -2324,6 +2315,36 @@
         "disp": true,
         "width": "5",
         "collapse": false
+    },
+    {
+        "id": "bebd1a76.551ec8",
+        "type": "node-red-contrib-httpauthfile",
+        "name": "",
+        "authType": "Basic",
+        "realm": "myRealm",
+        "filePath": "/app/.node-red/httpauth/httpauthfile.txt",
+        "hashed": false
+    },
+    {
+        "id": "e70d9188.7d95e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "$(BROKER_SERVICE_HOST)",
+        "port": "$(BROKER_SERVICE_PORT)",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
     },
     {
         "id": "d56e5f93.f422c",
@@ -9404,7 +9425,7 @@
         "topic": "",
         "qos": "",
         "retain": "",
-        "broker": "",
+        "broker": "e70d9188.7d95e",
         "x": 1150,
         "y": 820,
         "wires": []
@@ -9829,27 +9850,6 @@
         "wires": [
             [
                 "8c3f137a.f60d68"
-            ]
-        ]
-    },
-    {
-        "id": "8c3f137a.f60d68",
-        "type": "node-red-contrib-httpauth",
-        "z": "c7caf96e.a31f98",
-        "g": "10392549.d972b3",
-        "name": "handle http Auth",
-        "file": "bebd1a76.551ec8",
-        "cred": "",
-        "authType": "Basic",
-        "realm": "",
-        "username": "",
-        "password": "",
-        "hashed": false,
-        "x": 762,
-        "y": 386,
-        "wires": [
-            [
-                "ece6df22.01841"
             ]
         ]
     },
@@ -14152,27 +14152,6 @@
         ]
     },
     {
-        "id": "6ff3febf.38e72",
-        "type": "node-red-contrib-httpauth",
-        "z": "c7caf96e.a31f98",
-        "g": "10392549.d972b3",
-        "name": "handle http Auth",
-        "file": "bebd1a76.551ec8",
-        "cred": "",
-        "authType": "Basic",
-        "realm": "",
-        "username": "",
-        "password": "",
-        "hashed": false,
-        "x": 752,
-        "y": 506,
-        "wires": [
-            [
-                "e67e2ede.e4bdc8"
-            ]
-        ]
-    },
-    {
         "id": "e67e2ede.e4bdc8",
         "type": "link out",
         "z": "c7caf96e.a31f98",
@@ -16112,7 +16091,7 @@
         "z": "2164c119.f88826",
         "g": "d7076418.bb51d8",
         "name": "Login Group",
-        "func": "var msg = {};\n\n//msg.payload = {tab: \"Login\"};\n/*msg.payload = { group: {\n    hide : [\"Login_SensorData\", \"Login_History\"],\n    show : [\"Login_Signin\"]\n}\n};*/\n\nmsg.payload = { group: {\n    hide : [\"Login_Commands\", \"Login_Body\"],\n    show : [\"Login_Login\"]\n}\n};\n\nreturn msg;",
+        "func": "var msg = {};\n\n//msg.payload = {tab: \"Login\"};\n/*msg.payload = { group: {\n    hide : [\"Login_SensorData\", \"Login_History\"],\n    show : [\"Login_Signin\"]\n}\n};*/\n\nmsg.payload = { group: {\n    hide : [\"Login_Commands\", \"Login_Body\", \"Login_Health\"],\n    show : [\"Login_Login\"]\n}\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19171,6 +19150,46 @@
         "wires": [
             [
                 "4e98c9a7.ddc0e8"
+            ]
+        ]
+    },
+    {
+        "id": "8c3f137a.f60d68",
+        "type": "node-red-contrib-httpauth",
+        "z": "c7caf96e.a31f98",
+        "name": "handle http Auth",
+        "file": "bebd1a76.551ec8",
+        "cred": "",
+        "authType": "Basic",
+        "realm": "",
+        "username": "",
+        "password": "",
+        "hashed": false,
+        "x": 762,
+        "y": 386,
+        "wires": [
+            [
+                "ece6df22.01841"
+            ]
+        ]
+    },
+    {
+        "id": "6ff3febf.38e72",
+        "type": "node-red-contrib-httpauth",
+        "z": "c7caf96e.a31f98",
+        "name": "handle http Auth",
+        "file": "bebd1a76.551ec8",
+        "cred": "",
+        "authType": "Basic",
+        "realm": "",
+        "username": "",
+        "password": "",
+        "hashed": false,
+        "x": 752,
+        "y": 506,
+        "wires": [
+            [
+                "e67e2ede.e4bdc8"
             ]
         ]
     }

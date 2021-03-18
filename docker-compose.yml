@@ -2,9 +2,11 @@ version: '2.4'
 services:
     novaas:
         build: .
-        image: "novaas_festo_dpdm/dockerbase:1.0.0"
+        image: "registry.gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas:latest"
         environment:
             - "PORT_FORWARDING=${PORT_FORWARDING}" 
             - "HOST=${HOST}"
+            - "BROKER_SERVICE_HOST=${BROKER_SERVICE_HOST}"
+            - "BROKER_SERVICE_PORT=${BROKER_SERVICE_PORT}"
         ports:
             - "${PORT_FORWARDING}:1880"
