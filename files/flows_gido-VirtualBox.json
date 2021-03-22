@@ -875,7 +875,9 @@
             "c3b69ef7.26da48",
             "14af5723.cd5839",
             "6f0e3cf4.b41acc",
-            "db56541d.47959"
+            "db56541d.47959",
+            "45903dfe.700804",
+            "dae4e81e.eb5528"
         ],
         "x": 214,
         "y": 99,
@@ -2209,7 +2211,7 @@
         "group": "f9f1bdc8.0e017",
         "order": 2,
         "width": "5",
-        "height": "25"
+        "height": "28"
     },
     {
         "id": "bbfbe12.a34272",
@@ -2218,7 +2220,7 @@
         "group": "76f4488e.b66968",
         "order": 2,
         "width": "5",
-        "height": "15"
+        "height": "18"
     },
     {
         "id": "4534a6d5.677c78",
@@ -2237,7 +2239,7 @@
         "group": "4534a6d5.677c78",
         "order": 2,
         "width": "5",
-        "height": "15"
+        "height": "18"
     },
     {
         "id": "4944a8dc.cb1658",
@@ -2256,7 +2258,7 @@
         "group": "4944a8dc.cb1658",
         "order": 2,
         "width": "5",
-        "height": "15"
+        "height": "18"
     },
     {
         "id": "a9cc6929.51b4",
@@ -2275,7 +2277,7 @@
         "group": "a9cc6929.51b4",
         "order": 4,
         "width": "5",
-        "height": "31"
+        "height": "34"
     },
     {
         "id": "1e8a2f3d.54af89",
@@ -2304,7 +2306,7 @@
         "group": "c8188165.80a358",
         "order": 2,
         "width": "6",
-        "height": "20"
+        "height": "23"
     },
     {
         "id": "1a940952.a8af7f",
@@ -3675,8 +3677,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1410,
-        "y": 100,
+        "x": 1510,
+        "y": 180,
         "wires": []
     },
     {
@@ -7640,8 +7642,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1181.1112060546875,
-        "y": 118.8888931274414,
+        "x": 1170,
+        "y": 180,
         "wires": []
     },
     {
@@ -9172,7 +9174,7 @@
         "type": "unsafe-function",
         "z": "fd31082e.5487d8",
         "name": "PrepareOutput",
-        "func": "//msg.filename = msg.payload.value;\n//msg.staticDocs = \"/home/gido/.node-red-novaas/\";\nvar fn = msg.req.params.fn;\nmsg.filename = context.global.get('staticDocs') + \"aasx/docu/\" + fn;\n//msg.payload = \"aasx/4830902_DPDM-6-15-PA---_0_.pdf\";\nreturn msg;\n\n\n",
+        "func": "//msg.filename = msg.payload.value;\n//msg.staticDocs = \"/home/gido/.node-red-novaas/\";\nvar fn = msg.req.params.fn;\nmsg.filename = context.global.get('staticDocs') + \"aasx/Document/\" + fn;\n//msg.payload = \"aasx/4830902_DPDM-6-15-PA---_0_.pdf\";\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1200,
@@ -9973,14 +9975,17 @@
         "type": "unsafe-function",
         "z": "fd31082e.5487d8",
         "name": "Set Global Context",
-        "func": "\nvar os = context.global.get('os');\nvar path = context.global.get('path');\nvar fs = context.global.get('fs');\n\ncontext.global.set(\"Drivers\", []);\n\nvar interfaces = os.networkInterfaces();\nvar addresses = [];\n\nfor (var k in interfaces) {\n    for (var k2 in interfaces[k]) {\n        var address = interfaces[k][k2];\n        if (address.family === 'IPv4' && !address.internal) {\n            addresses.push(address.address);\n        }\n    }\n}\n\nvar host = addresses[0];\nvar port = context.global.get('uiPort');\n\n\ncontext.global.set('namespace',\"http://\" + host + \":\" + port);\n\n                   \n//Retrieving the home directory\nvar homedirectory = context.global.get('staticDocs');\nvar asmodelfolder = \"manifest\";\n\nvar modelDir = path.join(homedirectory, asmodelfolder);\ncontext.global.set(\"ModelDir\", modelDir); \n\n//Building up the path to find the models\nvar fileName = \"Aml_as_manifest.json\";\nvar filePath = path.join(modelDir, fileName);\ncontext.global.set(\"ModelFilePath\", filePath);\n\n//var driversfolder = \"drivers\";\n//var driversFilePath = path.join(homedirectory, driversfolder);\n//context.global.set(\"DriversFilePath\", driversFilePath);\n\n\nvar novaasIdentifier = context.global.get(\"AASIdentifier\") || \"\";\nif(novaasIdentifier === \"\"){\n    novaasIdentifier = \"http://novaas@\" + host + \":\" + port + \"/aas\";\n}\n\ncontext.global.set(\"AASIdentifier\", novaasIdentifier);\n\nreturn msg;",
-        "outputs": 1,
+        "func": "\nvar os = context.global.get('os');\nvar path = context.global.get('path');\nvar fs = context.global.get('fs');\n\ncontext.global.set(\"Drivers\", []);\n\nvar interfaces = os.networkInterfaces();\nvar addresses = [];\n\nfor (var k in interfaces) {\n    for (var k2 in interfaces[k]) {\n        var address = interfaces[k][k2];\n        if (address.family === 'IPv4' && !address.internal) {\n            addresses.push(address.address);\n        }\n    }\n}\n\nvar host = addresses[0];\nvar port = context.global.get('uiPort');\n\n\ncontext.global.set('namespace',\"http://\" + host + \":\" + port);\n\n                   \n//Retrieving the home directory\nvar homedirectory = context.global.get('staticDocs');\nvar asmodelfolderRef = \"aasx/_rels/aasx-origin.rels\";\n\nvar modelDirRef = path.join(homedirectory, asmodelfolderRef);\ncontext.global.set(\"ModelDirRef\", modelDirRef);\nmsg.filename = modelDirRef;\n\nvar msg2 = {};\nvar thumbnailRef = \"_rels/.rels\";\n\nvar thumbnailDirRef = path.join(homedirectory, thumbnailRef);\ncontext.global.set(\"AssetThumbnailRef\", thumbnailDirRef);\nmsg2.filename = thumbnailDirRef;\n\n\n\n\nvar novaasIdentifier = context.global.get(\"AASIdentifier\") || \"\";\nif(novaasIdentifier === \"\"){\n    novaasIdentifier = \"http://novaas@\" + host + \":\" + port + \"/aas\";\n}\n\ncontext.global.set(\"AASIdentifier\", novaasIdentifier);\n\nreturn [msg, msg2];",
+        "outputs": 2,
         "noerr": 0,
         "x": 630,
         "y": 40,
         "wires": [
             [
-                "a26f2e9e.3d0a3"
+                "5da4edd2.1f440c"
+            ],
+            [
+                "b552652f.7d8388"
             ]
         ]
     },
@@ -9989,12 +9994,12 @@
         "type": "debug",
         "z": "fd31082e.5487d8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 870,
+        "x": 1570,
         "y": 40,
         "wires": []
     },
@@ -16767,8 +16772,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 894.8831787109375,
-        "y": 154.88335418701172,
+        "x": 1130,
+        "y": 160,
         "wires": []
     },
     {
@@ -17011,8 +17016,8 @@
         "fwdInMessages": false,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 2780,
-        "y": 300,
+        "x": 3080,
+        "y": 280,
         "wires": [
             []
         ]
@@ -17047,8 +17052,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 2800.08349609375,
-        "y": 222.08338928222656,
+        "x": 3100.08349609375,
+        "y": 202.08338928222656,
         "wires": [
             [
                 "ed973683.3fdac8"
@@ -17070,8 +17075,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 2801.3334045410156,
-        "y": 261.6667022705078,
+        "x": 3101.3334045410156,
+        "y": 241.6667022705078,
         "wires": [
             []
         ]
@@ -17104,8 +17109,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 3001.58349609375,
-        "y": 222.08338928222656,
+        "x": 3301.58349609375,
+        "y": 202.08338928222656,
         "wires": []
     },
     {
@@ -18696,12 +18701,12 @@
         "order": 1,
         "width": 10,
         "height": "20",
-        "format": "<img src=\"/images/novaas_concerned_asset.jpg\"/>",
+        "format": "<img src=\"{{msg.payload}}\">",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 2770,
+        "x": 3070,
         "y": 340,
         "wires": [
             []
@@ -18753,18 +18758,18 @@
         "order": 1,
         "group": "76f4488e.b66968",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
@@ -18827,23 +18832,25 @@
         "order": 1,
         "group": "f9f1bdc8.0e017",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
         ],
         "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
         "name": "",
         "x": 1030,
         "y": 780,
@@ -18857,23 +18864,25 @@
         "order": 1,
         "group": "4534a6d5.677c78",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
         ],
         "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
         "name": "",
         "x": 1030,
         "y": 820,
@@ -18887,23 +18896,25 @@
         "order": 1,
         "group": "4944a8dc.cb1658",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
         ],
         "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
         "name": "",
         "x": 1030,
         "y": 857,
@@ -18917,23 +18928,25 @@
         "order": 1,
         "group": "a9cc6929.51b4",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
         ],
         "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
         "name": "",
         "x": 1030,
         "y": 900,
@@ -18947,23 +18960,25 @@
         "order": 1,
         "group": "1e8a2f3d.54af89",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
         ],
         "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
         "name": "",
         "x": 1030,
         "y": 940,
@@ -18977,23 +18992,25 @@
         "order": 1,
         "group": "c8188165.80a358",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
         ],
         "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
         "name": "",
         "x": 1030,
         "y": 979,
@@ -19007,23 +19024,25 @@
         "order": 1,
         "group": "1a940952.a8af7f",
         "width": "5",
-        "height": "5",
+        "height": "2",
         "label": "",
         "labelPlacement": "right",
         "labelAlignment": "right",
         "colorForValue": [
             {
-                "color": "red",
+                "color": "#ff0000",
                 "value": "false",
                 "valueType": "bool"
             },
             {
-                "color": "green",
+                "color": "#008000",
                 "value": "true",
                 "valueType": "bool"
             }
         ],
         "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
         "name": "",
         "x": 1030,
         "y": 1020,
@@ -19157,6 +19176,7 @@
         "id": "8c3f137a.f60d68",
         "type": "node-red-contrib-httpauth",
         "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
         "name": "handle http Auth",
         "file": "bebd1a76.551ec8",
         "cred": "",
@@ -19177,6 +19197,7 @@
         "id": "6ff3febf.38e72",
         "type": "node-red-contrib-httpauth",
         "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
         "name": "handle http Auth",
         "file": "bebd1a76.551ec8",
         "cred": "",
@@ -19192,5 +19213,166 @@
                 "e67e2ede.e4bdc8"
             ]
         ]
+    },
+    {
+        "id": "34b6971b.cc224",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "set Model Filepath",
+        "func": "var modelFilePath = context.global.get(\"staticDocs\").slice(0, -1) + msg.payload.Relationships.Relationship[0].$.Target;\ncontext.global.set(\"ModelFilePath\", modelFilePath);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1410,
+        "y": 40,
+        "wires": [
+            [
+                "a26f2e9e.3d0a3"
+            ]
+        ]
+    },
+    {
+        "id": "5da4edd2.1f440c",
+        "type": "file in",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 1070,
+        "y": 40,
+        "wires": [
+            [
+                "2ac4939d.2c7be4"
+            ]
+        ]
+    },
+    {
+        "id": "2ac4939d.2c7be4",
+        "type": "xml",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1210,
+        "y": 40,
+        "wires": [
+            [
+                "34b6971b.cc224"
+            ]
+        ]
+    },
+    {
+        "id": "45903dfe.700804",
+        "type": "inject",
+        "z": "2164c119.f88826",
+        "g": "1d9f40e2.66e59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2670,
+        "y": 340,
+        "wires": [
+            [
+                "dae4e81e.eb5528"
+            ]
+        ]
+    },
+    {
+        "id": "dae4e81e.eb5528",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "1d9f40e2.66e59f",
+        "name": "",
+        "func": "msg.payload = context.global.get(\"ThumbnailFilePath\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2880,
+        "y": 340,
+        "wires": [
+            [
+                "8de2ce5c.1783c8"
+            ]
+        ]
+    },
+    {
+        "id": "b552652f.7d8388",
+        "type": "file in",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 1070,
+        "y": 100,
+        "wires": [
+            [
+                "f98581a.2ae798"
+            ]
+        ]
+    },
+    {
+        "id": "f98581a.2ae798",
+        "type": "xml",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1210,
+        "y": 100,
+        "wires": [
+            [
+                "c2016cbb.a6e598"
+            ]
+        ]
+    },
+    {
+        "id": "c2016cbb.a6e598",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "set Thumbnail Filepath",
+        "func": "var thumbnailFilePath = msg.payload.Relationships.Relationship[1].$.Target;\ncontext.global.set(\"ThumbnailFilePath\", thumbnailFilePath);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1420,
+        "y": 100,
+        "wires": [
+            [
+                "46ff0e8a.9a3288"
+            ]
+        ]
+    },
+    {
+        "id": "46ff0e8a.9a3288",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1630,
+        "y": 100,
+        "wires": []
     }
 ]
