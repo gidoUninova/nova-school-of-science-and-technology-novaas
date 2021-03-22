@@ -14,7 +14,7 @@ The docker command to create the NOVAAS image is the following:
 
 Once the image has been created the followig docker command can be used to start a new container that runs the NOVAAS image:
 
-`docker run --env PORT_FORWARDING=1870 --env HOST=localhost -p 1870:1880 name_of_the_image:ver -d`
+`docker run --env PORT_FORWARDING=1870 --env HOST=localhost --env BROKER_SERVICE_HOST=localhost --env BROKER_SERVICE_PORT=1883 -p 1870:1880 name_of_the_image:ver -d`
 
 After executing the above commands, the NOVAAS will be accessible at the following link:
 
