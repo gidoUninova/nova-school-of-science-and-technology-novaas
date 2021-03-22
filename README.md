@@ -29,6 +29,8 @@ The NOVAAS embeds an MQTT client for pushing out data. This client needs to be c
 
 http://localhost:1870
 
+or by properly configure the following environmental variables: i) $BROKER_SERVICE_HOST that is used to set-up the host where the mqtt broker is running; and ii) $BROKER_SERVICE_PORT that is used to set-up the port used by the mqtt broker. 
+
 ![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.40.31.png)"NOVAAS Backend once user is logged in"
 
 To access the backend the user needs to insert username and password. These are the default username and password from the node-red settings file, namely:
@@ -57,11 +59,9 @@ https://gitlab.com/gidouninova/novaas/container_registry
 ## Run another version of NOVAAS from this base folder
 
 NOVAAS has been designed in order to be as generic as possible, if you want to run your own version of the NOVAAS you should perform the following steps:
-1. Add all the documentation files (datashees, user manuals, etc.) within the folder "file/aasx/docu", the names of the files should be aligned with the names in the manifest;
-1. Add an image of the concerned asset within the folder "files/images". Note that the name of the file **must** be kept -> novaas_concerned_asset.jpg;
-1. Add the Manifest file within the folder "files/manifest". Note that the name of the file **must** be kept -> AmI_as_manifest.json. In particular this file follows the data model provided in https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part1_V3.html and can be created by using the aasx-package-explorer tool (https://github.com/admin-shell-io/aasx-package-explorer) ;
+1. Add the environment model file within the folder "files/". Note that the name of the file **must** be kept -> model.aasx. In particular this file follows the data model provided in https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part1_V3.html and can be created by using the aasx-package-explorer tool (https://github.com/admin-shell-io/aasx-package-explorer); The aasx-package-explorer tool allows to save the environment model in several formats. However, the file format currently supported by NOVAAS is "aasx w JSON";
 1. Change the httpauth file in the folder "files/httpauth" properly;
-1. Run the docker and/0r docker-compose commands. 
+1. Run the docker and/or docker-compose commands. 
 
 ## NOVAAS in action (Click on the Image to Show the Video)
 
