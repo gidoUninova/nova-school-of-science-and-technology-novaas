@@ -430,7 +430,9 @@
             "1f1ce2c5.9cb5cd"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 322
     },
     {
         "id": "d366c10f.cbf158",
@@ -481,7 +483,9 @@
             "b88a92c6.fb547"
         ],
         "x": 194,
-        "y": 3374.22216796875
+        "y": 3374.22216796875,
+        "w": 2962,
+        "h": 686.77783203125
     },
     {
         "id": "8ba0dee2.7f7be8",
@@ -9153,7 +9157,7 @@
         "y": 4183,
         "wires": [
             [
-                "cac1840b.273ab8"
+                "33dfaad2.2f66be"
             ]
         ]
     },
@@ -9168,67 +9172,6 @@
         "x": 3115,
         "y": 4183,
         "wires": []
-    },
-    {
-        "id": "cac1840b.273ab8",
-        "type": "unsafe-function",
-        "z": "fd31082e.5487d8",
-        "name": "PrepareOutput",
-        "func": "//msg.filename = msg.payload.value;\n//msg.staticDocs = \"/home/gido/.node-red-novaas/\";\nvar fn = msg.req.params.fn;\nmsg.filename = context.global.get('staticDocs') + \"aasx/Document/\" + fn;\n//msg.payload = \"aasx/4830902_DPDM-6-15-PA---_0_.pdf\";\nreturn msg;\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1200,
-        "y": 4183,
-        "wires": [
-            [
-                "35a31ce7.ca5fd4"
-            ]
-        ]
-    },
-    {
-        "id": "8ce2baa0.e83948",
-        "type": "file in",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "filename": "",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 1630,
-        "y": 4183,
-        "wires": [
-            [
-                "1619def7.8eb651"
-            ]
-        ]
-    },
-    {
-        "id": "35a31ce7.ca5fd4",
-        "type": "change",
-        "z": "fd31082e.5487d8",
-        "name": "Set Headers",
-        "rules": [
-            {
-                "t": "set",
-                "p": "headers",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 4183,
-        "wires": [
-            [
-                "8ce2baa0.e83948"
-            ]
-        ]
     },
     {
         "id": "e0886cb3.b2a44",
@@ -19374,5 +19317,124 @@
         "x": 1630,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "33dfaad2.2f66be",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "PrepareOutput",
+        "func": "//msg.filename = msg.payload.value;\n//msg.staticDocs = \"/home/gido/.node-red-novaas/\";\nvar fn = msg.req.params.fn;\n//msg.filename = context.global.get('staticDocs') + \"aasx/Document/\" + fn;\nmsg.payload = \"-name\" + \" \" + fn;\n//msg.payload = \"aasx/4830902_DPDM-6-15-PA---_0_.pdf\";\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 980,
+        "y": 4180,
+        "wires": [
+            [
+                "2c5fff4c.088d18"
+            ]
+        ]
+    },
+    {
+        "id": "389ecac2.32281e",
+        "type": "file in",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 1850,
+        "y": 4160,
+        "wires": [
+            [
+                "1619def7.8eb651"
+            ]
+        ]
+    },
+    {
+        "id": "9454af3.ef43f5",
+        "type": "change",
+        "z": "fd31082e.5487d8",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1670,
+        "y": 4160,
+        "wires": [
+            [
+                "389ecac2.32281e"
+            ]
+        ]
+    },
+    {
+        "id": "2c5fff4c.088d18",
+        "type": "exec",
+        "z": "fd31082e.5487d8",
+        "command": "find",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 1250,
+        "y": 4180,
+        "wires": [
+            [
+                "92440de2.fa50f8",
+                "3bc52742.f5a13"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "92440de2.fa50f8",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 4140,
+        "wires": []
+    },
+    {
+        "id": "3bc52742.f5a13",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "PrepareOutput",
+        "func": "//msg.filename = msg.payload.value;\n//msg.staticDocs = \"/home/gido/.node-red-novaas/\";\nif(msg.payload != \"\"){\n    msg.filename = msg.payload;\n    //msg.payload = \"aasx/4830902_DPDM-6-15-PA---_0_.pdf\";\n    return [msg, null];\n} else {\n    msg.payload = \"document Not found\"\n    return [null, msg];\n}\n\n\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1480,
+        "y": 4180,
+        "wires": [
+            [
+                "9454af3.ef43f5"
+            ],
+            [
+                "1619def7.8eb651"
+            ]
+        ]
     }
 ]
