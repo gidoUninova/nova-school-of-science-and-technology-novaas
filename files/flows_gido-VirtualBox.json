@@ -529,7 +529,9 @@
             "234d668e.b04b9a"
         ],
         "x": 34,
-        "y": 4199
+        "y": 4199,
+        "w": 2872,
+        "h": 516
     },
     {
         "id": "e764eb53.6268c",
@@ -608,10 +610,6 @@
             "89e5925.5505a7",
             "b3a800e6.a29a8",
             "bc308362.e42d",
-            "3ca44267.3ce7be",
-            "52a2f1a5.1a3ed",
-            "d346597a.ae74f8",
-            "b621c86f.d41f18",
             "a021c58a.ecaa38",
             "765768ca.558788",
             "212e31cc.b3b22e",
@@ -630,7 +628,6 @@
             "9013cf3.6104b3",
             "59056746.35ae18",
             "30c42b36.d40824",
-            "8396a5d5.2c23e8",
             "8eed227b.f0fd",
             "aa908150.2b707",
             "d529c53.5108438",
@@ -648,7 +645,6 @@
             "c51cdd9d.6eb25",
             "5bee7bd0.7270b4",
             "f043a7a5.7ff1f8",
-            "b8432828.250018",
             "39275ee3.16c332",
             "1f20d73d.6aa1a9",
             "6537a286.fb390c",
@@ -666,7 +662,6 @@
             "e3de33fa.42495",
             "428a888d.111098",
             "5c8f3ff3.9492f",
-            "fac3d9c9.91ff68",
             "850e7647.007848",
             "4c5aee67.e2a16",
             "de697a2e.9ca3e8",
@@ -684,24 +679,11 @@
             "52ba5ddf.191df4",
             "3dbc10fa.de307",
             "7c26f024.22e61",
-            "5a5ee6da.81223",
-            "2cef83f3.ced6e4",
-            "e75ec357.7809a8",
-            "8acbd7ce.5c1778",
-            "b40100b8.4012f8",
-            "999a8bd1.368ba8",
             "71db3d39.91031c",
             "1f10e263.823406",
-            "726c1fdf.5d7b08",
-            "1d1bda6b.87f21e",
             "2b6e2b77.8b01bc",
-            "f09e6332.ee7f",
-            "a416219d.558d98",
-            "9ab51c01.289f5",
             "67941dbe.bfde3c",
-            "213d0113.03209e",
             "17d6c621.3b5ac2",
-            "2b9d542a.16a2d4",
             "30b0ab2a.1bf14c",
             "83b9c94b.0ffa2",
             "2a8b8c53.ecd06c",
@@ -710,10 +692,40 @@
             "36c02cf0.16e164",
             "2f27be24.91bbfa",
             "15537900.06473f",
-            "f0c0f9f6.9fd9e8"
+            "f0c0f9f6.9fd9e8",
+            "66bb6b.f38c6c94",
+            "54cee3c7.e1a9ec",
+            "8ebdbd20.6d149",
+            "5a2df726.a67778",
+            "5190f1da.086858",
+            "b7d51c73.5004b8",
+            "f6ec6364.9d27a",
+            "6797cad5.4c39b4",
+            "2e16b56b.a18de2",
+            "ab5f5b43.c34ff8",
+            "3216a5b8.dccc3a",
+            "99be0df0.d4b93",
+            "1936def3.e78721",
+            "98c363c4.a215d",
+            "2e8027c3.5cd1b8",
+            "56dcf371.e97e34",
+            "561d6014.5cc02",
+            "25e04e1.2f7dab2",
+            "6e51717d.3337a8",
+            "af8e2413.0f5f8",
+            "396fd766.552db8",
+            "63a8474b.bb437",
+            "62c54fdb.2fcea",
+            "e31a57ca.b5274",
+            "2111b7c3.d51d88",
+            "4be96b93.f5bd1c",
+            "b6321f8d.1dec1",
+            "a239d88d.2c5f7"
         ],
         "x": 14,
-        "y": 379
+        "y": 379,
+        "w": 2852,
+        "h": 3642
     },
     {
         "id": "a5ca466b.4777d8",
@@ -734,13 +746,15 @@
             "2c17a016.22b63",
             "471bd5c3.5b06ec",
             "53630693.cfe0a",
-            "7d3815c0.7593f4",
             "57c2b84b.d79938",
             "45db3a70.87fa04",
-            "cec7e1d0.707e4"
+            "cec7e1d0.707e4",
+            "a4c7092a.dcefd"
         ],
         "x": 64,
-        "y": 19
+        "y": 19,
+        "w": 1522,
+        "h": 322
     },
     {
         "id": "d7076418.bb51d8",
@@ -2351,6 +2365,18 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "d2edf304.fdfa2",
+        "type": "sub-link-config",
+        "name": "southbound",
+        "clone": false
+    },
+    {
+        "id": "72ae2011.f3d7b",
+        "type": "sub-link-config",
+        "name": "driver",
+        "clone": false
     },
     {
         "id": "d56e5f93.f422c",
@@ -9255,22 +9281,6 @@
         "wires": []
     },
     {
-        "id": "14038bb4.a14a34",
-        "type": "topic-link in",
-        "z": "670d9c89.6d0424",
-        "topic": "aas/suothbound/routed",
-        "appendTopic": false,
-        "name": "",
-        "x": 260,
-        "y": 620,
-        "wires": [
-            [
-                "891362a3.fb32c",
-                "66816677.7a4348"
-            ]
-        ]
-    },
-    {
         "id": "891362a3.fb32c",
         "type": "debug",
         "z": "670d9c89.6d0424",
@@ -9284,7 +9294,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 470,
-        "y": 600,
+        "y": 660,
         "wires": []
     },
     {
@@ -10202,7 +10212,7 @@
         "links": [],
         "scope": "global",
         "x": 480,
-        "y": 1320,
+        "y": 1340,
         "wires": [
             [
                 "5cebb994.b28cc8",
@@ -10217,8 +10227,8 @@
         "g": "e764eb53.6268c",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimeUnsub out",
         "links": [],
-        "x": 2430,
-        "y": 1320,
+        "x": 2420,
+        "y": 1340,
         "wires": []
     },
     {
@@ -10230,8 +10240,8 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n\n// Create an Observation Event Object ------------------------------------\nvar observation = {};\nobservation.id = uuid;\nobservation.source = msg.source;\nobservation.direction = \"Output\";\nobservation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nif(context.flow.get(\"timestamp\")){\n    observation.timestamp = context.flow.get(\"timestamp\");\n} else{\n    observation.timestamp = new Date().getTime();\n}\nobservation.payload = \"Data Flow removed\";\n//observation.href = msg.href;\n// END Create an Observation Object --------------------------------\n//outputMsgs.push(observation);\n\n//msg.payload = outputMsgs;\n//msg.payload = JSON.stringify(observation);\n//msg.test = JSON.parse(msg.payload);\ncontext.flow.set(\"responseTimeObsObj\", \"\");\nmsg.payload = observation;\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1123,
-        "y": 1320,
+        "x": 1120,
+        "y": 1340,
         "wires": [
             [
                 "d891b6d8.18fe28",
@@ -10325,8 +10335,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 460,
-        "y": 1820,
+        "x": 450,
+        "y": 1840,
         "wires": [
             [
                 "5c828e7.c23c97",
@@ -10341,8 +10351,8 @@
         "g": "e764eb53.6268c",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ValvePositionUnsub out",
         "links": [],
-        "x": 2410,
-        "y": 1820,
+        "x": 2400,
+        "y": 1840,
         "wires": []
     },
     {
@@ -10354,8 +10364,8 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n\n// Create an Observation Event Object ------------------------------------\nvar observation = {};\nobservation.id = uuid;\nobservation.source = msg.source;\nobservation.direction = \"Output\";\nobservation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nif(context.flow.get(\"timestamp\")){\n    observation.timestamp = context.flow.get(\"timestamp\");\n} else{\n    observation.timestamp = new Date().getTime();\n}\nobservation.payload = \"Data Flow removed\";\n//observation.href = msg.href;\n// END Create an Observation Object --------------------------------\n//outputMsgs.push(observation);\n\n//msg.payload = outputMsgs;\n//msg.payload = JSON.stringify(observation);\n//msg.test = JSON.parse(msg.payload);\ncontext.flow.set(\"valvePositionObsObj\", \"\");\nmsg.payload = observation;\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1143,
-        "y": 1820,
+        "x": 1140,
+        "y": 1840,
         "wires": [
             [
                 "f3961359.5444c",
@@ -10482,8 +10492,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 500,
-        "y": 760,
+        "x": 490,
+        "y": 780,
         "wires": [
             [
                 "3edff644.7f827a",
@@ -10498,8 +10508,8 @@
         "g": "e764eb53.6268c",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CurrentOperatingPressureUnsub out",
         "links": [],
-        "x": 2450,
-        "y": 760,
+        "x": 2440,
+        "y": 780,
         "wires": []
     },
     {
@@ -10511,8 +10521,8 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n\n// Create an Observation Event Object ------------------------------------\nvar observation = {};\nobservation.id = uuid;\nobservation.source = msg.source;\nobservation.direction = \"Output\";\nobservation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nobservation.timestamp = new Date().getTime();\nobservation.payload = \"Data Flow removed\";\n//observation.href = msg.href;\n// END Create an Observation Object --------------------------------\n//outputMsgs.push(observation);\n\n//msg.payload = outputMsgs;\n//msg.payload = JSON.stringify(observation);\n//msg.test = JSON.parse(msg.payload);\ncontext.flow.set(\"currentOpPressureObsObj\", \"\");\nmsg.payload = observation;\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1130,
-        "y": 760,
+        "x": 1120,
+        "y": 780,
         "wires": [
             [
                 "aac8e523.6a8f68",
@@ -10549,7 +10559,7 @@
         "wires": [
             [
                 "814e0c1a.5162",
-                "52a2f1a5.1a3ed"
+                "f6ec6364.9d27a"
             ]
         ]
     },
@@ -10803,8 +10813,8 @@
         "y": 1200,
         "wires": [
             [
-                "3ca44267.3ce7be",
-                "a021c58a.ecaa38"
+                "a021c58a.ecaa38",
+                "b7d51c73.5004b8"
             ]
         ]
     },
@@ -10877,7 +10887,7 @@
         "wires": [
             [
                 "e074929a.19c68",
-                "d346597a.ae74f8"
+                "5190f1da.086858"
             ]
         ]
     },
@@ -11120,7 +11130,7 @@
         "wires": [
             [
                 "bc308362.e42d",
-                "b621c86f.d41f18"
+                "6797cad5.4c39b4"
             ]
         ]
     },
@@ -11137,50 +11147,6 @@
         "complete": "true",
         "x": 2570,
         "y": 2200,
-        "wires": []
-    },
-    {
-        "id": "3ca44267.3ce7be",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/suothbound/routed",
-        "name": "",
-        "x": 2770,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "52a2f1a5.1a3ed",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/suothbound/routed",
-        "name": "",
-        "x": 2770,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "d346597a.ae74f8",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/suothbound/routed",
-        "name": "",
-        "x": 2770,
-        "y": 1720,
-        "wires": []
-    },
-    {
-        "id": "b621c86f.d41f18",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/suothbound/routed",
-        "name": "",
-        "x": 2770,
-        "y": 2160,
         "wires": []
     },
     {
@@ -11481,7 +11447,7 @@
         "wires": [
             [
                 "30c42b36.d40824",
-                "8396a5d5.2c23e8"
+                "5a2df726.a67778"
             ]
         ]
     },
@@ -11498,17 +11464,6 @@
         "complete": "true",
         "x": 2570,
         "y": 2660,
-        "wires": []
-    },
-    {
-        "id": "8396a5d5.2c23e8",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/suothbound/routed",
-        "name": "",
-        "x": 2770,
-        "y": 2620,
         "wires": []
     },
     {
@@ -11804,7 +11759,7 @@
         "links": [],
         "scope": "global",
         "x": 470,
-        "y": 3680,
+        "y": 3700,
         "wires": [
             [
                 "be9376e0.f77028",
@@ -11820,7 +11775,7 @@
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimePredUnsub out",
         "links": [],
         "x": 2420,
-        "y": 3680,
+        "y": 3700,
         "wires": []
     },
     {
@@ -11833,7 +11788,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1100,
-        "y": 3680,
+        "y": 3700,
         "wires": [
             [
                 "f6a8a1eb.fa43b",
@@ -11853,7 +11808,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 1410,
-        "y": 3700,
+        "y": 3720,
         "wires": []
     },
     {
@@ -11925,7 +11880,7 @@
         "wires": [
             [
                 "f043a7a5.7ff1f8",
-                "b8432828.250018"
+                "54cee3c7.e1a9ec"
             ]
         ]
     },
@@ -11942,17 +11897,6 @@
         "complete": "true",
         "x": 2570,
         "y": 3600,
-        "wires": []
-    },
-    {
-        "id": "b8432828.250018",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/suothbound/routed",
-        "name": "",
-        "x": 2770,
-        "y": 3560,
         "wires": []
     },
     {
@@ -12225,7 +12169,7 @@
         "wires": [
             [
                 "5c8f3ff3.9492f",
-                "fac3d9c9.91ff68"
+                "8ebdbd20.6d149"
             ]
         ]
     },
@@ -12242,17 +12186,6 @@
         "complete": "true",
         "x": 2570,
         "y": 3120,
-        "wires": []
-    },
-    {
-        "id": "fac3d9c9.91ff68",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/suothbound/routed",
-        "name": "",
-        "x": 2770,
-        "y": 3080,
         "wires": []
     },
     {
@@ -13790,8 +13723,8 @@
         "wires": [
             [
                 "2b9e3181.250df6",
-                "726c1fdf.5d7b08",
-                "f0c0f9f6.9fd9e8"
+                "f0c0f9f6.9fd9e8",
+                "2e8027c3.5cd1b8"
             ]
         ]
     },
@@ -13824,8 +13757,8 @@
         "wires": [
             [
                 "a1e9ac51.a91f6",
-                "1d1bda6b.87f21e",
-                "7009ab05.115a74"
+                "7009ab05.115a74",
+                "98c363c4.a215d"
             ]
         ]
     },
@@ -13858,8 +13791,8 @@
         "wires": [
             [
                 "ac03f0ff.d7422",
-                "bbba0824.273ce",
-                "83b9c94b.0ffa2"
+                "83b9c94b.0ffa2",
+                "1936def3.e78721"
             ]
         ]
     },
@@ -13892,8 +13825,8 @@
         "wires": [
             [
                 "b0be8914.9b46c8",
-                "5075892.d34fcf8",
-                "15537900.06473f"
+                "15537900.06473f",
+                "99be0df0.d4b93"
             ]
         ]
     },
@@ -13907,7 +13840,7 @@
         "dataField": "",
         "disableDiscover": false,
         "x": 830,
-        "y": 2200,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -13926,11 +13859,11 @@
         "wires": [
             [
                 "d8540c7.46fecf",
-                "f09e6332.ee7f",
-                "30b0ab2a.1bf14c"
+                "30b0ab2a.1bf14c",
+                "3216a5b8.dccc3a"
             ],
             [
-                "f09e6332.ee7f"
+                "3216a5b8.dccc3a"
             ]
         ]
     },
@@ -13944,7 +13877,7 @@
         "dataField": "",
         "disableDiscover": false,
         "x": 800,
-        "y": 2660,
+        "y": 2640,
         "wires": [
             []
         ]
@@ -13963,8 +13896,8 @@
         "wires": [
             [
                 "1e19ff37.ef2b41",
-                "a416219d.558d98",
-                "2f27be24.91bbfa"
+                "2f27be24.91bbfa",
+                "ab5f5b43.c34ff8"
             ]
         ]
     },
@@ -13997,8 +13930,8 @@
         "wires": [
             [
                 "d7b765a9.bab59",
-                "9ab51c01.289f5",
-                "36c02cf0.16e164"
+                "36c02cf0.16e164",
+                "2e16b56b.a18de2"
             ]
         ]
     },
@@ -14205,138 +14138,7 @@
         "y": 200,
         "wires": [
             [
-                "7d3815c0.7593f4"
-            ]
-        ]
-    },
-    {
-        "id": "7d3815c0.7593f4",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "a5ca466b.4777d8",
-        "topic": "aas/southbound/configSchedule",
-        "name": "",
-        "x": 1500,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "5a5ee6da.81223",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/southbound/configSchedule",
-        "appendTopic": true,
-        "name": "",
-        "x": 230,
-        "y": 640,
-        "wires": [
-            [
-                "2cfd83f7.7eff1c",
-                "593b509b.6c48f",
-                "1f10e263.823406"
-            ]
-        ]
-    },
-    {
-        "id": "2cef83f3.ced6e4",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/southbound/configSchedule",
-        "appendTopic": true,
-        "name": "",
-        "x": 250,
-        "y": 1200,
-        "wires": [
-            [
-                "ac973b55.db62e",
-                "d40c10a5.0d56a",
-                "71db3d39.91031c"
-            ]
-        ]
-    },
-    {
-        "id": "ef174c.c1b758b8",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "topic": "aas/southbound/configSchedule",
-        "appendTopic": true,
-        "name": "",
-        "x": 250,
-        "y": 1720,
-        "wires": [
-            [
-                "f19fbf03.8b095",
-                "b9418edb.d4e3b"
-            ]
-        ]
-    },
-    {
-        "id": "e75ec357.7809a8",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/southbound/configSchedule",
-        "appendTopic": true,
-        "name": "",
-        "x": 250,
-        "y": 2160,
-        "wires": [
-            [
-                "dc1fd283.a0d01",
-                "2b6e2b77.8b01bc"
-            ]
-        ]
-    },
-    {
-        "id": "8acbd7ce.5c1778",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/southbound/configSchedule",
-        "appendTopic": true,
-        "name": "",
-        "x": 250,
-        "y": 2620,
-        "wires": [
-            [
-                "5c9e031c.e1552c",
-                "7c26f024.22e61"
-            ]
-        ]
-    },
-    {
-        "id": "b40100b8.4012f8",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/southbound/configSchedule",
-        "appendTopic": true,
-        "name": "",
-        "x": 250,
-        "y": 3080,
-        "wires": [
-            [
-                "5d0c4fe9.a305b",
-                "3dbc10fa.de307"
-            ]
-        ]
-    },
-    {
-        "id": "999a8bd1.368ba8",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/southbound/configSchedule",
-        "appendTopic": true,
-        "name": "",
-        "x": 250,
-        "y": 3560,
-        "wires": [
-            [
-                "5cb91a29.a918e4",
-                "52ba5ddf.191df4"
+                "a4c7092a.dcefd"
             ]
         ]
     },
@@ -14354,8 +14156,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 1160,
+        "x": 510,
+        "y": 1280,
         "wires": []
     },
     {
@@ -14373,7 +14175,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 490,
-        "y": 600,
+        "y": 720,
         "wires": []
     },
     {
@@ -14428,81 +14230,6 @@
         ],
         "x": 3115,
         "y": 3940,
-        "wires": []
-    },
-    {
-        "id": "726c1fdf.5d7b08",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "driver/metrics",
-        "name": "",
-        "x": 780,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "1d1bda6b.87f21e",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "driver/metrics",
-        "name": "",
-        "x": 740,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "bbba0824.273ce",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "topic": "driver/metrics",
-        "name": "",
-        "x": 700,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "5075892.d34fcf8",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "topic": "driver/metrics",
-        "name": "",
-        "x": 760,
-        "y": 2240,
-        "wires": []
-    },
-    {
-        "id": "f09e6332.ee7f",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "driver/metrics",
-        "name": "",
-        "x": 800,
-        "y": 2700,
-        "wires": []
-    },
-    {
-        "id": "a416219d.558d98",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "driver/metrics",
-        "name": "",
-        "x": 660,
-        "y": 3160,
-        "wires": []
-    },
-    {
-        "id": "9ab51c01.289f5",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "driver/metrics",
-        "name": "",
-        "x": 660,
-        "y": 3640,
         "wires": []
     },
     {
@@ -14588,22 +14315,6 @@
         ]
     },
     {
-        "id": "213d0113.03209e",
-        "type": "topic-link in",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "driver/metrics",
-        "appendTopic": true,
-        "name": "",
-        "x": 1010,
-        "y": 3820,
-        "wires": [
-            [
-                "67941dbe.bfde3c"
-            ]
-        ]
-    },
-    {
         "id": "17d6c621.3b5ac2",
         "type": "unsafe-function",
         "z": "44340bcc.3da454",
@@ -14616,33 +14327,7 @@
         "y": 3800,
         "wires": [
             [
-                "2b9d542a.16a2d4"
-            ]
-        ]
-    },
-    {
-        "id": "2b9d542a.16a2d4",
-        "type": "topic-link out",
-        "z": "44340bcc.3da454",
-        "g": "e764eb53.6268c",
-        "topic": "aas/southbound/driver/metrics",
-        "name": "",
-        "x": 2170,
-        "y": 3800,
-        "wires": []
-    },
-    {
-        "id": "8b60b69b.dc508",
-        "type": "topic-link in",
-        "z": "670d9c89.6d0424",
-        "topic": "aas/southbound/driver/metrics",
-        "appendTopic": true,
-        "name": "",
-        "x": 290,
-        "y": 700,
-        "wires": [
-            [
-                "fbd472e7.d10f48"
+                "66bb6b.f38c6c94"
             ]
         ]
     },
@@ -15141,8 +14826,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
-        "y": 3540,
+        "x": 650,
+        "y": 3580,
         "wires": []
     },
     {
@@ -15159,8 +14844,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
-        "y": 3060,
+        "x": 630,
+        "y": 3100,
         "wires": []
     },
     {
@@ -19436,5 +19121,646 @@
                 "1619def7.8eb651"
             ]
         ]
+    },
+    {
+        "id": "fc7978cd.cdc41",
+        "type": "debug",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1550,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "b91fb15c.d6bbe",
+        "type": "debug",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1550,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "c46ec5d0.e4e248",
+        "type": "inject",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 500,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66bb6b.f38c6c94",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2100,
+        "y": 3800,
+        "wires": []
+    },
+    {
+        "id": "6eab8307.06c5ec",
+        "type": "sub-link-output",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "topic": "metrics",
+        "link": "d2edf304.fdfa2",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 210,
+        "y": 700,
+        "wires": [
+            [
+                "fbd472e7.d10f48"
+            ],
+            [
+                "8ba74a55.e37468"
+            ]
+        ]
+    },
+    {
+        "id": "8ba74a55.e37468",
+        "type": "debug",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "bf636294.91c428",
+        "type": "sub-link-output",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "topic": "routed",
+        "link": "d2edf304.fdfa2",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "66816677.7a4348"
+            ],
+            [
+                "891362a3.fb32c"
+            ]
+        ]
+    },
+    {
+        "id": "54cee3c7.e1a9ec",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "routed",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2710,
+        "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "8ebdbd20.6d149",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "routed",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2710,
+        "y": 3080,
+        "wires": []
+    },
+    {
+        "id": "5a2df726.a67778",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "routed",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2690,
+        "y": 2620,
+        "wires": []
+    },
+    {
+        "id": "6797cad5.4c39b4",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "routed",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2690,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "5190f1da.086858",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "routed",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2690,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "b7d51c73.5004b8",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "routed",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2690,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "f6ec6364.9d27a",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "routed",
+        "alias": "",
+        "aliasType": "str",
+        "link": "d2edf304.fdfa2",
+        "x": 2690,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "2e16b56b.a18de2",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 680,
+        "y": 3640,
+        "wires": []
+    },
+    {
+        "id": "ab5f5b43.c34ff8",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 640,
+        "y": 3140,
+        "wires": []
+    },
+    {
+        "id": "3216a5b8.dccc3a",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 780,
+        "y": 2680,
+        "wires": []
+    },
+    {
+        "id": "99be0df0.d4b93",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 780,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "1936def3.e78721",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 780,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "98c363c4.a215d",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 780,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "2e8027c3.5cd1b8",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 760,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "56dcf371.e97e34",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "metrics",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 990,
+        "y": 3820,
+        "wires": [
+            [
+                "67941dbe.bfde3c"
+            ],
+            [
+                "c75a38c7.df9c9"
+            ]
+        ]
+    },
+    {
+        "id": "c75a38c7.df9c9",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1250,
+        "y": 3860,
+        "wires": []
+    },
+    {
+        "id": "a4c7092a.dcefd",
+        "type": "sub-link-input",
+        "z": "44340bcc.3da454",
+        "g": "a5ca466b.4777d8",
+        "name": "",
+        "topic": "configSchedule",
+        "alias": "",
+        "aliasType": "str",
+        "link": "72ae2011.f3d7b",
+        "x": 1480,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "561d6014.5cc02",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 200,
+        "y": 640,
+        "wires": [
+            [
+                "2cfd83f7.7eff1c",
+                "593b509b.6c48f"
+            ],
+            [
+                "1f10e263.823406"
+            ]
+        ]
+    },
+    {
+        "id": "25e04e1.2f7dab2",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 200,
+        "y": 1200,
+        "wires": [
+            [
+                "d40c10a5.0d56a",
+                "ac973b55.db62e"
+            ],
+            [
+                "71db3d39.91031c"
+            ]
+        ]
+    },
+    {
+        "id": "6e51717d.3337a8",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 200,
+        "y": 1720,
+        "wires": [
+            [
+                "f19fbf03.8b095",
+                "b9418edb.d4e3b"
+            ],
+            [
+                "af8e2413.0f5f8"
+            ]
+        ]
+    },
+    {
+        "id": "af8e2413.0f5f8",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "396fd766.552db8",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 200,
+        "y": 2160,
+        "wires": [
+            [
+                "dc1fd283.a0d01",
+                "2b6e2b77.8b01bc"
+            ],
+            [
+                "63a8474b.bb437"
+            ]
+        ]
+    },
+    {
+        "id": "63a8474b.bb437",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "62c54fdb.2fcea",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 200,
+        "y": 2620,
+        "wires": [
+            [
+                "7c26f024.22e61",
+                "5c9e031c.e1552c"
+            ],
+            [
+                "e31a57ca.b5274"
+            ]
+        ]
+    },
+    {
+        "id": "e31a57ca.b5274",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 2700,
+        "wires": []
+    },
+    {
+        "id": "2111b7c3.d51d88",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 200,
+        "y": 3080,
+        "wires": [
+            [
+                "5d0c4fe9.a305b",
+                "3dbc10fa.de307"
+            ],
+            [
+                "b6321f8d.1dec1"
+            ]
+        ]
+    },
+    {
+        "id": "4be96b93.f5bd1c",
+        "type": "sub-link-output",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 200,
+        "y": 3560,
+        "wires": [
+            [
+                "5cb91a29.a918e4",
+                "52ba5ddf.191df4"
+            ],
+            [
+                "a239d88d.2c5f7"
+            ]
+        ]
+    },
+    {
+        "id": "b6321f8d.1dec1",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "a239d88d.2c5f7",
+        "type": "debug",
+        "z": "44340bcc.3da454",
+        "g": "e764eb53.6268c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 3640,
+        "wires": []
     }
 ]
