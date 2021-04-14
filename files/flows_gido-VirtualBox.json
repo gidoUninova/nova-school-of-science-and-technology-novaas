@@ -861,7 +861,6 @@
             "13eaa4a6.391393",
             "655852a0.36bea4",
             "7a918d3a.b1ea34",
-            "c37add0d.9710f",
             "aa9b9e00.d9a198",
             "eb868983.45c2e8",
             "57cc2b70.afb41c",
@@ -885,7 +884,8 @@
             "45903dfe.700804",
             "dae4e81e.eb5528",
             "ac226da6.8565c8",
-            "566bb148.1d86f"
+            "566bb148.1d86f",
+            "f76cbbfe.4be85"
         ],
         "x": 214,
         "y": 99,
@@ -16902,29 +16902,6 @@
         ]
     },
     {
-        "id": "c37add0d.9710f",
-        "type": "ui_template",
-        "z": "2164c119.f88826",
-        "g": "1d9f40e2.66e59f",
-        "group": "c56f01cc.380dd",
-        "name": "ConceptDescriptions",
-        "order": 1,
-        "width": "30",
-        "height": "20",
-        "format": "    <script>\n        (function(scope) {\n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.conceptDescriptions = [];\n                        var descriptions = msg.payload; \n                        for(var description in descriptions){\n                            var conceptDescription = {};\n                            conceptDescription.id = descriptions[description].identification.id;\n                            conceptDescription.modelType = descriptions[description].modelType.name;\n                            var dataSpecification = descriptions[description].embeddedDataSpecifications[0].dataSpecificationContent;\n                            var langs = dataSpecification.preferredName;\n                            for(var lang in langs){\n                                if(langs[lang].language == \"en\"){\n                                    conceptDescription.preferredName = langs[lang].text;\n                                }\n                            }\n                            conceptDescription.shortName = dataSpecification.shortName;\n                            conceptDescription.unit = dataSpecification.unit;\n                            conceptDescription.dataType = dataSpecification.dataType;\n                            var defLangs = dataSpecification.definition;\n                            for(var defLang in defLangs){\n                                if(defLangs[defLang].language == \"en\"){\n                                    conceptDescription.definition = defLangs[defLang].text;\n                                }\n                            }\n                                    //scope.send({payload:dataInterfaceElement});\n                                    scope.conceptDescriptions.push(conceptDescription);\n                        }\n                        scope.send({payload:scope.conceptDescriptions});\n                    }\n                        \n                }\n            });\n/*            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }*/\n        })(scope)\n    </script>\n    <div id=\"deck\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">Id</th>\n                    <th scope=\"col\">modelType</th>\n                    <th scope=\"col\">preferredName</th>\n                    <th scope=\"col\">shortName</th>\n                    <th scope=\"col\">unit</th>\n                    <th scope=\"col\">dataType</th>\n                    <th scope=\"col\">definition</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr ng-repeat=\"cd in conceptDescriptions\">\n                <td><a class=\"text-dark\">{{cd.id}}</a></td>\n                <td><a class=\"text-dark\">{{cd.modelType}}</a></td>\n                <td><a class=\"text-dark\">{{cd.preferredName}}</a></td>\n                <td><a class=\"text-dark\">{{cd.shortName}}</a></td>\n                <td><a class=\"text-dark\">{{cd.unit}}</a></td>\n                <td><a class=\"text-dark\">{{cd.dataType}}</a></td>\n                <td><a class=\"text-dark\">{{cd.definition}}</a></td>\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "x": 3040,
-        "y": 420,
-        "wires": [
-            [
-                "57cc2b70.afb41c"
-            ]
-        ]
-    },
-    {
         "id": "aa9b9e00.d9a198",
         "type": "debug",
         "z": "2164c119.f88826",
@@ -17077,8 +17054,8 @@
         "y": 420,
         "wires": [
             [
-                "c37add0d.9710f",
-                "2fa38586.c0acea"
+                "2fa38586.c0acea",
+                "f76cbbfe.4be85"
             ]
         ]
     },
@@ -19735,6 +19712,29 @@
             [
                 "40ba0174.feea08",
                 "db56541d.47959"
+            ]
+        ]
+    },
+    {
+        "id": "f76cbbfe.4be85",
+        "type": "ui_template",
+        "z": "2164c119.f88826",
+        "g": "1d9f40e2.66e59f",
+        "group": "c56f01cc.380dd",
+        "name": "ConceptDescriptions",
+        "order": 1,
+        "width": "30",
+        "height": "20",
+        "format": "    <script>\n        (function(scope) {\n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.conceptDescriptions = [];\n                        var descriptions = msg.payload; \n                        for(var description in descriptions){\n                            var conceptDescription = {};\n                            conceptDescription.id = descriptions[description].identification.id;\n                            conceptDescription.modelType = descriptions[description].modelType.name;\n                            if(descriptions[description].embeddedDataSpecifications.length > 0){\n                                var dataSpecification = descriptions[description].embeddedDataSpecifications[0].dataSpecificationContent;\n                                var langs = dataSpecification.preferredName;\n                                for(var lang in langs){\n                                    if(langs[lang].language == \"en\"){\n                                        conceptDescription.preferredName = langs[lang].text;\n                                    }\n                                }\n                                conceptDescription.shortName = dataSpecification.shortName;\n                                conceptDescription.unit = dataSpecification.unit;\n                                conceptDescription.dataType = dataSpecification.dataType;\n                                var defLangs = dataSpecification.definition;\n                                for(var defLang in defLangs){\n                                    if(defLangs[defLang].language == \"en\"){\n                                        conceptDescription.definition = defLangs[defLang].text;\n                                    }\n                                }\n                            }\n                                    //scope.send({payload:dataInterfaceElement});\n                                    scope.conceptDescriptions.push(conceptDescription);\n                        }\n                        scope.send({payload:scope.conceptDescriptions});\n                    }\n                        \n                }\n            });\n/*            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }*/\n        })(scope)\n    </script>\n    <div id=\"deck\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">Id</th>\n                    <th scope=\"col\">modelType</th>\n                    <th scope=\"col\">preferredName</th>\n                    <th scope=\"col\">shortName</th>\n                    <th scope=\"col\">unit</th>\n                    <th scope=\"col\">dataType</th>\n                    <th scope=\"col\">definition</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr ng-repeat=\"cd in conceptDescriptions\">\n                <td><a class=\"text-dark\">{{cd.id}}</a></td>\n                <td><a class=\"text-dark\">{{cd.modelType}}</a></td>\n                <td><a class=\"text-dark\">{{cd.preferredName}}</a></td>\n                <td><a class=\"text-dark\">{{cd.shortName}}</a></td>\n                <td><a class=\"text-dark\">{{cd.unit}}</a></td>\n                <td><a class=\"text-dark\">{{cd.dataType}}</a></td>\n                <td><a class=\"text-dark\">{{cd.definition}}</a></td>\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 3040,
+        "y": 420,
+        "wires": [
+            [
+                "57cc2b70.afb41c"
             ]
         ]
     }
