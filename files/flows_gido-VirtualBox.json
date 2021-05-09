@@ -20042,7 +20042,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<form action=\"/aasx/docu/report.pdf\" method=\"get\">\n    <input type=\"submit\" value=\"Download Report\" \n         name=\"Submit\" id=\"frm1_submit\" />\n</form>",
+        "format": "<form action=\"/aasx/docu/report.pdf\" method=\"get\">\n    <md-button class=\"btn1 vibrate filled touched bigfont\" type=\"submit\"\n         name=\"Submit\" id=\"frm1_submit\">Download</md-button>\n</form>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
