@@ -354,11 +354,15 @@
             "ec19d6a4.7505f8",
             "568d5f3.624242",
             "d5524b85.c3c27",
-            "d42664b2.514808"
+            "d42664b2.514808",
+            "1586a531.14b443",
+            "be911c88.9c0b2",
+            "2093ee9.2501c12",
+            "15f4655a.3a5aab"
         ],
         "x": 74,
         "y": 2439,
-        "w": 1965,
+        "w": 1972,
         "h": 642
     },
     {
@@ -431,7 +435,9 @@
             "1f1ce2c5.9cb5cd"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 322
     },
     {
         "id": "d366c10f.cbf158",
@@ -456,8 +462,6 @@
             "16317ec1.a4e071",
             "9ae0cc41.4f38e",
             "ff535ae7.0608f8",
-            "b27596a4.f65d38",
-            "573c6200.66098",
             "5d4ac5ad.0efeec",
             "8ee32862.092ac8",
             "986cdb5.550c428",
@@ -482,7 +486,9 @@
             "b88a92c6.fb547"
         ],
         "x": 194,
-        "y": 3374.22216796875
+        "y": 3374.22216796875,
+        "w": 2962,
+        "h": 686.77783203125
     },
     {
         "id": "8ba0dee2.7f7be8",
@@ -790,9 +796,7 @@
             "983208d5.9b5e"
         ],
         "x": 54,
-        "y": 2333.094940185547,
-        "w": 1272,
-        "h": 431.99999809265137
+        "y": 2333.094940185547
     },
     {
         "id": "9eaca16.128cb6",
@@ -813,9 +817,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -889,9 +891,7 @@
             "f76cbbfe.4be85"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3372,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -917,9 +917,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -947,9 +945,7 @@
             "7c1b2520.ec5814"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 242
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -987,9 +983,7 @@
             "db200cd7.5bd32"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "7f3265a4.23ba94",
@@ -1059,9 +1053,7 @@
             "323548f1.1a0c1"
         ],
         "x": 1584,
-        "y": 1479,
-        "w": 2222,
-        "h": 866.25
+        "y": 1479
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -1103,9 +1095,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "37a4080e.40ed9",
@@ -2750,7 +2740,7 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2765,7 +2755,7 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2800,10 +2790,11 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 560,
-        "y": 2700,
+        "y": 2720,
         "wires": [
             [
-                "88c56602.6df758"
+                "1586a531.14b443",
+                "15f4655a.3a5aab"
             ]
         ]
     },
@@ -2817,11 +2808,12 @@
         "method": "put",
         "upload": false,
         "swaggerDoc": "",
-        "x": 580,
-        "y": 2860,
+        "x": 570,
+        "y": 2900,
         "wires": [
             [
-                "c49a31af.5c28b"
+                "be911c88.9c0b2",
+                "2093ee9.2501c12"
             ]
         ]
     },
@@ -2833,8 +2825,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1959,
-        "y": 2860,
+        "x": 1950,
+        "y": 2900,
         "wires": []
     },
     {
@@ -2977,7 +2969,7 @@
         "z": "c7caf96e.a31f98",
         "g": "c358a7e7.e264e",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3023,7 +3015,7 @@
         "z": "c7caf96e.a31f98",
         "g": "c358a7e7.e264e",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3105,8 +3097,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1963,
-        "y": 2700,
+        "x": 1970,
+        "y": 2740,
         "wires": []
     },
     {
@@ -3115,7 +3107,7 @@
         "z": "c7caf96e.a31f98",
         "g": "66d3f26a.c296b4",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3628,8 +3620,8 @@
         "z": "c7caf96e.a31f98",
         "g": "66d3f26a.c296b4",
         "name": "",
-        "x": 1934,
-        "y": 2740,
+        "x": 1950,
+        "y": 2700,
         "wires": [],
         "icon": "node-red-contrib-viseo-log/log.svg"
     },
@@ -3672,8 +3664,8 @@
         "g": "66d3f26a.c296b4",
         "name": "",
         "env": [],
-        "x": 1932,
-        "y": 2900,
+        "x": 1930,
+        "y": 2860,
         "wires": [],
         "icon": "node-red-contrib-viseo-log/log.svg"
     },
@@ -5974,8 +5966,8 @@
         "y": 3620,
         "wires": [
             [
-                "6eef4cae.579154",
-                "6c8b8dd.0947374"
+                "6c8b8dd.0947374",
+                "3dd50be3.e99724"
             ]
         ]
     },
@@ -6054,16 +6046,15 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nif(msg.res){\n    // Create an Observation Event Object ------------------------------------\n    var observation = {};\n    observation.id = uuid;\n    observation.source = context.global.get(\"AASIdentifier\");\n    observation.direction = \"Output\";\n    observation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n    observation.timestamp = new Date().getTime();\n    observation.payload = msg.payload;\n    msg.payload = observation;\n    return [msg, null];\n} else {\n    msg.topic = msg.req.params.id;\n    return [null, msg];\n}\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 2810,
-        "y": 3660,
+        "x": 2750,
+        "y": 3680,
         "wires": [
             [
                 "c1053253.abab6",
                 "3dd50be3.e99724"
             ],
             [
-                "573c6200.66098",
-                "b27596a4.f65d38"
+                "3dd50be3.e99724"
             ]
         ]
     },
@@ -6101,7 +6092,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 3030,
-        "y": 3620,
+        "y": 3720,
         "wires": []
     },
     {
@@ -6112,7 +6103,8 @@
         "name": "16_In_a",
         "links": [
             "ec9e81bc.09759",
-            "91bf40f2.de56e"
+            "91bf40f2.de56e",
+            "33c7adca.f43a92"
         ],
         "x": 235,
         "y": 3540,
@@ -6129,7 +6121,8 @@
         "g": "d366c10f.cbf158",
         "name": "16_In_b",
         "links": [
-            "828df34.b6d9e1"
+            "828df34.b6d9e1",
+            "848b9065.852548"
         ],
         "x": 235,
         "y": 3660,
@@ -6146,7 +6139,8 @@
         "g": "d366c10f.cbf158",
         "name": "16_Out_a",
         "links": [
-            "fc99534e.2e75a"
+            "fc99534e.2e75a",
+            "73e6b16a.683058"
         ],
         "x": 3115,
         "y": 3640,
@@ -6222,7 +6216,7 @@
         "y": 3740,
         "wires": [
             [
-                "86743c69.70234"
+                "9ae0cc41.4f38e"
             ]
         ]
     },
@@ -6233,7 +6227,8 @@
         "g": "d366c10f.cbf158",
         "name": "17_Out",
         "links": [
-            "dac82e37.2d63d"
+            "dac82e37.2d63d",
+            "e61e4b18.21bfc8"
         ],
         "x": 3115,
         "y": 3780,
@@ -6246,7 +6241,8 @@
         "g": "d366c10f.cbf158",
         "name": "17_In",
         "links": [
-            "aca4e316.3e76"
+            "aca4e316.3e76",
+            "fa0d23e4.4f25c"
         ],
         "x": 235,
         "y": 3780,
@@ -7749,34 +7745,6 @@
         ]
     },
     {
-        "id": "b27596a4.f65d38",
-        "type": "link out",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "16_Out_b",
-        "links": [
-            "697188e3.d41538"
-        ],
-        "x": 3115,
-        "y": 3680,
-        "wires": []
-    },
-    {
-        "id": "573c6200.66098",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3010,
-        "y": 3700,
-        "wires": []
-    },
-    {
         "id": "3f7c074f.d35dc8",
         "type": "debug",
         "z": "fd31082e.5487d8",
@@ -8644,8 +8612,12 @@
             [
                 "16317ec1.a4e071"
             ],
-            [],
-            []
+            [
+                "86743c69.70234"
+            ],
+            [
+                "86743c69.70234"
+            ]
         ]
     },
     {
@@ -8679,7 +8651,8 @@
         "g": "d366c10f.cbf158",
         "name": "16_Out_a",
         "links": [
-            "fc99534e.2e75a"
+            "fc99534e.2e75a",
+            "73e6b16a.683058"
         ],
         "x": 3111,
         "y": 3523,
@@ -9029,7 +9002,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "UpdateSubscriptions",
-        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nvar subscription = msg.req.params.aasid + \";\" + msg.req.params.submodelId + \";\" + msg.req.params.id;\nsubscriptions.push(subscription);\ncontext.flow.set(\"subscriptions\", subscriptions);\nreturn msg;\n",
+        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nvar subscription = msg.req.params.aasid + \";\" + msg.req.params.submodelId + \";\" + msg.req.params.id + \";\" + msg.req.body;\nsubscriptions.push(subscription);\ncontext.flow.set(\"subscriptions\", subscriptions);\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1280,
@@ -9106,7 +9079,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "UpdateSubscriptions",
-        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nvar subscription = msg.req.params.aasid + \";\" + msg.req.params.submodelId + \";\" + msg.req.params.id;\nfor(var index in subscriptions){\n    if(subscriptions[index] == subscription){\n        subscriptions.splice(index, 1);\n    }\n}\ncontext.flow.set(\"subscriptions\", subscriptions);\nreturn msg;\n\n",
+        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nvar subscription = msg.req.params.aasid + \";\" + msg.req.params.submodelId + \";\" + msg.req.params.id + \";\" + msg.req.body;\nfor(var index in subscriptions){\n    if(subscriptions[index] == subscription){\n        subscriptions.splice(index, 1);\n    }\n}\ncontext.flow.set(\"subscriptions\", subscriptions);\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1280,
@@ -9369,7 +9342,7 @@
         "type": "debug",
         "z": "670d9c89.6d0424",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -9444,7 +9417,7 @@
         "type": "unsafe-function",
         "z": "3db1c009.99d51",
         "name": "PayloadProcessing",
-        "func": "var msg1 = {};\n\n//msg1.topic = context.global.get('AASIdentifier');\nmsg1.topic = msg.payload.observableReference;\nmsg1.payload = msg.payload;\n\nreturn msg1;",
+        "func": "var msg1 = {};\n\n//msg1.topic = context.global.get('AASIdentifier');\nif(msg.topic == \"\"){\n    msg1.topic = msg.payload.observableReference;\n    msg1.payload = msg.payload;\n} else {\n     msg1.topic = msg.topic;\n    msg1.payload = msg.payload;\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
         "x": 870,
@@ -9452,7 +9425,7 @@
         "wires": [
             [
                 "3423892e.2e5336",
-                "35de401c.4963b"
+                "c36f58b7.acd8a"
             ]
         ]
     },
@@ -9495,7 +9468,7 @@
         "qos": "",
         "retain": "",
         "broker": "e70d9188.7d95e",
-        "x": 1150,
+        "x": 1390,
         "y": 820,
         "wires": []
     },
@@ -9966,8 +9939,8 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nif(msg.res){\n    // Create an Observation Event Object ------------------------------------\n    var observation = {};\n    observation.id = uuid;\n    observation.source = context.global.get(\"AASIdentifier\");\n    observation.direction = \"Output\";\n    observation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n    observation.timestamp = new Date().getTime();\n    observation.payload = msg.payload;\n    msg.payload = observation;\n    return [msg, null];\n} else {\n    msg.topic = msg.req.params.id;\n    return [null, msg];\n}\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 2810,
-        "y": 3760,
+        "x": 2750,
+        "y": 3800,
         "wires": [
             [
                 "9ae0cc41.4f38e"
@@ -13586,7 +13559,8 @@
         "g": "d366c10f.cbf158",
         "name": "22_In",
         "links": [
-            "568d5f3.624242"
+            "568d5f3.624242",
+            "400d9646.413fe8"
         ],
         "x": 238,
         "y": 3860,
@@ -13603,7 +13577,8 @@
         "g": "d366c10f.cbf158",
         "name": "22_Out",
         "links": [
-            "d5524b85.c3c27"
+            "d5524b85.c3c27",
+            "7acbb909.02b518"
         ],
         "x": 3114,
         "y": 3860,
@@ -13682,7 +13657,7 @@
                 "b0715b05.2c6488"
             ],
             [
-                "cf377a9a.6c438"
+                "5d86388d.5f97d"
             ]
         ]
     },
@@ -13694,8 +13669,8 @@
         "func": "var subscriptions = context.flow.get(\"subscriptions\");\nif(subscriptions.length > 0){\n    var stats = context.global.get(\"statsNBI\");\n    var msgSize = msg.averageMsgSize;\n    var msgSizeIntervalAndFrequency = msg.intervalAndFrequency;\n    stats.msgSize = msgSize;\n    stats.msgSizeIntervalAndFrequency = msgSizeIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n} else {\n    var stats = context.global.get(\"statsNBI\");\n    var msgSize = 0;\n    var msgSizeIntervalAndFrequency = \"n/a\";\n    stats.msgSize = msgSize;\n    stats.msgSizeIntervalAndFrequency = msgSizeIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1810,
-        "y": 580,
+        "x": 1950,
+        "y": 560,
         "wires": [
             []
         ]
@@ -14632,11 +14607,11 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar observation = msg.payload;\nobservation.source = context.global.get(\"AASIdentifier\");\nmsg.payload = observation;\nreturn msg;",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsg = [];\nfor(var subscription in subscriptions){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if(msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])){\n        msg.topic = splittedSubscription[3];\n    }\n}\nvar observation = msg.payload;\nobservation.source = context.global.get(\"AASIdentifier\");\nmsg.payload = observation;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1300,
-        "y": 640,
+        "x": 1360,
+        "y": 600,
         "wires": [
             [
                 "4fc7fe8f.a5bc58",
@@ -14655,7 +14630,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 1590,
-        "y": 580,
+        "y": 560,
         "wires": []
     },
     {
@@ -14666,8 +14641,8 @@
         "links": [
             "3e11fc1c.d74334"
         ],
-        "x": 1875,
-        "y": 660,
+        "x": 1995,
+        "y": 620,
         "wires": []
     },
     {
@@ -14856,8 +14831,8 @@
         "ignore": false,
         "pauseAtStartup": false,
         "humanReadableStatus": true,
-        "x": 1660,
-        "y": 640,
+        "x": 1700,
+        "y": 600,
         "wires": [
             [
                 "2c43db2c.fe9c9c"
@@ -14875,8 +14850,8 @@
         "func": "var subscriptions = context.flow.get(\"subscriptions\");\nif(subscriptions.length > 0){\n    var stats = context.global.get(\"statsNBI\") || {};\n    var msgSpeed = msg.payload;\n    var msgIntervalAndFrequency = msg.intervalAndFrequency;\n    stats.msgSpeed = msgSpeed;\n    stats.IntervalAndFrequency = msgIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n} else {\n    var stats = context.global.get(\"statsNBI\") || {};\n    var msgSpeed = 0;\n    var msgIntervalAndFrequency = \"n/a\";\n    stats.msgSpeed = msgSpeed;\n    stats.IntervalAndFrequency = msgIntervalAndFrequency;\n    context.global.set(\"statsNBI\", stats);\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1130,
-        "y": 580,
+        "x": 1090,
+        "y": 560,
         "wires": [
             []
         ]
@@ -19105,67 +19080,6 @@
         ]
     },
     {
-        "id": "fc7978cd.cdc41",
-        "type": "debug",
-        "z": "670d9c89.6d0424",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1550,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "b91fb15c.d6bbe",
-        "type": "debug",
-        "z": "670d9c89.6d0424",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1550,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "c46ec5d0.e4e248",
-        "type": "inject",
-        "z": "670d9c89.6d0424",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 500,
-        "y": 1320,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "66bb6b.f38c6c94",
         "type": "sub-link-input",
         "z": "44340bcc.3da454",
@@ -19230,7 +19144,7 @@
         "aliasType": "str",
         "clone": false,
         "x": 210,
-        "y": 640,
+        "y": 620,
         "wires": [
             [
                 "66816677.7a4348"
@@ -20370,5 +20284,184 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "1586a531.14b443",
+        "type": "debug",
+        "z": "c7caf96e.a31f98",
+        "g": "66d3f26a.c296b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1090,
+        "y": 2640,
+        "wires": []
+    },
+    {
+        "id": "5d86388d.5f97d",
+        "type": "Load Balance",
+        "z": "670d9c89.6d0424",
+        "defaultcapacity": 100,
+        "dynamic": "d7e6d6dc.d37318",
+        "hashType": "pearson",
+        "mps": "",
+        "name": "",
+        "noavailability": "admin",
+        "nocapacity": "admin",
+        "outputs": 3,
+        "routes": "2",
+        "selection": "next",
+        "sourceProperty": "msg.topic",
+        "sticky": "",
+        "x": 1120,
+        "y": 620,
+        "wires": [
+            [],
+            [
+                "cf377a9a.6c438"
+            ],
+            [
+                "b33ebee8.a7fa18"
+            ]
+        ]
+    },
+    {
+        "id": "b33ebee8.a7fa18",
+        "type": "unsafe-function",
+        "z": "670d9c89.6d0424",
+        "name": "prepare Observation",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsg = [];\nfor(var subscription in subscriptions){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if(msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])){\n        msg.topic = splittedSubscription[3];\n    }\n}\nvar observation = msg.payload;\nobservation.source = context.global.get(\"AASIdentifier\");\nmsg.payload = observation;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1360,
+        "y": 640,
+        "wires": [
+            [
+                "35ab961d.d6237a"
+            ]
+        ]
+    },
+    {
+        "id": "c36f58b7.acd8a",
+        "type": "Load Balance",
+        "z": "3db1c009.99d51",
+        "defaultcapacity": 100,
+        "dynamic": "d7e6d6dc.d37318",
+        "hashType": "pearson",
+        "mps": "",
+        "name": "",
+        "noavailability": "admin",
+        "nocapacity": "admin",
+        "outputs": 3,
+        "routes": "2",
+        "selection": "next",
+        "sourceProperty": "msg.topic",
+        "sticky": "",
+        "x": 1140,
+        "y": 860,
+        "wires": [
+            [],
+            [
+                "35de401c.4963b",
+                "8e47149f.18aba"
+            ],
+            [
+                "619a2f6a.ac42e8"
+            ]
+        ]
+    },
+    {
+        "id": "619a2f6a.ac42e8",
+        "type": "mqtt out",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "e70d9188.7d95e",
+        "x": 1390,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8e47149f.18aba",
+        "type": "debug",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1350,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "be911c88.9c0b2",
+        "type": "debug",
+        "z": "c7caf96e.a31f98",
+        "g": "66d3f26a.c296b4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1090,
+        "y": 2800,
+        "wires": []
+    },
+    {
+        "id": "2093ee9.2501c12",
+        "type": "function",
+        "z": "c7caf96e.a31f98",
+        "g": "66d3f26a.c296b4",
+        "name": "",
+        "func": "if(Object.keys(msg.req.body).length === 0 || msg.req.body == \"\"){\n    msg.statusCode = \"400\";\n    msg.payload = \"No topic specified in message body\";\n    return [null, msg];\n} else {\n    return [msg, null];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nnode.status({text:\"check req params\"});",
+        "finalize": "",
+        "libs": [],
+        "x": 1035,
+        "y": 2900,
+        "wires": [
+            [
+                "c49a31af.5c28b"
+            ],
+            [
+                "63547b46.f4c064"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "15f4655a.3a5aab",
+        "type": "function",
+        "z": "c7caf96e.a31f98",
+        "g": "66d3f26a.c296b4",
+        "name": "",
+        "func": "if(Object.keys(msg.req.body).length === 0 || msg.req.body == \"\"){\n    msg.statusCode = \"400\";\n    msg.payload = \"No topic specified in message body\";\n    return [null, msg];\n} else {\n    return [msg, null];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nnode.status({text:\"check req params\"});",
+        "finalize": "",
+        "libs": [],
+        "x": 1035,
+        "y": 2720,
+        "wires": [
+            [
+                "88c56602.6df758"
+            ],
+            [
+                "f679f510.e6f448"
+            ]
+        ],
+        "l": false
     }
 ]
