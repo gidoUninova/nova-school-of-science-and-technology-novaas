@@ -532,7 +532,9 @@
             "234d668e.b04b9a"
         ],
         "x": 34,
-        "y": 4199
+        "y": 4199,
+        "w": 2872,
+        "h": 516
     },
     {
         "id": "e764eb53.6268c",
@@ -724,7 +726,9 @@
             "a239d88d.2c5f7"
         ],
         "x": 14,
-        "y": 379
+        "y": 379,
+        "w": 2852,
+        "h": 3642
     },
     {
         "id": "a5ca466b.4777d8",
@@ -751,7 +755,9 @@
             "a4c7092a.dcefd"
         ],
         "x": 64,
-        "y": 19
+        "y": 19,
+        "w": 1522,
+        "h": 322
     },
     {
         "id": "d7076418.bb51d8",
@@ -2485,18 +2491,6 @@
         "order": 2,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "46833b4b.0aec44",
-        "type": "remote-config",
-        "name": "Node-RED UI",
-        "host": "192.168.0.64",
-        "protocol": "http",
-        "port": "1880",
-        "baseurl": "/ui",
-        "instancehash": "5b6x7u3htxn84tvg9m8431kwxk3m5mscjyoh01kjxjoyb29taoru9gh7psoclbcx",
-        "server": "nodered02.remote-red.com",
-        "region": "de"
     },
     {
         "id": "d56e5f93.f422c",
