@@ -16745,11 +16745,11 @@
         "id": "3ee76f6c.2eebe",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "dash",
+        "name": "currentOperatingPressure",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
+        "x": 1690,
         "y": 580,
         "wires": [
             []
@@ -18034,11 +18034,11 @@
         "id": "79abdb6d.dd64fc",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "dash",
+        "name": "responseTime",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
+        "x": 1660,
         "y": 900,
         "wires": [
             []
@@ -18213,11 +18213,11 @@
         "id": "d108bbcb.582c3",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "dash",
+        "name": "valvePosition",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
+        "x": 1650,
         "y": 1160,
         "wires": [
             []
@@ -18391,11 +18391,11 @@
         "id": "615b8342.ca54c4",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "dash",
+        "name": "elapsedTimeMovingAvg",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
+        "x": 1690,
         "y": 1440,
         "wires": [
             []
@@ -18569,11 +18569,11 @@
         "id": "310439d1.da6bb6",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "dash",
+        "name": "cylinderStatus",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
+        "x": 1660,
         "y": 1700,
         "wires": [
             []
@@ -18747,7 +18747,7 @@
         "id": "63bc6758.842d08",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "dash",
+        "name": "cycle",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
@@ -18925,11 +18925,11 @@
         "id": "407c9cb6.22931c",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "dash",
+        "name": "responseTimePred",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
+        "x": 1670,
         "y": 2180,
         "wires": [
             []
