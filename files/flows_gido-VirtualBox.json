@@ -230,8 +230,9 @@
     {
         "id": "c1dd96d4.47a088",
         "type": "subflow",
-        "name": "Subflow 1",
+        "name": "Property handler",
         "info": "",
+        "category": "",
         "in": [
             {
                 "x": 420,
@@ -282,7 +283,10 @@
                     }
                 ]
             }
-        ]
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "10392549.d972b3",
