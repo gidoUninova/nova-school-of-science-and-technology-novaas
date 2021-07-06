@@ -2493,11 +2493,11 @@
         "z": "c7caf96e.a31f98",
         "g": "daa90db5.798ca",
         "name": "",
-        "url": "/aasServer/assets",
+        "url": "/aasServer/shells/:aasid/aas/assetInformation",
         "method": "get",
         "upload": false,
         "swaggerDoc": "103c6242.2d09ae",
-        "x": 240,
+        "x": 330,
         "y": 980,
         "wires": [
             [
@@ -3107,7 +3107,7 @@
         "dropdown_HowManyMessages": "single",
         "dropdownObjOrVal": "value",
         "outputs": 1,
-        "x": 557,
+        "x": 650,
         "y": 980,
         "wires": [
             [
@@ -4051,7 +4051,7 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 510,
+        "x": 650,
         "y": 1020,
         "wires": []
     },
@@ -7560,7 +7560,7 @@
         "y": 360.40711975097656,
         "wires": [
             [
-                "9af1e8ba.14f4a8"
+                "a34da828.6338f"
             ]
         ]
     },
@@ -7579,7 +7579,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "RetrievingAssets...",
-        "func": "var manifest = context.flow.get(\"manifest\");\nmsg.payload = manifest.assets;\nreturn msg;",
+        "func": "var ShellId = msg.req.params.aasid;\nif(msg.jsonataStatus == \"Success\"){\n    var keys = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var assets = manifest.assets;\n    for(var index1 in keys){\n        var key = keys[index1];\n        for(var index2 in assets){\n            var asset = assets[index2];\n            if(asset.identification.id === key.value){\n                msg.payload = asset;\n                msg.statusCode = \"200\";\n                return msg;\n            }\n        }\n    }\n    msg.payload = \"Asset not found\";\n    msg.statusCode = \"400\";\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Asset Administration Shell with id:\" + ShellId + \" not found\";\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1130,
@@ -18840,5 +18840,55 @@
                 "dbe4655.3217798"
             ]
         ]
+    },
+    {
+        "id": "a34da828.6338f",
+        "type": "unsafe-function",
+        "z": "7585249f.880c0c",
+        "name": "BuildingJsonataQuery...",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"'].asset.keys\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "3eb4fa9d.896106"
+            ]
+        ]
+    },
+    {
+        "id": "3eb4fa9d.896106",
+        "type": "jsonata",
+        "z": "7585249f.880c0c",
+        "name": "jsonata",
+        "property": "shellsJsonStr",
+        "jsonata": "",
+        "jsonataOpts": "",
+        "x": 900,
+        "y": 360,
+        "wires": [
+            [
+                "9af1e8ba.14f4a8",
+                "f308240a.bf55c"
+            ]
+        ]
+    },
+    {
+        "id": "f308240a.bf55c",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 400,
+        "wires": []
     }
 ]
