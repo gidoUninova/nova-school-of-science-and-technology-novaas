@@ -331,9 +331,7 @@
             "ad8fbd86.506ae8"
         ],
         "x": 76,
-        "y": 105,
-        "w": 1902,
-        "h": 477
+        "y": 105
     },
     {
         "id": "daa90db5.798ca",
@@ -384,9 +382,7 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1808
+        "y": 599
     },
     {
         "id": "66d3f26a.c296b4",
@@ -429,9 +425,7 @@
             "15f4655a.3a5aab"
         ],
         "x": 74,
-        "y": 2439,
-        "w": 1972,
-        "h": 642
+        "y": 2439
     },
     {
         "id": "fd25b313.221798",
@@ -454,9 +448,7 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 3119,
-        "w": 1912,
-        "h": 202
+        "y": 3119
     },
     {
         "id": "16640da3.5a20ca",
@@ -477,9 +469,7 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3339,
-        "w": 1932,
-        "h": 182
+        "y": 3339
     },
     {
         "id": "4b4e4270.d440bc",
@@ -503,9 +493,7 @@
             "1f1ce2c5.9cb5cd"
         ],
         "x": 194,
-        "y": 4242,
-        "w": 2272,
-        "h": 322
+        "y": 4242
     },
     {
         "id": "d366c10f.cbf158",
@@ -554,9 +542,7 @@
             "b88a92c6.fb547"
         ],
         "x": 194,
-        "y": 3374.22216796875,
-        "w": 2962,
-        "h": 686.77783203125
+        "y": 3374.22216796875
     },
     {
         "id": "d7076418.bb51d8",
@@ -944,9 +930,7 @@
             "bf993581.65f898"
         ],
         "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
+        "y": 59
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -990,9 +974,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 114,
-        "y": 2639,
-        "w": 2872,
-        "h": 516
+        "y": 2639
     },
     {
         "id": "37a4080e.40ed9",
@@ -1043,9 +1025,7 @@
             "bb1348ef.5dad58"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -1082,9 +1062,7 @@
             "9cae29d0.c4e968"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 472
+        "y": 1909
     },
     {
         "id": "de00f046.a69e6",
@@ -11686,7 +11664,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "LiveDataToGet",
-        "func": "//Retreiving Libraries from the Settings.json file\nvar outputMsgsLiveData = [];\nvar outputMsgsFileData = [];\nvar outputMsgsConstantData = [];\nvar outputMsgsPropertyData = [];\n\nvar uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nvar selectedElements = context.flow.get('selectedElements');\nfor(var element in selectedElements){\n    var selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    //var selected_element = selectedElements[element].submodelId + \";\" + selectedElements[element].selectedElement.idShort;\n    var modelType = selectedElements[element].selectedElement.modelType.name;\n    var category = selectedElements[element].selectedElement.category;\n    if(modelType == \"Property\" && category === \"VARIABLE\")\n    {\n        var msg = {payload:selected_element};\n        var  shellId = encodeURIComponent(selectedElements[element].aasid);\n        var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/request/submodel/submodelElements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        outputMsgsLiveData.push(msg);\n    } else if (modelType == \"File\")\n    {\n        var observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = {href: selectedElements[element].selectedElement.value};\n        var msg = {payload:observation};\n        outputMsgsFileData.push(msg);\n    } else if (modelType == \"Property\" && category === \"CONSTANT\"){\n        var observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = \"No Live Data Possible for Category: \" + category;\n        var msg = {payload:observation};\n        outputMsgsConstantData.push(msg);\n    } else {\n        var msg = {payload:selected_element};\n        var shellId = encodeURIComponent(selectedElements[element].aasid);\n        var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodelElements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        outputMsgsPropertyData.push(msg);\n    }\n    \n}\n\nreturn [outputMsgsLiveData, outputMsgsFileData, outputMsgsConstantData, outputMsgsPropertyData];",
+        "func": "//Retreiving Libraries from the Settings.json file\nvar outputMsgsLiveData = [];\nvar outputMsgsFileData = [];\nvar outputMsgsConstantData = [];\nvar outputMsgsPropertyData = [];\n\nvar uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nvar selectedElements = context.flow.get('selectedElements');\nfor(var element in selectedElements){\n    var selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }//var selected_element = selectedElements[element].submodelId + \";\" + selectedElements[element].selectedElement.idShort;\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    var modelType = selectedElements[element].selectedElement.modelType.name;\n    var category = selectedElements[element].selectedElement.category;\n    if(modelType == \"Property\" && category === \"VARIABLE\")\n    {\n        var msg = {payload:selected_element};\n        var  shellId = encodeURIComponent(selectedElements[element].aasid);\n        var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/request/submodel/submodelElements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/request/submodel/submodelElements/\" + selectedElements[element].selectedElement.idShort;            \n        }\n        \n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        outputMsgsLiveData.push(msg);\n    } else if (modelType == \"File\")\n    {\n        var observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = {href: selectedElements[element].selectedElement.value};\n        var msg = {payload:observation};\n        outputMsgsFileData.push(msg);\n    } else if (modelType == \"Property\" && category === \"CONSTANT\"){\n        var observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = \"No Live Data Possible for Category: \" + category;\n        var msg = {payload:observation};\n        outputMsgsConstantData.push(msg);\n    } else {\n        var msg = {payload:selected_element};\n        var shellId = encodeURIComponent(selectedElements[element].aasid);\n        var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodelElements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodelElements/\" + selectedElements[element].selectedElement.idShort;\n        }\n        \n        outputMsgsPropertyData.push(msg);\n    }\n    \n}\n\nreturn [outputMsgsLiveData, outputMsgsFileData, outputMsgsConstantData, outputMsgsPropertyData];",
         "outputs": 4,
         "noerr": 0,
         "x": 1971.666748046875,
@@ -13659,7 +13637,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "LiveDataToUnSubscribe",
-        "func": "//Retreiving Libraries from the Settings.json file\nvar outputMsgs = [];\nvar selectedElements = context.flow.get('selectedElements');\nfor(var element in selectedElements){\n    //var msg = {payload:selectedElements[element]};\n    \n    //var selected_element = selectedElements[element].submodelId + \"/\" +selectedElements[element].selectedElement.idShort;\n    var selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" +selectedElements[element].selectedElement.idShort;\n    var msg = {payload:selected_element};\n    var  shellId = encodeURIComponent(selectedElements[element].aasid);\n    var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n    msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/unsubscribe/submodel/submodelElements/\" + selectedElements[element].selectedElement.idShort;\n    outputMsgs.push(msg);\n    \n}\n\nreturn [outputMsgs];",
+        "func": "//Retreiving Libraries from the Settings.json file\nvar outputMsgs = [];\nvar selectedElements = context.flow.get('selectedElements');\nfor(var element in selectedElements){\n    //var msg = {payload:selectedElements[element]};\n    \n    //var selected_element = selectedElements[element].submodelId + \"/\" +selectedElements[element].selectedElement.idShort;\n    var selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    var msg = {payload:selected_element};\n    var  shellId = encodeURIComponent(selectedElements[element].aasid);\n    var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n    \n    if(typeof selectedElements[element].path != \"undefined\"){\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/unsubscribe/submodel/submodelElements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n    } else {\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/unsubscribe/submodel/submodelElements/\" + selectedElements[element].selectedElement.idShort;    \n    }\n    \n    outputMsgs.push(msg);\n    \n}\n\nreturn [outputMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1983.1873779296875,
@@ -13895,7 +13873,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "LiveDataToSubscribe",
-        "func": "//Retreiving Libraries from the Settings.json file\nvar outputMsgsLiveData = [];\nvar outputMsgsFileData = [];\nvar outputMsgsConstantData = [];\nvar outputMsgsPropertyData = [];\n\nvar uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nvar selectedElements = context.flow.get('selectedElements');\nfor(var element in selectedElements){\n    var selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" +selectedElements[element].selectedElement.idShort;\n    //var selected_element = selectedElements[element].submodelId + \";\" + selectedElements[element].selectedElement.idShort;\n    var modelType = selectedElements[element].selectedElement.modelType.name;\n    var category = selectedElements[element].selectedElement.category;\n    if(modelType == \"Property\" && category === \"VARIABLE\")\n    {\n        var msg = {payload:selected_element};\n        var  shellId = encodeURIComponent(selectedElements[element].aasid);\n        var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/subscribe/submodel/submodelElements/\" + selectedElements[element].selectedElement.idShort;\n        outputMsgsLiveData.push(msg);\n    } else if (modelType == \"Property\" && category === \"CONSTANT\" || modelType == \"File\"){\n        var observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = \"No Live Data Possible for Category: \" + category;\n        var msg = {payload:observation};\n        outputMsgsConstantData.push(msg);\n    }\n    \n}\n\nreturn [outputMsgsLiveData, outputMsgsConstantData];",
+        "func": "//Retreiving Libraries from the Settings.json file\nvar outputMsgsLiveData = [];\nvar outputMsgsFileData = [];\nvar outputMsgsConstantData = [];\nvar outputMsgsPropertyData = [];\n\nvar uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nvar selectedElements = context.flow.get('selectedElements');\nfor(var element in selectedElements){\n    var selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    var modelType = selectedElements[element].selectedElement.modelType.name;\n    var category = selectedElements[element].selectedElement.category;\n    if(modelType == \"Property\" && category === \"VARIABLE\")\n    {\n        var msg = {payload:selected_element};\n        var  shellId = encodeURIComponent(selectedElements[element].aasid);\n        var encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/subscribe/submodel/submodelElements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/subscribe/submodel/submodelElements/\" + selectedElements[element].selectedElement.idShort;    \n        }\n        \n        outputMsgsLiveData.push(msg);\n    } else if (modelType == \"Property\" && category === \"CONSTANT\" || modelType == \"File\"){\n        var observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = \"No Live Data Possible for Category: \" + category;\n        var msg = {payload:observation};\n        outputMsgsConstantData.push(msg);\n    }\n    \n}\n\nreturn [outputMsgsLiveData, outputMsgsConstantData];",
         "outputs": 2,
         "noerr": 0,
         "x": 1980,
@@ -13916,7 +13894,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -13931,7 +13909,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -16978,7 +16956,7 @@
         "type": "unsafe-function",
         "z": "4ff5da13.cce2c4",
         "name": "stats",
-        "func": "var statsSBI = {};\nvar msgSpeed = msg.payload;\nvar msgIntervalAndFrequency = msg.intervalAndFrequency;\nstatsSBI.msgSpeed = msgSpeed;\nstatsSBI.IntervalAndFrequency = msgIntervalAndFrequency;\nstatsSBI.maxMsgs = 420;\nmsg.payload = statsSBI;\nreturn msg;",
+        "func": "var statsSBI = {};\nvar msgSpeed = msg.payload;\nvar msgIntervalAndFrequency = msg.intervalAndFrequency;\nstatsSBI.msgSpeed = msgSpeed;\nstatsSBI.IntervalAndFrequency = msgIntervalAndFrequency;\nstatsSBI.maxMsgs = context.flow.get(\"NrOfDataSources\") * 60;\nmsg.payload = statsSBI;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1530,
