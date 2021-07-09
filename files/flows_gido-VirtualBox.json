@@ -284,7 +284,13 @@
                 ]
             }
         ],
-        "env": [],
+        "env": [
+            {
+                "name": "PropertyName",
+                "type": "str",
+                "value": ""
+            }
+        ],
         "meta": {},
         "color": "#DDAA99"
     },
@@ -16675,7 +16681,7 @@
         "type": "unsafe-function",
         "z": "c1dd96d4.47a088",
         "name": "",
-        "func": "var variable = msg.payload;\ncontext.flow.set(\"variable\", variable);\nreturn msg;",
+        "func": "var propertyName = env.get(\"PropertyName\");\nvar Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"$parent.\" + propertyName);\ncontext.flow.set(\"variable\", variable);\n\nOutmsg.payload = variable;\nreturn Outmsg;\n",
         "outputs": 1,
         "noerr": 0,
         "x": 875,
@@ -17664,9 +17670,15 @@
         "type": "subflow:c1dd96d4.47a088",
         "z": "4ff5da13.cce2c4",
         "name": "Property 1",
-        "env": [],
-        "x": 1440,
-        "y": 520,
+        "env": [
+            {
+                "name": "PropertyName",
+                "value": "currentOperatingPressure",
+                "type": "str"
+            }
+        ],
+        "x": 1270,
+        "y": 580,
         "wires": [
             [
                 "13009382.bdf22c",
@@ -17676,8 +17688,9 @@
                 "70786a05.e58e34"
             ],
             [
-                "3ee76f6c.2eebe",
-                "6b42f44.7f4fa0c"
+                "6b42f44.7f4fa0c",
+                "d7dd2509.938f6",
+                "b38966d5.942b2"
             ]
         ]
     },
@@ -17689,8 +17702,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 810,
-        "y": 500,
+        "x": 640,
+        "y": 560,
         "wires": [
             [
                 "760d448.12effbc",
@@ -17709,52 +17722,14 @@
         "alias": "",
         "aliasType": "str",
         "clone": false,
-        "x": 220,
-        "y": 520,
+        "x": 350,
+        "y": 620,
         "wires": [
             [
-                "5eb7b2c1.117e9c",
-                "cb876e8.ffc7a9",
-                "a47b250a.10fcc8",
-                "546c84f0.6d79bc",
-                "8d213bd3.3fa2a8",
-                "ab792b9d.5a0258",
-                "ce37b279.84b03"
+                "760d448.12effbc"
             ],
             []
         ]
-    },
-    {
-        "id": "3ee76f6c.2eebe",
-        "type": "iot-datasource",
-        "z": "4ff5da13.cce2c4",
-        "name": "currentOperatingPressure",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 1830,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5eb7b2c1.117e9c",
-        "type": "unsafe-function",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "func": "var Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"currentOperatingPressure\") || 4;\nOutmsg.payload = variable;\nreturn Outmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 455,
-        "y": 540,
-        "wires": [
-            [
-                "760d448.12effbc",
-                "d371d2b7.ef56e"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "13009382.bdf22c",
@@ -17762,8 +17737,8 @@
         "z": "4ff5da13.cce2c4",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CurrentOperatingPressure out",
         "links": [],
-        "x": 2100,
-        "y": 460,
+        "x": 1930,
+        "y": 520,
         "wires": []
     },
     {
@@ -17775,8 +17750,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1770,
-        "y": 520,
+        "x": 1600,
+        "y": 580,
         "wires": []
     },
     {
@@ -17788,8 +17763,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1780,
-        "y": 620,
+        "x": 1610,
+        "y": 680,
         "wires": []
     },
     {
@@ -17805,8 +17780,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1710,
-        "y": 420,
+        "x": 1540,
+        "y": 480,
         "wires": []
     },
     {
@@ -17822,25 +17797,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "d371d2b7.ef56e",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 580,
+        "x": 1100,
+        "y": 520,
         "wires": []
     },
     {
@@ -17848,9 +17806,20 @@
         "type": "subflow:c1dd96d4.47a088",
         "z": "4ff5da13.cce2c4",
         "name": "Property 2",
-        "env": [],
-        "x": 1440,
-        "y": 840,
+        "env": [
+            {
+                "name": "PropertyName",
+                "value": "responseTime",
+                "type": "str"
+            },
+            {
+                "name": "TEST",
+                "value": "2",
+                "type": "str"
+            }
+        ],
+        "x": 1270,
+        "y": 900,
         "wires": [
             [
                 "87d5a06b.ee62e8",
@@ -17866,24 +17835,6 @@
         ]
     },
     {
-        "id": "cb876e8.ffc7a9",
-        "type": "unsafe-function",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "func": "var Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"responseTime\") || 0;\nOutmsg.payload = variable;\nreturn Outmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 455,
-        "y": 860,
-        "wires": [
-            [
-                "c12fbad1.26a438",
-                "98769739.24db1"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "6448221.12bfa5c",
         "type": "sub-link-input",
         "z": "4ff5da13.cce2c4",
@@ -17892,8 +17843,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1770,
-        "y": 840,
+        "x": 1600,
+        "y": 900,
         "wires": []
     },
     {
@@ -17905,8 +17856,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1780,
-        "y": 940,
+        "x": 1610,
+        "y": 1000,
         "wires": []
     },
     {
@@ -17922,8 +17873,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 740,
+        "x": 1600,
+        "y": 800,
         "wires": []
     },
     {
@@ -17939,25 +17890,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "98769739.24db1",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 900,
+        "x": 1020,
+        "y": 840,
         "wires": []
     },
     {
@@ -17968,8 +17902,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 770,
-        "y": 820,
+        "x": 600,
+        "y": 880,
         "wires": [
             [
                 "c12fbad1.26a438",
@@ -17983,8 +17917,8 @@
         "z": "4ff5da13.cce2c4",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTime out",
         "links": [],
-        "x": 2060,
-        "y": 800,
+        "x": 1890,
+        "y": 860,
         "wires": []
     },
     {
@@ -17995,8 +17929,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1800,
-        "y": 900,
+        "x": 1630,
+        "y": 960,
         "wires": [
             []
         ]
@@ -18006,9 +17940,20 @@
         "type": "subflow:c1dd96d4.47a088",
         "z": "4ff5da13.cce2c4",
         "name": "Property 3",
-        "env": [],
-        "x": 1440,
-        "y": 1100,
+        "env": [
+            {
+                "name": "PropertyName",
+                "value": "valvePosition",
+                "type": "str"
+            },
+            {
+                "name": "TEST",
+                "value": "3",
+                "type": "str"
+            }
+        ],
+        "x": 1270,
+        "y": 1160,
         "wires": [
             [
                 "5be37c1a.82b4e4",
@@ -18025,24 +17970,6 @@
         ]
     },
     {
-        "id": "a47b250a.10fcc8",
-        "type": "unsafe-function",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "func": "var Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"valvePosition\") || 0;\nOutmsg.payload = variable;\nreturn Outmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 455,
-        "y": 1120,
-        "wires": [
-            [
-                "8be25527.3bece8",
-                "7966d2ce.e34e7c"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "9bc9fd1d.273338",
         "type": "sub-link-input",
         "z": "4ff5da13.cce2c4",
@@ -18051,8 +17978,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1770,
-        "y": 1100,
+        "x": 1600,
+        "y": 1160,
         "wires": []
     },
     {
@@ -18064,8 +17991,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1780,
-        "y": 1200,
+        "x": 1610,
+        "y": 1260,
         "wires": []
     },
     {
@@ -18081,8 +18008,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 1000,
+        "x": 1600,
+        "y": 1060,
         "wires": []
     },
     {
@@ -18098,25 +18025,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "7966d2ce.e34e7c",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 1160,
+        "x": 990,
+        "y": 1100,
         "wires": []
     },
     {
@@ -18127,8 +18037,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 770,
-        "y": 1080,
+        "x": 600,
+        "y": 1140,
         "wires": [
             [
                 "8be25527.3bece8",
@@ -18142,8 +18052,8 @@
         "z": "4ff5da13.cce2c4",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ValvePosition out",
         "links": [],
-        "x": 2060,
-        "y": 1060,
+        "x": 1890,
+        "y": 1120,
         "wires": []
     },
     {
@@ -18154,8 +18064,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1790,
-        "y": 1160,
+        "x": 1620,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -18165,9 +18075,20 @@
         "type": "subflow:c1dd96d4.47a088",
         "z": "4ff5da13.cce2c4",
         "name": "Property 4",
-        "env": [],
-        "x": 1440,
-        "y": 1380,
+        "env": [
+            {
+                "name": "PropertyName",
+                "value": "elapsedTimeMovingAvg",
+                "type": "str"
+            },
+            {
+                "name": "TEST",
+                "value": "4",
+                "type": "str"
+            }
+        ],
+        "x": 1270,
+        "y": 1440,
         "wires": [
             [
                 "b89b59e1.dbd68",
@@ -18183,24 +18104,6 @@
         ]
     },
     {
-        "id": "546c84f0.6d79bc",
-        "type": "unsafe-function",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "func": "var Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"elapsedTimeMovingAvg\") || 0;\nOutmsg.payload = variable;\nreturn Outmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 455,
-        "y": 1400,
-        "wires": [
-            [
-                "b81c2dbd.1c3848",
-                "aaff7d06.94315"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "10a1d9c8.a791be",
         "type": "sub-link-input",
         "z": "4ff5da13.cce2c4",
@@ -18209,8 +18112,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1770,
-        "y": 1380,
+        "x": 1600,
+        "y": 1440,
         "wires": []
     },
     {
@@ -18222,8 +18125,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1780,
-        "y": 1480,
+        "x": 1610,
+        "y": 1540,
         "wires": []
     },
     {
@@ -18239,8 +18142,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 1280,
+        "x": 1600,
+        "y": 1340,
         "wires": []
     },
     {
@@ -18256,25 +18159,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1250,
-        "y": 1320,
-        "wires": []
-    },
-    {
-        "id": "aaff7d06.94315",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 1440,
+        "x": 1080,
+        "y": 1380,
         "wires": []
     },
     {
@@ -18285,8 +18171,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 810,
-        "y": 1360,
+        "x": 640,
+        "y": 1420,
         "wires": [
             [
                 "b0c61a5e.da0af",
@@ -18300,8 +18186,8 @@
         "z": "4ff5da13.cce2c4",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimeMovingAvg out",
         "links": [],
-        "x": 2100,
-        "y": 1340,
+        "x": 1930,
+        "y": 1400,
         "wires": []
     },
     {
@@ -18312,8 +18198,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1830,
-        "y": 1440,
+        "x": 1660,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -18323,9 +18209,20 @@
         "type": "subflow:c1dd96d4.47a088",
         "z": "4ff5da13.cce2c4",
         "name": "Property 5",
-        "env": [],
-        "x": 1440,
-        "y": 1640,
+        "env": [
+            {
+                "name": "PropertyName",
+                "value": "cylinderStatus",
+                "type": "str"
+            },
+            {
+                "name": "TEST",
+                "value": "5",
+                "type": "str"
+            }
+        ],
+        "x": 1270,
+        "y": 1700,
         "wires": [
             [
                 "6bd65f5a.ecd74",
@@ -18341,24 +18238,6 @@
         ]
     },
     {
-        "id": "8d213bd3.3fa2a8",
-        "type": "unsafe-function",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "func": "var Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"cylinderStatus\") || 0;\nOutmsg.payload = variable;\nreturn Outmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 455,
-        "y": 1660,
-        "wires": [
-            [
-                "202b668d.68d56a",
-                "fb2efae.1cf6588"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "d26e769f.fa28e8",
         "type": "sub-link-input",
         "z": "4ff5da13.cce2c4",
@@ -18367,8 +18246,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1770,
-        "y": 1640,
+        "x": 1600,
+        "y": 1700,
         "wires": []
     },
     {
@@ -18380,8 +18259,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1780,
-        "y": 1740,
+        "x": 1610,
+        "y": 1800,
         "wires": []
     },
     {
@@ -18397,8 +18276,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 1540,
+        "x": 1600,
+        "y": 1600,
         "wires": []
     },
     {
@@ -18414,25 +18293,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "fb2efae.1cf6588",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 1700,
+        "x": 990,
+        "y": 1640,
         "wires": []
     },
     {
@@ -18443,8 +18305,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 770,
-        "y": 1620,
+        "x": 600,
+        "y": 1680,
         "wires": [
             [
                 "202b668d.68d56a",
@@ -18458,8 +18320,8 @@
         "z": "4ff5da13.cce2c4",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CylinderStatus out",
         "links": [],
-        "x": 2060,
-        "y": 1600,
+        "x": 1890,
+        "y": 1660,
         "wires": []
     },
     {
@@ -18470,8 +18332,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1800,
-        "y": 1700,
+        "x": 1630,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -18481,9 +18343,20 @@
         "type": "subflow:c1dd96d4.47a088",
         "z": "4ff5da13.cce2c4",
         "name": "Property 6",
-        "env": [],
-        "x": 1440,
-        "y": 1880,
+        "env": [
+            {
+                "name": "PropertyName",
+                "value": "cycle",
+                "type": "str"
+            },
+            {
+                "name": "TEST",
+                "value": "6",
+                "type": "str"
+            }
+        ],
+        "x": 1270,
+        "y": 1940,
         "wires": [
             [
                 "56db0733.df5fa8",
@@ -18494,27 +18367,10 @@
             ],
             [
                 "f3a8ac0c.647988",
-                "63bc6758.842d08"
+                "63bc6758.842d08",
+                "7f947dcd.218e7c"
             ]
         ]
-    },
-    {
-        "id": "ab792b9d.5a0258",
-        "type": "unsafe-function",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "func": "var Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"cycle\") || 0;\nOutmsg.payload = variable;\nreturn Outmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 455,
-        "y": 1900,
-        "wires": [
-            [
-                "3d19f624.55954a",
-                "9d8f4466.fb3fb8"
-            ]
-        ],
-        "l": false
     },
     {
         "id": "cf717b87.7861c8",
@@ -18525,8 +18381,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1770,
-        "y": 1880,
+        "x": 1600,
+        "y": 1940,
         "wires": []
     },
     {
@@ -18538,8 +18394,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1780,
-        "y": 1980,
+        "x": 1610,
+        "y": 2040,
         "wires": []
     },
     {
@@ -18555,8 +18411,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 1800,
+        "x": 1600,
+        "y": 1860,
         "wires": []
     },
     {
@@ -18572,25 +18428,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 1820,
-        "wires": []
-    },
-    {
-        "id": "9d8f4466.fb3fb8",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 1940,
+        "x": 990,
+        "y": 1880,
         "wires": []
     },
     {
@@ -18601,8 +18440,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 750,
-        "y": 1860,
+        "x": 580,
+        "y": 1920,
         "wires": [
             [
                 "6f665c8e.0ac494",
@@ -18616,8 +18455,8 @@
         "z": "4ff5da13.cce2c4",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/Cycle out",
         "links": [],
-        "x": 2030,
-        "y": 1840,
+        "x": 1860,
+        "y": 1900,
         "wires": []
     },
     {
@@ -18628,8 +18467,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1770,
-        "y": 1940,
+        "x": 1600,
+        "y": 2000,
         "wires": [
             []
         ]
@@ -18639,9 +18478,20 @@
         "type": "subflow:c1dd96d4.47a088",
         "z": "4ff5da13.cce2c4",
         "name": "Property 7",
-        "env": [],
-        "x": 1440,
-        "y": 2120,
+        "env": [
+            {
+                "name": "PropertyName",
+                "value": "responseTimePred",
+                "type": "str"
+            },
+            {
+                "name": "TEST",
+                "value": "7",
+                "type": "str"
+            }
+        ],
+        "x": 1270,
+        "y": 2180,
         "wires": [
             [
                 "e10fede1.f5141",
@@ -18657,24 +18507,6 @@
         ]
     },
     {
-        "id": "ce37b279.84b03",
-        "type": "unsafe-function",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "func": "var Outmsg = {};\nOutmsg.topic = msg.topic;\nvar variable = context.flow.get(\"responseTimePred\") || [];\nvar size = variable.length;\nif(size > 0){\n    Outmsg.payload = variable[0];\n    \n} else {\n    \n    Outmsg.payload = 0;\n    \n}\n\nreturn Outmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 455,
-        "y": 2140,
-        "wires": [
-            [
-                "2f78fbd6.731644",
-                "9b8617fb.c42b2"
-            ]
-        ],
-        "l": false
-    },
-    {
         "id": "2effc120.395026",
         "type": "sub-link-input",
         "z": "4ff5da13.cce2c4",
@@ -18683,8 +18515,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1770,
-        "y": 2120,
+        "x": 1600,
+        "y": 2180,
         "wires": []
     },
     {
@@ -18696,8 +18528,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1780,
-        "y": 2220,
+        "x": 1610,
+        "y": 2280,
         "wires": []
     },
     {
@@ -18713,8 +18545,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 2040,
+        "x": 1600,
+        "y": 2100,
         "wires": []
     },
     {
@@ -18730,25 +18562,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1210,
-        "y": 2060,
-        "wires": []
-    },
-    {
-        "id": "9b8617fb.c42b2",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 2180,
+        "x": 1040,
+        "y": 2120,
         "wires": []
     },
     {
@@ -18759,8 +18574,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 790,
-        "y": 2100,
+        "x": 620,
+        "y": 2160,
         "wires": [
             [
                 "2f78fbd6.731644",
@@ -18774,8 +18589,8 @@
         "z": "4ff5da13.cce2c4",
         "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimePred out",
         "links": [],
-        "x": 2080,
-        "y": 2080,
+        "x": 1910,
+        "y": 2140,
         "wires": []
     },
     {
@@ -18786,8 +18601,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1810,
-        "y": 2180,
+        "x": 1640,
+        "y": 2240,
         "wires": [
             []
         ]
@@ -18805,8 +18620,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1550,
-        "y": 1220,
+        "x": 1380,
+        "y": 1280,
         "wires": []
     },
     {
@@ -18889,6 +18704,174 @@
         "statusType": "auto",
         "x": 1070,
         "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d7dd2509.938f6",
+        "type": "debug",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b38966d5.942b2",
+        "type": "iot-datasource",
+        "z": "4ff5da13.cce2c4",
+        "name": "currentOperatingPressure",
+        "tstampField": "",
+        "dataField": "",
+        "disableDiscover": false,
+        "x": 1660,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f0fcfe7.52cb48",
+        "type": "sub-link-output",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 350,
+        "y": 940,
+        "wires": [
+            [
+                "c12fbad1.26a438"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "147fe8c7.b6da67",
+        "type": "sub-link-output",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 350,
+        "y": 1200,
+        "wires": [
+            [
+                "8be25527.3bece8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "98f6697c.11bfc",
+        "type": "sub-link-output",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 350,
+        "y": 1480,
+        "wires": [
+            [
+                "b81c2dbd.1c3848"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3275a386.896f4c",
+        "type": "sub-link-output",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 350,
+        "y": 1740,
+        "wires": [
+            [
+                "202b668d.68d56a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "69a2cc29.dac6e4",
+        "type": "sub-link-output",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 350,
+        "y": 1980,
+        "wires": [
+            [
+                "3d19f624.55954a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4e113907.e9e7b8",
+        "type": "sub-link-output",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "alias": "",
+        "aliasType": "str",
+        "clone": false,
+        "x": 350,
+        "y": 2220,
+        "wires": [
+            [
+                "2f78fbd6.731644"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7f947dcd.218e7c",
+        "type": "debug",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 2060,
         "wires": []
     }
 ]
