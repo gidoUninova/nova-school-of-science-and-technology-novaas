@@ -54,7 +54,7 @@ can be used to build a new image. The started docker container will run on port 
 
 An already built image is part of the repository and can be accessed here:
 
-https://gitlab.com/gidouninova/novaas/container_registry
+https://gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas/container_registry
 
 ## Run another version of NOVAAS from this base folder
 
