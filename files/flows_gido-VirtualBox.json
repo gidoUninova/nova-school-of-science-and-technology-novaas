@@ -595,9 +595,7 @@
             "983208d5.9b5e"
         ],
         "x": 54,
-        "y": 2333.094940185547,
-        "w": 1272,
-        "h": 431.99999809265137
+        "y": 2333.094940185547
     },
     {
         "id": "9eaca16.128cb6",
@@ -618,9 +616,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -694,9 +690,7 @@
             "f5d81204558f97fa"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3372,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -722,9 +716,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -752,9 +744,7 @@
             "7c1b2520.ec5814"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 242
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -792,9 +782,7 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "7f3265a4.23ba94",
@@ -856,9 +844,7 @@
             "3da1a7ea98029b38"
         ],
         "x": 1584,
-        "y": 1539,
-        "w": 2222,
-        "h": 783
+        "y": 1539
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -900,9 +886,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "27a2d798.8a5c5",
@@ -15840,7 +15824,7 @@
         "type": "unsafe-function",
         "z": "c1dd96d4.47a088",
         "name": "",
-        "func": "var outMsg = {};\nvar ObsObj = context.flow.get('ObsObj');\nObsObj.payload = context.flow.get(\"variable\");\noutMsg.payload = ObsObj;\nreturn outMsg;",
+        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nvar outMsg = {};\nvar ObsObj = context.flow.get('ObsObj');\nObsObj.id = uuid;\nObsObj.payload = context.flow.get(\"variable\");\noutMsg.payload = ObsObj;\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1635,
