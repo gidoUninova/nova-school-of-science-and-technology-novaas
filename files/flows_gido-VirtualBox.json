@@ -331,7 +331,9 @@
             "ad8fbd86.506ae8"
         ],
         "x": 76,
-        "y": 105
+        "y": 105,
+        "w": 1902,
+        "h": 477
     },
     {
         "id": "daa90db5.798ca",
@@ -382,7 +384,9 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599
+        "y": 599,
+        "w": 1977,
+        "h": 1808
     },
     {
         "id": "66d3f26a.c296b4",
@@ -425,7 +429,9 @@
             "15f4655a.3a5aab"
         ],
         "x": 74,
-        "y": 2439
+        "y": 2439,
+        "w": 1972,
+        "h": 642
     },
     {
         "id": "fd25b313.221798",
@@ -448,7 +454,9 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 3119
+        "y": 3119,
+        "w": 1912,
+        "h": 202
     },
     {
         "id": "16640da3.5a20ca",
@@ -469,7 +477,9 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3339
+        "y": 3339,
+        "w": 1932,
+        "h": 182
     },
     {
         "id": "4b4e4270.d440bc",
@@ -1014,7 +1024,9 @@
             "bb1348ef.5dad58"
         ],
         "x": 101,
-        "y": 1176
+        "y": 1176,
+        "w": 1925,
+        "h": 708
     },
     {
         "id": "c358a7e7.e264e",
@@ -1051,7 +1063,9 @@
             "9cae29d0.c4e968"
         ],
         "x": 111,
-        "y": 1909
+        "y": 1909,
+        "w": 1902,
+        "h": 472
     },
     {
         "id": "de00f046.a69e6",
@@ -13210,7 +13224,7 @@
         "order": 1,
         "width": 10,
         "height": "20",
-        "format": "    <script>\n        (function(scope) {\n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    var aass = msg.payload[1].assetAdministrationShells;\n                    scope.aasCounter = aass.length;\n                    var assets = msg.payload[1].assets;\n                    scope.assetCounter = assets.length;\n                    var submodels = msg.payload[1].submodels;\n                    scope.submodelsCounter = submodels.length;\n                    scope.submodelElementsCounter = 0;\n                    for(var submodel in submodels){\n                        scope.submodelElementsCounter = scope.submodelElementsCounter + submodels[submodel].submodelElements.length;\n                    }\n                    scope.conceptDescriptionsCounter = msg.payload[1].conceptDescriptions.length;\n                }\n            });\n        })(scope)\n    </script>\n        <div class=\"container\">\n            <h5><span class=\"badge badge-warning\">Asset Administration Shells: {{aasCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Assets: {{assetCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodels: {{submodelsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodel Elements: {{submodelElementsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Concept Descriptions: {{conceptDescriptionsCounter}}</span></h5>\n        </div>\n        <div>\n            <img src=\"{{msg.qrcode}}\">\n        </div>\n",
+        "format": "    <script>\n        (function(scope) {\n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    var aass = msg.payload[1].assetAdministrationShells;\n                    scope.aasCounter = aass.length;\n                    var assets = msg.payload[1].assets;\n                    scope.assetCounter = assets.length;\n                    var submodels = msg.payload[1].submodels;\n                    scope.submodelsCounter = submodels.length;\n                    scope.submodelElementsCounter = 0;\n                    for(var submodel in submodels){\n                        scope.submodelElementsCounter = scope.submodelElementsCounter + submodels[submodel].submodelElements.length;\n                    }\n                    scope.conceptDescriptionsCounter = msg.payload[1].conceptDescriptions.length;\n                }\n            });\n        })(scope)\n    </script>\n        <div class=\"container\">\n            <h5><span class=\"badge badge-warning\">Asset Administration Shells: {{aasCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Assets: {{assetCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodels: {{submodelsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodel Elements: {{submodelElementsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Concept Descriptions: {{conceptDescriptionsCounter}}</span></h5>\n        </div>\n        <div>\n            <img width=\"300\" height=\"300\" src=\"{{msg.qrcode}}\">\n        </div>\n",
         "storeOutMessages": false,
         "fwdInMessages": false,
         "resendOnRefresh": false,
