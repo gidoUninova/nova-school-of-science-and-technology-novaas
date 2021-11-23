@@ -331,9 +331,7 @@
             "ad8fbd86.506ae8"
         ],
         "x": 76,
-        "y": 105,
-        "w": 1902,
-        "h": 477
+        "y": 105
     },
     {
         "id": "daa90db5.798ca",
@@ -384,9 +382,7 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1808
+        "y": 599
     },
     {
         "id": "66d3f26a.c296b4",
@@ -429,9 +425,7 @@
             "15f4655a.3a5aab"
         ],
         "x": 74,
-        "y": 2439,
-        "w": 1972,
-        "h": 642
+        "y": 2439
     },
     {
         "id": "fd25b313.221798",
@@ -454,9 +448,7 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 3119,
-        "w": 1912,
-        "h": 202
+        "y": 3119
     },
     {
         "id": "16640da3.5a20ca",
@@ -477,9 +469,7 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3339,
-        "w": 1932,
-        "h": 182
+        "y": 3339
     },
     {
         "id": "4b4e4270.d440bc",
@@ -499,9 +489,7 @@
             "6c10cd375f817bbf"
         ],
         "x": 194,
-        "y": 4242,
-        "w": 2272,
-        "h": 162
+        "y": 4242
     },
     {
         "id": "d366c10f.cbf158",
@@ -552,9 +540,7 @@
             "a511e8225d1a1f58"
         ],
         "x": 194,
-        "y": 3374.22216796875,
-        "w": 2972,
-        "h": 686.77783203125
+        "y": 3374.22216796875
     },
     {
         "id": "d7076418.bb51d8",
@@ -697,7 +683,7 @@
         ],
         "x": 214,
         "y": 99,
-        "w": 3372,
+        "w": 3483.58349609375,
         "h": 962
     },
     {
@@ -933,9 +919,7 @@
             "0fd9cb57d05e439b"
         ],
         "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
+        "y": 59
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -979,9 +963,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 114,
-        "y": 2639,
-        "w": 2872,
-        "h": 516
+        "y": 2639
     },
     {
         "id": "37a4080e.40ed9",
@@ -1032,9 +1014,7 @@
             "bb1348ef.5dad58"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -1071,9 +1051,7 @@
             "9cae29d0.c4e968"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 472
+        "y": 1909
     },
     {
         "id": "de00f046.a69e6",
@@ -13211,7 +13189,8 @@
                 "b1d7bd45.436bf8"
             ],
             [
-                "a5d497d.a955b68"
+                "a5d497d.a955b68",
+                "28a6230f679f8eeb"
             ],
             [
                 "eb868983.45c2e8"
@@ -13231,12 +13210,13 @@
         "order": 1,
         "width": 10,
         "height": "20",
-        "format": "    <script>\n        (function(scope) {\n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    var aass = msg.payload[1].assetAdministrationShells;\n                    scope.aasCounter = aass.length;\n                    var assets = msg.payload[1].assets;\n                    scope.assetCounter = assets.length;\n                    var submodels = msg.payload[1].submodels;\n                    scope.submodelsCounter = submodels.length;\n                    scope.submodelElementsCounter = 0;\n                    for(var submodel in submodels){\n                        scope.submodelElementsCounter = scope.submodelElementsCounter + submodels[submodel].submodelElements.length;\n                    }\n                    scope.conceptDescriptionsCounter = msg.payload[1].conceptDescriptions.length;\n                }\n            });\n        })(scope)\n    </script>\n        <div class=\"container\">\n            <h5><span class=\"badge badge-warning\">Asset Administration Shells: {{aasCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Assets: {{assetCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodels: {{submodelsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodel Elements: {{submodelElementsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Concept Descriptions: {{conceptDescriptionsCounter}}</span></h5>\n        </div>\n",
+        "format": "    <script>\n        (function(scope) {\n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    var aass = msg.payload[1].assetAdministrationShells;\n                    scope.aasCounter = aass.length;\n                    var assets = msg.payload[1].assets;\n                    scope.assetCounter = assets.length;\n                    var submodels = msg.payload[1].submodels;\n                    scope.submodelsCounter = submodels.length;\n                    scope.submodelElementsCounter = 0;\n                    for(var submodel in submodels){\n                        scope.submodelElementsCounter = scope.submodelElementsCounter + submodels[submodel].submodelElements.length;\n                    }\n                    scope.conceptDescriptionsCounter = msg.payload[1].conceptDescriptions.length;\n                }\n            });\n        })(scope)\n    </script>\n        <div class=\"container\">\n            <h5><span class=\"badge badge-warning\">Asset Administration Shells: {{aasCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Assets: {{assetCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodels: {{submodelsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Submodel Elements: {{submodelElementsCounter}}</span></h5>\n            <h5><span class=\"badge badge-warning\">Concept Descriptions: {{conceptDescriptionsCounter}}</span></h5>\n        </div>\n        <div>\n            <img src=\"{{msg.qrcode}}\">\n        </div>\n",
         "storeOutMessages": false,
         "fwdInMessages": false,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 3080,
+        "className": "",
+        "x": 3380,
         "y": 280,
         "wires": [
             []
@@ -13272,7 +13252,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 3100.08349609375,
+        "x": 3400.08349609375,
         "y": 202.08338928222656,
         "wires": [
             [
@@ -13295,7 +13275,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 3101.3334045410156,
+        "x": 3401.3334045410156,
         "y": 241.6667022705078,
         "wires": [
             []
@@ -13310,8 +13290,8 @@
         "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload != \"init\"){\n    var selectedElements = context.flow.get('selectedElements');\n    var selectedElement = msg.payload;\n    \n    if(selectedElements.lenght == 0){\n        //selectedElements.push(selectedElement._Attribs.ID);\n        selectedElements.push(selectedElement);\n    } else {\n        var found = false;\n        for(var element in selectedElements){\n            //if(selectedElement._Attribs.ID == selectedElements[element]){\n            if(selectedElement.selectedElement.idShort == selectedElements[element].selectedElement.idShort && selectedElement.submodelId == selectedElements[element].submodelId && selectedElement.shellId == selectedElements[element].shellId){\n                selectedElements.splice(element, 1);\n                found = true;\n                break;\n            }\n        }\n        if(!found){\n            //selectedElements.push(selectedElement._Attribs.ID);\n            selectedElements.push(selectedElement);\n        }\n    }\n    context.flow.set('selectedElements', selectedElements);\n    msg.payload = selectedElements;\n    return msg;\n} else {\n    context.flow.set('selectedElements', []);\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 3260,
-        "y": 500,
+        "x": 3340,
+        "y": 600,
         "wires": [
             [
                 "13eaa4a6.391393"
@@ -13329,7 +13309,7 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 3301.58349609375,
+        "x": 3601.58349609375,
         "y": 202.08338928222656,
         "wires": []
     },
@@ -13344,8 +13324,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 3490,
-        "y": 500,
+        "x": 3570,
+        "y": 600,
         "wires": []
     },
     {
@@ -13538,8 +13518,8 @@
         "func": "var outMsg = {};\nvar administrationShells = msg.payload[1].assetAdministrationShells;\nvar submodels = msg.payload[1].submodels;\nvar shells = [];\nfor(var shellIndex in administrationShells){\n    var element = {};\n    var shell = administrationShells[shellIndex];\n    element.shellIdShort = shell.idShort;\n    element.shellIdentifier = shell.identification.id;\n    element.submodels = [];\n    var shellSubmodels = shell.submodels;\n    for(var submodelIndex in submodels){\n        for(var shellSubmodelIndex in shellSubmodels){\n            if(submodels[submodelIndex].identification.id === shellSubmodels[shellSubmodelIndex].keys[0].value){\n                element.submodels.push(submodels[submodelIndex]);\n            }\n        }\n    }\n    shells.push(element);\n}\n//outMsg.payload = msg.payload[1].submodels;\noutMsg.payload = shells;\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 2660,
-        "y": 500,
+        "x": 2740,
+        "y": 600,
         "wires": [
             [
                 "ad9570df.a95b4",
@@ -13697,8 +13677,8 @@
         "func": "var outMsg = {};\noutMsg.payload = msg.payload[1].conceptDescriptions;\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 2690,
-        "y": 420,
+        "x": 2770,
+        "y": 520,
         "wires": [
             [
                 "2fa38586.c0acea",
@@ -13717,8 +13697,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 3290,
-        "y": 420,
+        "x": 3370,
+        "y": 520,
         "wires": []
     },
     {
@@ -13732,8 +13712,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 2922.857177734375,
-        "y": 458.5714416503906,
+        "x": 3002.857177734375,
+        "y": 558.5714416503906,
         "wires": []
     },
     {
@@ -14818,8 +14798,8 @@
         "complete": "true",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2850,
-        "y": 620,
+        "x": 2930,
+        "y": 720,
         "wires": []
     },
     {
@@ -14837,8 +14817,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 3070,
-        "y": 340,
+        "x": 3150,
+        "y": 440,
         "wires": [
             []
         ]
@@ -15251,8 +15231,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 3270,
-        "y": 560,
+        "x": 3350,
+        "y": 660,
         "wires": []
     },
     {
@@ -15305,8 +15285,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2670,
-        "y": 340,
+        "x": 2750,
+        "y": 440,
         "wires": [
             [
                 "dae4e81e.eb5528"
@@ -15322,8 +15302,8 @@
         "func": "msg.payload = context.global.get(\"ThumbnailFilePath\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 2880,
-        "y": 340,
+        "x": 2960,
+        "y": 440,
         "wires": [
             [
                 "8de2ce5c.1783c8"
@@ -15346,8 +15326,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 2930,
-        "y": 520,
+        "x": 3010,
+        "y": 620,
         "wires": [
             []
         ]
@@ -15368,8 +15348,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 2950,
-        "y": 560,
+        "x": 3030,
+        "y": 660,
         "wires": [
             [
                 "40ba0174.feea08",
@@ -15393,8 +15373,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 3040,
-        "y": 420,
+        "x": 3120,
+        "y": 520,
         "wires": [
             [
                 "57cc2b70.afb41c"
@@ -16022,6 +16002,89 @@
         "wires": [
             [
                 "4b6c82b0.fc018c"
+            ]
+        ]
+    },
+    {
+        "id": "28a6230f679f8eeb",
+        "type": "change",
+        "z": "2164c119.f88826",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "qrcodeinput",
+                "pt": "msg",
+                "to": "REPO_LOCATION",
+                "tot": "env"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2760,
+        "y": 300,
+        "wires": [
+            [
+                "806e01ba8dd4aa22"
+            ]
+        ]
+    },
+    {
+        "id": "806e01ba8dd4aa22",
+        "type": "qrcode-generator",
+        "z": "2164c119.f88826",
+        "name": "",
+        "qrtype": "text2qr",
+        "text2qrText": "",
+        "ssid": "",
+        "hiddenssid": false,
+        "wifitype": "",
+        "phonenum": "",
+        "smsphonenum": "",
+        "smstext": "",
+        "mailto": "",
+        "mailsubject": "",
+        "mailbody": "",
+        "latitude": "",
+        "longitude": "",
+        "colorlight": "#ffffff",
+        "colordark": "#000000",
+        "printstatus": false,
+        "x": 2950,
+        "y": 300,
+        "wires": [
+            [
+                "bdc6118ddbb26572"
+            ]
+        ]
+    },
+    {
+        "id": "bdc6118ddbb26572",
+        "type": "change",
+        "z": "2164c119.f88826",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "qrcode",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3120,
+        "y": 300,
+        "wires": [
+            [
+                "a5d497d.a955b68"
             ]
         ]
     },

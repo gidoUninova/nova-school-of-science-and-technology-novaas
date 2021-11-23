@@ -8,5 +8,6 @@ services:
             - "HOST=${HOST}"
             - "BROKER_SERVICE_HOST=${BROKER_SERVICE_HOST}"
             - "BROKER_SERVICE_PORT=${BROKER_SERVICE_PORT}"
+            - "REPO_LOCATION=${REPO_LOCATION}"
         ports:
             - "${PORT_FORWARDING}:1880"
