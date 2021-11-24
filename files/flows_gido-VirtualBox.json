@@ -499,7 +499,9 @@
             "6c10cd375f817bbf"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 162
     },
     {
         "id": "d366c10f.cbf158",
@@ -550,7 +552,9 @@
             "a511e8225d1a1f58"
         ],
         "x": 194,
-        "y": 3374.22216796875
+        "y": 3374.22216796875,
+        "w": 2972,
+        "h": 686.77783203125
     },
     {
         "id": "d7076418.bb51d8",
@@ -929,7 +933,9 @@
             "0fd9cb57d05e439b"
         ],
         "x": 124,
-        "y": 59
+        "y": 59,
+        "w": 1522,
+        "h": 322
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -973,7 +979,9 @@
             "95c62ca4.9097f8"
         ],
         "x": 114,
-        "y": 2639
+        "y": 2639,
+        "w": 2872,
+        "h": 516
     },
     {
         "id": "37a4080e.40ed9",
@@ -5821,7 +5829,7 @@
         "z": "c7caf96e.a31f98",
         "g": "66d3f26a.c296b4",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -11312,7 +11320,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsg = [];\nfor(var subscription in subscriptions){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if(msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])){\n        msg.topic = splittedSubscription[3];\n    }\n}\nvar observation = msg.payload;\nobservation.source = context.global.get(\"AASIdentifier\");\nmsg.payload = observation;\nreturn msg;",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor(var subscription in subscriptions){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if(msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])){\n        var observation = msg.payload;\n        observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
@@ -11483,7 +11491,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsg = [];\nfor(var subscription in subscriptions){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if(msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])){\n        msg.topic = splittedSubscription[3];\n    }\n}\nvar observation = msg.payload;\nobservation.source = context.global.get(\"AASIdentifier\");\nmsg.payload = observation;\nreturn msg;",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription in subscriptions) {\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if (msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])) {\n        var observation = msg.payload;\n        observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
