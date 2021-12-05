@@ -65,10 +65,13 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 
 ###Notes
 
-The current aasx model file has been generated using the following version of the AASX Explorer selecting the option aasx w/ JSON:
+- The current aasx model file has been generated using the following version of the AASX Explorer selecting the option aasx w/ JSON:
 
-https://github.com/admin-shell-io/aasx-package-explorer/releases/tag/v2020-11-16.alpha
+    https://github.com/admin-shell-io/aasx-package-explorer/releases/tag/v2020-11-16.alpha
 
+- To connect the model to the physical asset (data provided by the physical asset) please take a look at the "DPDM/OperationalData" flow that contains the logic to handle this connection. A pattern has been created that can be replicated for each new "submodel element". The connection between the model and the real data is based on identificators.
+
+![Semantic description of image](/source/imaages/Screenshot 2021-12-05 at 14.03.26.png)""Submodel Element" pattern"
 
 
 ## NOVAAS in action (Click on the Image to Show the Video)
