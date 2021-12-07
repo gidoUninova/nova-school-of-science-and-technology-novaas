@@ -239,7 +239,10 @@
                 "y": 500,
                 "wires": [
                     {
-                        "id": "2ee706b2.763b22"
+                        "id": "8ba8df327cf35595"
+                    },
+                    {
+                        "id": "90181528aea09dcf"
                     }
                 ]
             }
@@ -287,6 +290,11 @@
         "env": [
             {
                 "name": "PropertyName",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "PropertyLink",
                 "type": "str",
                 "value": ""
             }
@@ -2919,7 +2927,7 @@
         "id": "2ee706b2.763b22",
         "type": "switch",
         "z": "c1dd96d4.47a088",
-        "name": "",
+        "name": "topic",
         "property": "topic",
         "propertyType": "msg",
         "rules": [
@@ -2937,16 +2945,11 @@
                 "t": "eq",
                 "v": "unobserve",
                 "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "sbi scheduling data routing",
-                "vt": "str"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 4,
+        "outputs": 3,
         "x": 710,
         "y": 500,
         "wires": [
@@ -2960,9 +2963,6 @@
             [
                 "bacdcd21.b441d",
                 "25790730.a8b2c8"
-            ],
-            [
-                "8f7552d2.152dd"
             ]
         ]
     },
@@ -3112,6 +3112,56 @@
             []
         ],
         "l": false
+    },
+    {
+        "id": "8ba8df327cf35595",
+        "type": "switch",
+        "z": "c1dd96d4.47a088",
+        "name": "propertyLink",
+        "property": "PropertyLink",
+        "propertyType": "env",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "link",
+                "vt": "msg"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "2ee706b2.763b22"
+            ]
+        ]
+    },
+    {
+        "id": "90181528aea09dcf",
+        "type": "switch",
+        "z": "c1dd96d4.47a088",
+        "name": "scheduler",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "sbi scheduling data routing",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 560,
+        "wires": [
+            [
+                "8f7552d2.152dd"
+            ]
+        ]
     },
     {
         "id": "cac1db39.b04078",
@@ -10919,13 +10969,10 @@
         "func": "msg.source = context.global.get('AASIdentifier');\nmsg.staticDocs = context.global.get(\"staticDocs\");\nmsg.topic = \"request\";\nvar af = context.global.get(\"actionflows\");\nvar link = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nvar action_ = af.invoke(link, msg);\naction_.then(function(msg){\n    node.send(msg);\n});\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1020,
-        "y": 200,
+        "x": 1120,
+        "y": 80,
         "wires": [
-            [
-                "a2bffe7c.1f5ea",
-                "c7330c767cc9bfc3"
-            ]
+            []
         ]
     },
     {
@@ -10947,11 +10994,9 @@
         "outputs": 1,
         "noerr": 0,
         "x": 760,
-        "y": 339,
+        "y": 240,
         "wires": [
-            [
-                "d040e1c5.e3fdd"
-            ]
+            []
         ]
     },
     {
@@ -11028,16 +11073,15 @@
         "id": "6f037794.4913b8",
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
-        "name": "InvokeInternalDriver",
-        "func": "var af = context.global.get(\"actionflows\");\nmsg.topic = \"unobserve\";\nvar link = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nvar action_ = af.invoke(link, msg);\naction_.then(function(msg){\n    node.send(msg);\n});\n\n",
+        "name": "attachLink",
+        "func": "msg.topic = \"unobserve\";\nlet link = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nmsg.link = link;\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 760,
+        "x": 430,
         "y": 480,
         "wires": [
             [
-                "d0eb61ec.23be6",
-                "c052f701.05adc8"
+                "4435b7c5af6aa76a"
             ]
         ]
     },
@@ -11080,21 +11124,6 @@
         "targetType": "full",
         "x": 520,
         "y": 160,
-        "wires": []
-    },
-    {
-        "id": "a2bffe7c.1f5ea",
-        "type": "debug",
-        "z": "670d9c89.6d0424",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1240,
-        "y": 140,
         "wires": []
     },
     {
@@ -11515,8 +11544,8 @@
         "y": 200,
         "wires": [
             [
-                "af4b6639.02a008",
-                "a7bac938.293518"
+                "a7bac938.293518",
+                "5a7fcf6ea5170a20"
             ]
         ]
     },
@@ -11542,7 +11571,7 @@
         "wires": [
             [
                 "79d810c0.ff0e3",
-                "9181f592.9db358"
+                "d22adb3413ce73f0"
             ]
         ]
     },
@@ -11665,6 +11694,90 @@
             [
                 "e0c0795b.6a17b8",
                 "1cd120a.1a88b5f"
+            ]
+        ]
+    },
+    {
+        "id": "ab1d12e26ef5c039",
+        "type": "link call",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "links": [
+            "4a312fbac2f026ed"
+        ],
+        "timeout": "30",
+        "x": 1040,
+        "y": 200,
+        "wires": [
+            [
+                "c7330c767cc9bfc3"
+            ]
+        ]
+    },
+    {
+        "id": "7bed9a4780172067",
+        "type": "link call",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "links": [
+            "4a312fbac2f026ed"
+        ],
+        "timeout": "30",
+        "x": 760,
+        "y": 340,
+        "wires": [
+            [
+                "d040e1c5.e3fdd"
+            ]
+        ]
+    },
+    {
+        "id": "4435b7c5af6aa76a",
+        "type": "link call",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "links": [
+            "4a312fbac2f026ed"
+        ],
+        "timeout": "30",
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "d0eb61ec.23be6",
+                "c052f701.05adc8"
+            ]
+        ]
+    },
+    {
+        "id": "d22adb3413ce73f0",
+        "type": "unsafe-function",
+        "z": "670d9c89.6d0424",
+        "name": "attachLink",
+        "func": "msg.topic = \"observe\";\nlet link = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nmsg.link = link;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "7bed9a4780172067"
+            ]
+        ]
+    },
+    {
+        "id": "5a7fcf6ea5170a20",
+        "type": "unsafe-function",
+        "z": "670d9c89.6d0424",
+        "name": "attachLink",
+        "func": "msg.source = context.global.get('AASIdentifier');\nmsg.topic = \"request\";\nlet link = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nmsg.link = link;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "ab1d12e26ef5c039"
             ]
         ]
     },
@@ -16302,7 +16415,7 @@
         "z": "4ff5da13.cce2c4",
         "g": "27a2d798.8a5c5",
         "name": "Initialize Simulator",
-        "func": "context.flow.set(\"cylinderStatus\", 0);\ncontext.flow.set(\"responseTime\", 0);\ncontext.flow.set(\"valvePosition\", 0);\ncontext.flow.set(\"newCycle\", false);\ncontext.flow.set(\"cycle\", 0);\ncontext.flow.set(\"responseTimePred\", []);\nreturn msg;",
+        "func": "context.flow.set(\"currentOperatingPressure\", 0);\ncontext.flow.set(\"cylinderStatus\", 0);\ncontext.flow.set(\"responseTime\", 0);\ncontext.flow.set(\"valvePosition\", 0);\ncontext.flow.set(\"newCycle\", false);\ncontext.flow.set(\"cycle\", 0);\ncontext.flow.set(\"responseTimePred\", []);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 770,
@@ -16406,8 +16519,10 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1780,
+        "x": 1760,
         "y": 2420,
         "wires": []
     },
@@ -16427,7 +16542,8 @@
         "y": 2440,
         "wires": [
             [
-                "65f952e3.108ff4"
+                "65f952e3.108ff4",
+                "bc75f94e0c83e972"
             ],
             []
         ]
@@ -17046,14 +17162,19 @@
                 "name": "PropertyName",
                 "value": "currentOperatingPressure",
                 "type": "str"
+            },
+            {
+                "name": "PropertyLink",
+                "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CurrentOperatingPressure",
+                "type": "str"
             }
         ],
-        "x": 1270,
-        "y": 580,
+        "x": 970,
+        "y": 540,
         "wires": [
             [
-                "13009382.bdf22c",
-                "bc61a4ba.e720e8"
+                "bc61a4ba.e720e8",
+                "a7c130ce5c3975a1"
             ],
             [
                 "70786a05.e58e34"
@@ -17061,57 +17182,9 @@
             [
                 "6b42f44.7f4fa0c",
                 "d7dd2509.938f6",
-                "b38966d5.942b2"
+                "5e25b9ab2b581b31"
             ]
         ]
-    },
-    {
-        "id": "d92dc201.c46128",
-        "type": "actionflows_in",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CurrentOperatingPressure in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 640,
-        "y": 560,
-        "wires": [
-            [
-                "760d448.12effbc",
-                "acb77643.946368"
-            ]
-        ]
-    },
-    {
-        "id": "fda690ac.7f99b8",
-        "type": "sub-link-output",
-        "z": "4ff5da13.cce2c4",
-        "inputs": 0,
-        "name": "",
-        "topic": "configSchedule",
-        "link": "72ae2011.f3d7b",
-        "priority": "0",
-        "aliasType": "str",
-        "alias": "",
-        "clone": false,
-        "x": 350,
-        "y": 620,
-        "wires": [
-            [
-                "760d448.12effbc"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "13009382.bdf22c",
-        "type": "actionflows_out",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CurrentOperatingPressure out",
-        "links": [],
-        "x": 1930,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "70786a05.e58e34",
@@ -17124,8 +17197,8 @@
         "aliasMatchAll": false,
         "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1570,
-        "y": 580,
+        "x": 1190,
+        "y": 560,
         "wires": []
     },
     {
@@ -17136,9 +17209,11 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1610,
-        "y": 680,
+        "x": 1200,
+        "y": 660,
         "wires": []
     },
     {
@@ -17154,8 +17229,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1540,
-        "y": 480,
+        "x": 1170,
+        "y": 500,
         "wires": []
     },
     {
@@ -17163,7 +17238,7 @@
         "type": "debug",
         "z": "4ff5da13.cce2c4",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17171,8 +17246,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 520,
+        "x": 230,
+        "y": 1080,
         "wires": []
     },
     {
@@ -17187,17 +17262,22 @@
                 "type": "str"
             },
             {
+                "name": "PropertyLink",
+                "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTime",
+                "type": "str"
+            },
+            {
                 "name": "TEST",
                 "value": "2",
                 "type": "str"
             }
         ],
-        "x": 1270,
-        "y": 900,
+        "x": 970,
+        "y": 820,
         "wires": [
             [
                 "87d5a06b.ee62e8",
-                "5d3a2044.ec34d8"
+                "87cc7fd4bcc8fc2a"
             ],
             [
                 "6448221.12bfa5c"
@@ -17216,9 +17296,11 @@
         "topic": "routed",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1600,
-        "y": 900,
+        "x": 1210,
+        "y": 840,
         "wires": []
     },
     {
@@ -17229,9 +17311,11 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1610,
-        "y": 1000,
+        "x": 1220,
+        "y": 940,
         "wires": []
     },
     {
@@ -17247,52 +17331,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "64e61d63.42bedc",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "b0b7f497.f2a88",
-        "type": "actionflows_in",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTime in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 600,
-        "y": 880,
-        "wires": [
-            [
-                "c12fbad1.26a438",
-                "64e61d63.42bedc"
-            ]
-        ]
-    },
-    {
-        "id": "5d3a2044.ec34d8",
-        "type": "actionflows_out",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTime out",
-        "links": [],
-        "x": 1890,
-        "y": 860,
+        "x": 1150,
+        "y": 780,
         "wires": []
     },
     {
@@ -17303,8 +17343,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
-        "y": 960,
+        "x": 1240,
+        "y": 900,
         "wires": [
             []
         ]
@@ -17321,17 +17361,22 @@
                 "type": "str"
             },
             {
+                "name": "PropertyLink",
+                "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ValvePosition",
+                "type": "str"
+            },
+            {
                 "name": "TEST",
                 "value": "3",
                 "type": "str"
             }
         ],
-        "x": 1270,
-        "y": 1160,
+        "x": 950,
+        "y": 1100,
         "wires": [
             [
                 "5be37c1a.82b4e4",
-                "36193d88.3fc792"
+                "246306a1d270009d"
             ],
             [
                 "9bc9fd1d.273338"
@@ -17351,9 +17396,11 @@
         "topic": "routed",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1600,
-        "y": 1160,
+        "x": 1190,
+        "y": 1120,
         "wires": []
     },
     {
@@ -17364,9 +17411,11 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1610,
-        "y": 1260,
+        "x": 1200,
+        "y": 1200,
         "wires": []
     },
     {
@@ -17382,52 +17431,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
+        "x": 1130,
         "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "a4ed02f.51daa",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "25829422.173a8c",
-        "type": "actionflows_in",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ValvePosition in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 600,
-        "y": 1140,
-        "wires": [
-            [
-                "8be25527.3bece8",
-                "a4ed02f.51daa"
-            ]
-        ]
-    },
-    {
-        "id": "36193d88.3fc792",
-        "type": "actionflows_out",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ValvePosition out",
-        "links": [],
-        "x": 1890,
-        "y": 1120,
         "wires": []
     },
     {
@@ -17438,8 +17443,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1620,
-        "y": 1220,
+        "x": 1210,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -17456,17 +17461,22 @@
                 "type": "str"
             },
             {
+                "name": "PropertyLink",
+                "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimeMovingAvg",
+                "type": "str"
+            },
+            {
                 "name": "TEST",
                 "value": "4",
                 "type": "str"
             }
         ],
-        "x": 1270,
-        "y": 1440,
+        "x": 950,
+        "y": 1360,
         "wires": [
             [
                 "b89b59e1.dbd68",
-                "1ca46441.f3401c"
+                "f565b10ef651de1d"
             ],
             [
                 "10a1d9c8.a791be"
@@ -17485,9 +17495,11 @@
         "topic": "routed",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1600,
-        "y": 1440,
+        "x": 1190,
+        "y": 1400,
         "wires": []
     },
     {
@@ -17498,9 +17510,11 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1610,
-        "y": 1540,
+        "x": 1200,
+        "y": 1500,
         "wires": []
     },
     {
@@ -17516,52 +17530,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "b0c61a5e.da0af",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "b0644d8d.fd514",
-        "type": "actionflows_in",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimeMovingAvg in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 640,
-        "y": 1420,
-        "wires": [
-            [
-                "b0c61a5e.da0af",
-                "b81c2dbd.1c3848"
-            ]
-        ]
-    },
-    {
-        "id": "1ca46441.f3401c",
-        "type": "actionflows_out",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimeMovingAvg out",
-        "links": [],
-        "x": 1930,
-        "y": 1400,
+        "x": 1130,
+        "y": 1320,
         "wires": []
     },
     {
@@ -17572,8 +17542,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1660,
-        "y": 1500,
+        "x": 1250,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -17590,17 +17560,22 @@
                 "type": "str"
             },
             {
+                "name": "PropertyLink",
+                "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CylinderStatus",
+                "type": "str"
+            },
+            {
                 "name": "TEST",
                 "value": "5",
                 "type": "str"
             }
         ],
-        "x": 1270,
-        "y": 1700,
+        "x": 950,
+        "y": 1620,
         "wires": [
             [
                 "6bd65f5a.ecd74",
-                "d9db1c33.cfd73"
+                "73d660a72d8adcad"
             ],
             [
                 "d26e769f.fa28e8"
@@ -17619,9 +17594,11 @@
         "topic": "routed",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1600,
-        "y": 1700,
+        "x": 1190,
+        "y": 1640,
         "wires": []
     },
     {
@@ -17632,9 +17609,11 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1610,
-        "y": 1800,
+        "x": 1200,
+        "y": 1740,
         "wires": []
     },
     {
@@ -17650,52 +17629,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
-        "y": 1600,
-        "wires": []
-    },
-    {
-        "id": "54f9f82b.dd93e",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 1640,
-        "wires": []
-    },
-    {
-        "id": "f77c5a0.8f782a8",
-        "type": "actionflows_in",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CylinderStatus in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 600,
-        "y": 1680,
-        "wires": [
-            [
-                "202b668d.68d56a",
-                "54f9f82b.dd93e"
-            ]
-        ]
-    },
-    {
-        "id": "d9db1c33.cfd73",
-        "type": "actionflows_out",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CylinderStatus out",
-        "links": [],
-        "x": 1890,
-        "y": 1660,
+        "x": 1130,
+        "y": 1580,
         "wires": []
     },
     {
@@ -17706,8 +17641,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
-        "y": 1760,
+        "x": 1220,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -17724,17 +17659,22 @@
                 "type": "str"
             },
             {
+                "name": "PropertyLink",
+                "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/Cycle",
+                "type": "str"
+            },
+            {
                 "name": "TEST",
                 "value": "6",
                 "type": "str"
             }
         ],
-        "x": 1270,
-        "y": 1940,
+        "x": 950,
+        "y": 1860,
         "wires": [
             [
                 "56db0733.df5fa8",
-                "6909b641.80fb38"
+                "b3151b0f0dadca74"
             ],
             [
                 "cf717b87.7861c8"
@@ -17754,9 +17694,11 @@
         "topic": "routed",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1600,
-        "y": 1940,
+        "x": 1210,
+        "y": 1880,
         "wires": []
     },
     {
@@ -17767,9 +17709,11 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1610,
-        "y": 2040,
+        "x": 1220,
+        "y": 1980,
         "wires": []
     },
     {
@@ -17785,52 +17729,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
-        "y": 1860,
-        "wires": []
-    },
-    {
-        "id": "6f665c8e.0ac494",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 1880,
-        "wires": []
-    },
-    {
-        "id": "1b0f282b.b0d52",
-        "type": "actionflows_in",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/Cycle in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 580,
-        "y": 1920,
-        "wires": [
-            [
-                "6f665c8e.0ac494",
-                "3d19f624.55954a"
-            ]
-        ]
-    },
-    {
-        "id": "6909b641.80fb38",
-        "type": "actionflows_out",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/Cycle out",
-        "links": [],
-        "x": 1860,
-        "y": 1900,
+        "x": 1130,
+        "y": 1820,
         "wires": []
     },
     {
@@ -17841,8 +17741,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1600,
-        "y": 2000,
+        "x": 1210,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -17859,17 +17759,22 @@
                 "type": "str"
             },
             {
+                "name": "PropertyLink",
+                "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimePred",
+                "type": "str"
+            },
+            {
                 "name": "TEST",
                 "value": "7",
                 "type": "str"
             }
         ],
-        "x": 1270,
-        "y": 2180,
+        "x": 950,
+        "y": 2140,
         "wires": [
             [
                 "e10fede1.f5141",
-                "f76b6e12.eb68f8"
+                "536107c446c90ff7"
             ],
             [
                 "2effc120.395026"
@@ -17888,9 +17793,11 @@
         "topic": "routed",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1600,
-        "y": 2180,
+        "x": 1210,
+        "y": 2160,
         "wires": []
     },
     {
@@ -17901,9 +17808,11 @@
         "topic": "metrics",
         "alias": "",
         "aliasType": "str",
+        "aliasMatchAll": false,
+        "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1610,
-        "y": 2280,
+        "x": 1220,
+        "y": 2260,
         "wires": []
     },
     {
@@ -17919,52 +17828,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
+        "x": 1110,
         "y": 2100,
-        "wires": []
-    },
-    {
-        "id": "90c40a1.47adbf8",
-        "type": "debug",
-        "z": "4ff5da13.cce2c4",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 2120,
-        "wires": []
-    },
-    {
-        "id": "9782459c.1401c",
-        "type": "actionflows_in",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimePred in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 620,
-        "y": 2160,
-        "wires": [
-            [
-                "2f78fbd6.731644",
-                "90c40a1.47adbf8"
-            ]
-        ]
-    },
-    {
-        "id": "f76b6e12.eb68f8",
-        "type": "actionflows_out",
-        "z": "4ff5da13.cce2c4",
-        "name": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimePred out",
-        "links": [],
-        "x": 1910,
-        "y": 2140,
         "wires": []
     },
     {
@@ -17975,8 +17840,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1640,
-        "y": 2240,
+        "x": 1250,
+        "y": 2220,
         "wires": [
             []
         ]
@@ -17994,8 +17859,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1380,
-        "y": 1280,
+        "x": 1190,
+        "y": 1260,
         "wires": []
     },
     {
@@ -18011,149 +17876,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1620,
-        "y": 740,
+        "x": 1190,
+        "y": 720,
         "wires": []
-    },
-    {
-        "id": "b38966d5.942b2",
-        "type": "iot-datasource",
-        "z": "4ff5da13.cce2c4",
-        "name": "currentOperatingPressure",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 1660,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7f0fcfe7.52cb48",
-        "type": "sub-link-output",
-        "z": "4ff5da13.cce2c4",
-        "inputs": 0,
-        "name": "",
-        "topic": "configSchedule",
-        "link": "72ae2011.f3d7b",
-        "priority": "0",
-        "aliasType": "str",
-        "alias": "",
-        "clone": false,
-        "x": 350,
-        "y": 940,
-        "wires": [
-            [
-                "c12fbad1.26a438"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "147fe8c7.b6da67",
-        "type": "sub-link-output",
-        "z": "4ff5da13.cce2c4",
-        "inputs": 0,
-        "name": "",
-        "topic": "configSchedule",
-        "link": "72ae2011.f3d7b",
-        "priority": "0",
-        "aliasType": "str",
-        "alias": "",
-        "clone": false,
-        "x": 350,
-        "y": 1200,
-        "wires": [
-            [
-                "8be25527.3bece8"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "98f6697c.11bfc",
-        "type": "sub-link-output",
-        "z": "4ff5da13.cce2c4",
-        "inputs": 0,
-        "name": "",
-        "topic": "configSchedule",
-        "link": "72ae2011.f3d7b",
-        "priority": "0",
-        "aliasType": "str",
-        "alias": "",
-        "clone": false,
-        "x": 350,
-        "y": 1480,
-        "wires": [
-            [
-                "b81c2dbd.1c3848"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "3275a386.896f4c",
-        "type": "sub-link-output",
-        "z": "4ff5da13.cce2c4",
-        "inputs": 0,
-        "name": "",
-        "topic": "configSchedule",
-        "link": "72ae2011.f3d7b",
-        "priority": "0",
-        "aliasType": "str",
-        "alias": "",
-        "clone": false,
-        "x": 350,
-        "y": 1740,
-        "wires": [
-            [
-                "202b668d.68d56a"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "69a2cc29.dac6e4",
-        "type": "sub-link-output",
-        "z": "4ff5da13.cce2c4",
-        "inputs": 0,
-        "name": "",
-        "topic": "configSchedule",
-        "link": "72ae2011.f3d7b",
-        "priority": "0",
-        "aliasType": "str",
-        "alias": "",
-        "clone": false,
-        "x": 350,
-        "y": 1980,
-        "wires": [
-            [
-                "3d19f624.55954a"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "4e113907.e9e7b8",
-        "type": "sub-link-output",
-        "z": "4ff5da13.cce2c4",
-        "inputs": 0,
-        "name": "",
-        "topic": "configSchedule",
-        "link": "72ae2011.f3d7b",
-        "priority": "0",
-        "aliasType": "str",
-        "alias": "",
-        "clone": false,
-        "x": 350,
-        "y": 2220,
-        "wires": [
-            [
-                "2f78fbd6.731644"
-            ],
-            []
-        ]
     },
     {
         "id": "7f947dcd.218e7c",
@@ -18168,8 +17893,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1460,
-        "y": 2060,
+        "x": 1210,
+        "y": 2040,
         "wires": []
     },
     {
@@ -18223,5 +17948,297 @@
         "x": 2255,
         "y": 2560,
         "wires": []
+    },
+    {
+        "id": "bc75f94e0c83e972",
+        "type": "debug",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "4a312fbac2f026ed",
+        "type": "link in",
+        "z": "4ff5da13.cce2c4",
+        "name": "invokeInternalDriver",
+        "links": [],
+        "x": 115,
+        "y": 1160,
+        "wires": [
+            [
+                "acb77643.946368",
+                "d439ee4246e826df"
+            ]
+        ]
+    },
+    {
+        "id": "1ccc472afbdc049c",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "return",
+        "links": [],
+        "x": 2375,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "d439ee4246e826df",
+        "type": "msg-router",
+        "z": "4ff5da13.cce2c4",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 7,
+        "x": 460,
+        "y": 1160,
+        "wires": [
+            [
+                "760d448.12effbc"
+            ],
+            [
+                "c12fbad1.26a438"
+            ],
+            [
+                "8be25527.3bece8"
+            ],
+            [
+                "b81c2dbd.1c3848"
+            ],
+            [
+                "202b668d.68d56a"
+            ],
+            [
+                "3d19f624.55954a"
+            ],
+            [
+                "2f78fbd6.731644"
+            ]
+        ]
+    },
+    {
+        "id": "86e8fb3007daad7d",
+        "type": "sub-link-output",
+        "z": "4ff5da13.cce2c4",
+        "inputs": 0,
+        "name": "",
+        "topic": "configSchedule",
+        "link": "72ae2011.f3d7b",
+        "priority": "0",
+        "aliasType": "str",
+        "alias": "",
+        "clone": false,
+        "x": 240,
+        "y": 1220,
+        "wires": [
+            [
+                "d439ee4246e826df",
+                "ae0cfa623c43b3ce"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a7c130ce5c3975a1",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "368c463adc53a8d1"
+        ],
+        "x": 1555,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "368c463adc53a8d1",
+        "type": "link in",
+        "z": "4ff5da13.cce2c4",
+        "name": "router",
+        "links": [
+            "246306a1d270009d",
+            "536107c446c90ff7",
+            "73d660a72d8adcad",
+            "87cc7fd4bcc8fc2a",
+            "a7c130ce5c3975a1",
+            "b3151b0f0dadca74",
+            "f565b10ef651de1d"
+        ],
+        "x": 2035,
+        "y": 1260,
+        "wires": [
+            [
+                "1ccc472afbdc049c"
+            ]
+        ]
+    },
+    {
+        "id": "87cc7fd4bcc8fc2a",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "368c463adc53a8d1"
+        ],
+        "x": 1555,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "246306a1d270009d",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "368c463adc53a8d1"
+        ],
+        "x": 1555,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "f565b10ef651de1d",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "368c463adc53a8d1"
+        ],
+        "x": 1555,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "73d660a72d8adcad",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "368c463adc53a8d1"
+        ],
+        "x": 1555,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "b3151b0f0dadca74",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "368c463adc53a8d1"
+        ],
+        "x": 1555,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "536107c446c90ff7",
+        "type": "link out",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "368c463adc53a8d1"
+        ],
+        "x": 1555,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "ae0cfa623c43b3ce",
+        "type": "debug",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "5e25b9ab2b581b31",
+        "type": "iot-datasource",
+        "z": "4ff5da13.cce2c4",
+        "name": "currentOperatingPressure",
+        "tstampField": "",
+        "dataField": "",
+        "disableDiscover": false,
+        "x": 1250,
+        "y": 620,
+        "wires": [
+            []
+        ]
     }
 ]
