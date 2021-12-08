@@ -74,6 +74,9 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 ![Semantic description of image](/source/images/Screenshot 2021-12-05 at 14.03.26.png)
 ""Submodel Element" pattern"
 
+![Semantic description of image](/source/images/Screenshot 2021-12-08 at 21.18.png)
+""Submodel Element" pattern"
+
 
 ## NOVAAS in action (Click on the Image to Show the Video)
 
