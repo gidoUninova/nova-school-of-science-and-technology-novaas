@@ -72,9 +72,6 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 - To connect the model to the physical asset (data provided by the physical asset) please take a look at the "DPDM/OperationalData" flow that contains the logic to handle this connection. A pattern has been created that can be replicated for each new "submodel element". The connection between the model and the real data is based on identificators.
 
 ![Semantic description of image](/source/images/Screenshot 2021-12-05 at 14.03.26.png)
-
-![Semantic description of image](/source/images/Screenshot 2021-12-08 at 21.18.png)
-
 ""Submodel Element" pattern"
 
 
