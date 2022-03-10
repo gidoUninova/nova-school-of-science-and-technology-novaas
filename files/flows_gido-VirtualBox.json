@@ -505,7 +505,9 @@
             "a9c22279a032d681"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 239
     },
     {
         "id": "d366c10f.cbf158",
@@ -549,7 +551,9 @@
             "a511e8225d1a1f58"
         ],
         "x": 194,
-        "y": 3519
+        "y": 3519,
+        "w": 2972,
+        "h": 542
     },
     {
         "id": "d7076418.bb51d8",
@@ -754,19 +758,19 @@
         "nodes": [
             "871d0572.18d9b8",
             "1a47219d.baab96",
-            "1e8c7e2a.260432",
-            "3488bd14.4bb1da",
-            "7b1c6bae.fc214c",
-            "8dbdf175.e7ac5",
             "fb94e554.157a98",
             "acb1ea8a.2a0e6",
             "4b6c82b0.fc018c",
-            "2b28ebc4a0c302d8"
+            "37b287cb56fcf5da",
+            "f79d3d7c87d27b67",
+            "382e5adb5c9c7ed5",
+            "939b57eb0bfa566a",
+            "2845e87d990395ef"
         ],
         "x": 1574,
         "y": 2679,
         "w": 912,
-        "h": 242
+        "h": 282
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -6557,132 +6561,6 @@
         ]
     },
     {
-        "id": "8452263f.a6ba28",
-        "type": "actionflows_in",
-        "z": "fd31082e.5487d8",
-        "name": "readSubmodelsFromAASUI in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 720,
-        "y": 2460,
-        "wires": [
-            [
-                "80d56e3763d2f915"
-            ]
-        ]
-    },
-    {
-        "id": "4950c4ca.40fb6c",
-        "type": "actionflows_out",
-        "z": "fd31082e.5487d8",
-        "name": "readSubmodelsFromAASUI out",
-        "links": [],
-        "x": 2670,
-        "y": 2460,
-        "wires": []
-    },
-    {
-        "id": "2c971198.d456ee",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1470,
-        "y": 2420,
-        "wires": []
-    },
-    {
-        "id": "458fac4.39e1f54",
-        "type": "actionflows_in",
-        "z": "fd31082e.5487d8",
-        "name": "updateSubmodelsFromAASUI in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 730,
-        "y": 2540,
-        "wires": [
-            [
-                "51127767.6acb78"
-            ]
-        ]
-    },
-    {
-        "id": "9c0c8569.eae818",
-        "type": "actionflows_out",
-        "z": "fd31082e.5487d8",
-        "name": "updateSubmodelsFromAASUI out",
-        "links": [],
-        "x": 2680,
-        "y": 2540,
-        "wires": []
-    },
-    {
-        "id": "51127767.6acb78",
-        "type": "unsafe-function",
-        "z": "fd31082e.5487d8",
-        "name": "reterieveSubmodels",
-        "func": "var submodels = msg.payload.InternalElement;\nmsg.payload = submodels;\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1300,
-        "y": 2540,
-        "wires": [
-            [
-                "509e7700.4e5958"
-            ]
-        ]
-    },
-    {
-        "id": "509e7700.4e5958",
-        "type": "split",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 1570,
-        "y": 2540,
-        "wires": [
-            [
-                "22f58847.d01c88",
-                "e9b19c94df957416"
-            ]
-        ]
-    },
-    {
-        "id": "22f58847.d01c88",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1690,
-        "y": 2500,
-        "wires": []
-    },
-    {
-        "id": "c069a564.445c18",
-        "type": "comment",
-        "z": "fd31082e.5487d8",
-        "name": "Interaction with the AASUI, to be checked",
-        "info": "",
-        "x": 460,
-        "y": 2360,
-        "wires": []
-    },
-    {
         "id": "8188be80.74de4",
         "type": "debug",
         "z": "fd31082e.5487d8",
@@ -6692,8 +6570,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1790,
-        "y": 2660,
+        "x": 1810,
+        "y": 2360,
         "wires": []
     },
     {
@@ -6705,8 +6583,8 @@
             "4a5f46fc.ea7c08",
             "c659a5d0.7355b8"
         ],
-        "x": 3115,
-        "y": 2700,
+        "x": 3135,
+        "y": 2400,
         "wires": []
     },
     {
@@ -6718,8 +6596,8 @@
             "f42c942d.6d6448",
             "a0c9ccc4.12d298"
         ],
-        "x": 235,
-        "y": 2700,
+        "x": 255,
+        "y": 2400,
         "wires": [
             [
                 "0277e205fc7c4018"
@@ -6736,8 +6614,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1730,
-        "y": 2820,
+        "x": 1750,
+        "y": 2520,
         "wires": []
     },
     {
@@ -6767,8 +6645,8 @@
         "delaying": "unrelated",
         "msgControl": false,
         "outputs": 2,
-        "x": 2030,
-        "y": 2880,
+        "x": 2050,
+        "y": 2580,
         "wires": [
             [
                 "31e9ae57.e1de12"
@@ -6787,8 +6665,8 @@
             "6e7f5025.a4315",
             "bcb152e2.608288"
         ],
-        "x": 3115,
-        "y": 2860,
+        "x": 3135,
+        "y": 2560,
         "wires": []
     },
     {
@@ -6800,8 +6678,8 @@
             "bc2fff91.b20fd",
             "df1cae54.a6ed38"
         ],
-        "x": 235,
-        "y": 2880,
+        "x": 255,
+        "y": 2580,
         "wires": [
             [
                 "797e0b452f2d10af"
@@ -6818,8 +6696,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1730,
-        "y": 3000,
+        "x": 1750,
+        "y": 2700,
         "wires": []
     },
     {
@@ -6849,8 +6727,8 @@
         "delaying": "unrelated",
         "msgControl": false,
         "outputs": 2,
-        "x": 2030,
-        "y": 3040,
+        "x": 2050,
+        "y": 2740,
         "wires": [
             [
                 "5e6f3c8.83ccdc4"
@@ -6869,8 +6747,8 @@
         "links": [
             "53f11e8b.9b099"
         ],
-        "x": 3115,
-        "y": 3020,
+        "x": 3135,
+        "y": 2720,
         "wires": []
     },
     {
@@ -6882,8 +6760,8 @@
             "9cae29d0.c4e968",
             "e2cbc28f.14c87"
         ],
-        "x": 235,
-        "y": 3040,
+        "x": 255,
+        "y": 2740,
         "wires": [
             [
                 "3186cf8ea5b9e507"
@@ -6900,8 +6778,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1730,
-        "y": 3160,
+        "x": 1750,
+        "y": 2860,
         "wires": []
     },
     {
@@ -6931,8 +6809,8 @@
         "delaying": "unrelated",
         "msgControl": false,
         "outputs": 2,
-        "x": 2030,
-        "y": 3220,
+        "x": 2050,
+        "y": 2920,
         "wires": [
             [
                 "4c0c0431.1e281c"
@@ -6951,8 +6829,8 @@
         "links": [
             "caf9273bf9a8afc4"
         ],
-        "x": 3115,
-        "y": 3200,
+        "x": 3135,
+        "y": 2900,
         "wires": []
     },
     {
@@ -6965,8 +6843,8 @@
             "2f34781a.c3a4b",
             "0bc19d258678bba4"
         ],
-        "x": 235,
-        "y": 3220,
+        "x": 255,
+        "y": 2920,
         "wires": [
             [
                 "b85879574e1d3bd1"
@@ -8213,8 +8091,8 @@
             "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
-        "x": 2340,
-        "y": 2900,
+        "x": 2360,
+        "y": 2600,
         "wires": [],
         "l": true
     },
@@ -8227,8 +8105,8 @@
             "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
-        "x": 2340,
-        "y": 3060,
+        "x": 2360,
+        "y": 2760,
         "wires": [],
         "l": true
     },
@@ -8241,8 +8119,8 @@
             "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
-        "x": 2340,
-        "y": 3240,
+        "x": 2360,
+        "y": 2940,
         "wires": [],
         "l": true
     },
@@ -8555,41 +8433,6 @@
         ]
     },
     {
-        "id": "80d56e3763d2f915",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [
-            "2e0bc58c812ae978"
-        ],
-        "timeout": "30",
-        "x": 1290,
-        "y": 2460,
-        "wires": [
-            [
-                "2c971198.d456ee",
-                "4950c4ca.40fb6c"
-            ]
-        ]
-    },
-    {
-        "id": "e9b19c94df957416",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [
-            "64e0e16be8a6705d"
-        ],
-        "timeout": "30",
-        "x": 1870,
-        "y": 2540,
-        "wires": [
-            [
-                "9c0c8569.eae818"
-            ]
-        ]
-    },
-    {
         "id": "797e0b452f2d10af",
         "type": "function",
         "z": "fd31082e.5487d8",
@@ -8600,8 +8443,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1000,
-        "y": 2880,
+        "x": 1020,
+        "y": 2580,
         "wires": [
             [
                 "1d0d971feff52be8"
@@ -8620,8 +8463,8 @@
             "9c413192820ac72d"
         ],
         "timeout": "30",
-        "x": 1490,
-        "y": 2840,
+        "x": 1510,
+        "y": 2540,
         "wires": [
             [
                 "3cae4c9a.680424",
@@ -8638,8 +8481,8 @@
             "183a7366ee87aed5"
         ],
         "timeout": "30",
-        "x": 1500,
-        "y": 3040,
+        "x": 1520,
+        "y": 2740,
         "wires": [
             [
                 "6d654b80.b160d4",
@@ -8658,8 +8501,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
-        "y": 3220,
+        "x": 1000,
+        "y": 2920,
         "wires": [
             [
                 "ef027ffb4cdf7faa"
@@ -8678,8 +8521,8 @@
             "fa81926752921ab7"
         ],
         "timeout": "30",
-        "x": 1500,
-        "y": 3200,
+        "x": 1520,
+        "y": 2900,
         "wires": [
             [
                 "3080ce10.a53cf2",
@@ -8868,8 +8711,8 @@
             "86b4b166afaa8721"
         ],
         "timeout": "30",
-        "x": 1310,
-        "y": 2700,
+        "x": 1330,
+        "y": 2400,
         "wires": [
             [
                 "8188be80.74de4",
@@ -8977,6 +8820,243 @@
         "complete": "true",
         "x": 710,
         "y": 4400,
+        "wires": []
+    },
+    {
+        "id": "eb9d71d37d808cfb",
+        "type": "actionflows_in",
+        "z": "fd31082e.5487d8",
+        "name": "readSubmodelsFromAASUI in",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 600,
+        "y": 3320,
+        "wires": [
+            [
+                "66e76291929fa929"
+            ]
+        ]
+    },
+    {
+        "id": "63ba801124eaef32",
+        "type": "actionflows_out",
+        "z": "fd31082e.5487d8",
+        "name": "readSubmodelsFromAASUI out",
+        "links": [],
+        "x": 2550,
+        "y": 3320,
+        "wires": []
+    },
+    {
+        "id": "e69c275560e005e2",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1350,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "4a3e4f5654cd500c",
+        "type": "actionflows_in",
+        "z": "fd31082e.5487d8",
+        "name": "updateSubmodelsFromAASUI in",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 610,
+        "y": 3400,
+        "wires": [
+            [
+                "fa07ee9f897300df"
+            ]
+        ]
+    },
+    {
+        "id": "19e49b82ce672f7e",
+        "type": "actionflows_out",
+        "z": "fd31082e.5487d8",
+        "name": "updateSubmodelsFromAASUI out",
+        "links": [],
+        "x": 2560,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "fa07ee9f897300df",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "reterieveSubmodels",
+        "func": "var submodels = msg.payload.InternalElement;\nmsg.payload = submodels;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1180,
+        "y": 3400,
+        "wires": [
+            [
+                "1f501beda33ec449"
+            ]
+        ]
+    },
+    {
+        "id": "1f501beda33ec449",
+        "type": "split",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 1450,
+        "y": 3400,
+        "wires": [
+            [
+                "4870e5dba713c410",
+                "2ef5202e0b0544eb"
+            ]
+        ]
+    },
+    {
+        "id": "4870e5dba713c410",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1570,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "a00c6a25876c5a71",
+        "type": "comment",
+        "z": "fd31082e.5487d8",
+        "name": "Interaction with the AASUI, to be checked",
+        "info": "",
+        "x": 340,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "66e76291929fa929",
+        "type": "link call",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "links": [
+            "2e0bc58c812ae978"
+        ],
+        "timeout": "30",
+        "x": 1170,
+        "y": 3320,
+        "wires": [
+            [
+                "e69c275560e005e2",
+                "63ba801124eaef32"
+            ]
+        ]
+    },
+    {
+        "id": "2ef5202e0b0544eb",
+        "type": "link call",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "links": [
+            "64e0e16be8a6705d"
+        ],
+        "timeout": "30",
+        "x": 1750,
+        "y": 3400,
+        "wires": [
+            [
+                "19e49b82ce672f7e"
+            ]
+        ]
+    },
+    {
+        "id": "3d24e4987a9374bb",
+        "type": "link in",
+        "z": "fd31082e.5487d8",
+        "name": "newConfiguration in",
+        "links": [],
+        "x": 595,
+        "y": 3200,
+        "wires": [
+            [
+                "14c24f89282d4443"
+            ]
+        ]
+    },
+    {
+        "id": "a48c3697a0e3068c",
+        "type": "link out",
+        "z": "fd31082e.5487d8",
+        "name": "newConfiguration out",
+        "mode": "return",
+        "links": [],
+        "x": 2565,
+        "y": 3200,
+        "wires": []
+    },
+    {
+        "id": "14c24f89282d4443",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "manipulate Message",
+        "func": "context.global.set(\"encrypt\", msg.payload.configuration.encrypt);\nmsg.payload = msg.payload.configuration.scheduling;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 3200,
+        "wires": [
+            [
+                "b66c98a4ecdfcfaa"
+            ]
+        ]
+    },
+    {
+        "id": "b66c98a4ecdfcfaa",
+        "type": "link call",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "links": [
+            "8e9def763e10c8fe"
+        ],
+        "timeout": "30",
+        "x": 1450,
+        "y": 3200,
+        "wires": [
+            [
+                "a48c3697a0e3068c",
+                "1e9f28b8ed7f8f81"
+            ]
+        ]
+    },
+    {
+        "id": "1e9f28b8ed7f8f81",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1910,
+        "y": 3120,
         "wires": []
     },
     {
@@ -11268,7 +11348,7 @@
         "type": "debug",
         "z": "670d9c89.6d0424",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -11321,8 +11401,8 @@
         "func": "var statusCheck = context.global.get(\"statusCheckSBI\");\nif(msg.payload.statusCheck != \"\" && msg.payload != \"connectionStatusCheck\"){\n    if(msg.payload.statusCheck.connected == true && msg.payload.statusCheck.nrOfDataSources > 0){\n        context.global.set(\"statusCheckSBI\", msg.payload.statusCheck);\n    }\n}\nelse {\n    statusCheck = {};\n    statusCheck.connected = false;\n    statusCheck.nrOfDatasources = 0;\n    context.global.set(\"statusCheckSBI\", statusCheck);\n}\nmsg.pyload = {\"statusCheckSBI\": statusCheck};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1440,
-        "y": 1200,
+        "x": 1430,
+        "y": 1260,
         "wires": [
             [
                 "796fdeb5.8f68b8"
@@ -11350,8 +11430,8 @@
         "topic": "",
         "payload": "connectionStatusCheck",
         "payloadType": "str",
-        "x": 370,
-        "y": 1200,
+        "x": 360,
+        "y": 1260,
         "wires": [
             [
                 "d4f1b535ee0549b9"
@@ -11371,8 +11451,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
-        "y": 1100,
+        "x": 1380,
+        "y": 1220,
         "wires": []
     },
     {
@@ -11383,8 +11463,8 @@
         "links": [
             "d7f84005.ce11e8"
         ],
-        "x": 1885,
-        "y": 1200,
+        "x": 1875,
+        "y": 1260,
         "wires": []
     },
     {
@@ -11703,8 +11783,8 @@
             "66477136701117fb"
         ],
         "timeout": "30",
-        "x": 1160,
-        "y": 1200,
+        "x": 1150,
+        "y": 1260,
         "wires": [
             [
                 "e0c0795b.6a17b8",
@@ -11930,12 +12010,12 @@
         "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = msg.payload.observableReference;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
-        "x": 870,
-        "y": 820,
+        "x": 630,
+        "y": 860,
         "wires": [
             [
                 "3423892e.2e5336",
-                "c36f58b7.acd8a"
+                "19e82adda5928970"
             ]
         ]
     },
@@ -11978,7 +12058,7 @@
         "qos": "",
         "retain": "",
         "broker": "e70d9188.7d95e",
-        "x": 1390,
+        "x": 1670,
         "y": 820,
         "wires": []
     },
@@ -12008,7 +12088,7 @@
         "selection": "next",
         "sourceProperty": "msg.topic",
         "sticky": "",
-        "x": 1140,
+        "x": 1420,
         "y": 860,
         "wires": [
             [],
@@ -12030,7 +12110,7 @@
         "qos": "",
         "retain": "",
         "broker": "e70d9188.7d95e",
-        "x": 1390,
+        "x": 1670,
         "y": 900,
         "wires": []
     },
@@ -12075,6 +12155,187 @@
         "x": 1615,
         "y": 740,
         "wires": []
+    },
+    {
+        "id": "457356dfaa85b7f5",
+        "type": "rsa-generate-keypair",
+        "z": "3db1c009.99d51",
+        "name": "rsa generate keypair",
+        "bitlength": "2048",
+        "passphrase": "",
+        "x": 800,
+        "y": 1280,
+        "wires": [
+            [
+                "1352c08fbbbba291",
+                "c9d3f6417927e31b",
+                "f600197e0a0799a7"
+            ]
+        ]
+    },
+    {
+        "id": "eb10d7cc28a79ca8",
+        "type": "inject",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 1280,
+        "wires": [
+            [
+                "457356dfaa85b7f5"
+            ]
+        ]
+    },
+    {
+        "id": "c9d3f6417927e31b",
+        "type": "rsa-encrypt",
+        "z": "3db1c009.99d51",
+        "name": "rsa encrypt",
+        "publickey": "",
+        "x": 1130,
+        "y": 920,
+        "wires": [
+            [
+                "c36f58b7.acd8a"
+            ]
+        ]
+    },
+    {
+        "id": "f600197e0a0799a7",
+        "type": "rsa-decrypt",
+        "z": "3db1c009.99d51",
+        "name": "rsa decrypt",
+        "privatekey": "",
+        "x": 1410,
+        "y": 1060,
+        "wires": [
+            [
+                "25f57a08afdcdf1c"
+            ]
+        ]
+    },
+    {
+        "id": "1352c08fbbbba291",
+        "type": "function",
+        "z": "3db1c009.99d51",
+        "name": "store Keys",
+        "func": "context.flow.set(\"privateKey\", msg.payload.privateKey);\ncontext.flow.set(\"publicKey\", msg.payload.publicKey);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19e82adda5928970",
+        "type": "switch",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "property": "encrypt",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 870,
+        "y": 860,
+        "wires": [
+            [
+                "c36f58b7.acd8a"
+            ],
+            [
+                "c9d3f6417927e31b"
+            ]
+        ]
+    },
+    {
+        "id": "25f57a08afdcdf1c",
+        "type": "debug",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "f2a9ea262f659fb4",
+        "type": "inject",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 980,
+        "wires": [
+            [
+                "bfe393f510769353"
+            ]
+        ]
+    },
+    {
+        "id": "bfe393f510769353",
+        "type": "unsafe-function",
+        "z": "3db1c009.99d51",
+        "name": "PayloadProcessing",
+        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = \"test\";\nobservation.source = \"myAAS\";\nobservation.direction = \"out\";\nobservation.observableReference = \"msg.observableReference\";\nobservation.timestamp = \"msg.timestamp\";\nobservation.payload = \"msg.payload\";\nobservation.topic = \"msg.topic\";\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = msg.payload.observableReference;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 980,
+        "wires": [
+            [
+                "19e82adda5928970"
+            ]
+        ]
     },
     {
         "id": "b05b8675.6b0908",
@@ -14440,7 +14701,7 @@
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
         "name": "",
-        "label": "Seconds",
+        "label": "Every ...",
         "tooltip": "",
         "group": "360b2bc7.818494",
         "order": 1,
@@ -14449,10 +14710,12 @@
         "wrap": false,
         "passthru": true,
         "topic": "",
+        "topicType": "str",
         "format": "{{value}}",
         "min": "1",
         "max": "59",
         "step": 1,
+        "className": "",
         "x": 1660,
         "y": 2720,
         "wires": [
@@ -14466,96 +14729,12 @@
         "type": "unsafe-function",
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
-        "name": "store seconds",
-        "func": "context.flow.set(\"seconds\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1930,
-        "y": 2720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1e8c7e2a.260432",
-        "type": "ui_numeric",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "",
-        "label": "Minutes",
-        "tooltip": "",
-        "group": "360b2bc7.818494",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "59",
-        "step": 1,
-        "x": 1660,
-        "y": 2760,
-        "wires": [
-            [
-                "3488bd14.4bb1da"
-            ]
-        ]
-    },
-    {
-        "id": "3488bd14.4bb1da",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "store minutes",
-        "func": "context.flow.set(\"minutes\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1930,
-        "y": 2760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7b1c6bae.fc214c",
-        "type": "ui_numeric",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "",
-        "label": "Hours",
-        "tooltip": "",
-        "group": "360b2bc7.818494",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "60",
-        "step": 1,
-        "x": 1650,
-        "y": 2800,
-        "wires": [
-            [
-                "8dbdf175.e7ac5"
-            ]
-        ]
-    },
-    {
-        "id": "8dbdf175.e7ac5",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "store hours",
-        "func": "context.flow.set(\"hours\", msg.payload);\nreturn msg;",
+        "name": "store period",
+        "func": "context.flow.set(\"period\", msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1920,
-        "y": 2800,
+        "y": 2720,
         "wires": [
             []
         ]
@@ -14565,22 +14744,24 @@
         "type": "ui_button",
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
-        "name": "Update Scheduling",
+        "name": "Update Configuration",
         "group": "360b2bc7.818494",
         "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Update Scheduling",
+        "label": "Update Configuration",
         "tooltip": "",
         "color": "",
         "bgcolor": "#FF9000",
+        "className": "",
         "icon": "mode_edit",
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1690,
-        "y": 2880,
+        "topicType": "str",
+        "x": 1700,
+        "y": 2920,
         "wires": [
             [
                 "acb1ea8a.2a0e6"
@@ -14593,14 +14774,14 @@
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
         "name": "Get Values",
-        "func": "var seconds = context.flow.get(\"seconds\");\nvar minutes = context.flow.get(\"minutes\");\nvar hours = context.flow.get(\"hours\");\nmsg.payload = {};\nmsg.payload = msg.seconds + \" \" + \" \" + msg.minutes + \" \" + msg.hours + \" \" + \"* * * *\";\n\nreturn msg;",
+        "func": "var period = context.flow.get(\"period\");\nvar granularity = context.flow.get(\"granularity\");\nvar encrypt = context.flow.get(\"encrypt\");\nmsg.payload = {};\nmsg.payload.configuration = {};\nif(granularity == \"Seconds\"){\n    msg.payload.configuration.scheduling = \"*/\" + period + \" \" + \"* * * * * *\";\n} else if(granularity == \"Minutes\"){\n    msg.payload.configuration.scheduling = \"0 \" + \"/*\" + period + \" \" + \"* * * * *\";\n} else if (granularity == \"Hours\"){\n    msg.payload.configuration.scheduling = \"0 \" + \"0 \" + \"/*\" + period + \" \" + \"* * * *\";\n}\nmsg.payload.configuration.encrypt = encrypt;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1930,
-        "y": 2880,
+        "y": 2920,
         "wires": [
             [
-                "2b28ebc4a0c302d8"
+                "382e5adb5c9c7ed5"
             ]
         ]
     },
@@ -14619,7 +14800,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2390,
-        "y": 2880,
+        "y": 2920,
         "wires": []
     },
     {
@@ -16153,24 +16334,6 @@
         ]
     },
     {
-        "id": "2b28ebc4a0c302d8",
-        "type": "link call",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "",
-        "links": [
-            "8e9def763e10c8fe"
-        ],
-        "timeout": "30",
-        "x": 2170,
-        "y": 2880,
-        "wires": [
-            [
-                "4b6c82b0.fc018c"
-            ]
-        ]
-    },
-    {
         "id": "28a6230f679f8eeb",
         "type": "change",
         "z": "2164c119.f88826",
@@ -16530,6 +16693,133 @@
             [
                 "fd86db17b1d2abfe"
             ]
+        ]
+    },
+    {
+        "id": "37b287cb56fcf5da",
+        "type": "ui_switch",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "Encrypt",
+        "label": "Encrypt",
+        "tooltip": "",
+        "group": "360b2bc7.818494",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1660,
+        "y": 2860,
+        "wires": [
+            [
+                "f79d3d7c87d27b67"
+            ]
+        ]
+    },
+    {
+        "id": "f79d3d7c87d27b67",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "store encrypt",
+        "func": "context.flow.set(\"encrypt\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1930,
+        "y": 2860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "382e5adb5c9c7ed5",
+        "type": "link call",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "",
+        "links": [
+            "3d24e4987a9374bb"
+        ],
+        "timeout": "30",
+        "x": 2160,
+        "y": 2920,
+        "wires": [
+            [
+                "4b6c82b0.fc018c"
+            ]
+        ]
+    },
+    {
+        "id": "939b57eb0bfa566a",
+        "type": "ui_dropdown",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "360b2bc7.818494",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Seconds",
+                "value": "Seconds",
+                "type": "str"
+            },
+            {
+                "label": "Minutes",
+                "value": "Minutes",
+                "type": "str"
+            },
+            {
+                "label": "Hours",
+                "value": "Hours",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1670,
+        "y": 2780,
+        "wires": [
+            [
+                "2845e87d990395ef"
+            ]
+        ]
+    },
+    {
+        "id": "2845e87d990395ef",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "store granularity",
+        "func": "context.flow.set(\"granularity\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1920,
+        "y": 2780,
+        "wires": [
+            []
         ]
     },
     {
