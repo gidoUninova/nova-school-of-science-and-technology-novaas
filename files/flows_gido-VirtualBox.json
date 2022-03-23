@@ -56,6 +56,14 @@
         "info": ""
     },
     {
+        "id": "d6ac686a8b33b0c0",
+        "type": "tab",
+        "label": "InternalDbTester",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "56cb7422.e3d28c",
         "type": "subflow",
         "name": "APILogger",
@@ -293,6 +301,50 @@
                 "name": "PropertyLink",
                 "type": "str",
                 "value": ""
+            },
+            {
+                "name": "HistoryLength",
+                "type": "num",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "5ed335e57e3a0a3e",
+        "type": "subflow",
+        "name": "History",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "09d05abc4fc708a6"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "09d05abc4fc708a6",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "historyArrayName",
+                "type": "str",
+                "value": ""
             }
         ],
         "meta": {},
@@ -335,9 +387,7 @@
             "ad8fbd86.506ae8"
         ],
         "x": 76,
-        "y": 105,
-        "w": 1902,
-        "h": 477
+        "y": 105
     },
     {
         "id": "daa90db5.798ca",
@@ -388,9 +438,7 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1888
+        "y": 599
     },
     {
         "id": "66d3f26a.c296b4",
@@ -429,9 +477,7 @@
             "15f4655a.3a5aab"
         ],
         "x": 74,
-        "y": 2499,
-        "w": 1972,
-        "h": 642
+        "y": 2499
     },
     {
         "id": "fd25b313.221798",
@@ -454,9 +500,7 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 3179,
-        "w": 1912,
-        "h": 202
+        "y": 3179
     },
     {
         "id": "16640da3.5a20ca",
@@ -477,9 +521,7 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3399,
-        "w": 1932,
-        "h": 182
+        "y": 3399
     },
     {
         "id": "4b4e4270.d440bc",
@@ -522,13 +564,11 @@
         "nodes": [
             "b5632ab6.616158",
             "6eef4cae.579154",
-            "c1053253.abab6",
             "6659f21b.215e6c",
             "3dd50be3.e99724",
             "9ae0cc41.4f38e",
             "ff535ae7.0608f8",
             "7a3969fb.3f65c8",
-            "6c8b8dd.0947374",
             "5ee56f7a.9622a",
             "86743c69.70234",
             "be37d7a0.4489e",
@@ -539,20 +579,23 @@
             "162cb66c.3b7292",
             "9f810b8b.7a1b8",
             "b88a92c6.fb547",
-            "49f6617c1a03ff11",
-            "9adaa7b9af390ff8",
-            "3b6f974617ed5d03",
             "763e24a65676fe62",
             "7bbc28fb574d58c1",
             "21eb2aa8ef422845",
             "e3b65b422feee85c",
             "45a677306f7064d0",
             "555ce72ca0d7dfd4",
-            "a511e8225d1a1f58"
+            "a511e8225d1a1f58",
+            "caf4b4a16d985b11",
+            "52c6afa7afd3a2fb",
+            "fcd421eb75b0dc8c",
+            "dc5dcf0aae894289",
+            "6b774011e4b71813",
+            "946165d1730b5724"
         ],
         "x": 194,
         "y": 3519,
-        "w": 2972,
+        "w": 2962,
         "h": 542
     },
     {
@@ -595,12 +638,13 @@
             "f31795b7.8000d",
             "309b8128.737fce",
             "28ed3c82.06228c",
-            "983208d5.9b5e"
+            "983208d5.9b5e",
+            "9d9d4e513499c3ff"
         ],
         "x": 54,
-        "y": 2333.094940185547,
+        "y": 2319,
         "w": 1272,
-        "h": 431.99999809265137
+        "h": 446.09493827819824
     },
     {
         "id": "9eaca16.128cb6",
@@ -830,23 +874,15 @@
             "fef12c4c.00324",
             "1ab68a79.a369be",
             "eb351cb4.81437",
-            "66cf1c72.99bbcc",
-            "d32b5901.1a603",
-            "27faa505.26a31a",
             "d50039d0.bc4938",
             "2b4abcf3.ba6b04",
             "9d155fa1.55784",
-            "856b84d2.58bc58",
-            "f73c7559.2f4508",
             "50f38532.36990c",
             "4a2fa6da.9b03d8",
             "41bb2566.3acfdc",
-            "8b15d4c7.c880d",
             "c65f095e.8a22d",
             "cb167da9.5407f8",
             "550830ba.1dfd1",
-            "a11a2eee.a46c8",
-            "abde95dc.e3d6d",
             "90530db5.87162",
             "e76c094a.301b98",
             "2f54e93e.6944ae",
@@ -861,19 +897,22 @@
             "86227a90.b4dd58",
             "62f98cdc.581cc4",
             "2776ae57.9d57ea",
-            "da93d1b7.9c1328",
-            "e8c93d79.6993d",
-            "515aafe.e6c17d",
-            "ae5e1f90.74594",
-            "c26f366a.bc9c88",
             "323548f1.1a0c1",
             "510bb40f.d3429c",
-            "3da1a7ea98029b38"
+            "a26bc914f34b8f50",
+            "de657e4d8db0f36b",
+            "fe09fae4e18b7ea8",
+            "251c8344386b81d8",
+            "9eaf942099d38833",
+            "71e9e40b340b070d",
+            "92da7713d087f2a3",
+            "ae52d30cfa804461",
+            "ce4844b28ff75308"
         ],
         "x": 1584,
         "y": 1539,
         "w": 2222,
-        "h": 783
+        "h": 802
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -992,7 +1031,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 114,
-        "y": 2639,
+        "y": 2899,
         "w": 2872,
         "h": 516
     },
@@ -1045,9 +1084,7 @@
             "bb1348ef.5dad58"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -1091,9 +1128,7 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 552
+        "y": 1909
     },
     {
         "id": "de00f046.a69e6",
@@ -2369,6 +2404,12 @@
         "hidden": false
     },
     {
+        "id": "50760f2b4eafd99b",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
         "id": "d56e5f93.f422c",
         "type": "logger",
         "z": "56cb7422.e3d28c",
@@ -3080,7 +3121,7 @@
         "type": "unsafe-function",
         "z": "c1dd96d4.47a088",
         "name": "responseTime",
-        "func": "var outMsg= {};\noutMsg.topic = \"put\";\noutMsg.payload = {\n    link: env.get(\"PropertyLink\"),\n    tstamp: context.flow.get(\"$parent.timestamp\"),\n    data: context.flow.get(\"variable\")\n};\nreturn outMsg;",
+        "func": "var historyArrayName = \"$parent.\" + env.get(\"PropertyName\") + \"_hist\";\nvar outMsg= {};\noutMsg.topic = \"put\";\noutMsg.payload = {\n    link: env.get(\"PropertyLink\"),\n    tstamp: context.flow.get(\"$parent.timestamp\"),\n    data: context.flow.get(\"variable\")\n};\nlet history = context.flow.get(historyArrayName) || [];\nif (history.length >= env.get(\"HistoryLength\")){\n    history.pop();\n}\nhistory.push(outMsg.payload);\ncontext.flow.set(historyArrayName, history);\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1075,
@@ -3138,6 +3179,23 @@
             [
                 "8f7552d2.152dd"
             ]
+        ]
+    },
+    {
+        "id": "09d05abc4fc708a6",
+        "type": "function",
+        "z": "5ed335e57e3a0a3e",
+        "name": "History",
+        "func": "// Get request timestamps\nvar start = msg.payload.start;\nvar end = (msg.payload.end - start)/1000;\n//var end = msg.payload.end;\nvar history = context.flow.get(\"$parent.\" + env.get(\"historyArrayName\"));\nif(end > history.length){\n    start = history.length;\n} else {\n    start = history.length - end;\n}\n\nvar data = [];\nfor (var ts = start; ts < history.length; ts++ )\n{   \n    var element = history[ts];\n\n    data.push( {\n        tstamp: element.tstamp,\n        data: element.data\n    } );\n}\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            []
         ]
     },
     {
@@ -6565,7 +6623,7 @@
         "type": "debug",
         "z": "fd31082e.5487d8",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6902,32 +6960,16 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nif(msg.res){\n    // Create an Observation Event Object ------------------------------------\n    var observation = {};\n    observation.id = uuid;\n    observation.source = context.global.get(\"AASIdentifier\");\n    observation.direction = \"Output\";\n    observation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n    observation.timestamp = new Date().getTime();\n    observation.payload = msg.payload;\n    msg.payload = observation;\n    return [msg, null];\n} else {\n    msg.topic = msg.req.params.id;\n    return [null, msg];\n}\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 2750,
-        "y": 3680,
+        "x": 1550,
+        "y": 3660,
         "wires": [
             [
-                "c1053253.abab6",
-                "3dd50be3.e99724"
+                "946165d1730b5724"
             ],
             [
-                "3dd50be3.e99724"
+                "946165d1730b5724"
             ]
         ]
-    },
-    {
-        "id": "c1053253.abab6",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3030,
-        "y": 3680,
-        "wires": []
     },
     {
         "id": "6659f21b.215e6c",
@@ -7099,30 +7141,6 @@
             ],
             [
                 "86743c69.70234"
-            ]
-        ]
-    },
-    {
-        "id": "6c8b8dd.0947374",
-        "type": "switch",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "IF_statusMessage_not_null",
-        "property": "statusMessage",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1960,
-        "y": 3580,
-        "wires": [
-            [
-                "49f6617c1a03ff11"
             ]
         ]
     },
@@ -7364,14 +7382,14 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nif(msg.res){\n    // Create an Observation Event Object ------------------------------------\n    var observation = {};\n    observation.id = uuid;\n    observation.source = context.global.get(\"AASIdentifier\");\n    observation.direction = \"Output\";\n    observation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n    observation.timestamp = new Date().getTime();\n    observation.payload = msg.payload;\n    msg.payload = observation;\n    return [msg, null];\n} else {\n    msg.topic = msg.req.params.id;\n    return [null, msg];\n}\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 2750,
+        "x": 1550,
         "y": 3800,
         "wires": [
             [
-                "9ae0cc41.4f38e"
+                "6b774011e4b71813"
             ],
             [
-                "9ae0cc41.4f38e"
+                "6b774011e4b71813"
             ]
         ]
     },
@@ -8125,58 +8143,6 @@
         "l": true
     },
     {
-        "id": "49f6617c1a03ff11",
-        "type": "link out",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "NOVAAS_(Un)SubscriptionEvent_UI",
-        "links": [
-            "3da1a7ea98029b38"
-        ],
-        "x": 3000,
-        "y": 3580,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "3b6f974617ed5d03",
-        "type": "link out",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "NOVAAS_(Un)SubscriptionEvent_UI",
-        "links": [
-            "3da1a7ea98029b38"
-        ],
-        "x": 2980,
-        "y": 3740,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "9adaa7b9af390ff8",
-        "type": "switch",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "IF_statusMessage_not_null",
-        "property": "statusMessage",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1960,
-        "y": 3740,
-        "wires": [
-            [
-                "3b6f974617ed5d03"
-            ]
-        ]
-    },
-    {
         "id": "b631ea1ebc90bca5",
         "type": "link call",
         "z": "fd31082e.5487d8",
@@ -8599,8 +8565,7 @@
         "y": 3620,
         "wires": [
             [
-                "6c8b8dd.0947374",
-                "3dd50be3.e99724"
+                "946165d1730b5724"
             ]
         ]
     },
@@ -8618,8 +8583,7 @@
         "y": 3760,
         "wires": [
             [
-                "9adaa7b9af390ff8",
-                "9ae0cc41.4f38e"
+                "6b774011e4b71813"
             ]
         ]
     },
@@ -8716,7 +8680,7 @@
         "wires": [
             [
                 "8188be80.74de4",
-                "3baa6a51.8f0c46"
+                "473173ab2a027b36"
             ]
         ]
     },
@@ -8823,122 +8787,6 @@
         "wires": []
     },
     {
-        "id": "eb9d71d37d808cfb",
-        "type": "actionflows_in",
-        "z": "fd31082e.5487d8",
-        "name": "readSubmodelsFromAASUI in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 600,
-        "y": 3320,
-        "wires": [
-            [
-                "66e76291929fa929"
-            ]
-        ]
-    },
-    {
-        "id": "63ba801124eaef32",
-        "type": "actionflows_out",
-        "z": "fd31082e.5487d8",
-        "name": "readSubmodelsFromAASUI out",
-        "links": [],
-        "x": 2550,
-        "y": 3320,
-        "wires": []
-    },
-    {
-        "id": "e69c275560e005e2",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1350,
-        "y": 3280,
-        "wires": []
-    },
-    {
-        "id": "4a3e4f5654cd500c",
-        "type": "actionflows_in",
-        "z": "fd31082e.5487d8",
-        "name": "updateSubmodelsFromAASUI in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 610,
-        "y": 3400,
-        "wires": [
-            [
-                "fa07ee9f897300df"
-            ]
-        ]
-    },
-    {
-        "id": "19e49b82ce672f7e",
-        "type": "actionflows_out",
-        "z": "fd31082e.5487d8",
-        "name": "updateSubmodelsFromAASUI out",
-        "links": [],
-        "x": 2560,
-        "y": 3400,
-        "wires": []
-    },
-    {
-        "id": "fa07ee9f897300df",
-        "type": "unsafe-function",
-        "z": "fd31082e.5487d8",
-        "name": "reterieveSubmodels",
-        "func": "var submodels = msg.payload.InternalElement;\nmsg.payload = submodels;\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1180,
-        "y": 3400,
-        "wires": [
-            [
-                "1f501beda33ec449"
-            ]
-        ]
-    },
-    {
-        "id": "1f501beda33ec449",
-        "type": "split",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 1450,
-        "y": 3400,
-        "wires": [
-            [
-                "4870e5dba713c410",
-                "2ef5202e0b0544eb"
-            ]
-        ]
-    },
-    {
-        "id": "4870e5dba713c410",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1570,
-        "y": 3360,
-        "wires": []
-    },
-    {
         "id": "a00c6a25876c5a71",
         "type": "comment",
         "z": "fd31082e.5487d8",
@@ -8947,41 +8795,6 @@
         "x": 340,
         "y": 3100,
         "wires": []
-    },
-    {
-        "id": "66e76291929fa929",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [
-            "2e0bc58c812ae978"
-        ],
-        "timeout": "30",
-        "x": 1170,
-        "y": 3320,
-        "wires": [
-            [
-                "e69c275560e005e2",
-                "63ba801124eaef32"
-            ]
-        ]
-    },
-    {
-        "id": "2ef5202e0b0544eb",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [
-            "64e0e16be8a6705d"
-        ],
-        "timeout": "30",
-        "x": 1750,
-        "y": 3400,
-        "wires": [
-            [
-                "19e49b82ce672f7e"
-            ]
-        ]
     },
     {
         "id": "3d24e4987a9374bb",
@@ -9057,6 +8870,336 @@
         "complete": "true",
         "x": 1910,
         "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "caf4b4a16d985b11",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2830,
+        "y": 3600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52c6afa7afd3a2fb",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "name": "prepare INSERT Statement",
+        "func": "let observation = msg.payload;\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\";\nmsg.payload = [context.global.get('AASIdentifier'), observation.observableReference, observation.timestamp, observation.payload];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2480,
+        "y": 3600,
+        "wires": [
+            [
+                "caf4b4a16d985b11"
+            ]
+        ]
+    },
+    {
+        "id": "dc5dcf0aae894289",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "name": "prepare INSERT Statement",
+        "func": "let observation = msg.payload;\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\";\nmsg.payload = [context.global.get('AASIdentifier'), observation.observableReference, observation.timestamp, observation.payload];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2480,
+        "y": 3740,
+        "wires": [
+            [
+                "fcd421eb75b0dc8c"
+            ]
+        ]
+    },
+    {
+        "id": "fcd421eb75b0dc8c",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2830,
+        "y": 3740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b774011e4b71813",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2190,
+        "y": 3780,
+        "wires": [
+            [
+                "dc5dcf0aae894289"
+            ],
+            [
+                "9ae0cc41.4f38e"
+            ]
+        ]
+    },
+    {
+        "id": "946165d1730b5724",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2190,
+        "y": 3640,
+        "wires": [
+            [
+                "52c6afa7afd3a2fb"
+            ],
+            [
+                "3dd50be3.e99724"
+            ]
+        ]
+    },
+    {
+        "id": "473173ab2a027b36",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2030,
+        "y": 2400,
+        "wires": [
+            [
+                "3baa6a51.8f0c46"
+            ],
+            [
+                "5b7cc2a7fed6a732"
+            ]
+        ]
+    },
+    {
+        "id": "5b7cc2a7fed6a732",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\n\nlet filterNamespaceUrl = msg.req.url.replace(context.global.get('namespace'), \"\");\nlet filterAPIElements1Url = filterNamespaceUrl.replace(\"/aasServer/shells/\", \"\");\nlet filterAPIElements2Url = filterAPIElements1Url.replace(\"/aas/submodels\", \"\");\nlet filterAPIElements3Url = filterAPIElements2Url.replace(\"/submodel/submodel-elements\", \"\");\n\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"Output\";\nlogEvent.observableReference = decodeURIComponent(filterAPIElements3Url.trim());\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = msg.payload.value;\n\nif(msg.payload.modelType.name == \"Property\"){\n    msg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\";\n} else if (msg.payload.modelType.name == \"File\"){\n    msg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, link) VALUES ($aasId, $observableRef, $timestamp, $link)\";\n}\nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2300,
+        "y": 2440,
+        "wires": [
+            [
+                "1cb938c7cc1ad367",
+                "c21dc6455514a760"
+            ]
+        ]
+    },
+    {
+        "id": "1cb938c7cc1ad367",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2650,
+        "y": 2440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e66f9517e92d99ba",
+        "type": "link in",
+        "z": "fd31082e.5487d8",
+        "name": "newLogin in",
+        "links": [],
+        "x": 595,
+        "y": 3300,
+        "wires": [
+            [
+                "c925290f9583547d",
+                "3d3547b4770d731e"
+            ]
+        ]
+    },
+    {
+        "id": "f04c07e586c4cefc",
+        "type": "link out",
+        "z": "fd31082e.5487d8",
+        "name": "newConfiguration out",
+        "mode": "return",
+        "links": [],
+        "x": 2565,
+        "y": 3300,
+        "wires": []
+    },
+    {
+        "id": "c925290f9583547d",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "// Process msg payload\n\nlet logEvent = {};\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.timestamp = msg.payload.accessAt;\nlogEvent.payload = msg.payload.username;\n\nmsg.topic = \"INSERT INTO accountLogs (accessAt, username) VALUES ($accessAt, $username)\";\nmsg.payload = [logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 3300,
+        "wires": [
+            [
+                "83cb56d8d6ecb41f",
+                "e44cc6a2281fec42"
+            ]
+        ]
+    },
+    {
+        "id": "83cb56d8d6ecb41f",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1590,
+        "y": 3300,
+        "wires": [
+            [
+                "f04c07e586c4cefc"
+            ]
+        ]
+    },
+    {
+        "id": "e44cc6a2281fec42",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 3240,
+        "wires": []
+    },
+    {
+        "id": "3d3547b4770d731e",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1109.7222900390625,
+        "y": 3248.0556640625,
+        "wires": []
+    },
+    {
+        "id": "c21dc6455514a760",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2650,
+        "y": 2500,
         "wires": []
     },
     {
@@ -11302,7 +11445,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1090,
-        "y": 940,
+        "y": 1100,
         "wires": [
             [
                 "125cba557ead93be"
@@ -11357,7 +11500,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
-        "y": 1060,
+        "y": 1220,
         "wires": []
     },
     {
@@ -11369,7 +11512,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 710,
-        "y": 700,
+        "y": 860,
         "wires": [
             [
                 "a1e4b28.4d15dd"
@@ -11390,7 +11533,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1070,
-        "y": 700,
+        "y": 860,
         "wires": []
     },
     {
@@ -11402,7 +11545,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1430,
-        "y": 1260,
+        "y": 1420,
         "wires": [
             [
                 "796fdeb5.8f68b8"
@@ -11431,7 +11574,7 @@
         "payload": "connectionStatusCheck",
         "payloadType": "str",
         "x": 360,
-        "y": 1260,
+        "y": 1420,
         "wires": [
             [
                 "d4f1b535ee0549b9"
@@ -11452,7 +11595,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1380,
-        "y": 1220,
+        "y": 1380,
         "wires": []
     },
     {
@@ -11464,7 +11607,7 @@
             "d7f84005.ce11e8"
         ],
         "x": 1875,
-        "y": 1260,
+        "y": 1420,
         "wires": []
     },
     {
@@ -11561,7 +11704,7 @@
         "alias": "",
         "clone": false,
         "x": 210,
-        "y": 700,
+        "y": 860,
         "wires": [
             [
                 "fbd472e7.d10f48"
@@ -11585,7 +11728,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 670,
-        "y": 740,
+        "y": 900,
         "wires": []
     },
     {
@@ -11713,7 +11856,7 @@
         "name": "callSBIReadSubscriptions in",
         "links": [],
         "x": 205,
-        "y": 940,
+        "y": 1100,
         "wires": [
             [
                 "3c4d0520.a593ba"
@@ -11728,7 +11871,7 @@
         "mode": "return",
         "links": [],
         "x": 1885,
-        "y": 940,
+        "y": 1100,
         "wires": []
     },
     {
@@ -11738,7 +11881,7 @@
         "name": "callSBIConfigureScheduling in",
         "links": [],
         "x": 205,
-        "y": 1020,
+        "y": 1180,
         "wires": [
             [
                 "aa978f3cb2dc8431",
@@ -11754,7 +11897,7 @@
         "mode": "return",
         "links": [],
         "x": 1885,
-        "y": 1020,
+        "y": 1180,
         "wires": []
     },
     {
@@ -11767,7 +11910,7 @@
         ],
         "timeout": "30",
         "x": 1140,
-        "y": 1020,
+        "y": 1180,
         "wires": [
             [
                 "bc92294e8890be13"
@@ -11784,7 +11927,7 @@
         ],
         "timeout": "30",
         "x": 1150,
-        "y": 1260,
+        "y": 1420,
         "wires": [
             [
                 "e0c0795b.6a17b8",
@@ -11862,7 +12005,7 @@
         "aliasMatchAll": false,
         "clone": false,
         "x": 230,
-        "y": 820,
+        "y": 980,
         "wires": [
             [
                 "eeab441ae2b4c1e1"
@@ -11879,7 +12022,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 490,
-        "y": 820,
+        "y": 980,
         "wires": [
             [
                 "27003dfc19eeaf18",
@@ -11901,7 +12044,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 800,
+        "y": 960,
         "wires": []
     },
     {
@@ -11914,7 +12057,7 @@
             "7b48ced64946a8d2"
         ],
         "x": 1895,
-        "y": 820,
+        "y": 980,
         "wires": []
     },
     {
@@ -12358,7 +12501,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "LiveDataToGet",
-        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgsFileData = [];\nlet outputMsgsPropertyData = [];\n\nlet uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nlet selectedElements = context.flow.get('selectedElements');\nfor(let element in selectedElements){\n    let selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }//let selected_element = selectedElements[element].submodelId + \";\" + selectedElements[element].selectedElement.idShort;\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let modelType = selectedElements[element].selectedElement.modelType.name;\n    let category = selectedElements[element].selectedElement.category;\n    \n    if (modelType == \"File\")\n    {\n        let observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = {href: selectedElements[element].selectedElement.value};\n        let msg = {payload:observation};\n        outputMsgsFileData.push(msg);\n    } else {\n        let msg = {payload:selected_element};\n        let shellId = encodeURIComponent(selectedElements[element].aasid);\n        let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;\n        }\n        \n        outputMsgsPropertyData.push(msg);\n    }\n    \n}\n\nreturn [outputMsgsFileData, outputMsgsPropertyData];",
+        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgsFileData = [];\nlet outputMsgsPropertyData = [];\n\nlet uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nlet selectedElements = context.flow.get('selectedElements');\nfor(let element in selectedElements){\n    let selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }//let selected_element = selectedElements[element].submodelId + \";\" + selectedElements[element].selectedElement.idShort;\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let modelType = selectedElements[element].selectedElement.modelType.name;\n    let category = selectedElements[element].selectedElement.category;\n    \n    /*if (modelType == \"File\")\n    {\n        let observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = {href: selectedElements[element].selectedElement.value};\n        let msg = {payload:observation};\n        outputMsgsFileData.push(msg);\n    } else {*/\n        let msg = {payload:selected_element};\n        let shellId = encodeURIComponent(selectedElements[element].aasid);\n        let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;\n        }\n        \n        outputMsgsPropertyData.push(msg);\n    //}\n    \n}\n\nreturn [outputMsgsFileData, outputMsgsPropertyData];",
         "outputs": 2,
         "noerr": 0,
         "x": 1971.666748046875,
@@ -12383,7 +12526,7 @@
         "order": 0,
         "width": "35",
         "height": "20",
-        "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }\n        })(scope)\n    </script>\n    <div id=\"logs_Table\" ng-init=\"init()\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">AAS Id</th>\n                    <th scope=\"col\">Observable Reference</th>\n                    <th scope=\"col\">_msgId</th>\n                    <th scope=\"col\">Timestamp</th>\n                    <th scope=\"col\">Value</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-info\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.AASID}}</a></td>\n                <td><a class=\"text-dark\">{{i.observableReference}}</a></td>\n                <td><a class=\"text-dark\">{{i._msgid}}</a></td>\n                <td><a class=\"text-dark\">{{i.time}}</a></td>\n                <td ng-if='i.link != undefined'><a class=\"btn btn-link\" target=\"_blank\" rel=\"noopener noreferrer\" ng-href=\"{{i.link}}\">{{i.link}}</a></td>\n                <td ng-if='i.value != undefined'><a class=\"text-dark\">{{i.value}}</a></td>\n                \n                <!--<td><a class=\"text-dark\">{{i.value}}</a></td>!-->\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
+        "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }\n        })(scope)\n    </script>\n    <div id=\"logs_Table\" ng-init=\"init()\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">AAS Id</th>\n                    <th scope=\"col\">Observable Reference</th>\n                    <th scope=\"col\">_msgId</th>\n                    <th scope=\"col\">Timestamp</th>\n                    <th scope=\"col\">Value</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-info\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.aasId}}</a></td>\n                <td><a class=\"text-dark\">{{i.observableRef}}</a></td>\n                <td><a class=\"text-dark\">{{i.id}}</a></td>\n                <td><a class=\"text-dark\">{{i.timestamp}}</a></td>\n                <td ng-if='i.link != undefined'><a class=\"btn btn-link\" target=\"_blank\" rel=\"noopener noreferrer\" ng-href=\"{{i.link}}\">{{i.link}}</a></td>\n                <td ng-if='i.value != undefined'><a class=\"text-dark\">{{i.value}}</a></td>\n                \n                <!--<td><a class=\"text-dark\">{{i.value}}</a></td>!-->\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -12393,8 +12536,7 @@
         "y": 1678.8096923828125,
         "wires": [
             [
-                "b05b8675.6b0908",
-                "d32b5901.1a603"
+                "b05b8675.6b0908"
             ]
         ]
     },
@@ -12404,7 +12546,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "LogsProcessing",
-        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    //var observation = JSON.parse(msg.payload);\n    var observation = msg.payload;\n    var logs = context.flow.get('logs');\n    var copyLogs = logs.slice(Math.max(logs.length - 25, 0));\n    //for(var log in msg.payload){\n    //    logs.push(msg.payload[log]);\n    //}\n    var log = {};\n    if(typeof observation.payload.href !== \"undefined\"){\n        log.link = observation.payload.href;\n    } else{\n        log.value = observation.payload;\n    }\n    log.time = Date.now();\n    log._msgid = msg._msgid;\n    log.AASID = context.global.get('AASIdentifier');\n    log.observableReference = observation.observableReference;\n    if(copyLogs.length > 25){\n        copyLogs.pop();\n        copyLogs.push(log);\n        logs.push(log);\n    } else {\n        logs.push(log);\n    }\n    \n    context.flow.set('logs', logs);\n    var outputMsg = {};\n    //msg.payload = logs;\n    //outputMsg.payload = logs;\n    outputMsg.payload = copyLogs;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
+        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    /*\n    //var observation = JSON.parse(msg.payload);\n    var observation = msg.payload;\n    var logs = context.flow.get('logs');\n    var copyLogs = logs.slice(Math.max(logs.length - 25, 0));\n    //for(var log in msg.payload){\n    //    logs.push(msg.payload[log]);\n    //}\n    var log = {};\n    if(typeof observation.payload.href !== \"undefined\"){\n        log.link = observation.payload.href;\n    } else{\n        log.value = observation.payload;\n    }\n    //log.time = Date.now();\n    log.time = observation.timestamp;\n    log._msgid = msg._msgid;\n    log.AASID = context.global.get('AASIdentifier');\n    log.observableReference = observation.observableReference;\n    if(copyLogs.length > 25){\n        copyLogs.pop();\n        copyLogs.push(log);\n        logs.push(log);\n    } else {\n        logs.push(log);\n    }*/\n    \n    context.flow.set('logs', msg.payload);\n    var outputMsg = {};\n    //msg.payload = logs;\n    //outputMsg.payload = logs;\n    outputMsg.payload = msg.payload;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
         "outputs": 1,
         "noerr": 0,
         "x": 3053.0234375,
@@ -12416,64 +12558,6 @@
                 "90530db5.87162"
             ]
         ]
-    },
-    {
-        "id": "66cf1c72.99bbcc",
-        "type": "delay",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 3649.7377319335938,
-        "y": 1751,
-        "wires": [
-            [
-                "1ab68a79.a369be"
-            ]
-        ]
-    },
-    {
-        "id": "d32b5901.1a603",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "GetLog",
-        "func": "//Retreiving Libraries from the Settings.json file\nvar logs = context.flow.get('logs');\nvar copyLogs = logs.slice(Math.max(logs.length - 25, 0));\nmsg.payload = copyLogs;\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3386.4043579101562,
-        "y": 1747.6666259765625,
-        "wires": [
-            [
-                "66cf1c72.99bbcc",
-                "27faa505.26a31a"
-            ]
-        ]
-    },
-    {
-        "id": "27faa505.26a31a",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3578.5709838867188,
-        "y": 1786.333251953125,
-        "wires": []
     },
     {
         "id": "d50039d0.bc4938",
@@ -12555,13 +12639,13 @@
         "z": "2164c119.f88826",
         "g": "d7076418.bb51d8",
         "name": "Debug Account Log ",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 627.5471801757812,
-        "y": 2399.094940185547,
+        "x": 620,
+        "y": 2360,
         "wires": []
     },
     {
@@ -12581,16 +12665,18 @@
         "z": "2164c119.f88826",
         "g": "d7076418.bb51d8",
         "name": "Account Log",
-        "func": "var accountlog =  flow.get(\"accountlog\") || [] ; \n\naccountlog.push({ accessAt : new Date(), username : msg.payload.username})\n\nflow.set(\"accountlog\", accountlog);\n\nmsg.payload = accountlog;\nreturn msg;",
+        "func": "\nlet username = msg.payload.username;\n\nmsg.payload = { accessAt: Date.now(), username: username };\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 372.54718017578125,
         "y": 2401.094940185547,
         "wires": [
             [
-                "e76f2790.4d439"
+                "e76f2790.4d439",
+                "9d9d4e513499c3ff"
             ]
         ]
     },
@@ -13036,45 +13122,14 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 3210,
+        "x": 2250,
         "y": 2280,
         "wires": [
             [
-                "856b84d2.58bc58"
+                "ae52d30cfa804461",
+                "ce4844b28ff75308"
             ]
         ]
-    },
-    {
-        "id": "856b84d2.58bc58",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "ResetObservations",
-        "func": "context.flow.set('logs', []);\ncontext.flow.set('accountlog', []);\nmsg.payload = context.flow.get('logs');\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3424.5,
-        "y": 2279,
-        "wires": [
-            [
-                "f73c7559.2f4508"
-            ]
-        ]
-    },
-    {
-        "id": "f73c7559.2f4508",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3623.5,
-        "y": 2281,
-        "wires": []
     },
     {
         "id": "50f38532.36990c",
@@ -13159,28 +13214,6 @@
             ],
             [
                 "2b4abcf3.ba6b04"
-            ]
-        ]
-    },
-    {
-        "id": "8b15d4c7.c880d",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "(Un)SubscriptionNotification",
-        "func": "var outMsg = {};\noutMsg.payload = msg.statusMessage;\nreturn [msg, outMsg]; ",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 2500,
-        "y": 2100,
-        "wires": [
-            [
-                "abde95dc.e3d6d"
-            ],
-            [
-                "a11a2eee.a46c8",
-                "cb167da9.5407f8",
-                "eb351cb4.81437"
             ]
         ]
     },
@@ -13770,36 +13803,6 @@
         "wires": []
     },
     {
-        "id": "a11a2eee.a46c8",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2570,
-        "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "abde95dc.e3d6d",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2570,
-        "y": 2040,
-        "wires": []
-    },
-    {
         "id": "853a0e8f.857808",
         "type": "ui_template",
         "z": "2164c119.f88826",
@@ -14017,8 +14020,8 @@
         "y": 1680,
         "wires": [
             [
-                "e76c094a.301b98",
-                "510bb40f.d3429c"
+                "510bb40f.d3429c",
+                "e76c094a.301b98"
             ]
         ]
     },
@@ -14804,39 +14807,6 @@
         "wires": []
     },
     {
-        "id": "da93d1b7.9c1328",
-        "type": "ui_ui_control",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "events": "all",
-        "x": 3120,
-        "y": 2020,
-        "wires": [
-            [
-                "e8c93d79.6993d"
-            ]
-        ]
-    },
-    {
-        "id": "e8c93d79.6993d",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "accountLog",
-        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    var accountLogs = context.flow.get('accountlog');\n    var outputMsg = {};\n    outputMsg.payload = accountLogs;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3310,
-        "y": 2020,
-        "wires": [
-            [
-                "323548f1.1a0c1",
-                "515aafe.e6c17d"
-            ]
-        ]
-    },
-    {
         "id": "323548f1.1a0c1",
         "type": "ui_template",
         "z": "2164c119.f88826",
@@ -14851,31 +14821,12 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 3570,
-        "y": 2020,
+        "className": "",
+        "x": 3550,
+        "y": 2200,
         "wires": [
-            [
-                "ae5e1f90.74594"
-            ]
+            []
         ]
-    },
-    {
-        "id": "515aafe.e6c17d",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3450,
-        "y": 1960,
-        "wires": []
     },
     {
         "id": "4b043c0a.8457ec",
@@ -14945,48 +14896,6 @@
         "y": 3155,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "ae5e1f90.74594",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "GetLog",
-        "func": "//Retreiving Libraries from the Settings.json file\nmsg.payload = context.flow.get('accountlog');\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3420,
-        "y": 2100,
-        "wires": [
-            [
-                "c26f366a.bc9c88"
-            ]
-        ]
-    },
-    {
-        "id": "c26f366a.bc9c88",
-        "type": "delay",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "250",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 3590,
-        "y": 2100,
-        "wires": [
-            [
-                "323548f1.1a0c1"
-            ]
         ]
     },
     {
@@ -16243,7 +16152,7 @@
         "z": "2164c119.f88826",
         "g": "7f3265a4.23ba94",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -16274,25 +16183,6 @@
                 "2cf012d1.4a7f5e",
                 "2706d3c7.5d9a2c",
                 "648a464.2a92838"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "3da1a7ea98029b38",
-        "type": "link in",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "NOVAAS_(Un)SubscriptionEvent_UI",
-        "links": [
-            "49f6617c1a03ff11",
-            "3b6f974617ed5d03"
-        ],
-        "x": 1800,
-        "y": 2100,
-        "wires": [
-            [
-                "8b15d4c7.c880d"
             ]
         ],
         "l": true
@@ -16474,6 +16364,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "",
         "payloadType": "date",
         "x": 1870,
         "y": 660,
@@ -16823,6 +16714,212 @@
         ]
     },
     {
+        "id": "fe09fae4e18b7ea8",
+        "type": "inject",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2010,
+        "y": 2160,
+        "wires": [
+            [
+                "de657e4d8db0f36b"
+            ]
+        ]
+    },
+    {
+        "id": "9eaf942099d38833",
+        "type": "ui_ui_control",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "name": "",
+        "events": "change",
+        "x": 1920,
+        "y": 2240,
+        "wires": [
+            [
+                "71e9e40b340b070d",
+                "251c8344386b81d8"
+            ]
+        ]
+    },
+    {
+        "id": "71e9e40b340b070d",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2070,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "de657e4d8db0f36b",
+        "type": "gate",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "closed",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": false,
+        "storeName": "default",
+        "x": 2250,
+        "y": 2160,
+        "wires": [
+            [
+                "a26bc914f34b8f50",
+                "8aa82451c428832a"
+            ]
+        ]
+    },
+    {
+        "id": "251c8344386b81d8",
+        "type": "function",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "name": "",
+        "func": "msg.topic = \"control\";\nif(msg.payload == \"change\" && msg.tab == 4){\n    msg.payload = \"open\";\n} else {\n    msg.payload = \"close\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2080,
+        "y": 2220,
+        "wires": [
+            [
+                "de657e4d8db0f36b"
+            ]
+        ]
+    },
+    {
+        "id": "a26bc914f34b8f50",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "select * FROM aasLogs",
+        "name": "",
+        "x": 2770,
+        "y": 2160,
+        "wires": [
+            [
+                "eb351cb4.81437"
+            ]
+        ]
+    },
+    {
+        "id": "9d9d4e513499c3ff",
+        "type": "link call",
+        "z": "2164c119.f88826",
+        "g": "d7076418.bb51d8",
+        "name": "",
+        "links": [
+            "e66f9517e92d99ba"
+        ],
+        "timeout": "30",
+        "x": 590,
+        "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8aa82451c428832a",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "select * FROM accountLogs",
+        "name": "",
+        "x": 2770,
+        "y": 2200,
+        "wires": [
+            [
+                "92da7713d087f2a3",
+                "323548f1.1a0c1"
+            ]
+        ]
+    },
+    {
+        "id": "92da7713d087f2a3",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3150,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "ae52d30cfa804461",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "delete FROM accountLogs",
+        "name": "",
+        "x": 2890,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce4844b28ff75308",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "delete FROM aasLogs",
+        "name": "",
+        "x": 2890,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "6bc32d33.45f9e4",
         "type": "inject",
         "z": "4ff5da13.cce2c4",
@@ -17066,8 +17163,8 @@
         "interval": 1,
         "estimation": false,
         "ignore": false,
-        "x": 1270,
-        "y": 2440,
+        "x": 1250,
+        "y": 2580,
         "wires": [
             [
                 "5ada0973.9aaea"
@@ -17083,8 +17180,8 @@
         "func": "var statsSBI = {};\nvar msgSpeed = msg.payload;\nvar msgIntervalAndFrequency = msg.intervalAndFrequency;\nstatsSBI.msgSpeed = msgSpeed;\nstatsSBI.IntervalAndFrequency = msgIntervalAndFrequency;\nstatsSBI.maxMsgs = context.flow.get(\"NrOfDataSources\") * 60;\nmsg.payload = statsSBI;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1530,
-        "y": 2420,
+        "x": 1510,
+        "y": 2560,
         "wires": [
             [
                 "64629317.37dd04"
@@ -17102,8 +17199,8 @@
         "aliasMatchAll": false,
         "topicType": "str",
         "link": "d2edf304.fdfa2",
-        "x": 1760,
-        "y": 2420,
+        "x": 1740,
+        "y": 2560,
         "wires": []
     },
     {
@@ -17118,12 +17215,12 @@
         "aliasType": "str",
         "alias": "",
         "clone": false,
-        "x": 690,
-        "y": 2440,
+        "x": 670,
+        "y": 2580,
         "wires": [
             [
-                "65f952e3.108ff4",
-                "bc75f94e0c83e972"
+                "bc75f94e0c83e972",
+                "65f952e3.108ff4"
             ],
             []
         ]
@@ -17137,7 +17234,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1350,
-        "y": 2560,
+        "y": 2820,
         "wires": [
             [
                 "10fa90021ceb2821"
@@ -17154,7 +17251,7 @@
         "outputs": 2,
         "noerr": 0,
         "x": 560,
-        "y": 2880,
+        "y": 3140,
         "wires": [
             [
                 "a526eb90.5eb89",
@@ -17178,7 +17275,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 850,
-        "y": 2920,
+        "y": 3180,
         "wires": []
     },
     {
@@ -17199,7 +17296,7 @@
         "drop": false,
         "outputs": 1,
         "x": 960,
-        "y": 2840,
+        "y": 3100,
         "wires": [
             [
                 "66121d53.f7a264",
@@ -17220,7 +17317,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1210,
-        "y": 2920,
+        "y": 3180,
         "wires": []
     },
     {
@@ -17233,7 +17330,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1220,
-        "y": 2880,
+        "y": 3140,
         "wires": [
             [
                 "aa852a4a.3a9728",
@@ -17255,7 +17352,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 2050,
-        "y": 2694,
+        "y": 2954,
         "wires": []
     },
     {
@@ -17268,7 +17365,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 2200,
-        "y": 2800,
+        "y": 3060,
         "wires": [
             []
         ]
@@ -17291,7 +17388,7 @@
             "msg.payload[1]"
         ],
         "x": 1840,
-        "y": 2754,
+        "y": 3014,
         "wires": [
             [
                 "2dd76a11.baee1e",
@@ -17320,7 +17417,7 @@
         "drop": false,
         "outputs": 1,
         "x": 1440,
-        "y": 2880,
+        "y": 3140,
         "wires": [
             [
                 "3f2701d6.f73216"
@@ -17337,7 +17434,7 @@
         "outputs": 2,
         "noerr": 0,
         "x": 1620,
-        "y": 2880,
+        "y": 3140,
         "wires": [
             [
                 "5543cf66.c72ba8",
@@ -17361,7 +17458,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1430,
-        "y": 2820,
+        "y": 3080,
         "wires": []
     },
     {
@@ -17377,7 +17474,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1810,
-        "y": 2680,
+        "y": 2940,
         "wires": []
     },
     {
@@ -17390,7 +17487,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 2200,
-        "y": 2760,
+        "y": 3020,
         "wires": [
             [
                 "95c62ca4.9097f8",
@@ -17411,7 +17508,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 2630,
-        "y": 2820,
+        "y": 3080,
         "wires": []
     },
     {
@@ -17427,7 +17524,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 2430,
-        "y": 2800,
+        "y": 3060,
         "wires": []
     },
     {
@@ -17440,7 +17537,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 2720,
-        "y": 2880,
+        "y": 3140,
         "wires": [
             [
                 "e3a6732e.ca9c5"
@@ -17460,7 +17557,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 2890,
-        "y": 2820,
+        "y": 3080,
         "wires": []
     },
     {
@@ -17476,7 +17573,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 530,
-        "y": 2960,
+        "y": 3220,
         "wires": []
     },
     {
@@ -17494,7 +17591,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1830,
-        "y": 3014,
+        "y": 3274,
         "wires": []
     },
     {
@@ -17507,7 +17604,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1440,
-        "y": 3014,
+        "y": 3274,
         "wires": [
             [
                 "cc4c0f0b.0473a8"
@@ -17524,7 +17621,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1850,
-        "y": 3114,
+        "y": 3374,
         "wires": [
             []
         ]
@@ -17539,7 +17636,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 380,
-        "y": 3054,
+        "y": 3314,
         "wires": [
             [
                 "fbec0d31.b2b898"
@@ -17556,7 +17653,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 840,
-        "y": 3074,
+        "y": 3334,
         "wires": [
             []
         ]
@@ -17574,7 +17671,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1190,
-        "y": 2994,
+        "y": 3254,
         "wires": []
     },
     {
@@ -17590,7 +17687,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1190,
-        "y": 3034,
+        "y": 3294,
         "wires": []
     },
     {
@@ -17619,7 +17716,7 @@
             }
         ],
         "x": 220,
-        "y": 2960,
+        "y": 3220,
         "wires": [
             [
                 "50caec1c.6ad584",
@@ -17644,7 +17741,7 @@
         "setTimeToNewWhileRunning": false,
         "startCountdownOnControlMessage": false,
         "x": 970,
-        "y": 2974,
+        "y": 3234,
         "wires": [
             [
                 "be9595d8.2df6a8",
@@ -17671,7 +17768,7 @@
         "setTimeToNewWhileRunning": true,
         "startCountdownOnControlMessage": true,
         "x": 1630,
-        "y": 3014,
+        "y": 3274,
         "wires": [
             [],
             [
@@ -17696,7 +17793,7 @@
         "setTimeToNewWhileRunning": true,
         "startCountdownOnControlMessage": true,
         "x": 590,
-        "y": 3054,
+        "y": 3314,
         "wires": [
             [],
             [
@@ -17724,7 +17821,7 @@
         "functionOutputFieldType": "msg",
         "resultOnly": false,
         "x": 2490,
-        "y": 2880,
+        "y": 3140,
         "wires": [
             [
                 "67e92151.ed84b8",
@@ -17747,6 +17844,11 @@
                 "name": "PropertyLink",
                 "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CurrentOperatingPressure",
                 "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "num"
             }
         ],
         "x": 970,
@@ -17790,7 +17892,7 @@
         "aliasMatchAll": false,
         "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1400,
+        "x": 1440,
         "y": 640,
         "wires": []
     },
@@ -17905,10 +18007,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1440,
+        "x": 1720,
         "y": 860,
         "wires": [
-            []
+            [
+                "dfaed3f059e72c6f"
+            ]
         ]
     },
     {
@@ -18003,10 +18107,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1430,
+        "x": 1710,
         "y": 1140,
         "wires": [
-            []
+            [
+                "376dbc14848add90"
+            ]
         ]
     },
     {
@@ -18101,10 +18207,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1430,
-        "y": 1420,
+        "x": 1750,
+        "y": 1400,
         "wires": [
-            []
+            [
+                "d658cb3bea86470f"
+            ]
         ]
     },
     {
@@ -18170,8 +18278,8 @@
         "aliasMatchAll": false,
         "topicType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1440,
-        "y": 1680,
+        "x": 1480,
+        "y": 1700,
         "wires": []
     },
     {
@@ -18199,10 +18307,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1460,
+        "x": 1720,
         "y": 1640,
         "wires": [
-            []
+            [
+                "0811ac9fa4a25f45"
+            ]
         ]
     },
     {
@@ -18297,10 +18407,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1410,
-        "y": 1900,
+        "x": 1690,
+        "y": 1880,
         "wires": [
-            []
+            [
+                "6db9167e5bdff7e3"
+            ]
         ]
     },
     {
@@ -18395,10 +18507,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1450,
-        "y": 2180,
+        "x": 1730,
+        "y": 2160,
         "wires": [
-            []
+            [
+                "6070a087c2e8a2ae"
+            ]
         ]
     },
     {
@@ -18435,7 +18549,7 @@
         "name": "driverConnectionCheck in",
         "links": [],
         "x": 295,
-        "y": 2560,
+        "y": 2820,
         "wires": [
             [
                 "c1deb42e.c6018"
@@ -18450,7 +18564,7 @@
         "mode": "return",
         "links": [],
         "x": 2255,
-        "y": 2560,
+        "y": 2820,
         "wires": []
     },
     {
@@ -18466,8 +18580,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 2380,
+        "x": 930,
+        "y": 2520,
         "wires": []
     },
     {
@@ -18739,10 +18853,13 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1450,
+        "x": 1750,
         "y": 600,
         "wires": [
-            []
+            [
+                "93883b135d28b2a4",
+                "25d0583475286e1d"
+            ]
         ]
     },
     {
@@ -18779,7 +18896,7 @@
         "msgControl": false,
         "outputs": 3,
         "x": 1210,
-        "y": 620,
+        "y": 640,
         "wires": [
             [
                 "5e25b9ab2b581b31"
@@ -18803,7 +18920,7 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1410,
+        "x": 1450,
         "y": 700,
         "wires": []
     },
@@ -19066,8 +19183,8 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1450,
-        "y": 1740,
+        "x": 1490,
+        "y": 1760,
         "wires": []
     },
     {
@@ -19193,5 +19310,314 @@
         "x": 1430,
         "y": 2280,
         "wires": []
+    },
+    {
+        "id": "e76298e5073089cd",
+        "type": "function",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 2640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93883b135d28b2a4",
+        "type": "debug",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2170,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "3914cad54ab2ccf0",
+        "type": "debug",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2010,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "25d0583475286e1d",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "currentOperatingPressure_hist",
+                "type": "str"
+            }
+        ],
+        "x": 1720,
+        "y": 660,
+        "wires": [
+            [
+                "5e25b9ab2b581b31",
+                "3914cad54ab2ccf0"
+            ]
+        ]
+    },
+    {
+        "id": "dfaed3f059e72c6f",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "responseTime_hist",
+                "type": "str"
+            }
+        ],
+        "x": 1720,
+        "y": 920,
+        "wires": [
+            [
+                "79abdb6d.dd64fc"
+            ]
+        ]
+    },
+    {
+        "id": "376dbc14848add90",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "valvePosition_hist",
+                "type": "str"
+            }
+        ],
+        "x": 1720,
+        "y": 1200,
+        "wires": [
+            [
+                "d108bbcb.582c3"
+            ]
+        ]
+    },
+    {
+        "id": "d658cb3bea86470f",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "elapsedTimeMovingAvg_hist",
+                "type": "str"
+            }
+        ],
+        "x": 1740,
+        "y": 1460,
+        "wires": [
+            [
+                "615b8342.ca54c4"
+            ]
+        ]
+    },
+    {
+        "id": "0811ac9fa4a25f45",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "cylinderStatus_hist",
+                "type": "str"
+            }
+        ],
+        "x": 1720,
+        "y": 1700,
+        "wires": [
+            [
+                "310439d1.da6bb6"
+            ]
+        ]
+    },
+    {
+        "id": "6db9167e5bdff7e3",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "cycle_hist",
+                "type": "str"
+            }
+        ],
+        "x": 1700,
+        "y": 1940,
+        "wires": [
+            [
+                "63bc6758.842d08"
+            ]
+        ]
+    },
+    {
+        "id": "6070a087c2e8a2ae",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "responseTimePred_hist",
+                "type": "str"
+            }
+        ],
+        "x": 1720,
+        "y": 2220,
+        "wires": [
+            [
+                "407c9cb6.22931c"
+            ]
+        ]
+    },
+    {
+        "id": "9b99d064808aa5a3",
+        "type": "inject",
+        "z": "d6ac686a8b33b0c0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 600,
+        "y": 740,
+        "wires": [
+            [
+                "4c73862aca011a2c",
+                "d9231ce7a7157e12"
+            ]
+        ]
+    },
+    {
+        "id": "4c73862aca011a2c",
+        "type": "function",
+        "z": "d6ac686a8b33b0c0",
+        "name": "",
+        "func": "msg.topic = \"select * FROM aasLogs\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 740,
+        "wires": [
+            [
+                "e5d1870f13a17d9c"
+            ]
+        ]
+    },
+    {
+        "id": "e5d1870f13a17d9c",
+        "type": "sqlite",
+        "z": "d6ac686a8b33b0c0",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1130,
+        "y": 740,
+        "wires": [
+            [
+                "d46e4990ad8a2374"
+            ]
+        ]
+    },
+    {
+        "id": "d46e4990ad8a2374",
+        "type": "debug",
+        "z": "d6ac686a8b33b0c0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "d9231ce7a7157e12",
+        "type": "function",
+        "z": "d6ac686a8b33b0c0",
+        "name": "",
+        "func": "msg.topic = \"select * FROM accountLogs\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 800,
+        "wires": [
+            [
+                "4da6b4b63bc9c3be"
+            ]
+        ]
+    },
+    {
+        "id": "4da6b4b63bc9c3be",
+        "type": "sqlite",
+        "z": "d6ac686a8b33b0c0",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1130,
+        "y": 800,
+        "wires": [
+            [
+                "d46e4990ad8a2374"
+            ]
+        ]
     }
 ]
