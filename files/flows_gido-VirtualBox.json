@@ -911,10 +911,11 @@
             "510bb40f.d3429c",
             "a26bc914f34b8f50",
             "9eaf942099d38833",
-            "92da7713d087f2a3",
             "ae52d30cfa804461",
             "ce4844b28ff75308",
-            "7f54c53fd744810d"
+            "7f54c53fd744810d",
+            "8aa82451c428832a",
+            "c22a134df446b17f"
         ],
         "x": 1584,
         "y": 1539,
@@ -992,7 +993,9 @@
             "0fd9cb57d05e439b"
         ],
         "x": 124,
-        "y": 59
+        "y": 59,
+        "w": 1522,
+        "h": 322
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -1036,7 +1039,9 @@
             "95c62ca4.9097f8"
         ],
         "x": 114,
-        "y": 2899
+        "y": 2899,
+        "w": 2872,
+        "h": 516
     },
     {
         "id": "37a4080e.40ed9",
@@ -17221,6 +17226,7 @@
         "id": "8aa82451c428832a",
         "type": "sqlite",
         "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
         "mydb": "50760f2b4eafd99b",
         "sqlquery": "fixed",
         "sql": "select * FROM accountLogs",
@@ -17229,28 +17235,9 @@
         "y": 2200,
         "wires": [
             [
-                "92da7713d087f2a3",
-                "323548f1.1a0c1"
+                "c22a134df446b17f"
             ]
         ]
-    },
-    {
-        "id": "92da7713d087f2a3",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3150,
-        "y": 2180,
-        "wires": []
     },
     {
         "id": "ae52d30cfa804461",
@@ -17309,6 +17296,23 @@
             [
                 "a26bc914f34b8f50",
                 "8aa82451c428832a"
+            ]
+        ]
+    },
+    {
+        "id": "c22a134df446b17f",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "7f3265a4.23ba94",
+        "name": "LogsProcessing",
+        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    /*\n    //var observation = JSON.parse(msg.payload);\n    var observation = msg.payload;\n    var logs = context.flow.get('logs');\n    var copyLogs = logs.slice(Math.max(logs.length - 25, 0));\n    //for(var log in msg.payload){\n    //    logs.push(msg.payload[log]);\n    //}\n    var log = {};\n    if(typeof observation.payload.href !== \"undefined\"){\n        log.link = observation.payload.href;\n    } else{\n        log.value = observation.payload;\n    }\n    //log.time = Date.now();\n    log.time = observation.timestamp;\n    log._msgid = msg._msgid;\n    log.AASID = context.global.get('AASIdentifier');\n    log.observableReference = observation.observableReference;\n    if(copyLogs.length > 25){\n        copyLogs.pop();\n        copyLogs.push(log);\n        logs.push(log);\n    } else {\n        logs.push(log);\n    }*/\n    \n    context.flow.set('accountlog', msg.payload);\n    var outputMsg = {};\n    //msg.payload = logs;\n    //outputMsg.payload = logs;\n    outputMsg.payload = msg.payload;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 3080,
+        "y": 2200,
+        "wires": [
+            [
+                "323548f1.1a0c1"
             ]
         ]
     },
@@ -18340,6 +18344,11 @@
                 "type": "str"
             },
             {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "num"
+            },
+            {
                 "name": "TEST",
                 "value": "2",
                 "type": "str"
@@ -18423,6 +18432,11 @@
                 "name": "PropertyLink",
                 "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ValvePosition",
                 "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "num"
             },
             {
                 "name": "TEST",
@@ -18525,6 +18539,11 @@
                 "type": "str"
             },
             {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "num"
+            },
+            {
                 "name": "TEST",
                 "value": "4",
                 "type": "str"
@@ -18623,6 +18642,11 @@
                 "name": "PropertyLink",
                 "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/CylinderStatus",
                 "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "num"
             },
             {
                 "name": "TEST",
@@ -18725,6 +18749,11 @@
                 "type": "str"
             },
             {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "num"
+            },
+            {
                 "name": "TEST",
                 "value": "6",
                 "type": "str"
@@ -18823,6 +18852,11 @@
                 "name": "PropertyLink",
                 "value": "http://smart.festo.com/id/instance/aas/5140_0142_3091_4340/OperationalData/ResponseTimePred",
                 "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "num"
             },
             {
                 "name": "TEST",
