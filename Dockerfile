@@ -1,6 +1,7 @@
 FROM nikolaik/python-nodejs:python3.9-nodejs14-slim
 LABEL org.opencontainers.image.authors="gido@uninova.pt"
-RUN apt-get update && apt install unzip && apt install -y sqlite3 && npm install -g --unsafe-perm node-red
+RUN apt-get update && apt install unzip && apt-get install -y git && apt install -y sqlite3 && apt-get install -y netcat \
+&& npm install -g --unsafe-perm node-red
 WORKDIR /app
 RUN mkdir -p .node-red
 ADD files .node-red/
