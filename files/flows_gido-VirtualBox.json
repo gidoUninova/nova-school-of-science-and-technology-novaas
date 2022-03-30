@@ -428,9 +428,7 @@
             "ad8fbd86.506ae8"
         ],
         "x": 76,
-        "y": 105,
-        "w": 1902,
-        "h": 477
+        "y": 105
     },
     {
         "id": "daa90db5.798ca",
@@ -481,9 +479,7 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1888
+        "y": 599
     },
     {
         "id": "66d3f26a.c296b4",
@@ -522,9 +518,7 @@
             "15f4655a.3a5aab"
         ],
         "x": 74,
-        "y": 2499,
-        "w": 1972,
-        "h": 642
+        "y": 2499
     },
     {
         "id": "fd25b313.221798",
@@ -547,9 +541,7 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 3179,
-        "w": 1912,
-        "h": 202
+        "y": 3179
     },
     {
         "id": "16640da3.5a20ca",
@@ -570,9 +562,7 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3399,
-        "w": 1932,
-        "h": 182
+        "y": 3399
     },
     {
         "id": "4b4e4270.d440bc",
@@ -689,7 +679,9 @@
             "9d9d4e513499c3ff"
         ],
         "x": 54,
-        "y": 2319
+        "y": 2319,
+        "w": 1272,
+        "h": 446.09493827819824
     },
     {
         "id": "9eaca16.128cb6",
@@ -710,7 +702,9 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179
+        "y": 2179,
+        "w": 652,
+        "h": 82
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -797,7 +791,9 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99
+        "y": 99,
+        "w": 3532,
+        "h": 962
     },
     {
         "id": "48a4f908.86ced8",
@@ -823,7 +819,9 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359
+        "y": 2359,
+        "w": 1132,
+        "h": 304.3541259765625
     },
     {
         "id": "a4c26498.4d1758",
@@ -851,7 +849,9 @@
             "2845e87d990395ef"
         ],
         "x": 1574,
-        "y": 2679
+        "y": 2679,
+        "w": 912,
+        "h": 282
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -889,7 +889,9 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679
+        "y": 2679,
+        "w": 1272,
+        "h": 517
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -931,7 +933,9 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999
+        "y": 2999,
+        "w": 1572,
+        "h": 682
     },
     {
         "id": "27a2d798.8a5c5",
@@ -960,9 +964,7 @@
             "0fd9cb57d05e439b"
         ],
         "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
+        "y": 59
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -1006,9 +1008,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 114,
-        "y": 2899,
-        "w": 2872,
-        "h": 516
+        "y": 2899
     },
     {
         "id": "e8501749a8186080",
@@ -1062,7 +1062,9 @@
             "53da882cf73ecacf"
         ],
         "x": 1524,
-        "y": 1299
+        "y": 1299,
+        "w": 2222,
+        "h": 802
     },
     {
         "id": "37a4080e.40ed9",
@@ -1113,9 +1115,7 @@
             "bb1348ef.5dad58"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -1159,9 +1159,7 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 552
+        "y": 1909
     },
     {
         "id": "de00f046.a69e6",
@@ -1252,10 +1250,10 @@
             "sizes": {
                 "sx": 48,
                 "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
+                "gx": 5,
+                "gy": 5,
+                "cx": 5,
+                "cy": 5,
                 "px": 0,
                 "py": 0
             }
@@ -1498,7 +1496,8 @@
         "order": 2,
         "disp": true,
         "width": "15",
-        "collapse": false
+        "collapse": true,
+        "className": ""
     },
     {
         "id": "e61c2c82.e7e9f",
@@ -1517,7 +1516,8 @@
         "order": 3,
         "disp": true,
         "width": "20",
-        "collapse": false
+        "collapse": true,
+        "className": ""
     },
     {
         "id": "c56f01cc.380dd",
@@ -1781,17 +1781,9 @@
         "tab": "cb7ccff3.2c214",
         "order": 1,
         "disp": true,
-        "width": "35",
-        "collapse": false
-    },
-    {
-        "id": "a32461e7.fcfdd",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 1,
-        "width": 3,
-        "height": 1
+        "width": "34",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "2681df6d.da9b2",
@@ -1817,15 +1809,6 @@
         "name": "spacer",
         "group": "b9aed87e.bdd0c8",
         "order": 4,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "c62a8f6f.71b85",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 5,
         "width": 3,
         "height": 1
     },
@@ -1871,87 +1854,6 @@
         "name": "spacer",
         "group": "b9aed87e.bdd0c8",
         "order": 10,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "7ac6f7fa.e5daa8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 11,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "609040ed.9370e",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 12,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "9be6ab03.c43b98",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 13,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "ee89ce2c.1026e",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 14,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "6855863b.0d5da8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 15,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "753e304.187cdd",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 16,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "8c35f1c6.db11",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 17,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "1bdd7722.5a6369",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 18,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "5bc9a598.e7076c",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "b9aed87e.bdd0c8",
-        "order": 19,
         "width": 3,
         "height": 1
     },
@@ -2085,8 +1987,9 @@
         "tab": "d1259efc.6308f8",
         "order": 1,
         "disp": true,
-        "width": "40",
-        "collapse": false
+        "width": "34",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "777bc51a.c31cac",
@@ -2180,8 +2083,9 @@
         "tab": "cb7ccff3.2c214",
         "order": 3,
         "disp": true,
-        "width": "35",
-        "collapse": false
+        "width": "34",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "952e8c04.ed2bb8",
@@ -2211,7 +2115,8 @@
         "order": 4,
         "disp": true,
         "width": "5",
-        "collapse": false
+        "collapse": true,
+        "className": ""
     },
     {
         "id": "3d2c88cc.07fe3",
@@ -2286,16 +2191,8 @@
         "order": 4,
         "disp": true,
         "width": "5",
-        "collapse": false
-    },
-    {
-        "id": "ac674a92.7f35c",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "a9cc6929.51b4",
-        "order": 4,
-        "width": "5",
-        "height": "34"
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "1e8a2f3d.54af89",
@@ -13527,6 +13424,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
+        "className": "",
         "x": 3400.08349609375,
         "y": 202.08338928222656,
         "wires": [
@@ -13912,7 +13810,7 @@
         "group": "f57f5dd7.e298c",
         "name": "Active Subscriptions",
         "order": 0,
-        "width": "40",
+        "width": "34",
         "height": "20",
         "format": "<script>\n    (function(scope) {\n            //scope.connections = [];\n            scope.$watch('msg', function(msg){\n                //scope.connections = [];\n                if (msg) {\n                    if (msg.payload) {\n                        scope.subscriptions = [];\n                        for (var index in msg.payload){\n                            var subscription = msg.payload[index].split(\";\");\n                            scope.subscriptions.push(subscription);\n                        }\n                        //scope.connections = msg.payload;\n                    }\n                }\n            });\n            scope.init = function() {\n                //scope.connections = [];\n                //scope.send({payload:scope.connections});\n            }\n        })(scope)\n</script>\n<div id=\"subscriptions_Table\" ng-init=\"init()\">\n    <table class=\"table table-sm\">\n        <thead class=\"text-dark\">\n            <tr>\n                <th scope=\"col\">AAS Id</th>\n                <th scope=\"col\">Submodel idShort</th>\n                <th scope=\"col\">Submodel Element idShort</th>\n                <th scope=\"col\">Status</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr class=\"table-info\" ng-repeat=\"s in subscriptions\">\n                <td><a class=\"text-dark\">{{s[0]}}</a></td>\n                <td><a class=\"text-dark\">{{s[1]}}</a></td>\n                <td><a class=\"text-dark\">{{s[2]}}</a></td>\n                <td><a class=\"text-success\">Subscribed</a></td>\n\n                <!--<td><a class=\"text-dark\">{{i.value}}</a></td>!-->\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n        </tbody>\n\n    </table>\n</div>",
         "storeOutMessages": false,
@@ -14603,11 +14501,12 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.min.css\"  />\n<script type=\"text/javascript\" src=\"/css/jquery-3.3.1.slim.min.js\"></script>\n<script type=\"text/javascript\" src=\"/css/popper.min.js\"></script>\n<script type=\"text/javascript\" src=\"/css/bootstrap.min.js\"></script>",
+        "format": "<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/bootstrap.min.css\" />\n<link rel=\"stylesheet\" href=\"css/novaas.css\">\n<script type=\"text/javascript\" src=\"/css/jquery-3.3.1.slim.min.js\"></script>\n<script type=\"text/javascript\" src=\"/css/popper.min.js\"></script>\n<script type=\"text/javascript\" src=\"/css/bootstrap.min.js\"></script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "global",
+        "className": "",
         "x": 270,
         "y": 60,
         "wires": [
@@ -15625,7 +15524,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<script id=\"clockScript1\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        //add logo\n        var div1 = $('<div/>');\n        var logo = new Image();\n\n        logo.src = '/images/' + \"logo.png\";\n        logo.height = 45;\n        div1[0].style.margin = '10px auto';\n\n        div1.append(logo);\n\n        //add clock\n        var div2 = $('<div/>');\n        var p = $('<p/>');\n\n        div2.append(p);\n        div2[0].style.margin = '5px';\n\n        function displayTime() {\n            p.text(new Date().toLocaleString());\n        }\n        \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div2);\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 100);\n    });\n</script>",
+        "format": "<script id=\"clockScript1\" type=\"text/javascript\">\n    var clockInterval;\n    $(function () {\n        if (clockInterval) return;\n\n        //add logo\n        var div1 = $('<div/>');\n        var logo = new Image();\n\n        logo.src = '/images/' + \"logo.png\";\n        logo.height = 45;\n        div1[0].style.margin = '10px auto';\n\n///        div1.append(logo);*/\n\n        //add clock\n        var div2 = $('<div/>');\n        var p = $('<p/>');\n\n        div2.append(p);\n        div2[0].style.margin = '5px';\n\n        function displayTime() {\n            p.text(new Date().toLocaleString());\n        }\n        \n        clockInterval = setInterval(displayTime, 1000);\n\n        //add to toolbar when it's available\n        var addToToolbarTimer;\n        \n        function addToToolbar() {\n            var toolbar = $('.md-toolbar-tools');\n            \n            if(!toolbar.length) return;\n            \n            toolbar.append(div1);\n            toolbar.append(div2);\n            clearInterval(addToToolbarTimer);\n        }\n        addToToolbarTimer = setInterval(addToToolbar, 100);\n    });\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -16275,8 +16174,8 @@
         "group": "63d120af.ce7f5",
         "name": "Log",
         "order": 0,
-        "width": "35",
-        "height": "20",
+        "width": "34",
+        "height": "12",
         "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }\n        })(scope)\n    </script>\n    <div id=\"logs_Table\" ng-init=\"init()\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">AAS Id</th>\n                    <th scope=\"col\">Observable Reference</th>\n                    <th scope=\"col\">_msgId</th>\n                    <th scope=\"col\">Timestamp</th>\n                    <th scope=\"col\">Value</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-info\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.aasId}}</a></td>\n                <td><a class=\"text-dark\">{{i.observableRef}}</a></td>\n                <td><a class=\"text-dark\">{{i.id}}</a></td>\n                <td><a class=\"text-dark\">{{i.timestamp}}</a></td>\n                <td ng-if='i.link != undefined'><a class=\"btn btn-link\" target=\"_blank\" rel=\"noopener noreferrer\" ng-href=\"{{i.link}}\">{{i.link}}</a></td>\n                <td ng-if='i.value != undefined'><a class=\"text-dark\">{{i.value}}</a></td>\n                \n                <!--<td><a class=\"text-dark\">{{i.value}}</a></td>!-->\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -16788,8 +16687,8 @@
         "group": "16ffbcf4.6cfa43",
         "name": "AccountLog",
         "order": 0,
-        "width": "35",
-        "height": "15",
+        "width": "34",
+        "height": "12",
         "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n        })(scope)\n    </script>\n    <div id=\"accountLog_Table\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">access At</th>\n                    <th scope=\"col\">username</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-success\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.accessAt}}</a></td>\n                <td><a class=\"text-dark\">{{i.username}}</a></td>\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
         "storeOutMessages": true,
         "fwdInMessages": true,

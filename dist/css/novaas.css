@@ -1,0 +1,35 @@
+:root {
+    --main-bg: rgb(7, 7, 7);
+    --ov-fg: rgba(59, 102, 102, 0.15);
+    --ov-color: rgba(59, 102, 102, 1.0);
+    --main_fg: rgba(15,15,15, 0.95);
+    --button-bg: rgba(255,255,255,0.7);
+    --button-bg-hover: rgba(255,255,255,0.9);
+}
+.nr-dashboard-theme {
+    /*background-image: url("../images/RICS LOGO _ Background.jpg");*/
+    /* background-image: url("../images/Background4.jpg"); */
+
+    background-image: url("../images/logo.png"), url("../images/19449741.jpg");
+    background-position: 96% 96%;, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 4%, cover;
+    background-
+    /* background-color:grey !important; */
+    color:var(--main-fg) !important;
+}
+.md-toolbar-tools{
+    background-image: url("../images/NOVAAS.svg");
+    background-repeat: no-repeat;
+    /*margin-left: 20px !important;*/
+    background-size: 125px 39px;
+    background-position: 70px;
+
+}
+.md-toolbar-tools h1{
+    text-align: right;
+    width: 400px;
+    font-size: 25px !important;
+    color: #FFF !important;
+    /* text-shadow: 2px 2px 4px #ffffff; */
+}
