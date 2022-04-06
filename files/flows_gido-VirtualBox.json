@@ -974,9 +974,7 @@
             "0fd9cb57d05e439b"
         ],
         "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
+        "y": 59
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -1020,9 +1018,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 114,
-        "y": 2899,
-        "w": 2872,
-        "h": 516
+        "y": 2899
     },
     {
         "id": "e8501749a8186080",
@@ -13036,7 +13032,7 @@
         "z": "2164c119.f88826",
         "g": "1d9f40e2.66e59f",
         "name": "flowVariables",
-        "func": "context.flow.set('selectedElements', []);\ncontext.flow.set('logs', []);\ncontext.flow.set('sessionTimeout', 30000);\n\nvar fs = context.global.get('fs');\nvar path = context.global.get('path');\ncontext.flow.set('accounts', []);\n\nvar fileName = \"httpauthfile.txt\";\nvar basePath = context.global.get('staticDocs');\nvar filePath = path.join(basePath, \"httpauth\", fileName);\n\nfs.readFile(filePath, \"utf8\", function read(err, data) {\n    if (err) {\n        throw err;\n    }\n    content = data;\n    var contentArray = content.split(\"\\n\");\n    //var account = {username: contentArray[0], password: contentArray[2]};\n    var accounts = context.flow.get('accounts');\n    for(var account in contentArray){\n        accounts.push(contentArray[account]);    \n    }\n    \n    // Invoke the next step here however you like\n    //console.log(content);   // Put all of the code here (not the best solution)\n    exit();          // Or put the next step in a function and invoke it\n    \n    });\n    \nfunction exit() {\n    //msg.payload = content;\n    node.send(msg);\n    \n}\n    \n    //return msg;\n    //context.flow.set('Body', \\\"\\\");\n",
+        "func": "context.flow.set('selectedElements', []);\ncontext.flow.set('logs', []);\ncontext.flow.set('sessionTimeout', 30000);\n\nvar fs = context.global.get('fs');\nvar path = context.global.get('path');\ncontext.flow.set('accounts', []);\n\ncontext.flow.set(\"encrypt\", false);\ncontext.flow.set(\"granularity\", \"Seconds\");\ncontext.flow.set(\"period\", 1);\n\nvar fileName = \"httpauthfile.txt\";\nvar basePath = context.global.get('staticDocs');\nvar filePath = path.join(basePath, \"httpauth\", fileName);\n\nfs.readFile(filePath, \"utf8\", function read(err, data) {\n    if (err) {\n        throw err;\n    }\n    let content = data;\n    var contentArray = content.split(\"\\n\");\n    //var account = {username: contentArray[0], password: contentArray[2]};\n    var accounts = context.flow.get('accounts');\n    for(var account in contentArray){\n        accounts.push(contentArray[account]);    \n    }\n    \n    // Invoke the next step here however you like\n    //console.log(content);   // Put all of the code here (not the best solution)\n    exit();          // Or put the next step in a function and invoke it\n    \n    });\n    \nfunction exit() {\n    //msg.payload = content;\n    node.send(msg);\n    \n}\n    \n    //return msg;\n    //context.flow.set('Body', \\\"\\\");\n",
         "outputs": 1,
         "noerr": 0,
         "x": 687.0001220703125,
