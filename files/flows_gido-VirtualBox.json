@@ -12282,96 +12282,6 @@
         "wires": []
     },
     {
-        "id": "457356dfaa85b7f5",
-        "type": "rsa-generate-keypair",
-        "z": "3db1c009.99d51",
-        "name": "rsa generate keypair",
-        "bitlength": "2048",
-        "passphrase": "",
-        "x": 800,
-        "y": 1280,
-        "wires": [
-            [
-                "1352c08fbbbba291",
-                "c9d3f6417927e31b",
-                "f600197e0a0799a7"
-            ]
-        ]
-    },
-    {
-        "id": "eb10d7cc28a79ca8",
-        "type": "inject",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 400,
-        "y": 1280,
-        "wires": [
-            [
-                "457356dfaa85b7f5"
-            ]
-        ]
-    },
-    {
-        "id": "c9d3f6417927e31b",
-        "type": "rsa-encrypt",
-        "z": "3db1c009.99d51",
-        "name": "rsa encrypt",
-        "publickey": "",
-        "x": 1130,
-        "y": 920,
-        "wires": [
-            [
-                "c36f58b7.acd8a"
-            ]
-        ]
-    },
-    {
-        "id": "f600197e0a0799a7",
-        "type": "rsa-decrypt",
-        "z": "3db1c009.99d51",
-        "name": "rsa decrypt",
-        "privatekey": "",
-        "x": 1410,
-        "y": 1060,
-        "wires": [
-            [
-                "25f57a08afdcdf1c"
-            ]
-        ]
-    },
-    {
-        "id": "1352c08fbbbba291",
-        "type": "function",
-        "z": "3db1c009.99d51",
-        "name": "store Keys",
-        "func": "context.flow.set(\"privateKey\", msg.payload.privateKey);\ncontext.flow.set(\"publicKey\", msg.payload.publicKey);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1130,
-        "y": 1280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "19e82adda5928970",
         "type": "switch",
         "z": "3db1c009.99d51",
@@ -12396,26 +12306,9 @@
                 "c36f58b7.acd8a"
             ],
             [
-                "c9d3f6417927e31b"
+                "155e283a54e809c1"
             ]
         ]
-    },
-    {
-        "id": "25f57a08afdcdf1c",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1670,
-        "y": 1060,
-        "wires": []
     },
     {
         "id": "f2a9ea262f659fb4",
@@ -12459,6 +12352,63 @@
         "wires": [
             [
                 "19e82adda5928970"
+            ]
+        ]
+    },
+    {
+        "id": "d0ac4ef9a5e10fdd",
+        "type": "link in",
+        "z": "3db1c009.99d51",
+        "name": "encrypt in",
+        "links": [],
+        "x": 365,
+        "y": 1420,
+        "wires": [
+            [
+                "e5e879c46f500ca6"
+            ]
+        ]
+    },
+    {
+        "id": "9b0abb440520f3b4",
+        "type": "link out",
+        "z": "3db1c009.99d51",
+        "name": "encrypt out",
+        "mode": "return",
+        "links": [],
+        "x": 1605,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "e5e879c46f500ca6",
+        "type": "encrypt",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "algorithm": "AES",
+        "key": "novaas",
+        "x": 970,
+        "y": 1420,
+        "wires": [
+            [
+                "9b0abb440520f3b4"
+            ]
+        ]
+    },
+    {
+        "id": "155e283a54e809c1",
+        "type": "link call",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "links": [
+            "d0ac4ef9a5e10fdd"
+        ],
+        "timeout": "30",
+        "x": 1140,
+        "y": 900,
+        "wires": [
+            [
+                "c36f58b7.acd8a"
             ]
         ]
     },

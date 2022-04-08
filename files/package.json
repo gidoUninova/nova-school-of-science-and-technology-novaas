@@ -44,7 +44,7 @@
   "node-red-contrib-opcua": "0.2.262",
   "node-red-contrib-qrcode-generator": "0.4.0",
   "node-red-node-sqlite":"1.0.3",
-  "sense-rsa":"2.1.5"
+  "node-red-contrib-crypto-js-dynamic":"0.1.22"
 },
   "node-red": {
       "settings": {
