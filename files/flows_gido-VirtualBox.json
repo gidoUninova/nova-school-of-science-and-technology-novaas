@@ -598,7 +598,9 @@
             "a9c22279a032d681"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 239
     },
     {
         "id": "d366c10f.cbf158",
@@ -643,7 +645,9 @@
             "946165d1730b5724"
         ],
         "x": 194,
-        "y": 3519
+        "y": 3519,
+        "w": 2962,
+        "h": 542
     },
     {
         "id": "d7076418.bb51d8",
@@ -689,9 +693,7 @@
             "9d9d4e513499c3ff"
         ],
         "x": 54,
-        "y": 2319,
-        "w": 1272,
-        "h": 446.09493827819824
+        "y": 2319
     },
     {
         "id": "9eaca16.128cb6",
@@ -712,9 +714,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -801,9 +801,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -829,9 +827,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -859,9 +855,7 @@
             "2845e87d990395ef"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 282
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -899,9 +893,7 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -943,9 +935,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "27a2d798.8a5c5",
@@ -1072,9 +1062,7 @@
             "53da882cf73ecacf"
         ],
         "x": 1524,
-        "y": 1299,
-        "w": 2222,
-        "h": 802
+        "y": 1299
     },
     {
         "id": "37a4080e.40ed9",
@@ -3190,11 +3178,11 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "",
-        "url": "/aasServer/shells/:aasid/aas/submodels/:id",
+        "url": "/aasServer/shells/:aasid/aas/submodels/:id/submodel",
         "method": "get",
         "upload": false,
         "swaggerDoc": "75f5f3f5.58cb1c",
-        "x": 327,
+        "x": 350,
         "y": 1500,
         "wires": [
             [
@@ -3274,12 +3262,12 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "",
-        "url": "/aasServer/shells/:aasid/aas/submodels/:id",
-        "method": "post",
+        "url": "/aasServer/shells/:aasid/aas/submodels/:id/submodel",
+        "method": "put",
         "upload": false,
         "swaggerDoc": "",
-        "x": 327,
-        "y": 1620,
+        "x": 350,
+        "y": 1700,
         "wires": [
             [
                 "43541659.0da4d8",
@@ -3293,12 +3281,12 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "",
-        "url": "/aasServer/shells/:aasid/aas/submodels/:id",
+        "url": "/aasServer/shells/:aasid/aas/submodels/:id/submodel",
         "method": "delete",
         "upload": false,
         "swaggerDoc": "",
-        "x": 340,
-        "y": 1803,
+        "x": 360,
+        "y": 1800,
         "wires": [
             [
                 "3caf47b6.93e548",
@@ -3314,8 +3302,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1940,
-        "y": 1623,
+        "x": 1930,
+        "y": 1600,
         "wires": []
     },
     {
@@ -3341,8 +3329,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 590,
-        "y": 1583,
+        "x": 663,
+        "y": 1660,
         "wires": []
     },
     {
@@ -3356,8 +3344,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 590,
-        "y": 1743,
+        "x": 670,
+        "y": 1760,
         "wires": []
     },
     {
@@ -3371,8 +3359,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 617,
-        "y": 1480,
+        "x": 670,
+        "y": 1460,
         "wires": []
     },
     {
@@ -3870,8 +3858,8 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "",
-        "x": 1920,
-        "y": 1663,
+        "x": 1910,
+        "y": 1640,
         "wires": [],
         "icon": "node-red-contrib-viseo-log/log.svg"
     },
@@ -3942,8 +3930,8 @@
         "dropdown_HowManyMessages": "single",
         "dropdownObjOrVal": "value",
         "outputs": 1,
-        "x": 677,
-        "y": 1620,
+        "x": 743,
+        "y": 1700,
         "wires": [
             [
                 "cb3ea6e9.72b438"
@@ -3974,7 +3962,7 @@
         "dropdown_HowManyMessages": "single",
         "dropdownObjOrVal": "value",
         "outputs": 1,
-        "x": 717,
+        "x": 770,
         "y": 1800,
         "wires": [
             [
@@ -4509,11 +4497,12 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "9_Out",
+        "mode": "link",
         "links": [
-            "3d10d866.bf3aa8"
+            "28678d6a.db84e2"
         ],
-        "x": 982,
-        "y": 1620,
+        "x": 975,
+        "y": 1700,
         "wires": []
     },
     {
@@ -4525,8 +4514,8 @@
         "links": [
             "678e4e74.45bcf"
         ],
-        "x": 1405,
-        "y": 1623,
+        "x": 1395,
+        "y": 1600,
         "wires": [
             [
                 "2520a136.899d6e",
@@ -6000,6 +5989,119 @@
         "wires": []
     },
     {
+        "id": "d05b53b9a69cc83a",
+        "type": "http in",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "url": "/aasServer/shells/:aasid/aas/submodels",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 1600,
+        "wires": [
+            [
+                "d628753dc4cde75c",
+                "48d15348a443e9ab"
+            ]
+        ]
+    },
+    {
+        "id": "d628753dc4cde75c",
+        "type": "debug",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 663,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "48d15348a443e9ab",
+        "type": "set-defaults",
+        "z": "c7caf96e.a31f98",
+        "name": "set-startTime",
+        "rules": [
+            {
+                "p": "startTime",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "chbox_DoOutputToMessage": true,
+        "chbox_SetCurrentToMsg": false,
+        "howSend": {
+            "text": "payload",
+            "type": "msg",
+            "modifiedValue": "payload"
+        },
+        "dropdown_HowManyMessages": "single",
+        "dropdownObjOrVal": "value",
+        "outputs": 1,
+        "x": 743,
+        "y": 1600,
+        "wires": [
+            [
+                "ac692a0253f3bdc4"
+            ]
+        ]
+    },
+    {
+        "id": "ac692a0253f3bdc4",
+        "type": "link out",
+        "z": "c7caf96e.a31f98",
+        "name": "9_Out",
+        "links": [
+            "3d10d866.bf3aa8"
+        ],
+        "x": 975,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "2512454532d4c62c",
+        "type": "http response",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1930,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "c47790502bc32479",
+        "type": "subflow:56cb7422.e3d28c",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "x": 1910,
+        "y": 1740,
+        "wires": [],
+        "icon": "node-red-contrib-viseo-log/log.svg"
+    },
+    {
+        "id": "b47cf61ef147466d",
+        "type": "link in",
+        "z": "c7caf96e.a31f98",
+        "name": "9_In",
+        "links": [
+            "b3a06096.d9e97"
+        ],
+        "x": 1395,
+        "y": 1700,
+        "wires": [
+            [
+                "2512454532d4c62c",
+                "c47790502bc32479"
+            ]
+        ]
+    },
+    {
         "id": "f871547d.46eff8",
         "type": "debug",
         "z": "fd31082e.5487d8",
@@ -6410,8 +6512,8 @@
         "z": "fd31082e.5487d8",
         "name": "9_In",
         "links": [
-            "cb3ea6e9.72b438",
-            "786ee408.b667c4"
+            "786ee408.b667c4",
+            "ac692a0253f3bdc4"
         ],
         "x": 235,
         "y": 1880,
@@ -6562,7 +6664,8 @@
         "name": "11_Out",
         "links": [
             "d932c8d.cf79c38",
-            "51031ae7.2a3aa4"
+            "51031ae7.2a3aa4",
+            "b47cf61ef147466d"
         ],
         "x": 3135,
         "y": 2238,
@@ -6575,7 +6678,8 @@
         "name": "11_In",
         "links": [
             "d50a98f1.b0b938",
-            "1e00e0ac.7b7297"
+            "1e00e0ac.7b7297",
+            "cb3ea6e9.72b438"
         ],
         "x": 235,
         "y": 2258,
@@ -9238,14 +9342,15 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"].submodels.keys\";\nreturn msg;",
+        "func": "var ShellId = msg.req.params.aasid;\nvar submodel = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId + \"'].submodels.keys[value='\" + submodel.identification.id + \"']\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 710,
         "y": 720,
         "wires": [
             [
-                "7e7dc061.190f9"
+                "7e7dc061.190f9",
+                "725dc272f81933b2"
             ]
         ]
     },
@@ -9834,10 +9939,11 @@
         "property": "shellsJsonStr",
         "jsonata": "",
         "jsonataOpts": "",
-        "x": 940,
+        "x": 960,
         "y": 720,
         "wires": [
             [
+                "baa39adde9859415",
                 "643649a5.2eddb8"
             ]
         ]
@@ -9846,8 +9952,8 @@
         "id": "643649a5.2eddb8",
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
-        "name": "Add/Update Submodel",
-        "func": "var submodel = msg.payload;\nvar submodelId = msg.req.param.id;\nif(msg.jsonataStatus == \"Success\"){\n    \n    var keys = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n    for(var index1 in keys){\n        var key = keys[index1];\n        for(var index2 in submodels){\n            var submodel = submodels[index2];\n            if(submodel.identification.id === key.value){\n                if(submodel.idShort === submodelId){\n                    submodels[index2] = submodel;\n                    msg.statusCode = \"200\";\n                    context.flow.set(\"manifest\", manifest);\n                    return msg;\n                }\n            }\n        }\n    }\n} else {\n    msg.statusCode = \"201\";\n    var manifest = context.flow.get(\"manifest\");\n    manifest.submodels.push(msg.payload);\n    var shells = manifest.assetAdministrationShells;\n    for(var element in shells){\n        if(shells[element].identification.id == shellId){\n            var submodelRef = {};\n            var keys = [];\n            var ref = {};\n            ref.type = \"Submodel\";\n            ref.local = true;\n            ref.value = submodel.identification.id;\n            ref.index = 0;\n            ref.idType = submodel.identification.idType;\n            keys.push(ref);\n            submodelRef.keys = keys;\n            context.flow.set(\"manifest\", manifest);\n        }\n    }\n}\n\nreturn msg;",
+        "name": "Add Submodel",
+        "func": "var submodel = msg.payload;\nvar submodelId = msg.req.param.id;\nvar shellId = msg.req.params.aasid;\nif(msg.jsonataStatus == \"Success\"){\n    \n    /*var keys = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n    for(var index1 in keys){\n        var key = keys[index1];\n        for(var index2 in submodels){\n            var submodel = submodels[index2];\n            if(submodel.identification.id === key.value){\n                if(submodel.idShort === submodelId){\n                    submodels[index2] = submodel;\n                    msg.statusCode = \"200\";\n                    context.flow.set(\"manifest\", manifest);\n                    return msg;\n                }\n            }\n        }\n    }*/\n    msg.statusCode = \"409\";\n    msg.payload = \"Error! submodel already exists!\";\n    return msg;\n} else {\n    msg.statusCode = \"201\";\n    var manifest = context.flow.get(\"manifest\");\n    manifest.submodels.push(msg.payload);\n    var shells = manifest.assetAdministrationShells;\n    for(var element in shells){\n        if(shells[element].identification.id == shellId){\n            var submodelRef = {};\n            // @ts-ignore\n            var keys = [];\n            var ref = {};\n            ref.type = \"Submodel\";\n            ref.local = true;\n            ref.value = submodel.identification.id;\n            ref.index = 0;\n            ref.idType = submodel.identification.idType;\n            keys.push(ref);\n            submodelRef.keys = keys;\n            shells[element].submodels.push(submodelRef);\n            context.flow.set(\"manifest\", manifest);\n        }\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1160,
@@ -11229,6 +11335,40 @@
                 "f3d77d2c4bd793f1"
             ]
         ]
+    },
+    {
+        "id": "725dc272f81933b2",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "baa39adde9859415",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 680,
+        "wires": []
     },
     {
         "id": "af4b6639.02a008",
