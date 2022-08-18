@@ -622,9 +622,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -709,9 +707,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 921
+        "y": 99
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -750,9 +746,7 @@
             "22add3d70156e4b3"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "e8501749a8186080",
@@ -793,9 +787,7 @@
             "e14fe06ae748a0af"
         ],
         "x": 1794,
-        "y": 1279,
-        "w": 1952,
-        "h": 442
+        "y": 1279
     },
     {
         "id": "6aa9beecbf5f8d23",
@@ -815,9 +807,7 @@
             "346761bdd7d6cd41"
         ],
         "x": 134,
-        "y": 59,
-        "w": 1292,
-        "h": 182
+        "y": 59
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -861,9 +851,7 @@
             "315ed0cad6dcaedc"
         ],
         "x": 54,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -907,9 +895,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 14,
-        "y": 2299,
-        "w": 2872,
-        "h": 516
+        "y": 2299
     },
     {
         "id": "37a4080e.40ed9",
@@ -10199,7 +10185,7 @@
         "z": "3db1c009.99d51",
         "name": "",
         "property": "encrypt",
-        "propertyType": "global",
+        "propertyType": "flow",
         "rules": [
             {
                 "t": "false"
@@ -10375,7 +10361,7 @@
         "z": "3db1c009.99d51",
         "name": "",
         "property": "encrypt",
-        "propertyType": "global",
+        "propertyType": "flow",
         "rules": [
             {
                 "t": "false"
@@ -10651,129 +10637,6 @@
         ]
     },
     {
-        "id": "f9b5420cad128eaf",
-        "type": "inject",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "on",
-        "payload": "",
-        "payloadType": "date",
-        "x": 590,
-        "y": 1720,
-        "wires": [
-            [
-                "a89170b27e831c5c"
-            ]
-        ]
-    },
-    {
-        "id": "5360c0d6891e9fb7",
-        "type": "inject",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "off",
-        "payload": "",
-        "payloadType": "date",
-        "x": 590,
-        "y": 1760,
-        "wires": [
-            [
-                "a89170b27e831c5c"
-            ]
-        ]
-    },
-    {
-        "id": "a89170b27e831c5c",
-        "type": "function",
-        "z": "3db1c009.99d51",
-        "name": "Encryption",
-        "func": "if(msg.topic === \"on\") context.flow.set(\"encrypt\", true);\nelse if (msg.topic === \"off\" || msg.topic === \"init\") context.flow.set(\"encrypt\", false);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 940,
-        "y": 1740,
-        "wires": [
-            [
-                "8db2cd280f2c6c33"
-            ]
-        ]
-    },
-    {
-        "id": "8db2cd280f2c6c33",
-        "type": "debug",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1230,
-        "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "33dfc58a8d5eb2a4",
-        "type": "inject",
-        "z": "3db1c009.99d51",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "init",
-        "payload": "",
-        "payloadType": "date",
-        "x": 600,
-        "y": 1820,
-        "wires": [
-            [
-                "a89170b27e831c5c"
-            ]
-        ]
-    },
-    {
         "id": "04783421e5b9026b",
         "type": "Kafka Admin",
         "z": "3db1c009.99d51",
@@ -10861,6 +10724,100 @@
         "convertFromJson": false,
         "x": 1520,
         "y": 960,
+        "wires": []
+    },
+    {
+        "id": "f9b5420cad128eaf",
+        "type": "inject",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "encrypt_cmd",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 600,
+        "y": 1720,
+        "wires": [
+            [
+                "a89170b27e831c5c"
+            ]
+        ]
+    },
+    {
+        "id": "5360c0d6891e9fb7",
+        "type": "inject",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "encrypt_cmd",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 610,
+        "y": 1760,
+        "wires": [
+            [
+                "a89170b27e831c5c"
+            ]
+        ]
+    },
+    {
+        "id": "a89170b27e831c5c",
+        "type": "function",
+        "z": "3db1c009.99d51",
+        "name": "Encryption",
+        "func": "if(msg.topic === \"encrypt_cmd\"){\n    if(msg.payload === \"on\"){\n        context.flow.set(\"encrypt\", true);\n    } else if (msg.payload === \"off\") {\n        context.flow.set(\"encrypt\", false);\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 1740,
+        "wires": [
+            [
+                "8db2cd280f2c6c33"
+            ]
+        ]
+    },
+    {
+        "id": "8db2cd280f2c6c33",
+        "type": "debug",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 1740,
         "wires": []
     },
     {
