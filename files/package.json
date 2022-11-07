@@ -42,7 +42,8 @@
   "node-red-node-sqlite":"1.0.3",
   "node-red-contrib-crypto-js-dynamic":"0.1.22",
   "node-red-contrib-kafka-manager":"0.5.1",
-  "node-red-contrib-cron-plus": "1.5.7"
+  "node-red-contrib-cron-plus": "1.5.7",
+  "node-red-contrib-actionflows": "2.1.2"
 },
   "node-red": {
       "settings": {
