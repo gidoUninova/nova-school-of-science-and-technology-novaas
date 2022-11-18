@@ -423,9 +423,7 @@
             "ad85b295.7069f"
         ],
         "x": 76,
-        "y": 225,
-        "w": 1902,
-        "h": 242
+        "y": 225
     },
     {
         "id": "daa90db5.798ca",
@@ -476,9 +474,7 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1888
+        "y": 599
     },
     {
         "id": "66d3f26a.c296b4",
@@ -501,9 +497,7 @@
             "d42664b2.514808"
         ],
         "x": 74,
-        "y": 2499,
-        "w": 1951,
-        "h": 282
+        "y": 2499
     },
     {
         "id": "fd25b313.221798",
@@ -526,9 +520,7 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 2799,
-        "w": 1912,
-        "h": 202
+        "y": 2799
     },
     {
         "id": "16640da3.5a20ca",
@@ -549,9 +541,7 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3019,
-        "w": 1932,
-        "h": 182
+        "y": 3019
     },
     {
         "id": "4b4e4270.d440bc",
@@ -626,7 +616,9 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179
+        "y": 2179,
+        "w": 652,
+        "h": 82
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -711,7 +703,9 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99
+        "y": 99,
+        "w": 3532,
+        "h": 921
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -750,7 +744,9 @@
             "22add3d70156e4b3"
         ],
         "x": 2504,
-        "y": 2679
+        "y": 2679,
+        "w": 1272,
+        "h": 517
     },
     {
         "id": "e8501749a8186080",
@@ -791,7 +787,9 @@
             "e14fe06ae748a0af"
         ],
         "x": 1794,
-        "y": 1279
+        "y": 1279,
+        "w": 1952,
+        "h": 442
     },
     {
         "id": "6aa9beecbf5f8d23",
@@ -857,7 +855,9 @@
             "315ed0cad6dcaedc"
         ],
         "x": 54,
-        "y": 2999
+        "y": 2999,
+        "w": 1572,
+        "h": 682
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -955,9 +955,7 @@
             "d05b53b9a69cc83a"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -1001,9 +999,7 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 552
+        "y": 1909
     },
     {
         "id": "bf8d1775bedc9126",
@@ -2441,7 +2437,7 @@
         "type": "unsafe-function",
         "z": "41b3a1439ccec2c1",
         "name": "",
-        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nvar outMsg = {};\nvar ObsObj = context.flow.get('ObsObj');\nObsObj.id = uuid;\nvar timestamp = context.flow.get(\"$parent.timestamp\");\nObsObj.timestamp = timestamp;\nObsObj.payload = context.flow.get(\"variable\");\noutMsg.payload = ObsObj;\nreturn outMsg;",
+        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nvar outMsg = {};\nvar ObsObj = context.flow.get('ObsObj');\nObsObj.id = uuid;\nvar timestamp = context.flow.get(\"$parent.timestamp\");\nif (typeof timestamp == 'undefined') {\n    timestamp = new Date().getTime();\n}\nelse {\n    ObsObj.timestamp = timestamp;\n}\nObsObj.payload = context.flow.get(\"variable\");\noutMsg.payload = ObsObj;\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1635,
@@ -2507,7 +2503,7 @@
         "type": "unsafe-function",
         "z": "41b3a1439ccec2c1",
         "name": "responseTime",
-        "func": "var historyArrayName = \"$parent.\" + env.get(\"PropertyName\") + \"_hist\";\nvar outMsg= {};\noutMsg.topic = \"put\";\noutMsg.payload = {\n    link: env.get(\"PropertyLink\"),\n    tstamp: context.flow.get(\"$parent.timestamp\"),\n    data: context.flow.get(\"variable\")\n};\nlet history = context.flow.get(historyArrayName) || [];\nif (history.length >= env.get(\"HistoryLength\")){\n    history.pop();\n}\nhistory.push(outMsg.payload);\ncontext.flow.set(historyArrayName, history);\nreturn outMsg;",
+        "func": "var historyArrayName = \"$parent.\" + env.get(\"PropertyName\") + \"_hist\";\nvar outMsg = {};\noutMsg.topic = \"put\";\nvar timestamp = context.flow.get(\"$parent.timestamp\");\nif (typeof timestamp == \"undefined\") {\n    timestamp = new Date().getTime();\n}\noutMsg.payload = {\n    link: env.get(\"PropertyLink\"),\n    tstamp: timestamp,\n    data: context.flow.get(\"variable\")\n};\nlet history = context.flow.get(historyArrayName) || [];\nif (history.length >= env.get(\"HistoryLength\")) {\n    history.pop();\n}\nhistory.push(outMsg.payload);\ncontext.flow.set(historyArrayName, history);\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1075,
