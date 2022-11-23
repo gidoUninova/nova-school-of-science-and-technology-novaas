@@ -423,7 +423,9 @@
             "ad85b295.7069f"
         ],
         "x": 76,
-        "y": 225
+        "y": 225,
+        "w": 1902,
+        "h": 242
     },
     {
         "id": "daa90db5.798ca",
@@ -474,7 +476,9 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599
+        "y": 599,
+        "w": 1977,
+        "h": 1888
     },
     {
         "id": "66d3f26a.c296b4",
@@ -497,7 +501,9 @@
             "d42664b2.514808"
         ],
         "x": 74,
-        "y": 2499
+        "y": 2499,
+        "w": 1951,
+        "h": 282
     },
     {
         "id": "fd25b313.221798",
@@ -520,7 +526,9 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 2799
+        "y": 2799,
+        "w": 1912,
+        "h": 202
     },
     {
         "id": "16640da3.5a20ca",
@@ -541,7 +549,9 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3019
+        "y": 3019,
+        "w": 1932,
+        "h": 182
     },
     {
         "id": "4b4e4270.d440bc",
@@ -567,9 +577,7 @@
             "a9c22279a032d681"
         ],
         "x": 194,
-        "y": 4242,
-        "w": 2272,
-        "h": 239
+        "y": 4242
     },
     {
         "id": "d366c10f.cbf158",
@@ -593,9 +601,7 @@
             "555ce72ca0d7dfd4"
         ],
         "x": 194,
-        "y": 3519,
-        "w": 2962,
-        "h": 542
+        "y": 3519
     },
     {
         "id": "9eaca16.128cb6",
@@ -616,9 +622,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -703,9 +707,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 921
+        "y": 99
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -744,9 +746,7 @@
             "22add3d70156e4b3"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "e8501749a8186080",
@@ -787,9 +787,7 @@
             "e14fe06ae748a0af"
         ],
         "x": 1794,
-        "y": 1279,
-        "w": 1952,
-        "h": 442
+        "y": 1279
     },
     {
         "id": "6aa9beecbf5f8d23",
@@ -809,9 +807,7 @@
             "e0583acdd8f2c8aa"
         ],
         "x": 134,
-        "y": 59,
-        "w": 1312,
-        "h": 182
+        "y": 59
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -855,9 +851,7 @@
             "315ed0cad6dcaedc"
         ],
         "x": 54,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -901,9 +895,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 14,
-        "y": 2299,
-        "w": 2872,
-        "h": 516
+        "y": 2299
     },
     {
         "id": "37a4080e.40ed9",
@@ -955,7 +947,9 @@
             "d05b53b9a69cc83a"
         ],
         "x": 101,
-        "y": 1176
+        "y": 1176,
+        "w": 1925,
+        "h": 708
     },
     {
         "id": "c358a7e7.e264e",
@@ -999,7 +993,9 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909
+        "y": 1909,
+        "w": 1902,
+        "h": 552
     },
     {
         "id": "bf8d1775bedc9126",
@@ -9137,26 +9133,6 @@
         ]
     },
     {
-        "id": "768efb1a.62c604",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "UpdatingSubmodelElement...",
-        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"Value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType.name;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                //msg.debug3 = \"entrei\";\n\n                let values = JSON.parse(value);\n\n                let keys = Object.keys(values);\n\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n\n                    submodelElements[submodelElement].value[keyIndex].value = selectedValue;\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && modelType === \"Property\") {\n\n                submodelElements[submodelElement].value = value;\n\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathToSubmodelElement = submodelElementId;\n\n    let collectionIds = pathToSubmodelElement.split(\".\");\n\n    let value = msg.submodelElement[msg.submodelElementId];\n\n    let submodelRootIdentifier = submodelRoot.identification.id;\n\n    let result = false;\n\n    let manifest = context.flow.get(\"manifest\");\n\n    let manifestSubmodels = manifest.submodels;\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            let manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n            //msg.debug1 = collectionIds;\n\n            //msg.debug2 = manifestSubmodelElements;\n\n            result = updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, value);\n\n            //msg.result = result;\n\n            if (result) {\n\n                context.flow.set(\"manifest\", manifest);\n\n                if (persist == \"true\") {\n\n                    return [msg, null];\n\n                } else {\n                    //msg.parsedValue = Object.keys(JSON.parse(value));\n                    //msg.values = JSON.parse(value);\n                    return [null, msg];\n\n                }\n            } else {\n\n                msg.statusCode = \"404\";\n                //msg.payload = \"Submodel with id:\" + submodelIdentifier + \" not found!!!\";\n                return [null, msg];\n\n            }\n\n        }\n\n    }\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}\n\n\n\n",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 1810,
-        "y": 1460,
-        "wires": [
-            [
-                "06cdab4690033b11",
-                "2e0ef87ae37655e9"
-            ],
-            [
-                "06cdab4690033b11"
-            ]
-        ]
-    },
-    {
         "id": "3cf9675a.eb4928",
         "type": "switch",
         "z": "7585249f.880c0c",
@@ -9183,7 +9159,7 @@
         "wires": [
             [
                 "78f4c2e4.f28bcc",
-                "768efb1a.62c604"
+                "9d52563a1d0e86d3"
             ],
             [
                 "06cdab4690033b11"
@@ -9534,7 +9510,7 @@
         "name": "createEnv out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 180,
         "wires": []
     },
@@ -9559,7 +9535,7 @@
         "name": "persistEnv out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 1720,
         "wires": []
     },
@@ -9584,7 +9560,7 @@
         "name": "readEnv out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 240,
         "wires": []
     },
@@ -9609,7 +9585,7 @@
         "name": "readShells out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 300,
         "wires": []
     },
@@ -9634,7 +9610,7 @@
         "name": "readAssets out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 360,
         "wires": []
     },
@@ -9659,7 +9635,7 @@
         "name": "readAas out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 440,
         "wires": []
     },
@@ -9684,7 +9660,7 @@
         "name": "readSubmodels out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 500,
         "wires": []
     },
@@ -9709,7 +9685,7 @@
         "name": "readAasSubmodels out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 560,
         "wires": []
     },
@@ -9734,7 +9710,7 @@
         "name": "readSubmodel out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 640,
         "wires": []
     },
@@ -9759,7 +9735,7 @@
         "name": "addSubmodel out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 720,
         "wires": []
     },
@@ -9799,7 +9775,7 @@
         "name": "removeSubmodel out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 840,
         "wires": []
     },
@@ -9854,7 +9830,7 @@
         "name": "updateSubmodel out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 1000,
         "wires": []
     },
@@ -9879,7 +9855,7 @@
         "name": "readSubmodelElement out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 1100,
         "wires": []
     },
@@ -9904,7 +9880,7 @@
         "name": "addSubmodelElement out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 1260,
         "wires": []
     },
@@ -9946,7 +9922,7 @@
         "name": "removeSubmodelElement out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 1380,
         "wires": []
     },
@@ -10037,7 +10013,7 @@
         "name": "updateSubmodelElement out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 1500,
         "wires": []
     },
@@ -10062,7 +10038,7 @@
         "name": "addConceptDescription out",
         "mode": "return",
         "links": [],
-        "x": 2215,
+        "x": 2435,
         "y": 1620,
         "wires": []
     },
@@ -10170,7 +10146,7 @@
             "feac9604b306e8d4"
         ],
         "timeout": "30",
-        "x": 2090,
+        "x": 2350,
         "y": 1440,
         "wires": [
             []
@@ -10243,6 +10219,63 @@
         "statusType": "auto",
         "x": 1150,
         "y": 800,
+        "wires": []
+    },
+    {
+        "id": "9d52563a1d0e86d3",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "preprocessing and flattening JSON",
+        "func": "function getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\n\nlet flattenObject = getFlatObject(JSON.parse(msg.value));\nlet keys = Object.keys(flattenObject);\nmsg.flattenObject = flattenObject;\nfor(let keyIndex = 0; keyIndex < keys.length; keyIndex++){\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\nlet pathsToUpdate = [];\nif(uniqueKeys.length > 1){\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++){\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 1460,
+        "wires": [
+            [
+                "8b9a4bcfa15c7cc3",
+                "b9eb97851f3682d9"
+            ]
+        ]
+    },
+    {
+        "id": "b9eb97851f3682d9",
+        "type": "unsafe-function",
+        "z": "7585249f.880c0c",
+        "name": "UpdatingSubmodelElement...",
+        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType.name;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                let values = JSON.parse(value);\n\n                let keys = Object.keys(values);\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n                    //msg.debug15 = selectedValue;\n\n                    //msg.debug15 = selectedValue;\n                    if (typeof selectedValue != 'object') {\n                        for (let valuesIndex = 0; valuesIndex < submodelElements[submodelElement].value.length; valuesIndex++) {\n                            if (submodelElements[submodelElement].value[valuesIndex].idShort == keys[keyIndex]) {\n                                submodelElements[submodelElement].value[valuesIndex].value = selectedValue;\n                                break;\n\n                            }\n                        }\n                    }\n\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && modelType === \"Property\") {\n                //msg.debug11 = \"Entrei \" + submodelElements[submodelElement].idShort + \" and \" + idPath + \" \" + value;\n                submodelElements[submodelElement].value = value;\n\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nlet manifest = context.flow.get(\"manifest\");\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathsToSubmodelElements = msg.pathsToUpdate;\n\n    let submodelRootIdentifier = submodelRoot.identification.id;\n\n    let manifestSubmodels = manifest.submodels;\n\n    let manifestSubmodelElements = {};\n\n    let stratingJsonDecomposition = msg.submodelElementId.split(\".\");\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n        }\n\n    }\n\n    for (let pathIndex = 0; pathIndex < pathsToSubmodelElements.length; pathIndex++) {\n\n        let collectionIds = pathsToSubmodelElements[pathIndex].split(\".\");\n\n        let value = msg.submodelElement[msg.submodelElementId];\n\n        let jsonObjectValue = {};\n\n        let processedValue = {};\n\n        if (collectionIds.length > 1) {\n            jsonObjectValue = JSON.parse(value);\n            let decomposeJsonObj = jsonObjectValue;\n            for (let index = stratingJsonDecomposition.length; index < collectionIds.length; index++) {\n                decomposeJsonObj = decomposeJsonObj[collectionIds[index]];\n            }\n            processedValue = JSON.stringify(decomposeJsonObj)\n\n        } else {\n            processedValue = msg.value;\n        }\n\n        updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, processedValue);\n\n    }\n    context.flow.set(\"manifest\", manifest);\n\n    if (persist == \"true\") {\n\n        return [msg, null];\n\n    } else {\n\n        return [null, msg];\n    }\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 2090,
+        "y": 1460,
+        "wires": [
+            [
+                "2e0ef87ae37655e9",
+                "06cdab4690033b11"
+            ],
+            [
+                "06cdab4690033b11"
+            ]
+        ]
+    },
+    {
+        "id": "8b9a4bcfa15c7cc3",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1920,
+        "y": 1420,
         "wires": []
     },
     {
