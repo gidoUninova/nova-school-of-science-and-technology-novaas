@@ -1788,18 +1788,6 @@
         "mode": "RW"
     },
     {
-        "id": "d2edf304.fdfa2",
-        "type": "sub-link-config",
-        "name": "southbound",
-        "clone": false
-    },
-    {
-        "id": "72ae2011.f3d7b",
-        "type": "sub-link-config",
-        "name": "driver",
-        "clone": false
-    },
-    {
         "id": "d56e5f93.f422c",
         "type": "logger",
         "z": "56cb7422.e3d28c",
