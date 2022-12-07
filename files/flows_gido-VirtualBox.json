@@ -622,9 +622,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -709,9 +707,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 921
+        "y": 99
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -750,9 +746,7 @@
             "22add3d70156e4b3"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "e8501749a8186080",
@@ -793,9 +787,7 @@
             "e14fe06ae748a0af"
         ],
         "x": 1794,
-        "y": 1279,
-        "w": 1952,
-        "h": 442
+        "y": 1279
     },
     {
         "id": "6aa9beecbf5f8d23",
@@ -816,9 +808,7 @@
             "f8b354e5d9771dda"
         ],
         "x": 134,
-        "y": 59,
-        "w": 1232,
-        "h": 182
+        "y": 59
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -862,9 +852,7 @@
             "315ed0cad6dcaedc"
         ],
         "x": 54,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -908,9 +896,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 14,
-        "y": 2299,
-        "w": 2872,
-        "h": 516
+        "y": 2299
     },
     {
         "id": "37a4080e.40ed9",
@@ -2477,7 +2463,7 @@
         "type": "unsafe-function",
         "z": "41b3a1439ccec2c1",
         "name": "",
-        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nvar outMsg = {};\nvar ObsObj = context.flow.get('ObsObj');\nObsObj.id = uuid;\nvar timestamp = context.flow.get(\"$parent.timestamp\");\nif (typeof timestamp == 'undefined') {\n    timestamp = new Date().getTime();\n}\nelse {\n    ObsObj.timestamp = timestamp;\n}\nObsObj.payload = context.flow.get(\"variable\");\noutMsg.payload = ObsObj;\nreturn outMsg;",
+        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nvar outMsg = {};\nvar ObsObj = context.flow.get('ObsObj');\nObsObj.id = uuid;\nvar timestamp = context.flow.get(\"$parent.timestamp\");\nif (typeof timestamp == 'undefined') {\n    timestamp = new Date().getTime();\n    ObsObj.timestamp = timestamp;\n}\nelse {\n    ObsObj.timestamp = timestamp;\n}\nObsObj.payload = context.flow.get(\"variable\");\noutMsg.payload = ObsObj;\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1635,
@@ -10525,7 +10511,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor(var subscription = 0; subscription < subscriptions.length; subscription++){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])){\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription = 0; subscription < subscriptions.length; subscription++) {\n    //var splittedSubscription = subscriptions[subscription].split(\";\");\n    //if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])){\n    if (msg.payload.source.includes(subscriptions[subscription])) {\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
@@ -10651,7 +10637,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription = 0; subscription < subscriptions.length; subscription++) {\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])) {\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription = 0; subscription < subscriptions.length; subscription++) {\n    //var splittedSubscription = subscriptions[subscription].split(\";\");\n    //if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])){\n    if (msg.payload.source.includes(subscriptions[subscription])) {\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
