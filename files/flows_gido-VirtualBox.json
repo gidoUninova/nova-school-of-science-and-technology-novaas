@@ -423,9 +423,7 @@
             "ad85b295.7069f"
         ],
         "x": 76,
-        "y": 225,
-        "w": 1902,
-        "h": 242
+        "y": 225
     },
     {
         "id": "daa90db5.798ca",
@@ -476,9 +474,7 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1888
+        "y": 599
     },
     {
         "id": "66d3f26a.c296b4",
@@ -501,9 +497,7 @@
             "d42664b2.514808"
         ],
         "x": 74,
-        "y": 2499,
-        "w": 1951,
-        "h": 282
+        "y": 2499
     },
     {
         "id": "fd25b313.221798",
@@ -526,9 +520,7 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 2799,
-        "w": 1912,
-        "h": 202
+        "y": 2799
     },
     {
         "id": "16640da3.5a20ca",
@@ -549,9 +541,7 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3019,
-        "w": 1932,
-        "h": 182
+        "y": 3019
     },
     {
         "id": "4b4e4270.d440bc",
@@ -576,10 +566,8 @@
             "4872c068f48e839b",
             "a9c22279a032d681"
         ],
-        "x": 194,
-        "y": 4242,
-        "w": 2272,
-        "h": 239
+        "x": 214,
+        "y": 3819
     },
     {
         "id": "d366c10f.cbf158",
@@ -602,10 +590,8 @@
             "21eb2aa8ef422845",
             "555ce72ca0d7dfd4"
         ],
-        "x": 194,
-        "y": 3519,
-        "w": 2962,
-        "h": 542
+        "x": 214,
+        "y": 3096
     },
     {
         "id": "9eaca16.128cb6",
@@ -956,9 +942,7 @@
             "d05b53b9a69cc83a"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -1002,9 +986,7 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 552
+        "y": 1909
     },
     {
         "id": "bf8d1775bedc9126",
@@ -5879,8 +5861,8 @@
         "z": "fd31082e.5487d8",
         "name": "AAS Rosource Monitoring - Component Manger",
         "info": "",
-        "x": 600,
-        "y": 4623,
+        "x": 620,
+        "y": 4200,
         "wires": []
     },
     {
@@ -5908,8 +5890,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 750,
-        "y": 4343,
+        "x": 770,
+        "y": 3920,
         "wires": []
     },
     {
@@ -5933,8 +5915,8 @@
         "g": "4b4e4270.d440bc",
         "name": "Interaction with AAS - NBI",
         "info": "",
-        "x": 530,
-        "y": 4283,
+        "x": 550,
+        "y": 3860,
         "wires": []
     },
     {
@@ -5944,8 +5926,8 @@
         "g": "d366c10f.cbf158",
         "name": "Interaction with AAS - SBI",
         "info": "",
-        "x": 410,
-        "y": 3560,
+        "x": 430,
+        "y": 3137,
         "wires": []
     },
     {
@@ -5956,8 +5938,8 @@
         "links": [
             "48ef191e.d28c98"
         ],
-        "x": 235,
-        "y": 4183,
+        "x": 255,
+        "y": 3760,
         "wires": [
             [
                 "33dfaad2.2f66be"
@@ -5972,8 +5954,8 @@
         "links": [
             "e7a9e126.1cef"
         ],
-        "x": 3115,
-        "y": 4183,
+        "x": 3135,
+        "y": 3760,
         "wires": []
     },
     {
@@ -6339,8 +6321,8 @@
             "568d5f3.624242",
             "400d9646.413fe8"
         ],
-        "x": 238,
-        "y": 3860,
+        "x": 258,
+        "y": 3437,
         "wires": [
             [
                 "555ce72ca0d7dfd4"
@@ -6357,8 +6339,8 @@
             "d5524b85.c3c27",
             "7acbb909.02b518"
         ],
-        "x": 3114,
-        "y": 3860,
+        "x": 3134,
+        "y": 3437,
         "wires": []
     },
     {
@@ -6371,8 +6353,8 @@
             "e05fcd52.be3ca8",
             "84b54255.d93878"
         ],
-        "x": 235,
-        "y": 4363,
+        "x": 255,
+        "y": 3940,
         "wires": [
             [
                 "c7097b80.b03428",
@@ -6391,8 +6373,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 2370,
-        "y": 4363,
+        "x": 2390,
+        "y": 3940,
         "wires": []
     },
     {
@@ -6405,8 +6387,8 @@
             "796fdeb5.8f68b8",
             "898d8bc.861cc78"
         ],
-        "x": 235,
-        "y": 4020,
+        "x": 255,
+        "y": 3597,
         "wires": [
             [
                 "21eb2aa8ef422845"
@@ -6422,8 +6404,8 @@
         "func": "var manifest = msg.payload;\nif(manifest != \"\" && manifest.submodels.length > 0){\n    var statusCheckSBI = context.global.get(\"statusCheckSBI\");\n    if(statusCheckSBI.connected){\n        if(statusCheckSBI.nrOfDataSources > 0){\n            if((typeof context.global.get('namespace') !== \"undefined\")){\n                context.global.set(\"NOVAAS_Overall_Status\", \"ok\");\n                msg.payload = context.global.get(\"NOVAAS_Overall_Status\");\n                return msg;\n            }\n        }\n    }\n}\ncontext.global.set(\"NOVAAS_Overall_Status\", \"not_ok\");\nmsg.payload = context.global.get(\"NOVAAS_Overall_Status\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1020,
-        "y": 4020,
+        "x": 1040,
+        "y": 3597,
         "wires": [
             [
                 "b88a92c6.fb547"
@@ -6444,8 +6426,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 3980,
+        "x": 890,
+        "y": 3557,
         "wires": []
     },
     {
@@ -6459,8 +6441,8 @@
             "ef469c86.b0f528",
             "a4c9e82d39de3c53"
         ],
-        "x": 3115,
-        "y": 4020,
+        "x": 3135,
+        "y": 3597,
         "wires": []
     },
     {
@@ -6468,8 +6450,8 @@
         "type": "OS",
         "z": "fd31082e.5487d8",
         "name": "",
-        "x": 1850,
-        "y": 4900,
+        "x": 1370,
+        "y": 4300,
         "wires": [
             [
                 "713f7fd4.702168",
@@ -6488,8 +6470,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 1650,
-        "y": 4800,
+        "x": 1170,
+        "y": 4280,
         "wires": [
             [
                 "3319bd2e.c8291a"
@@ -6509,8 +6491,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2240,
-        "y": 4820,
+        "x": 1750,
+        "y": 4280,
         "wires": []
     },
     {
@@ -6636,8 +6618,8 @@
         "func": "//msg.filename = msg.payload.value;\n//msg.staticDocs = \"/home/gido/.node-red-novaas/\";\nvar fn = msg.req.params.fn;\n//msg.filename = context.global.get('staticDocs') + \"aasx/Document/\" + fn;\nmsg.payload = \"-name\" + \" \" + fn;\n//msg.payload = \"aasx/4830902_DPDM-6-15-PA---_0_.pdf\";\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 980,
-        "y": 4180,
+        "x": 1000,
+        "y": 3757,
         "wires": [
             [
                 "2c5fff4c.088d18"
@@ -6654,8 +6636,8 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 1850,
-        "y": 4160,
+        "x": 1870,
+        "y": 3737,
         "wires": [
             [
                 "1619def7.8eb651"
@@ -6681,8 +6663,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1670,
-        "y": 4160,
+        "x": 1690,
+        "y": 3737,
         "wires": [
             [
                 "389ecac2.32281e"
@@ -6700,8 +6682,8 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 1250,
-        "y": 4180,
+        "x": 1270,
+        "y": 3757,
         "wires": [
             [
                 "92440de2.fa50f8",
@@ -6724,8 +6706,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1470,
-        "y": 4140,
+        "x": 1490,
+        "y": 3717,
         "wires": []
     },
     {
@@ -6736,8 +6718,8 @@
         "func": "//msg.filename = msg.payload.value;\n//msg.staticDocs = \"/home/gido/.node-red-novaas/\";\nif(msg.payload != \"\"){\n    msg.filename = msg.payload;\n    //msg.payload = \"aasx/4830902_DPDM-6-15-PA---_0_.pdf\";\n    return [msg, null];\n} else {\n    msg.payload = \"document Not found\"\n    return [null, msg];\n}\n\n\n\n\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 1480,
-        "y": 4180,
+        "x": 1500,
+        "y": 3757,
         "wires": [
             [
                 "9454af3.ef43f5"
@@ -7150,8 +7132,8 @@
             "cfe951f06c55831e"
         ],
         "timeout": "30",
-        "x": 690,
-        "y": 4020,
+        "x": 710,
+        "y": 3597,
         "wires": [
             [
                 "9f810b8b.7a1b8",
@@ -7169,8 +7151,8 @@
             "02bb228b85db556d"
         ],
         "timeout": "30",
-        "x": 1580,
-        "y": 3860,
+        "x": 1600,
+        "y": 3437,
         "wires": [
             [
                 "c757ee5b.08a1f8"
@@ -7187,8 +7169,8 @@
             "99b95b4d975cf063"
         ],
         "timeout": "30",
-        "x": 1400,
-        "y": 4360,
+        "x": 1420,
+        "y": 3937,
         "wires": [
             [
                 "1f1ce2c5.9cb5cd"
@@ -7201,8 +7183,8 @@
         "z": "fd31082e.5487d8",
         "name": "OSsysDscr in",
         "links": [],
-        "x": 735,
-        "y": 4900,
+        "x": 255,
+        "y": 4300,
         "wires": [
             [
                 "3319bd2e.c8291a"
@@ -7216,8 +7198,8 @@
         "name": "OSsysDscr out",
         "mode": "return",
         "links": [],
-        "x": 2795,
-        "y": 4900,
+        "x": 2315,
+        "y": 4300,
         "wires": []
     },
     {
@@ -7247,8 +7229,8 @@
         "links": [
             "1fc06f6a8f3492b8"
         ],
-        "x": 235,
-        "y": 4440,
+        "x": 255,
+        "y": 4017,
         "wires": [
             [
                 "893f967b73205095",
@@ -7267,8 +7249,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 450,
-        "y": 4400,
+        "x": 470,
+        "y": 3977,
         "wires": []
     },
     {
@@ -7281,8 +7263,8 @@
             "fa81926752921ab7"
         ],
         "timeout": "30",
-        "x": 830,
-        "y": 4440,
+        "x": 850,
+        "y": 4017,
         "wires": [
             [
                 "e1994719bd7b4722"
@@ -7300,8 +7282,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 2370,
-        "y": 4440,
+        "x": 2390,
+        "y": 4017,
         "wires": []
     },
     {
@@ -7316,8 +7298,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 4440,
+        "x": 500,
+        "y": 4017,
         "wires": [
             [
                 "a9c22279a032d681",
@@ -7336,18 +7318,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 710,
-        "y": 4400,
-        "wires": []
-    },
-    {
-        "id": "a00c6a25876c5a71",
-        "type": "comment",
-        "z": "fd31082e.5487d8",
-        "name": "Interaction with the AASUI, to be checked",
-        "info": "",
-        "x": 340,
-        "y": 3100,
+        "x": 730,
+        "y": 3977,
         "wires": []
     },
     {
@@ -7421,102 +7393,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "e66f9517e92d99ba",
-        "type": "link in",
-        "z": "fd31082e.5487d8",
-        "name": "newLogin in",
-        "links": [],
-        "x": 595,
-        "y": 3300,
-        "wires": [
-            [
-                "c925290f9583547d",
-                "3d3547b4770d731e"
-            ]
-        ]
-    },
-    {
-        "id": "f04c07e586c4cefc",
-        "type": "link out",
-        "z": "fd31082e.5487d8",
-        "name": "newConfiguration out",
-        "mode": "return",
-        "links": [],
-        "x": 2565,
-        "y": 3300,
-        "wires": []
-    },
-    {
-        "id": "c925290f9583547d",
-        "type": "function",
-        "z": "fd31082e.5487d8",
-        "name": "prepare INSERT Statement",
-        "func": "// Process msg payload\n\nlet logEvent = {};\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.timestamp = msg.payload.accessAt;\nlogEvent.payload = msg.payload.username;\n\nmsg.topic = \"INSERT INTO accountLogs (accessAt, username) VALUES ($accessAt, $username)\";\nmsg.payload = [logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1240,
-        "y": 3300,
-        "wires": [
-            [
-                "83cb56d8d6ecb41f",
-                "e44cc6a2281fec42"
-            ]
-        ]
-    },
-    {
-        "id": "83cb56d8d6ecb41f",
-        "type": "sqlite",
-        "z": "fd31082e.5487d8",
-        "mydb": "50760f2b4eafd99b",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "",
-        "x": 1590,
-        "y": 3300,
-        "wires": [
-            [
-                "f04c07e586c4cefc"
-            ]
-        ]
-    },
-    {
-        "id": "e44cc6a2281fec42",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1470,
-        "y": 3240,
-        "wires": []
-    },
-    {
-        "id": "3d3547b4770d731e",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1109.7222900390625,
-        "y": 3248.0556640625,
-        "wires": []
     },
     {
         "id": "c21dc6455514a760",
@@ -8677,6 +8553,236 @@
         ]
     },
     {
+        "id": "15e77fdb6f5ba133",
+        "type": "inject",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 4540,
+        "wires": [
+            [
+                "f823dc7f6b29ac78"
+            ]
+        ]
+    },
+    {
+        "id": "f823dc7f6b29ac78",
+        "type": "exec",
+        "z": "fd31082e.5487d8",
+        "command": "tail -f ./logfile.txt",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 980,
+        "y": 4540,
+        "wires": [
+            [
+                "6fc59e78e64564b0",
+                "6d5e23d932baeb73"
+            ],
+            [
+                "9d65de1d1f516130"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9d65de1d1f516130",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1570,
+        "y": 4600,
+        "wires": []
+    },
+    {
+        "id": "6fc59e78e64564b0",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 4440,
+        "wires": []
+    },
+    {
+        "id": "d3f01c41c9a534a7",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 4480,
+        "wires": []
+    },
+    {
+        "id": "6d5e23d932baeb73",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "get Events",
+        "func": "var outputMsgs = [];\nlet events = msg.payload.trim().split(\"\\n\");\nfor (var e in events) {\n    outputMsgs.push({ payload: events[e] });\n}\nreturn [outputMsgs];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 4520,
+        "wires": [
+            [
+                "066181d359f943c7"
+            ]
+        ]
+    },
+    {
+        "id": "066181d359f943c7",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "get comms.auth",
+        "func": "let event = msg.payload;\nif(event.includes(\"comms.auth\")){\n    return msg;\n} else return null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 4520,
+        "wires": [
+            [
+                "0968f3f08288f133"
+            ]
+        ]
+    },
+    {
+        "id": "0968f3f08288f133",
+        "type": "json",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1650,
+        "y": 4520,
+        "wires": [
+            [
+                "afe5646656054e6b"
+            ]
+        ]
+    },
+    {
+        "id": "afe5646656054e6b",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "process Log",
+        "func": "let lastAuditLog = context.flow.get(\"lastAuditLog\");\nif(typeof lastAuditLog == \"undefined\"){\n    context.flow.set(\"lastAuditLog\", msg.payload);\n    return msg;\n} else {\n    if(lastAuditLog.event.timestamp != msg.payload.event.timestamp){\n        context.flow.set(\"lastAuditLog\", msg.payload);\n        return msg;\n    } else return null;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1810,
+        "y": 4520,
+        "wires": [
+            [
+                "d3f01c41c9a534a7",
+                "2fd0332425941bca"
+            ]
+        ]
+    },
+    {
+        "id": "2fd0332425941bca",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "// Process msg payload\n\nlet logEvent = {};\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.timestamp = msg.payload.event.timestamp;\nlogEvent.payload = msg.payload.event.user.username;\n\nmsg.topic = \"INSERT INTO accountLogs (accessAt, username) VALUES ($accessAt, $username)\";\nmsg.payload = [logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 4520,
+        "wires": [
+            [
+                "408467fa2308a4f0",
+                "bb0a33346d86364c"
+            ]
+        ]
+    },
+    {
+        "id": "408467fa2308a4f0",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2370,
+        "y": 4520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb0a33346d86364c",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2280,
+        "y": 4480,
+        "wires": []
+    },
+    {
         "id": "67c6d794.309d08",
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
@@ -9630,7 +9736,7 @@
         "type": "debug",
         "z": "7585249f.880c0c",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -10732,6 +10838,71 @@
                 "f26f2711b159da25"
             ]
         ]
+    },
+    {
+        "id": "c38a6d952fa9ab40",
+        "type": "inject",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 570,
+        "y": 2260,
+        "wires": [
+            [
+                "20aa7bb66b4bf13e"
+            ]
+        ]
+    },
+    {
+        "id": "20aa7bb66b4bf13e",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "function 1",
+        "func": "function getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet manifest = context.flow.get(\"manifest\");\nlet flattenObject = getFlatObject(manifest);\nmsg.payload = flattenObject;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 2260,
+        "wires": [
+            [
+                "20eb23e457527d08"
+            ]
+        ]
+    },
+    {
+        "id": "20eb23e457527d08",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 2260,
+        "wires": []
     },
     {
         "id": "af4b6639.02a008",
@@ -13385,14 +13556,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "sbi scheduling data routing",
         "payload": "",
         "payloadType": "date",
-        "x": 250,
+        "x": 260,
         "y": 200,
         "wires": [
             [
@@ -16508,6 +16679,20 @@
             [
                 "3cebbd208bc6d469"
             ]
+        ]
+    },
+    {
+        "id": "7c2523a56163fe73",
+        "type": "smxstate",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
+        "noerr": 0,
+        "x": 2120,
+        "y": 1700,
+        "wires": [
+            [],
+            []
         ]
     },
     {

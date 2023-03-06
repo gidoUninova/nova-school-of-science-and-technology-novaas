@@ -255,6 +255,23 @@
                  metrics: false,
                  /** Whether or not to include audit events in the log output */
                  audit: false
+             },
+             file: {
+                level:'off',
+                audit: true,
+                handler: function(conf) {
+                    const fs = require('fs');
+                    const logFile = fs.createWriteStream('./logfile.txt', { flags: 'a' });
+                    const logger = new console.Console(logFile, logFile);
+                    return function(msg) {
+                        var message = {
+                            'event': msg
+                        }
+                        try{
+                            logger.log(JSON.stringify(message));
+                        }catch(err) {console.log(err);}
+                    }
+                }
              }
          },
     
