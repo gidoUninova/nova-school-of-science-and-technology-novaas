@@ -423,7 +423,9 @@
             "ad85b295.7069f"
         ],
         "x": 76,
-        "y": 225
+        "y": 225,
+        "w": 1902,
+        "h": 242
     },
     {
         "id": "daa90db5.798ca",
@@ -474,7 +476,9 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599
+        "y": 599,
+        "w": 1977,
+        "h": 1888
     },
     {
         "id": "66d3f26a.c296b4",
@@ -497,7 +501,9 @@
             "d42664b2.514808"
         ],
         "x": 74,
-        "y": 2499
+        "y": 2499,
+        "w": 1951,
+        "h": 282
     },
     {
         "id": "fd25b313.221798",
@@ -520,7 +526,9 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 2799
+        "y": 2799,
+        "w": 1912,
+        "h": 202
     },
     {
         "id": "16640da3.5a20ca",
@@ -541,7 +549,9 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3019
+        "y": 3019,
+        "w": 1932,
+        "h": 182
     },
     {
         "id": "4b4e4270.d440bc",
@@ -942,7 +952,9 @@
             "d05b53b9a69cc83a"
         ],
         "x": 101,
-        "y": 1176
+        "y": 1176,
+        "w": 1925,
+        "h": 708
     },
     {
         "id": "c358a7e7.e264e",
@@ -986,7 +998,9 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909
+        "y": 1909,
+        "w": 1902,
+        "h": 552
     },
     {
         "id": "bf8d1775bedc9126",
@@ -16679,20 +16693,6 @@
             [
                 "3cebbd208bc6d469"
             ]
-        ]
-    },
-    {
-        "id": "7c2523a56163fe73",
-        "type": "smxstate",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
-        "noerr": 0,
-        "x": 2120,
-        "y": 1700,
-        "wires": [
-            [],
-            []
         ]
     },
     {
