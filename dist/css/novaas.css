@@ -5,6 +5,7 @@
     --main_fg: rgba(15,15,15, 0.95);
     --button-bg: rgba(255,255,255,0.7);
     --button-bg-hover: rgba(255,255,255,0.9);
+
 }
 .nr-dashboard-theme {
     /*background-image: url("../images/RICS LOGO _ Background.jpg");*/
@@ -14,9 +15,11 @@
     background-position: 96% 96%;, left top;
     background-repeat: no-repeat, no-repeat;
     background-size: 4%, cover;
-    background-
     /* background-color:grey !important; */
     color:var(--main-fg) !important;
+}
+.nr-dashboard-theme .nr-dashboard-template {
+    background-color: #fff0;
 }
 .md-toolbar-tools{
     background-image: url("../images/NOVAAS.svg");
@@ -30,6 +33,11 @@
     text-align: right;
     width: 400px;
     font-size: 25px !important;
-    color: #FFF !important;
+    color: #ffffff !important;
     /* text-shadow: 2px 2px 4px #ffffff; */
 }
+.masonry-container > .visible {
+    opacity: 1;
+    /*! opacity: 0.5; */
+    background-color: #ffffff60;
+  }
