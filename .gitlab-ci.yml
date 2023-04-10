@@ -30,6 +30,8 @@ before_script:
 
 
 Build:
+  tags: 
+    - uninova
   stage: build
   script:
     # fetches the latest image (not failing if image is not found)
