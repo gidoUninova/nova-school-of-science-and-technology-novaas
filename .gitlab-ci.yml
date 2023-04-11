@@ -59,6 +59,8 @@ Push latest:
     # We are just playing with Docker here. 
     # We do not need GitLab to clone the source code.
     GIT_STRATEGY: none
+  tags:
+    - uninova
   stage: push
   only:
     # Only "master" should be tagged "latest"
