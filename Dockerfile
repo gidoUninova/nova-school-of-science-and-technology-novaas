@@ -1,6 +1,6 @@
-FROM nikolaik/python-nodejs:python3.9-nodejs14-slim
+FROM nikolaik/python-nodejs:python3.11-nodejs18
 LABEL org.opencontainers.image.authors="gido@uninova.pt"
-RUN apt-get update && apt install unzip && apt-get install -y git && apt install -y sqlite3 && apt-get install -y netcat \
+RUN apt-get update && apt-get install -y apt-utils && apt install unzip && apt-get install -y git && apt install -y sqlite3 && apt-get install -y netcat \
 && npm install -g --unsafe-perm node-red
 WORKDIR /app
 RUN mkdir -p .node-red

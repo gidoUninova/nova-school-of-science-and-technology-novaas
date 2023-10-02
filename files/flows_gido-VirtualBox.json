@@ -634,9 +634,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -711,9 +709,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 702
+        "y": 99
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -742,9 +738,7 @@
             "078956014bccb540"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1182,
-        "h": 362
+        "y": 2679
     },
     {
         "id": "e8501749a8186080",
@@ -785,9 +779,7 @@
             "e14fe06ae748a0af"
         ],
         "x": 1794,
-        "y": 1279,
-        "w": 1952,
-        "h": 442
+        "y": 1279
     },
     {
         "id": "6aa9beecbf5f8d23",
@@ -855,9 +847,7 @@
             "315ed0cad6dcaedc"
         ],
         "x": 54,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -8818,48 +8808,16 @@
         ]
     },
     {
-        "id": "d5c9f97f.61a3f8",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"'].submodels.keys\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 720,
-        "y": 640,
-        "wires": [
-            [
-                "86347903.b492c8"
-            ]
-        ]
-    },
-    {
-        "id": "93cc4b55.7bd498",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.aasid;\nvar submodel = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId + \"'].submodels.keys[value='\" + submodel.identification.id + \"']\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 710,
-        "y": 720,
-        "wires": [
-            [
-                "7e7dc061.190f9",
-                "725dc272f81933b2"
-            ]
-        ]
-    },
-    {
         "id": "3d51a1c1.b8b6ce",
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
+        "d": true,
         "name": "BuildingJsonataQuery...",
         "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"'].submodels\";\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 710,
-        "y": 840,
+        "y": 880,
         "wires": [
             [
                 "15e890d4.de552f"
@@ -8909,7 +8867,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1140,
-        "y": 1000,
+        "y": 980,
         "wires": [
             [
                 "9ff89318.c7ef7"
@@ -8939,7 +8897,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1350,
-        "y": 1000,
+        "y": 980,
         "wires": [
             [
                 "c6f2ebed8beb7fcd",
@@ -9181,22 +9139,6 @@
         ]
     },
     {
-        "id": "86347903.b492c8",
-        "type": "jsonata",
-        "z": "7585249f.880c0c",
-        "name": "jsonata",
-        "property": "shellsJsonStr",
-        "jsonata": "",
-        "jsonataOpts": "",
-        "x": 950,
-        "y": 640,
-        "wires": [
-            [
-                "c80258e3.6fb648"
-            ]
-        ]
-    },
-    {
         "id": "c80258e3.6fb648",
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
@@ -9209,23 +9151,6 @@
         "wires": [
             [
                 "0e6dba6f13a192ce"
-            ]
-        ]
-    },
-    {
-        "id": "7e7dc061.190f9",
-        "type": "jsonata",
-        "z": "7585249f.880c0c",
-        "name": "jsonata",
-        "property": "shellsJsonStr",
-        "jsonata": "",
-        "jsonataOpts": "",
-        "x": 960,
-        "y": 720,
-        "wires": [
-            [
-                "baa39adde9859415",
-                "643649a5.2eddb8"
             ]
         ]
     },
@@ -9250,12 +9175,13 @@
         "id": "2d51e181.ae4cae",
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
+        "d": true,
         "name": "BuildingJsonataQuery...",
         "func": "//var xml_string = msg.payload;\n//var XML = context.global.get('XML');\n\nvar submodel = msg.payload;\nvar manifest = context.flow.get(\"manifest\");\nmsg.submodelsJsonStr = JSON.stringify(manifest.submodels);\nmsg.jsonata = \"$[identification.id='\" + submodel.identification.id +\"']\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 710,
-        "y": 1000,
+        "x": 610,
+        "y": 1020,
         "wires": [
             [
                 "a03551a4.d6a72"
@@ -9266,16 +9192,15 @@
         "id": "a03551a4.d6a72",
         "type": "jsonata",
         "z": "7585249f.880c0c",
+        "d": true,
         "name": "jsonata",
         "property": "submodelsJsonStr",
         "jsonata": "",
         "jsonataOpts": "",
-        "x": 940,
-        "y": 1000,
+        "x": 840,
+        "y": 1020,
         "wires": [
-            [
-                "4b7901f0.6bbe8"
-            ]
+            []
         ]
     },
     {
@@ -9572,70 +9497,6 @@
         ]
     },
     {
-        "id": "d26578b5.f4395",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"']\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 650,
-        "y": 440,
-        "wires": [
-            [
-                "e865512.7fb2e3"
-            ]
-        ]
-    },
-    {
-        "id": "e865512.7fb2e3",
-        "type": "jsonata",
-        "z": "7585249f.880c0c",
-        "name": "jsonata",
-        "property": "shellsJsonStr",
-        "jsonata": "",
-        "jsonataOpts": "",
-        "x": 900,
-        "y": 440,
-        "wires": [
-            [
-                "8f8f9ca3.088ce8"
-            ]
-        ]
-    },
-    {
-        "id": "171b4a3a.35b006",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"'].submodels\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 720,
-        "y": 560,
-        "wires": [
-            [
-                "197990af.d2ecdf"
-            ]
-        ]
-    },
-    {
-        "id": "197990af.d2ecdf",
-        "type": "jsonata",
-        "z": "7585249f.880c0c",
-        "name": "jsonata",
-        "property": "shellsJsonStr",
-        "jsonata": "",
-        "jsonataOpts": "",
-        "x": 950,
-        "y": 560,
-        "wires": [
-            [
-                "1e83a689.597559"
-            ]
-        ]
-    },
-    {
         "id": "1e83a689.597559",
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
@@ -9671,51 +9532,15 @@
         "id": "15e890d4.de552f",
         "type": "jsonata",
         "z": "7585249f.880c0c",
+        "d": true,
         "name": "jsonata",
         "property": "shellsJsonStr",
         "jsonata": "",
         "jsonataOpts": "",
         "x": 960,
-        "y": 840,
+        "y": 880,
         "wires": [
-            [
-                "da187920.ebbfd8",
-                "faadeccab2b979c5"
-            ]
-        ]
-    },
-    {
-        "id": "84f391fb.1b9108",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "BuildingJsonataQuery...",
-        "func": "var submodelId = msg.req.params.submodelId;\nvar submodelCollectionId = [];\nsubmodelCollectionId = msg.req.params.submodelId.split(\".\");\nvar jsonataQuery = \"[$[idShort=\\\"\" + submodelId + \"\\\"]]\";\n\nvar manifest = context.flow.get('manifest');\n    \nvar submodels = manifest.submodels;\nmsg.submodelsJsonStr = JSON.stringify(submodels);\nmsg.jsonata = jsonataQuery;\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 740,
-        "y": 1100,
-        "wires": [
-            [
-                "130b9e71.df3e8a",
-                "e11cc9ff.59b02"
-            ]
-        ]
-    },
-    {
-        "id": "130b9e71.df3e8a",
-        "type": "jsonata",
-        "z": "7585249f.880c0c",
-        "name": "jsonata",
-        "property": "submodelsJsonStr",
-        "jsonata": "",
-        "jsonataOpts": "",
-        "x": 990,
-        "y": 1100,
-        "wires": [
-            [
-                "b0af427b.0e7ea8",
-                "48e654a6.f98c5c"
-            ]
+            []
         ]
     },
     {
@@ -9729,8 +9554,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1520,
-        "y": 1040,
+        "x": 1530,
+        "y": 1080,
         "wires": []
     },
     {
@@ -9744,23 +9569,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1040,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "b0af427b.0e7ea8",
-        "type": "debug",
-        "z": "7585249f.880c0c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1300,
-        "y": 1060,
+        "x": 930,
+        "y": 1080,
         "wires": []
     },
     {
@@ -9779,56 +9589,6 @@
                 "fe06f34ca6318762"
             ]
         ]
-    },
-    {
-        "id": "a34da828.6338f",
-        "type": "unsafe-function",
-        "z": "7585249f.880c0c",
-        "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"'].asset.keys\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 650,
-        "y": 360,
-        "wires": [
-            [
-                "3eb4fa9d.896106"
-            ]
-        ]
-    },
-    {
-        "id": "3eb4fa9d.896106",
-        "type": "jsonata",
-        "z": "7585249f.880c0c",
-        "name": "jsonata",
-        "property": "shellsJsonStr",
-        "jsonata": "",
-        "jsonataOpts": "",
-        "x": 900,
-        "y": 360,
-        "wires": [
-            [
-                "9af1e8ba.14f4a8",
-                "f308240a.bf55c"
-            ]
-        ]
-    },
-    {
-        "id": "f308240a.bf55c",
-        "type": "debug",
-        "z": "7585249f.880c0c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1070,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "f8e2cdcf35feb9b2",
@@ -9941,7 +9701,7 @@
         "y": 360,
         "wires": [
             [
-                "a34da828.6338f"
+                "3de9055d88bf3d72"
             ]
         ]
     },
@@ -9966,7 +9726,7 @@
         "y": 440,
         "wires": [
             [
-                "d26578b5.f4395"
+                "6d353eca41c7f3c2"
             ]
         ]
     },
@@ -10016,7 +9776,7 @@
         "y": 560,
         "wires": [
             [
-                "171b4a3a.35b006"
+                "74b0ade885314eb2"
             ]
         ]
     },
@@ -10041,7 +9801,7 @@
         "y": 640,
         "wires": [
             [
-                "d5c9f97f.61a3f8"
+                "c34af678226125c4"
             ]
         ]
     },
@@ -10066,7 +9826,7 @@
         "y": 720,
         "wires": [
             [
-                "93cc4b55.7bd498"
+                "3e922de3b2450eba"
             ]
         ]
     },
@@ -10106,7 +9866,7 @@
         "y": 840,
         "wires": [
             [
-                "3d51a1c1.b8b6ce"
+                "608d01fd6a3d76b7"
             ]
         ]
     },
@@ -10146,7 +9906,7 @@
         ],
         "timeout": "30",
         "x": 1530,
-        "y": 940,
+        "y": 920,
         "wires": [
             []
         ]
@@ -10158,10 +9918,10 @@
         "name": "updateSubmodel in",
         "links": [],
         "x": 315,
-        "y": 1000,
+        "y": 980,
         "wires": [
             [
-                "2d51e181.ae4cae"
+                "3f7f7d86b973187a"
             ]
         ]
     },
@@ -10173,7 +9933,7 @@
         "mode": "return",
         "links": [],
         "x": 2435,
-        "y": 1000,
+        "y": 980,
         "wires": []
     },
     {
@@ -10186,7 +9946,7 @@
         "y": 1100,
         "wires": [
             [
-                "84f391fb.1b9108"
+                "67fe686ec4b22e4b"
             ]
         ]
     },
@@ -10513,23 +10273,6 @@
         ]
     },
     {
-        "id": "725dc272f81933b2",
-        "type": "debug",
-        "z": "7585249f.880c0c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "baa39adde9859415",
         "type": "debug",
         "z": "7585249f.880c0c",
@@ -10542,8 +10285,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 680,
+        "x": 930,
+        "y": 700,
         "wires": []
     },
     {
@@ -10551,7 +10294,7 @@
         "type": "debug",
         "z": "7585249f.880c0c",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -10559,8 +10302,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1150,
-        "y": 800,
+        "x": 930,
+        "y": 820,
         "wires": []
     },
     {
@@ -10889,6 +10632,231 @@
         "statusType": "auto",
         "x": 980,
         "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "3de9055d88bf3d72",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aas aaset keys",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor (var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].identification.id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell].asset.keys;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\nmsg.jsonataStatus = \"Failure\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 360,
+        "wires": [
+            [
+                "9af1e8ba.14f4a8",
+                "f308240a.bf55c"
+            ]
+        ]
+    },
+    {
+        "id": "6d353eca41c7f3c2",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aass",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].identification.id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell];\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 440,
+        "wires": [
+            [
+                "8f8f9ca3.088ce8",
+                "24f12c469a065810"
+            ]
+        ]
+    },
+    {
+        "id": "74b0ade885314eb2",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aas submodels",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].identification.id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell].submodels;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 560,
+        "wires": [
+            [
+                "1e83a689.597559"
+            ]
+        ]
+    },
+    {
+        "id": "c34af678226125c4",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aas submodels keys",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].identification.id;\n    if(id == ShellId){\n        let submodels = shells[indexShell].submodels;\n        var keys = [];\n        for(var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n            keys = [...submodels[indexSubmodel].keys, ...keys];\n        }\n        msg.jsonataResult = keys;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 640,
+        "wires": [
+            [
+                "39980413b1dc2403",
+                "c80258e3.6fb648"
+            ]
+        ]
+    },
+    {
+        "id": "3e922de3b2450eba",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aas submodels key",
+        "func": "var ShellId = msg.req.params.aasid;\nvar submodelFromPayload = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor (var indexShell = 0; indexShell < shells.length; indexShell++) {\n    let id = shells[indexShell].identification.id;\n    if (id == ShellId) {\n        let submodels = shells[indexShell].submodels;\n        for (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++) {\n            var submodelKeys = submodels[indexSubmodel].keys;\n            for (var indexKey = 0; indexKey < submodelKeys.length; indexKey++) {\n                let keyId = submodelKeys[indexKey].value;\n                if (keyId == submodelFromPayload.identification.id){\n                    msg.jsonataStatus = \"Success\";\n                    return msg;\n                }\n            }\n        }\n    }\n}\n\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 720,
+        "wires": [
+            [
+                "643649a5.2eddb8",
+                "baa39adde9859415"
+            ]
+        ]
+    },
+    {
+        "id": "608d01fd6a3d76b7",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aas submodels",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].identification.id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell].submodels;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 840,
+        "wires": [
+            [
+                "da187920.ebbfd8",
+                "faadeccab2b979c5"
+            ]
+        ]
+    },
+    {
+        "id": "3f7f7d86b973187a",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aas submodels",
+        "func": "var submodelFromPayload = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let id = submodels[indexSubmodel].keys[0].value;\n    if (id == submodelFromPayload.identification.id){\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 980,
+        "wires": [
+            [
+                "4b7901f0.6bbe8",
+                "47c2f73e75854e7f"
+            ]
+        ]
+    },
+    {
+        "id": "67fe686ec4b22e4b",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "Getting aas submodels",
+        "func": "var submodelId = msg.req.params.submodelId;\nvar submodelCollectionId = [];\nsubmodelCollectionId = msg.req.params.submodelId.split(\".\");\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let idShort = submodels[indexSubmodel].idShort;\n    if (idShort == submodelId){\n        msg.jsonataResult = [];\n        msg.jsonataResult.push(submodels[indexSubmodel]);\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1100,
+        "wires": [
+            [
+                "e11cc9ff.59b02",
+                "48e654a6.f98c5c"
+            ]
+        ]
+    },
+    {
+        "id": "f308240a.bf55c",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "24f12c469a065810",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "39980413b1dc2403",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "47c2f73e75854e7f",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 930,
+        "y": 960,
         "wires": []
     },
     {
