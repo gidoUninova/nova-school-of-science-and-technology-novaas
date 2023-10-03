@@ -634,9 +634,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -711,9 +709,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 702
+        "y": 99
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -742,9 +738,7 @@
             "078956014bccb540"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1182,
-        "h": 362
+        "y": 2679
     },
     {
         "id": "e8501749a8186080",
@@ -785,9 +779,7 @@
             "e14fe06ae748a0af"
         ],
         "x": 1794,
-        "y": 1279,
-        "w": 1952,
-        "h": 442
+        "y": 1279
     },
     {
         "id": "6aa9beecbf5f8d23",
@@ -855,9 +847,7 @@
             "315ed0cad6dcaedc"
         ],
         "x": 54,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "b3fca1f0.1e5ef8",
@@ -10575,8 +10565,9 @@
         "type": "function",
         "z": "7585249f.880c0c",
         "name": "preprocessing and flattening JSON",
-        "func": "function getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    //msg.object = data;\n} else {\n    flattenObject = getFlatObject(JSON.parse(msg.value));\n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\nlet keys = Object.keys(flattenObject);\nmsg.flattenObject = flattenObject;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
+        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch (error) {\n        return false;\n    }\n}\n\nfunction getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    keys = Object.keys(flattenObject);\n    //msg.object = data;\n} else {\n    if(msg.payload.modelType.name == \"Property\"){\n        if(isJSONString(msg.value)){\n            flattenObject = msg.value;\n            keys.push(\"\");\n        }\n    } else if (msg.payload.modelType.name == \"SubmodelElementCollection\"){\n        flattenObject = getFlatObject(JSON.parse(msg.value));\n        keys = Object.keys(flattenObject);\n    }\n    \n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -10585,7 +10576,8 @@
         "y": 1460,
         "wires": [
             [
-                "b9eb97851f3682d9"
+                "b9eb97851f3682d9",
+                "e8062b0fb407564c"
             ]
         ]
     },
@@ -10900,6 +10892,23 @@
         "targetType": "full",
         "x": 930,
         "y": 960,
+        "wires": []
+    },
+    {
+        "id": "e8062b0fb407564c",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2030,
+        "y": 1420,
         "wires": []
     },
     {
@@ -11630,6 +11639,60 @@
         "links": [],
         "x": 465,
         "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "a945157b859dd5e1",
+        "type": "link in",
+        "z": "670d9c89.6d0424",
+        "name": "southbound.send.commands",
+        "links": [],
+        "x": 280,
+        "y": 1720,
+        "wires": [
+            [
+                "ab6759f66a906482"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "cd6f2a247f2e7f66",
+        "type": "link out",
+        "z": "670d9c89.6d0424",
+        "name": "southbound.send.commands out",
+        "mode": "return",
+        "links": [],
+        "x": 1865,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "ab6759f66a906482",
+        "type": "link call",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "links": [
+            "72693a70ea801745"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1130,
+        "y": 1720,
+        "wires": [
+            [
+                "cd6f2a247f2e7f66"
+            ]
+        ]
+    },
+    {
+        "id": "bc85e755bd96a45e",
+        "type": "comment",
+        "z": "670d9c89.6d0424",
+        "name": "To be used in the case of event-based communication for receving events",
+        "info": "",
+        "x": 420,
+        "y": 1680,
         "wires": []
     },
     {
@@ -12429,6 +12492,69 @@
         "x": 1230,
         "y": 1740,
         "wires": []
+    },
+    {
+        "id": "dcb7263cc5550382",
+        "type": "link call",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "links": [
+            "a945157b859dd5e1"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1710,
+        "y": 2020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a18f0a2c9f34dcd",
+        "type": "debug",
+        "z": "3db1c009.99d51",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "dceb9cccc856bdb6",
+        "type": "inject",
+        "z": "3db1c009.99d51",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 2020,
+        "wires": [
+            [
+                "dcb7263cc5550382",
+                "7a18f0a2c9f34dcd"
+            ]
+        ]
     },
     {
         "id": "9b99d064808aa5a3",
@@ -15705,8 +15831,8 @@
         "ignore": false,
         "pauseAtStartup": false,
         "topicDependent": false,
-        "x": 1330,
-        "y": 2080,
+        "x": 1340,
+        "y": 1960,
         "wires": [
             [
                 "d9a9ec7b13ac68ad"
@@ -15722,8 +15848,8 @@
         "func": "var statsSBI = {};\nvar msgSpeed = msg.payload;\nvar msgIntervalAndFrequency = msg.intervalAndFrequency;\nstatsSBI.msgSpeed = msgSpeed;\nstatsSBI.IntervalAndFrequency = msgIntervalAndFrequency;\nstatsSBI.maxMsgs = context.flow.get(\"NrOfDataSources\") * 60;\nmsg.payload = statsSBI;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1590,
-        "y": 2060,
+        "x": 1600,
+        "y": 1940,
         "wires": [
             [
                 "50f874d57977fcf9"
@@ -17508,8 +17634,8 @@
         "func": "var statusCheck  = {};\nstatusCheck.connected = context.flow.get(\"connected\");\nstatusCheck.nrOfDataSources = context.flow.get(\"NrOfDataSources\");\nmsg.payload = {\"statusCheck\": statusCheck};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1550,
-        "y": 2200,
+        "x": 1560,
+        "y": 2080,
         "wires": [
             [
                 "ab057144cf917fb8"
@@ -18110,8 +18236,8 @@
         "z": "128ab3134a54f6b4",
         "name": "driver.connection.check",
         "links": [],
-        "x": 780,
-        "y": 2200,
+        "x": 790,
+        "y": 2080,
         "wires": [
             [
                 "4f1ed87887f71afd"
@@ -18126,8 +18252,8 @@
         "name": "driver.connection.check out",
         "mode": "return",
         "links": [],
-        "x": 2165,
-        "y": 2200,
+        "x": 2175,
+        "y": 2080,
         "wires": []
     },
     {
@@ -18291,8 +18417,8 @@
             "ebeaa83d4abb8b92",
             "5df3fe8b89186d53"
         ],
-        "x": 730,
-        "y": 2080,
+        "x": 740,
+        "y": 1960,
         "wires": [
             [
                 "568d6b198e562bcd"
@@ -18879,8 +19005,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1780,
-        "y": 2060,
+        "x": 1790,
+        "y": 1940,
         "wires": [
             [
                 "ddd6397bb839158d"
@@ -18895,8 +19021,8 @@
         "links": [],
         "linkType": "dynamic",
         "timeout": "30",
-        "x": 2160,
-        "y": 2060,
+        "x": 2170,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -19319,5 +19445,48 @@
                 "1103084ec6579d65"
             ]
         ]
+    },
+    {
+        "id": "72693a70ea801745",
+        "type": "link in",
+        "z": "128ab3134a54f6b4",
+        "name": "driver.send.commands",
+        "links": [],
+        "x": 880,
+        "y": 2180,
+        "wires": [
+            [
+                "84b237411eda95b6",
+                "f995bbc47f93d025"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "84b237411eda95b6",
+        "type": "link out",
+        "z": "128ab3134a54f6b4",
+        "name": "driver.send.commands",
+        "mode": "return",
+        "links": [],
+        "x": 2145,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "f995bbc47f93d025",
+        "type": "debug",
+        "z": "128ab3134a54f6b4",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 2160,
+        "wires": []
     }
 ]
