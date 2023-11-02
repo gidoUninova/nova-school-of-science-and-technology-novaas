@@ -65,23 +65,6 @@
         "info": ""
     },
     {
-        "id": "56cb7422.e3d28c",
-        "type": "subflow",
-        "name": "APILogger",
-        "info": "",
-        "category": "as_subflows",
-        "in": [
-            {
-                "x": 413.88330078125,
-                "y": 302.8833312988281,
-                "wires": []
-            }
-        ],
-        "out": [],
-        "env": [],
-        "color": "#DDAA99"
-    },
-    {
         "id": "c4ef1733.bc36a8",
         "type": "subflow",
         "name": "OpenAAS_Manifest_RetrievingSubmodels",
@@ -408,6 +391,23 @@
         }
     },
     {
+        "id": "56cb7422.e3d28c",
+        "type": "subflow",
+        "name": "APILogger",
+        "info": "",
+        "category": "as_subflows",
+        "in": [
+            {
+                "x": 413.88330078125,
+                "y": 302.8833312988281,
+                "wires": []
+            }
+        ],
+        "out": [],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
         "id": "10392549.d972b3",
         "type": "group",
         "z": "c7caf96e.a31f98",
@@ -585,7 +585,9 @@
             "a9c22279a032d681"
         ],
         "x": 214,
-        "y": 3819
+        "y": 4099,
+        "w": 2272,
+        "h": 239
     },
     {
         "id": "d366c10f.cbf158",
@@ -609,7 +611,9 @@
             "555ce72ca0d7dfd4"
         ],
         "x": 214,
-        "y": 3096
+        "y": 3376,
+        "w": 2962,
+        "h": 542
     },
     {
         "id": "9eaca16.128cb6",
@@ -797,7 +801,9 @@
             "41d1269376597f69"
         ],
         "x": 134,
-        "y": 59
+        "y": 59,
+        "w": 1232,
+        "h": 182
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -885,7 +891,9 @@
             "95c62ca4.9097f8"
         ],
         "x": 14,
-        "y": 2299
+        "y": 2299,
+        "w": 2872,
+        "h": 516
     },
     {
         "id": "37a4080e.40ed9",
@@ -1736,93 +1744,6 @@
         "rows": 1
     },
     {
-        "id": "d56e5f93.f422c",
-        "type": "logger",
-        "z": "56cb7422.e3d28c",
-        "name": "",
-        "filename": "logs.log",
-        "maxsize": 1,
-        "maxfiles": 10,
-        "complete": "true",
-        "console": false,
-        "file": true,
-        "debug": false,
-        "zip": false,
-        "logtype": "info",
-        "x": 1043.6332397460938,
-        "y": 298.88336181640625,
-        "wires": []
-    },
-    {
-        "id": "dca65b7f.b00ba8",
-        "type": "unsafe-function",
-        "z": "56cb7422.e3d28c",
-        "name": "createLogEntry",
-        "func": "//var element = JSON.stringify(msg.payload);\nvar msg1 = {};\nvar outmsg = {};\n//msg1.payload = element;\nmsg1.requestedURL = msg.req.url;\nmsg1.headers = {};\nmsg1.headers[\"user-agent\"] = msg.req.headers[\"user-agent\"];\nmsg1.headers[\"authorization\"] = msg.req.headers[\"authorization\"];\nmsg1.headers[\"content-type\"] = msg.req.headers[\"content-type\"];\nmsg1.headers[\"host\"] = msg.req.headers[\"host\"];\nmsg1.startTime = msg.startTime;\nif(typeof msg.req.client._peername !== 'undefined'){\n    msg1.client = msg.req.client._peername.address;\n} else{\n    msg1.client = \"internal\";\n} \n\nmsg1.endTime = Date.now();\noutmsg.payload = JSON.stringify(msg1);\nreturn outmsg; // msg1;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 573.88330078125,
-        "y": 302.8833312988281,
-        "wires": [
-            [
-                "8713151e.2f1728"
-            ]
-        ]
-    },
-    {
-        "id": "8713151e.2f1728",
-        "type": "unsafe-function",
-        "z": "56cb7422.e3d28c",
-        "name": "checkLogging",
-        "func": "//var element = JSON.stringify(msg.payload);\nlet node_aas_log = process.env.NODE_AAS_RUNNNING_UNDER_PM2;\nif(typeof node_aas_log == \"undefined\"){\n    return [msg, null];\n} else {\n    return [null, msg];\n}\n\n",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 808.6041870117188,
-        "y": 304.85418701171875,
-        "wires": [
-            [
-                "d56e5f93.f422c"
-            ],
-            [
-                "6c23162c.b90798",
-                "fd22ab4d.326ef8"
-            ]
-        ]
-    },
-    {
-        "id": "fd22ab4d.326ef8",
-        "type": "logger",
-        "z": "56cb7422.e3d28c",
-        "name": "",
-        "filename": "logs.log",
-        "maxsize": 1,
-        "maxfiles": 10,
-        "complete": "true",
-        "console": true,
-        "file": false,
-        "debug": false,
-        "zip": false,
-        "logtype": "info",
-        "x": 1044.7666015625,
-        "y": 351.76666259765625,
-        "wires": []
-    },
-    {
-        "id": "6c23162c.b90798",
-        "type": "debug",
-        "z": "56cb7422.e3d28c",
-        "name": "",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1075.5,
-        "y": 398.5,
-        "wires": []
-    },
-    {
         "id": "264fc7aa.b065d8",
         "type": "file in",
         "z": "c4ef1733.bc36a8",
@@ -2546,6 +2467,93 @@
             []
         ],
         "l": false
+    },
+    {
+        "id": "d56e5f93.f422c",
+        "type": "logger",
+        "z": "56cb7422.e3d28c",
+        "name": "",
+        "filename": "logs.log",
+        "maxsize": 1,
+        "maxfiles": 10,
+        "complete": "true",
+        "console": false,
+        "file": true,
+        "debug": false,
+        "zip": false,
+        "logtype": "info",
+        "x": 1043.6332397460938,
+        "y": 298.88336181640625,
+        "wires": []
+    },
+    {
+        "id": "dca65b7f.b00ba8",
+        "type": "unsafe-function",
+        "z": "56cb7422.e3d28c",
+        "name": "createLogEntry",
+        "func": "//var element = JSON.stringify(msg.payload);\nvar msg1 = {};\nvar outmsg = {};\n//msg1.payload = element;\nmsg1.requestedURL = msg.req.url;\nmsg1.headers = {};\nmsg1.headers[\"user-agent\"] = msg.req.headers[\"user-agent\"];\nmsg1.headers[\"authorization\"] = msg.req.headers[\"authorization\"];\nmsg1.headers[\"content-type\"] = msg.req.headers[\"content-type\"];\nmsg1.headers[\"host\"] = msg.req.headers[\"host\"];\nmsg1.startTime = msg.startTime;\nif(typeof msg.req.client._peername !== 'undefined'){\n    msg1.client = msg.req.client._peername.address;\n} else{\n    msg1.client = \"internal\";\n} \n\nmsg1.endTime = Date.now();\noutmsg.payload = JSON.stringify(msg1);\nreturn outmsg; // msg1;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 573.88330078125,
+        "y": 302.8833312988281,
+        "wires": [
+            [
+                "8713151e.2f1728"
+            ]
+        ]
+    },
+    {
+        "id": "8713151e.2f1728",
+        "type": "unsafe-function",
+        "z": "56cb7422.e3d28c",
+        "name": "checkLogging",
+        "func": "//var element = JSON.stringify(msg.payload);\nlet node_aas_log = process.env.NODE_AAS_RUNNNING_UNDER_PM2;\nif(typeof node_aas_log == \"undefined\"){\n    return [msg, null];\n} else {\n    return [null, msg];\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 808.6041870117188,
+        "y": 304.85418701171875,
+        "wires": [
+            [
+                "d56e5f93.f422c"
+            ],
+            [
+                "6c23162c.b90798",
+                "fd22ab4d.326ef8"
+            ]
+        ]
+    },
+    {
+        "id": "fd22ab4d.326ef8",
+        "type": "logger",
+        "z": "56cb7422.e3d28c",
+        "name": "",
+        "filename": "logs.log",
+        "maxsize": 1,
+        "maxfiles": 10,
+        "complete": "true",
+        "console": true,
+        "file": false,
+        "debug": false,
+        "zip": false,
+        "logtype": "info",
+        "x": 1044.7666015625,
+        "y": 351.76666259765625,
+        "wires": []
+    },
+    {
+        "id": "6c23162c.b90798",
+        "type": "debug",
+        "z": "56cb7422.e3d28c",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1075.5,
+        "y": 398.5,
+        "wires": []
     },
     {
         "id": "cac1db39.b04078",
@@ -4977,6 +4985,120 @@
         ]
     },
     {
+        "id": "ae3557fc025f637b",
+        "type": "http in",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "url": "/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodel-elements/:id/Invoke",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 450,
+        "y": 3460,
+        "wires": [
+            [
+                "d7eaed1d3689a90b",
+                "0b95dfea2f8e1657"
+            ]
+        ]
+    },
+    {
+        "id": "d7eaed1d3689a90b",
+        "type": "set-defaults",
+        "z": "c7caf96e.a31f98",
+        "name": "set-startTime",
+        "rules": [
+            {
+                "p": "startTime",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "chbox_DoOutputToMessage": true,
+        "chbox_SetCurrentToMsg": false,
+        "howSend": {
+            "text": "payload",
+            "type": "msg",
+            "modifiedValue": "payload"
+        },
+        "dropdown_HowManyMessages": "single",
+        "dropdownObjOrVal": "value",
+        "outputs": 1,
+        "x": 970,
+        "y": 3460,
+        "wires": [
+            [
+                "e48aa212b69d1647"
+            ]
+        ]
+    },
+    {
+        "id": "0b95dfea2f8e1657",
+        "type": "debug",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 950,
+        "y": 3420,
+        "wires": []
+    },
+    {
+        "id": "5583c6b91d5daedd",
+        "type": "http response",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1870,
+        "y": 3460,
+        "wires": []
+    },
+    {
+        "id": "711f4d75c2195aa4",
+        "type": "subflow:56cb7422.e3d28c",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "x": 1850,
+        "y": 3500,
+        "wires": [],
+        "icon": "node-red-contrib-viseo-log/log.svg"
+    },
+    {
+        "id": "e48aa212b69d1647",
+        "type": "link out",
+        "z": "c7caf96e.a31f98",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "34a074dc1254447e"
+        ],
+        "x": 1135,
+        "y": 3460,
+        "wires": []
+    },
+    {
+        "id": "90cd6d4576b62209",
+        "type": "link in",
+        "z": "c7caf96e.a31f98",
+        "name": "link in 1",
+        "links": [
+            "aa6d27d3be4df9ca"
+        ],
+        "x": 1495,
+        "y": 3460,
+        "wires": [
+            [
+                "5583c6b91d5daedd",
+                "711f4d75c2195aa4"
+            ]
+        ]
+    },
+    {
         "id": "c9de3df7.c99ee",
         "type": "link in",
         "z": "fd31082e.5487d8",
@@ -5834,7 +5956,7 @@
         "name": "AAS Rosource Monitoring - Component Manger",
         "info": "",
         "x": 620,
-        "y": 4200,
+        "y": 4480,
         "wires": []
     },
     {
@@ -5863,7 +5985,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 770,
-        "y": 3920,
+        "y": 4200,
         "wires": []
     },
     {
@@ -5888,7 +6010,7 @@
         "name": "Interaction with AAS - NBI",
         "info": "",
         "x": 550,
-        "y": 3860,
+        "y": 4140,
         "wires": []
     },
     {
@@ -5899,7 +6021,7 @@
         "name": "Interaction with AAS - SBI",
         "info": "",
         "x": 430,
-        "y": 3137,
+        "y": 3417,
         "wires": []
     },
     {
@@ -5911,7 +6033,7 @@
             "48ef191e.d28c98"
         ],
         "x": 255,
-        "y": 3760,
+        "y": 4040,
         "wires": [
             [
                 "33dfaad2.2f66be"
@@ -5927,7 +6049,7 @@
             "e7a9e126.1cef"
         ],
         "x": 3135,
-        "y": 3760,
+        "y": 4040,
         "wires": []
     },
     {
@@ -6294,7 +6416,7 @@
             "400d9646.413fe8"
         ],
         "x": 258,
-        "y": 3437,
+        "y": 3717,
         "wires": [
             [
                 "555ce72ca0d7dfd4"
@@ -6312,7 +6434,7 @@
             "7acbb909.02b518"
         ],
         "x": 3134,
-        "y": 3437,
+        "y": 3717,
         "wires": []
     },
     {
@@ -6326,7 +6448,7 @@
             "84b54255.d93878"
         ],
         "x": 255,
-        "y": 3940,
+        "y": 4220,
         "wires": [
             [
                 "c7097b80.b03428",
@@ -6346,7 +6468,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 2390,
-        "y": 3940,
+        "y": 4220,
         "wires": []
     },
     {
@@ -6360,7 +6482,7 @@
             "898d8bc.861cc78"
         ],
         "x": 255,
-        "y": 3597,
+        "y": 3877,
         "wires": [
             [
                 "21eb2aa8ef422845"
@@ -6377,7 +6499,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1040,
-        "y": 3597,
+        "y": 3877,
         "wires": [
             [
                 "b88a92c6.fb547"
@@ -6399,7 +6521,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 890,
-        "y": 3557,
+        "y": 3837,
         "wires": []
     },
     {
@@ -6411,7 +6533,7 @@
         "mode": "link",
         "links": [],
         "x": 3135,
-        "y": 3597,
+        "y": 3877,
         "wires": []
     },
     {
@@ -6420,7 +6542,7 @@
         "z": "fd31082e.5487d8",
         "name": "",
         "x": 1370,
-        "y": 4300,
+        "y": 4580,
         "wires": [
             [
                 "713f7fd4.702168",
@@ -6440,7 +6562,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 1170,
-        "y": 4280,
+        "y": 4560,
         "wires": [
             [
                 "3319bd2e.c8291a"
@@ -6461,7 +6583,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1750,
-        "y": 4280,
+        "y": 4560,
         "wires": []
     },
     {
@@ -6588,7 +6710,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1000,
-        "y": 3757,
+        "y": 4037,
         "wires": [
             [
                 "2c5fff4c.088d18"
@@ -6606,7 +6728,7 @@
         "sendError": false,
         "encoding": "none",
         "x": 1870,
-        "y": 3737,
+        "y": 4017,
         "wires": [
             [
                 "1619def7.8eb651"
@@ -6633,7 +6755,7 @@
         "to": "",
         "reg": false,
         "x": 1690,
-        "y": 3737,
+        "y": 4017,
         "wires": [
             [
                 "389ecac2.32281e"
@@ -6652,7 +6774,7 @@
         "oldrc": false,
         "name": "",
         "x": 1270,
-        "y": 3757,
+        "y": 4037,
         "wires": [
             [
                 "92440de2.fa50f8",
@@ -6676,7 +6798,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1490,
-        "y": 3717,
+        "y": 3997,
         "wires": []
     },
     {
@@ -6688,7 +6810,7 @@
         "outputs": 2,
         "noerr": 0,
         "x": 1500,
-        "y": 3757,
+        "y": 4037,
         "wires": [
             [
                 "9454af3.ef43f5"
@@ -7118,7 +7240,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 710,
-        "y": 3597,
+        "y": 3877,
         "wires": [
             [
                 "9f810b8b.7a1b8",
@@ -7138,7 +7260,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1600,
-        "y": 3437,
+        "y": 3717,
         "wires": [
             [
                 "c757ee5b.08a1f8"
@@ -7157,7 +7279,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 1420,
-        "y": 3937,
+        "y": 4217,
         "wires": [
             [
                 "1f1ce2c5.9cb5cd"
@@ -7171,7 +7293,7 @@
         "name": "OSsysDscr in",
         "links": [],
         "x": 255,
-        "y": 4300,
+        "y": 4580,
         "wires": [
             [
                 "3319bd2e.c8291a"
@@ -7186,7 +7308,7 @@
         "mode": "return",
         "links": [],
         "x": 2315,
-        "y": 4300,
+        "y": 4580,
         "wires": []
     },
     {
@@ -7218,7 +7340,7 @@
             "1fc06f6a8f3492b8"
         ],
         "x": 255,
-        "y": 4017,
+        "y": 4297,
         "wires": [
             [
                 "893f967b73205095",
@@ -7238,7 +7360,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 470,
-        "y": 3977,
+        "y": 4257,
         "wires": []
     },
     {
@@ -7253,7 +7375,7 @@
         "linkType": "static",
         "timeout": "30",
         "x": 850,
-        "y": 4017,
+        "y": 4297,
         "wires": [
             [
                 "e1994719bd7b4722"
@@ -7272,7 +7394,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 2390,
-        "y": 4017,
+        "y": 4297,
         "wires": []
     },
     {
@@ -7288,7 +7410,7 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 4017,
+        "y": 4297,
         "wires": [
             [
                 "a9c22279a032d681",
@@ -7308,7 +7430,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 730,
-        "y": 3977,
+        "y": 4257,
         "wires": []
     },
     {
@@ -8563,7 +8685,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 550,
-        "y": 4540,
+        "y": 4820,
         "wires": [
             [
                 "f823dc7f6b29ac78"
@@ -8583,7 +8705,7 @@
         "oldrc": false,
         "name": "",
         "x": 980,
-        "y": 4540,
+        "y": 4820,
         "wires": [
             [
                 "6fc59e78e64564b0",
@@ -8609,7 +8731,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1570,
-        "y": 4600,
+        "y": 4880,
         "wires": []
     },
     {
@@ -8626,7 +8748,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1300,
-        "y": 4440,
+        "y": 4720,
         "wires": []
     },
     {
@@ -8643,7 +8765,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2040,
-        "y": 4480,
+        "y": 4760,
         "wires": []
     },
     {
@@ -8658,7 +8780,7 @@
         "finalize": "",
         "libs": [],
         "x": 1310,
-        "y": 4520,
+        "y": 4800,
         "wires": [
             [
                 "066181d359f943c7"
@@ -8677,7 +8799,7 @@
         "finalize": "",
         "libs": [],
         "x": 1480,
-        "y": 4520,
+        "y": 4800,
         "wires": [
             [
                 "0968f3f08288f133"
@@ -8693,7 +8815,7 @@
         "action": "",
         "pretty": false,
         "x": 1650,
-        "y": 4520,
+        "y": 4800,
         "wires": [
             [
                 "afe5646656054e6b"
@@ -8712,7 +8834,7 @@
         "finalize": "",
         "libs": [],
         "x": 1810,
-        "y": 4520,
+        "y": 4800,
         "wires": [
             [
                 "d3f01c41c9a534a7",
@@ -8732,7 +8854,7 @@
         "finalize": "",
         "libs": [],
         "x": 2060,
-        "y": 4520,
+        "y": 4800,
         "wires": [
             [
                 "408467fa2308a4f0",
@@ -8749,7 +8871,7 @@
         "sql": "",
         "name": "",
         "x": 2370,
-        "y": 4520,
+        "y": 4800,
         "wires": [
             []
         ]
@@ -8768,8 +8890,205 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2280,
-        "y": 4480,
+        "y": 4760,
         "wires": []
+    },
+    {
+        "id": "34a074dc1254447e",
+        "type": "link in",
+        "z": "fd31082e.5487d8",
+        "name": "16_In",
+        "links": [
+            "e48aa212b69d1647"
+        ],
+        "x": 255,
+        "y": 3160,
+        "wires": [
+            [
+                "ac39b69bd18aa87e"
+            ]
+        ]
+    },
+    {
+        "id": "aa6d27d3be4df9ca",
+        "type": "link out",
+        "z": "fd31082e.5487d8",
+        "name": "16_Out",
+        "mode": "link",
+        "links": [
+            "90cd6d4576b62209"
+        ],
+        "x": 3135,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "ac39b69bd18aa87e",
+        "type": "switch",
+        "z": "fd31082e.5487d8",
+        "name": "Content-Type",
+        "property": "req.headers['content-type']",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "application/json",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 3160,
+        "wires": [
+            [
+                "09fe24773ade8e9b",
+                "9de793a5318a3780"
+            ],
+            [
+                "a85a357d7b226a0f"
+            ]
+        ]
+    },
+    {
+        "id": "a85a357d7b226a0f",
+        "type": "change",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "\"Not Understood\"",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "400",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 3180,
+        "wires": [
+            [
+                "411a49d448b119d2"
+            ]
+        ]
+    },
+    {
+        "id": "411a49d448b119d2",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2040,
+        "y": 3160,
+        "wires": [
+            [
+                "aa6d27d3be4df9ca"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "09fe24773ade8e9b",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "9de793a5318a3780",
+        "type": "switch",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "req.query.async",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "false",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 920,
+        "y": 3140,
+        "wires": [
+            [],
+            [
+                "951842fd783ccd81"
+            ]
+        ]
+    },
+    {
+        "id": "951842fd783ccd81",
+        "type": "link call",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "links": [
+            "881a0c3218ffb16f"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1280,
+        "y": 3140,
+        "wires": [
+            [
+                "411a49d448b119d2"
+            ]
+        ]
     },
     {
         "id": "67c6d794.309d08",
@@ -10901,6 +11220,252 @@
         "statusType": "auto",
         "x": 2030,
         "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "881a0c3218ffb16f",
+        "type": "link in",
+        "z": "7585249f.880c0c",
+        "name": "Invoke_Op in",
+        "links": [],
+        "x": 315,
+        "y": 2140,
+        "wires": [
+            [
+                "b826322d4c5e0dd3"
+            ]
+        ]
+    },
+    {
+        "id": "eda11e1af3a33633",
+        "type": "link out",
+        "z": "7585249f.880c0c",
+        "name": "Invoke_Op out",
+        "mode": "return",
+        "links": [],
+        "x": 2425,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "b826322d4c5e0dd3",
+        "type": "unsafe-function",
+        "z": "7585249f.880c0c",
+        "name": "BuildingJsonataQuery...",
+        "func": "//var xml_string = msg.payload;\n//var XML = context.global.get('XML');\n\nmsg.submodelElement = msg.payload;\nmsg.submodelElementId = msg.req.params.id;\nmsg.req.params.id = msg.req.params.submodelId;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 2140,
+        "wires": [
+            [
+                "0c6d65d1dcab6fee"
+            ]
+        ]
+    },
+    {
+        "id": "0c6d65d1dcab6fee",
+        "type": "link call",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "links": [
+            "73fa67f7ce94427b"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 750,
+        "y": 2140,
+        "wires": [
+            [
+                "8de067076149825d"
+            ]
+        ]
+    },
+    {
+        "id": "8de067076149825d",
+        "type": "switch",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "404",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 950,
+        "y": 2140,
+        "wires": [
+            [
+                "16aaa0fd22061e5e"
+            ],
+            [
+                "eda11e1af3a33633"
+            ]
+        ]
+    },
+    {
+        "id": "16aaa0fd22061e5e",
+        "type": "change",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "req.params.id",
+                "pt": "msg",
+                "to": "submodelElementId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 2100,
+        "wires": [
+            [
+                "73183c0e7e10afe5"
+            ]
+        ]
+    },
+    {
+        "id": "73183c0e7e10afe5",
+        "type": "link call",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "links": [
+            "86b4b166afaa8721"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1430,
+        "y": 2100,
+        "wires": [
+            [
+                "19cf7aace4a280db"
+            ]
+        ]
+    },
+    {
+        "id": "19cf7aace4a280db",
+        "type": "switch",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "404",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1650,
+        "y": 2100,
+        "wires": [
+            [
+                "c7789bcaee9c8777",
+                "eda11e1af3a33633",
+                "4e93dd24164082a2"
+            ],
+            [
+                "eda11e1af3a33633",
+                "c7789bcaee9c8777"
+            ]
+        ]
+    },
+    {
+        "id": "c7789bcaee9c8777",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "4e93dd24164082a2",
+        "type": "function",
+        "z": "7585249f.880c0c",
+        "name": "function 4",
+        "func": "let body = msg.req.body;\nlet operation_from_model = msg.payload;\n\n// Verify InputVariable\nif (operation_from_model.inputVariable.length == body.inputArguments.length && operation_from_model.inoutputVariable.length == body.inoutputArguments.length){\n    \n    //Process InputVariable\n    for (let index0 = 0; index0 < operation_from_model.inputVariable.length; index0++){\n        for (let index1 = 0; index1 < body.inputArguments.length; index1++){\n            if (body.inputArguments[index1].value.submodelElement.idShort == operation_from_model.inputVariable[index0].value.submodelElement.idShort){\n                break;\n            }\n            return [null, msg];\n        }\n    }\n\n    //Process InoutputVariable\n    for (let index2 = 0; index2 < operation_from_model.inoutputVariable.length; index2++) {\n        for (let index3 = 0; index3 < body.inoutputArguments.length; index3++) {\n            if (body.inoutputArguments[index3].value.submodelElement.idShort == operation_from_model.inoutputVariable[index2].value.submodelElement.idShort) {\n                break;\n            }\n            return [null, msg];\n        }\n    }\n    return [msg,null];\n\n} else {\n    return [null, msg];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2170,
+        "y": 2060,
+        "wires": [
+            [
+                "3ef1dfccaa2aa8e1"
+            ],
+            [
+                "e50adb828b97e318"
+            ]
+        ]
+    },
+    {
+        "id": "3ef1dfccaa2aa8e1",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2380,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "e50adb828b97e318",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2380,
+        "y": 2080,
         "wires": []
     },
     {
