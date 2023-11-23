@@ -14,5 +14,11 @@ RUN npm i passport-keycloak-oauth2-oidc
 ADD dist .node-red/node_modules/node-red-dashboard/dist/
 RUN unzip /app/.node-red/model.aasx -d /app/.node-red/
 RUN /usr/bin/sqlite3 /db/inNOVAASdb.db
+RUN apt install jq -y
+RUN jq -s 'flatten | group_by(.id) | map(reduce .[] as $x ({}; . * $x))' \
+    /app/.node-red/flows_gido-VirtualBox.json /app/.node-red/flow_asset_user_interface.json > /app/.node-red/flows_aux.json \
+    && mv /app/.node-red/flows_aux.json /app/.node-red/flows_gido-VirtualBox.json
+# RUN jq -s '.[0] * .[1]' /app/.node-red/a.json /app/.node-red/b.json >> /app/.node-red/c.json
+# RUN cat /app/.node-red/c.json
 EXPOSE 1880
 ENTRYPOINT ["node-red", "-u", "/app/.node-red", "-s", "/app/.node-red/settings.js"]
