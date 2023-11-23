@@ -16,7 +16,7 @@
     {
         "id": "7585249f.880c0c",
         "type": "tab",
-        "label": "AAS - Environment - V2",
+        "label": "AAS - Environment",
         "disabled": false,
         "info": ""
     },
@@ -408,6 +408,200 @@
         "color": "#DDAA99"
     },
     {
+        "id": "10392549.d972b3",
+        "type": "group",
+        "z": "c7caf96e.a31f98",
+        "name": "AAS Configuration",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "8af52e00.b2df48",
+            "3a568a54.3c63e6",
+            "b102af28.a0df28",
+            "c0822d7.a2222d",
+            "ed7feffb.fdc4d8",
+            "d7080631.6bd928",
+            "8c3f137a.f60d68",
+            "ece6df22.01841",
+            "fff82399.2f49b",
+            "82289ad6.a600d8",
+            "ad85b295.7069f"
+        ],
+        "x": 76,
+        "y": 225
+    },
+    {
+        "id": "daa90db5.798ca",
+        "type": "group",
+        "z": "c7caf96e.a31f98",
+        "name": "Operation on Manifest",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true
+        },
+        "nodes": [
+            "911146e5.f855a8",
+            "235c6137.8eecfe",
+            "369802aa.4bb65e",
+            "7f25771a.9570b8",
+            "c8694f03.dfd39",
+            "87e27c61.d45d5",
+            "d4cc7b36.ba12e8",
+            "e3f319e7.11c788",
+            "2591dc6f.beecf4",
+            "42fa9309.ed70dc",
+            "62354c3.8a2cab4",
+            "dc737b31.78c9a8",
+            "cbc42023.5d017",
+            "acf520d7.dad7a",
+            "c4626f7b.fb5ac",
+            "c34ae37f.12318",
+            "8ddc3a56.0b1778",
+            "6c1542cb.673e8c",
+            "697de89c.c97c98",
+            "bbf9bf7d.66354",
+            "bc9740dc.6a656",
+            "37a4080e.40ed9",
+            "c358a7e7.e264e",
+            "4fd92a61.1a1cbc",
+            "856c9918.42c4b8",
+            "90d9b2.6335f65",
+            "23e7fb8f.11fddc",
+            "e2c6dfcd.e05b7",
+            "2554c114.74adde",
+            "bb4de309.e48c",
+            "f63b07e4.457e2",
+            "8165c6b8.c3519",
+            "e34ed51c.060cd",
+            "d0bce444.7eb068",
+            "eb085e57.c9db48",
+            "59776b4d.36b314",
+            "437c7c89.d0b51c"
+        ],
+        "x": 75,
+        "y": 599
+    },
+    {
+        "id": "66d3f26a.c296b4",
+        "type": "group",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "style": {
+            "label": true,
+            "color": "#777777",
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "b06bbe8c.99281",
+            "a3ec15bc.b3e59",
+            "633578fc.26a7a",
+            "184a6b3e.d382f5",
+            "ec19d6a4.7505f8",
+            "568d5f3.624242",
+            "d5524b85.c3c27",
+            "d42664b2.514808"
+        ],
+        "x": 74,
+        "y": 2499
+    },
+    {
+        "id": "fd25b313.221798",
+        "type": "group",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "c3859dd5.c946d",
+            "fba64935.3c8e18",
+            "3c448e09.9248f2",
+            "48ef191e.d28c98",
+            "e7a9e126.1cef",
+            "ed77ca84.755278",
+            "b4eb437c.b5efd",
+            "e0886cb3.b2a44",
+            "2dc97f2a.e1d8d8"
+        ],
+        "x": 74,
+        "y": 2799
+    },
+    {
+        "id": "16640da3.5a20ca",
+        "type": "group",
+        "z": "c7caf96e.a31f98",
+        "name": "",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "23801d7a.c17572",
+            "4768d29a.aacc4c",
+            "17d166e7.5b6559",
+            "ebf8a1.a3dd076",
+            "f6f1e3c3.9ffa5",
+            "98293416.fa8198",
+            "43be3c31.fa03f4"
+        ],
+        "x": 74,
+        "y": 3019
+    },
+    {
+        "id": "4b4e4270.d440bc",
+        "type": "group",
+        "z": "fd31082e.5487d8",
+        "name": "To North",
+        "style": {
+            "fill": "#bfc7d7",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "c7097b80.b03428",
+            "5c80f7ac.2fc2b8",
+            "3e11fc1c.d74334",
+            "1f1ce2c5.9cb5cd",
+            "6c10cd375f817bbf",
+            "7b48ced64946a8d2",
+            "893f967b73205095",
+            "5cea18b9856d1364",
+            "e1994719bd7b4722",
+            "4872c068f48e839b",
+            "a9c22279a032d681"
+        ],
+        "x": 214,
+        "y": 4099
+    },
+    {
+        "id": "d366c10f.cbf158",
+        "type": "group",
+        "z": "fd31082e.5487d8",
+        "name": "To/From South",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "5ee56f7a.9622a",
+            "be37d7a0.4489e",
+            "c757ee5b.08a1f8",
+            "d7f84005.ce11e8",
+            "162cb66c.3b7292",
+            "9f810b8b.7a1b8",
+            "b88a92c6.fb547",
+            "21eb2aa8ef422845",
+            "555ce72ca0d7dfd4"
+        ],
+        "x": 214,
+        "y": 3376
+    },
+    {
         "id": "9eaca16.128cb6",
         "type": "group",
         "z": "2164c119.f88826",
@@ -582,6 +776,28 @@
         "h": 442
     },
     {
+        "id": "6aa9beecbf5f8d23",
+        "type": "group",
+        "z": "128ab3134a54f6b4",
+        "name": "Set-up",
+        "style": {
+            "fill": "#e3f3d3",
+            "fill-opacity": "0.4",
+            "label": true
+        },
+        "nodes": [
+            "5c3897124d1d95c0",
+            "41d553602c61b3d5",
+            "4be0576d4487e1ca",
+            "1103084ec6579d65",
+            "d57f305ac53e4d3f",
+            "f8b354e5d9771dda",
+            "41d1269376597f69"
+        ],
+        "x": 134,
+        "y": 59
+    },
+    {
         "id": "d9efc969.3ac7a8",
         "type": "group",
         "z": "2164c119.f88826",
@@ -628,234 +844,6 @@
         "h": 682
     },
     {
-        "id": "10392549.d972b3",
-        "type": "group",
-        "z": "c7caf96e.a31f98",
-        "name": "AAS Configuration",
-        "style": {
-            "fill": "#e3f3d3",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "8af52e00.b2df48",
-            "3a568a54.3c63e6",
-            "b102af28.a0df28",
-            "c0822d7.a2222d",
-            "ed7feffb.fdc4d8",
-            "d7080631.6bd928",
-            "8c3f137a.f60d68",
-            "ece6df22.01841",
-            "fff82399.2f49b",
-            "82289ad6.a600d8",
-            "ad85b295.7069f"
-        ],
-        "x": 76,
-        "y": 225,
-        "w": 1902,
-        "h": 242
-    },
-    {
-        "id": "daa90db5.798ca",
-        "type": "group",
-        "z": "c7caf96e.a31f98",
-        "name": "Operation on Manifest",
-        "style": {
-            "fill": "#ffffbf",
-            "label": true
-        },
-        "nodes": [
-            "911146e5.f855a8",
-            "235c6137.8eecfe",
-            "369802aa.4bb65e",
-            "7f25771a.9570b8",
-            "c8694f03.dfd39",
-            "87e27c61.d45d5",
-            "d4cc7b36.ba12e8",
-            "e3f319e7.11c788",
-            "2591dc6f.beecf4",
-            "42fa9309.ed70dc",
-            "62354c3.8a2cab4",
-            "dc737b31.78c9a8",
-            "cbc42023.5d017",
-            "acf520d7.dad7a",
-            "c4626f7b.fb5ac",
-            "c34ae37f.12318",
-            "8ddc3a56.0b1778",
-            "6c1542cb.673e8c",
-            "697de89c.c97c98",
-            "bbf9bf7d.66354",
-            "bc9740dc.6a656",
-            "37a4080e.40ed9",
-            "c358a7e7.e264e",
-            "4fd92a61.1a1cbc",
-            "856c9918.42c4b8",
-            "90d9b2.6335f65",
-            "23e7fb8f.11fddc",
-            "e2c6dfcd.e05b7",
-            "2554c114.74adde",
-            "bb4de309.e48c",
-            "f63b07e4.457e2",
-            "8165c6b8.c3519",
-            "e34ed51c.060cd",
-            "d0bce444.7eb068",
-            "eb085e57.c9db48",
-            "59776b4d.36b314",
-            "437c7c89.d0b51c"
-        ],
-        "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1888
-    },
-    {
-        "id": "66d3f26a.c296b4",
-        "type": "group",
-        "z": "c7caf96e.a31f98",
-        "name": "",
-        "style": {
-            "label": true,
-            "color": "#777777",
-            "fill": "#e3f3d3"
-        },
-        "nodes": [
-            "b06bbe8c.99281",
-            "a3ec15bc.b3e59",
-            "633578fc.26a7a",
-            "184a6b3e.d382f5",
-            "ec19d6a4.7505f8",
-            "568d5f3.624242",
-            "d5524b85.c3c27",
-            "d42664b2.514808"
-        ],
-        "x": 74,
-        "y": 2499,
-        "w": 1951,
-        "h": 282
-    },
-    {
-        "id": "fd25b313.221798",
-        "type": "group",
-        "z": "c7caf96e.a31f98",
-        "name": "",
-        "style": {
-            "fill": "#bfdbef",
-            "label": true
-        },
-        "nodes": [
-            "c3859dd5.c946d",
-            "fba64935.3c8e18",
-            "3c448e09.9248f2",
-            "48ef191e.d28c98",
-            "e7a9e126.1cef",
-            "ed77ca84.755278",
-            "b4eb437c.b5efd",
-            "e0886cb3.b2a44",
-            "2dc97f2a.e1d8d8"
-        ],
-        "x": 74,
-        "y": 2799,
-        "w": 1912,
-        "h": 202
-    },
-    {
-        "id": "16640da3.5a20ca",
-        "type": "group",
-        "z": "c7caf96e.a31f98",
-        "name": "",
-        "style": {
-            "fill": "#ffbfbf",
-            "label": true
-        },
-        "nodes": [
-            "23801d7a.c17572",
-            "4768d29a.aacc4c",
-            "17d166e7.5b6559",
-            "ebf8a1.a3dd076",
-            "f6f1e3c3.9ffa5",
-            "98293416.fa8198",
-            "43be3c31.fa03f4"
-        ],
-        "x": 74,
-        "y": 3019,
-        "w": 1932,
-        "h": 182
-    },
-    {
-        "id": "4b4e4270.d440bc",
-        "type": "group",
-        "z": "fd31082e.5487d8",
-        "name": "To North",
-        "style": {
-            "fill": "#bfc7d7",
-            "label": true,
-            "color": "#ffffff"
-        },
-        "nodes": [
-            "c7097b80.b03428",
-            "5c80f7ac.2fc2b8",
-            "3e11fc1c.d74334",
-            "1f1ce2c5.9cb5cd",
-            "6c10cd375f817bbf",
-            "7b48ced64946a8d2",
-            "893f967b73205095",
-            "5cea18b9856d1364",
-            "e1994719bd7b4722",
-            "4872c068f48e839b",
-            "a9c22279a032d681"
-        ],
-        "x": 214,
-        "y": 4099
-    },
-    {
-        "id": "d366c10f.cbf158",
-        "type": "group",
-        "z": "fd31082e.5487d8",
-        "name": "To/From South",
-        "style": {
-            "fill": "#bfdbef",
-            "label": true,
-            "color": "#ffffff"
-        },
-        "nodes": [
-            "5ee56f7a.9622a",
-            "be37d7a0.4489e",
-            "c757ee5b.08a1f8",
-            "d7f84005.ce11e8",
-            "162cb66c.3b7292",
-            "9f810b8b.7a1b8",
-            "b88a92c6.fb547",
-            "21eb2aa8ef422845",
-            "555ce72ca0d7dfd4"
-        ],
-        "x": 214,
-        "y": 3376
-    },
-    {
-        "id": "6aa9beecbf5f8d23",
-        "type": "group",
-        "z": "128ab3134a54f6b4",
-        "name": "Set-up",
-        "style": {
-            "fill": "#e3f3d3",
-            "fill-opacity": "0.4",
-            "label": true
-        },
-        "nodes": [
-            "5c3897124d1d95c0",
-            "41d553602c61b3d5",
-            "4be0576d4487e1ca",
-            "1103084ec6579d65",
-            "d57f305ac53e4d3f",
-            "f8b354e5d9771dda",
-            "41d1269376597f69"
-        ],
-        "x": 134,
-        "y": 59,
-        "w": 1232,
-        "h": 182
-    },
-    {
         "id": "b3fca1f0.1e5ef8",
         "type": "group",
         "z": "128ab3134a54f6b4",
@@ -897,9 +885,7 @@
             "95c62ca4.9097f8"
         ],
         "x": 14,
-        "y": 2299,
-        "w": 2872,
-        "h": 516
+        "y": 2299
     },
     {
         "id": "37a4080e.40ed9",
@@ -951,9 +937,7 @@
             "d05b53b9a69cc83a"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -997,9 +981,7 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 552
+        "y": 1909
     },
     {
         "id": "bf8d1775bedc9126",
@@ -1115,69 +1097,72 @@
         ]
     },
     {
-        "id": "d7c7c76980707d64",
+        "id": "de00f046.a69e6",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#097479",
+                "baseColor": "#595959",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "customTheme": {
-                "name": "Untitled Theme 1",
+                "name": "AASGreen",
                 "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseColor": "#14524e",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "default": "#097479",
+                    "value": "#595959",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#595959",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
+                    "value": "#111111",
+                    "edited": true
                 },
                 "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#333333",
+                    "edited": true
                 },
                 "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
+                    "value": "#7f7f7f",
+                    "edited": true
                 },
                 "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#555555",
+                    "edited": true
                 },
                 "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#333333",
+                    "edited": true
                 },
                 "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
+                    "value": "#eeeeee",
+                    "edited": true
                 },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
+                    "value": "#595959",
+                    "edited": true
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#333333",
+                    "edited": true
                 },
                 "base-font": {
                     "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
@@ -1187,12 +1172,11 @@
                 "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
-                "background": "grey",
-                "palette": "light"
+                "background": "grey"
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "NOVAsset Administration Shell",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -1201,10 +1185,10 @@
             "sizes": {
                 "sx": 48,
                 "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
+                "gx": 5,
+                "gy": 5,
+                "cx": 5,
+                "cy": 5,
                 "px": 0,
                 "py": 0
             }
@@ -1320,242 +1304,6 @@
         "collapse": false
     },
     {
-        "id": "63d120af.ce7f5",
-        "type": "ui_group",
-        "name": "Logs",
-        "tab": "cb7ccff3.2c214",
-        "order": 1,
-        "disp": true,
-        "width": "34",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d1259efc.6308f8",
-        "type": "ui_tab",
-        "name": "Subscriptions",
-        "icon": "link",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "f57f5dd7.e298c",
-        "type": "ui_group",
-        "name": "Actual Subscribed Elements",
-        "tab": "d1259efc.6308f8",
-        "order": 1,
-        "disp": true,
-        "width": "34",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "a1ac21b4.e86f9",
-        "type": "ui_tab",
-        "name": "Dash",
-        "icon": "dashboard",
-        "order": 7,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "175d54ea.788a73",
-        "type": "ui_group",
-        "name": "Dashboard SBI",
-        "tab": "a1ac21b4.e86f9",
-        "order": 1,
-        "disp": true,
-        "width": "30",
-        "collapse": false
-    },
-    {
-        "id": "77c7337d.b33f54",
-        "type": "ui_group",
-        "name": "Asset",
-        "tab": "7511afda.577af",
-        "order": 3,
-        "disp": true,
-        "width": "10",
-        "collapse": false
-    },
-    {
-        "id": "16ffbcf4.6cfa43",
-        "type": "ui_group",
-        "name": "Account Logs",
-        "tab": "cb7ccff3.2c214",
-        "order": 2,
-        "disp": true,
-        "width": "34",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "6a4d510d.5de65",
-        "type": "ui_group",
-        "name": "ReportDownload",
-        "tab": "56715436.c2591c",
-        "order": 2,
-        "disp": false,
-        "width": "9",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "56715436.c2591c",
-        "type": "ui_tab",
-        "name": "Reporting",
-        "icon": "assignment",
-        "order": 9,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "7dcd4079.256cf",
-        "type": "ui_group",
-        "name": "form",
-        "tab": "56715436.c2591c",
-        "order": 1,
-        "disp": true,
-        "width": "15",
-        "collapse": false
-    },
-    {
-        "id": "50760f2b4eafd99b",
-        "type": "sqlitedb",
-        "db": "/app/.node-red/db/inNOVAASdb.db",
-        "mode": "RW"
-    },
-    {
-        "id": "4285443c9ec1065f",
-        "type": "ui_tab",
-        "name": "Documents",
-        "icon": "folder",
-        "order": 10,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "dc6a962d74630b25",
-        "type": "ui_group",
-        "name": "Documents",
-        "tab": "4285443c9ec1065f",
-        "order": 1,
-        "disp": true,
-        "width": "20",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "747e4668e069e06a",
-        "type": "ui_group",
-        "name": "Commands",
-        "tab": "4285443c9ec1065f",
-        "order": 2,
-        "disp": true,
-        "width": "3",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "de00f046.a69e6",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-custom",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "AASGreen",
-                "default": "#4B7930",
-                "baseColor": "#14524e",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#14524e",
-                    "value": "#14524e",
-                    "edited": true
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#14524e",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#f0f0f0",
-                    "edited": true
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "group-textColor": {
-                    "value": "#000000",
-                    "edited": true
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "widget-textColor": {
-                    "value": "#000000",
-                    "edited": true
-                },
-                "widget-backgroundColor": {
-                    "value": "#14524e",
-                    "edited": true
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey"
-            }
-        },
-        "site": {
-            "name": "NOVAsset Administration Shell",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 5,
-                "gy": 5,
-                "cx": 5,
-                "cy": 5,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "d61f3cdd.7e8e5",
         "type": "swagger-doc",
         "summary": "Test the status of the AAS",
@@ -1652,6 +1400,17 @@
         "deprecated": false
     },
     {
+        "id": "63d120af.ce7f5",
+        "type": "ui_group",
+        "name": "Logs",
+        "tab": "cb7ccff3.2c214",
+        "order": 1,
+        "disp": true,
+        "width": "34",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "a67da331.7afbf8",
         "type": "swagger-doc",
         "summary": "Retrieve the current Manifest document",
@@ -1702,6 +1461,66 @@
         "deprecated": false
     },
     {
+        "id": "d1259efc.6308f8",
+        "type": "ui_tab",
+        "name": "Subscriptions",
+        "icon": "link",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f57f5dd7.e298c",
+        "type": "ui_group",
+        "name": "Actual Subscribed Elements",
+        "tab": "d1259efc.6308f8",
+        "order": 1,
+        "disp": true,
+        "width": "34",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a1ac21b4.e86f9",
+        "type": "ui_tab",
+        "name": "Dash",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "175d54ea.788a73",
+        "type": "ui_group",
+        "name": "Dashboard SBI",
+        "tab": "a1ac21b4.e86f9",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "77c7337d.b33f54",
+        "type": "ui_group",
+        "name": "Asset",
+        "tab": "7511afda.577af",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "16ffbcf4.6cfa43",
+        "type": "ui_group",
+        "name": "Account Logs",
+        "tab": "cb7ccff3.2c214",
+        "order": 2,
+        "disp": true,
+        "width": "34",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "bebd1a76.551ec8",
         "type": "node-red-contrib-httpauthfile",
         "name": "",
@@ -1730,6 +1549,73 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "6a4d510d.5de65",
+        "type": "ui_group",
+        "name": "ReportDownload",
+        "tab": "56715436.c2591c",
+        "order": 2,
+        "disp": false,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "56715436.c2591c",
+        "type": "ui_tab",
+        "name": "Reporting",
+        "icon": "assignment",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7dcd4079.256cf",
+        "type": "ui_group",
+        "name": "form",
+        "tab": "56715436.c2591c",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false
+    },
+    {
+        "id": "50760f2b4eafd99b",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
+        "id": "4285443c9ec1065f",
+        "type": "ui_tab",
+        "name": "Documents",
+        "icon": "folder",
+        "order": 10,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "dc6a962d74630b25",
+        "type": "ui_group",
+        "name": "Documents",
+        "tab": "4285443c9ec1065f",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "747e4668e069e06a",
+        "type": "ui_group",
+        "name": "Commands",
+        "tab": "4285443c9ec1065f",
+        "order": 2,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "9e53ceb7c065e802",
@@ -6958,7 +6844,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "7719269fc9a88d8b",
+            "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
         "x": 2980,
@@ -6972,7 +6858,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "7719269fc9a88d8b",
+            "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
         "x": 2320,
@@ -6986,7 +6872,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "7719269fc9a88d8b",
+            "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
         "x": 2340,
@@ -7000,7 +6886,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "7719269fc9a88d8b",
+            "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
         "x": 2340,
@@ -7014,7 +6900,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "7719269fc9a88d8b",
+            "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
         "x": 2360,
@@ -7028,7 +6914,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "7719269fc9a88d8b",
+            "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
         "x": 2360,
@@ -7042,7 +6928,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "7719269fc9a88d8b",
+            "f5d81204558f97fa",
             "57aec539a62e6dfa"
         ],
         "x": 2360,
@@ -14485,7 +14371,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 1400,
+        "x": 1380,
         "y": 300,
         "wires": [
             [
@@ -16202,6 +16088,96 @@
         ]
     },
     {
+        "id": "5c30c48e1a2467ea",
+        "type": "fd-gauge",
+        "z": "1543d308b342690a",
+        "fd_container": "268989bc4b3b4aed",
+        "fd_cols": "3",
+        "fd_rows": "3",
+        "fd_array": false,
+        "fd_array_max": "1",
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "value": null,
+        "unit": "msgs",
+        "arc": 180,
+        "min": 0,
+        "max": null,
+        "color": "light-green-accent-3",
+        "low_color": "",
+        "high_color": "",
+        "low_threshold": null,
+        "high_threshold": null,
+        "base_color": "grey-darken-3",
+        "needle_color": "white",
+        "radius": 70,
+        "stretch": false,
+        "x": 570,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "cdadfa37404a50cd",
+        "type": "fd-gauge",
+        "z": "1543d308b342690a",
+        "fd_container": "8d5a1fac7723db1f",
+        "fd_cols": "3",
+        "fd_rows": "3",
+        "fd_array": false,
+        "fd_array_max": "1",
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "value": null,
+        "unit": "msgs",
+        "arc": 180,
+        "min": 0,
+        "max": null,
+        "color": "light-green-accent-3",
+        "low_color": "",
+        "high_color": "",
+        "low_threshold": null,
+        "high_threshold": null,
+        "base_color": "grey-darken-3",
+        "needle_color": "white",
+        "radius": 70,
+        "stretch": false,
+        "x": 570,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "43c94c0e40120042",
+        "type": "fd-gauge",
+        "z": "1543d308b342690a",
+        "fd_container": "3ecc3bf90d60cd53",
+        "fd_cols": "3",
+        "fd_rows": "3",
+        "fd_array": false,
+        "fd_array_max": "1",
+        "name": "",
+        "title": "Nr of subscriptions",
+        "popup_info": "",
+        "value": null,
+        "unit": "",
+        "arc": 180,
+        "min": 0,
+        "max": null,
+        "color": "light-green-accent-3",
+        "low_color": "",
+        "high_color": "",
+        "low_threshold": null,
+        "high_threshold": null,
+        "base_color": "grey-darken-3",
+        "needle_color": "white",
+        "radius": 70,
+        "stretch": false,
+        "x": 770,
+        "y": 760,
+        "wires": []
+    },
+    {
         "id": "97e34cb72c2f36bd",
         "type": "fd-date-time",
         "z": "1543d308b342690a",
@@ -16233,6 +16209,35 @@
         ],
         "x": 300,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b7b1a215ed15c556",
+        "type": "fd-stat",
+        "z": "1543d308b342690a",
+        "fd_container": "ef647bf71bb867a7",
+        "fd_cols": "2",
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": "1",
+        "name": "Status",
+        "title": "Status",
+        "popup_info": "",
+        "unit": "",
+        "value": "",
+        "color": "transparent",
+        "low_color": "red-accent-3",
+        "high_color": "light-green-accent-3",
+        "low_threshold": null,
+        "high_threshold": null,
+        "low_regexp": "NOT CONNECTED",
+        "high_regexp": "CONNECTED",
+        "chip": false,
+        "iso_prefix": false,
+        "precision": null,
+        "zoom": null,
+        "x": 770,
+        "y": 820,
         "wires": []
     },
     {
@@ -16330,125 +16335,6 @@
                 "1e6c7a273cda476c"
             ]
         ]
-    },
-    {
-        "id": "5c30c48e1a2467ea",
-        "type": "fd-gauge",
-        "z": "1543d308b342690a",
-        "fd_container": "268989bc4b3b4aed",
-        "fd_cols": "3",
-        "fd_rows": "3",
-        "fd_array": false,
-        "fd_array_max": "1",
-        "name": "",
-        "title": "",
-        "popup_info": "",
-        "value": null,
-        "unit": "msgs",
-        "arc": 180,
-        "min": 0,
-        "max": null,
-        "color": "light-green-accent-3",
-        "low_color": "",
-        "high_color": "",
-        "low_threshold": null,
-        "high_threshold": null,
-        "base_color": "grey-darken-3",
-        "needle_color": "white",
-        "radius": 70,
-        "stretch": false,
-        "x": 570,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "cdadfa37404a50cd",
-        "type": "fd-gauge",
-        "z": "1543d308b342690a",
-        "fd_container": "8d5a1fac7723db1f",
-        "fd_cols": "3",
-        "fd_rows": "3",
-        "fd_array": false,
-        "fd_array_max": "1",
-        "name": "",
-        "title": "",
-        "popup_info": "",
-        "value": null,
-        "unit": "msgs",
-        "arc": 180,
-        "min": 0,
-        "max": null,
-        "color": "light-green-accent-3",
-        "low_color": "",
-        "high_color": "",
-        "low_threshold": null,
-        "high_threshold": null,
-        "base_color": "grey-darken-3",
-        "needle_color": "white",
-        "radius": 70,
-        "stretch": false,
-        "x": 570,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "43c94c0e40120042",
-        "type": "fd-gauge",
-        "z": "1543d308b342690a",
-        "fd_container": "3ecc3bf90d60cd53",
-        "fd_cols": "3",
-        "fd_rows": "3",
-        "fd_array": false,
-        "fd_array_max": "1",
-        "name": "",
-        "title": "Nr of subscriptions",
-        "popup_info": "",
-        "value": null,
-        "unit": "",
-        "arc": 180,
-        "min": 0,
-        "max": null,
-        "color": "light-green-accent-3",
-        "low_color": "",
-        "high_color": "",
-        "low_threshold": null,
-        "high_threshold": null,
-        "base_color": "grey-darken-3",
-        "needle_color": "white",
-        "radius": 70,
-        "stretch": false,
-        "x": 770,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "b7b1a215ed15c556",
-        "type": "fd-stat",
-        "z": "1543d308b342690a",
-        "fd_container": "ef647bf71bb867a7",
-        "fd_cols": "2",
-        "fd_rows": 1,
-        "fd_array": false,
-        "fd_array_max": "1",
-        "name": "Status",
-        "title": "Status",
-        "popup_info": "",
-        "unit": "",
-        "value": "",
-        "color": "transparent",
-        "low_color": "red-accent-3",
-        "high_color": "light-green-accent-3",
-        "low_threshold": null,
-        "high_threshold": null,
-        "low_regexp": "NOT CONNECTED",
-        "high_regexp": "CONNECTED",
-        "chip": false,
-        "iso_prefix": false,
-        "precision": null,
-        "zoom": null,
-        "x": 770,
-        "y": 820,
-        "wires": []
     },
     {
         "id": "5c3897124d1d95c0",
