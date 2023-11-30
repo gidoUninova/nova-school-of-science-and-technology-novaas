@@ -11092,7 +11092,7 @@
         "type": "function",
         "z": "7585249f.880c0c",
         "name": "Getting aas submodels",
-        "func": "var submodelFromPayload = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let id = submodels[indexSubmodel].keys[0].value;\n    if (id == submodelFromPayload.identification.id){\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "func": "var submodelFromPayload = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let id = submodels[indexSubmodel].identification.id;\n    if (id == submodelFromPayload.identification.id){\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
