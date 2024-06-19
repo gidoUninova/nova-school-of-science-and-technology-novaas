@@ -5,9 +5,6 @@ RUN apt-get update && apt-get install -y apt-utils && apt install unzip && apt-g
 WORKDIR /app
 RUN mkdir -p .node-red
 ADD files .node-red/
-# Adding Flexdash dependecies and core widgets ************************
-RUN npm i @flexdash/node-red-fd-corewidgets --prefix /app/.node-red
-# *********************************************************************
 RUN npm install --prefix /app/.node-red
 RUN npm i passport
 RUN npm i passport-keycloak-oauth2-oidc
