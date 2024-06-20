@@ -6585,7 +6585,7 @@
       "type": "function",
       "z": "1543d308b342690a",
       "name": "stats",
-      "func": "function isObjEmpty(obj) {\n    return Object.keys(obj).length === 0;\n}\n\nlet statsNBI = context.global.get(\"statsNBI\") || {};\nlet statsSBI = context.global.get(\"statsSBI\") || {};\n\nlet outStatsSBI_msgSpeed = {};\nlet outStatsSBI_msgsOverTime = {};\n\nif (isObjEmpty(statsSBI) || msg.enable == false){\n    outStatsSBI_msgSpeed.payload = 0;\n    outStatsSBI_msgSpeed.max = statsSBI.maxMsgs;\n    outStatsSBI_msgSpeed.title = statsSBI.IntervalAndFrequency;\n\n    outStatsSBI_msgsOverTime.payload = [];\n    //outStatsSBI_msgsOverTime.payload[0] = 0;\n    //outStatsSBI_msgsOverTime.payload[1] = 0;\n    outStatsSBI_msgsOverTime.payload = 0;\n    outStatsSBI_msgsOverTime.title = \"msgs/1 min\";\n\n} else {\n    outStatsSBI_msgSpeed.payload = statsSBI.msgSpeed;\n    outStatsSBI_msgSpeed.max = statsSBI.maxMsgs;\n    outStatsSBI_msgSpeed.title = statsSBI.IntervalAndFrequency;\n\n    //outStatsSBI_msgsOverTime.payload = [];\n    //outStatsSBI_msgsOverTime.payload[0] = Math.floor(Date.now() / 1000);\n    //outStatsSBI_msgsOverTime.payload[1] = statsSBI.msgSpeed;\n    outStatsSBI_msgsOverTime.payload = statsSBI.msgSpeed;\n    outStatsSBI_msgsOverTime.title = \"msgs/1 min\";\n\n}\n\nlet outStatsNBI_msgSpeed = {};\nlet outStatsNBI_msgsOverTime = {};\noutStatsNBI_msgsOverTime.payload = [];\nlet outStatsNBI_msgsSizeOverTime = {};\noutStatsNBI_msgsSizeOverTime.payload = [];\nif (isObjEmpty(statsNBI) || msg.enable == false){\n    outStatsNBI_msgSpeed.payload = 0;\n    outStatsNBI_msgSpeed.max = statsSBI.maxMsgs;\n    outStatsNBI_msgSpeed.title = statsSBI.IntervalAndFrequency;\n\n    //outStatsNBI_msgsOverTime.payload[0] = 0;\n    //outStatsNBI_msgsOverTime.payload[1] = 0;\n    outStatsNBI_msgsOverTime.payload = 0;\n    outStatsNBI_msgsOverTime.title = statsNBI.IntervalAndFrequency;\n\n    //outStatsNBI_msgsSizeOverTime.payload[0] = 0;\n    //outStatsNBI_msgsSizeOverTime.payload[1] = 0;\n    outStatsNBI_msgsSizeOverTime.payload = 0;\n    outStatsNBI_msgsSizeOverTime.title = statsNBI.IntervalAndFrequency;\n\n} else {\n    outStatsNBI_msgSpeed.payload = statsNBI.msgSpeed;\n    outStatsNBI_msgSpeed.max = statsSBI.maxMsgs;\n    outStatsNBI_msgSpeed.title = statsNBI.IntervalAndFrequency;\n    \n    //outStatsNBI_msgsOverTime.payload[0] = Math.floor(Date.now() / 1000);\n    //outStatsNBI_msgsOverTime.payload[1] = statsNBI.msgSpeed;\n    outStatsNBI_msgsOverTime.payload = statsNBI.msgSpeed;\n    outStatsNBI_msgsOverTime.title = statsNBI.IntervalAndFrequency;\n\n    //outStatsNBI_msgsSizeOverTime.payload[0] = Math.floor(Date.now() / 1000);\n    //outStatsNBI_msgsSizeOverTime.payload[1] = statsNBI.msgSize;\n    outStatsNBI_msgsSizeOverTime.payload = statsNBI.msgSize;\n    outStatsNBI_msgsSizeOverTime.title = statsNBI.msgSizeIntervalAndFrequency;\n    \n}\n\nreturn [outStatsSBI_msgSpeed, outStatsSBI_msgsOverTime, outStatsNBI_msgSpeed, outStatsNBI_msgsOverTime, outStatsNBI_msgsSizeOverTime];",
+      "func": "function isObjEmpty(obj) {\n    return Object.keys(obj).length === 0;\n}\n\nlet statsNBI = context.global.get(\"statsNBI\") || {};\nlet statsSBI = context.global.get(\"statsSBI\") || {};\n\nlet outStatsSBI_msgSpeed = {};\nlet outStatsSBI_msgsOverTime = {};\n\nif (isObjEmpty(statsSBI) || msg.enable == false){\n    outStatsSBI_msgSpeed.payload = 0;\n    outStatsSBI_msgsOverTime.payload = [];\n    \n\n} else {\n    outStatsSBI_msgSpeed.payload = statsSBI.msgSpeed;\n    outStatsSBI_msgsOverTime.payload = statsSBI.msgSpeed;\n\n}\n\nlet outStatsNBI_msgSpeed = {};\nlet outStatsNBI_msgsOverTime = {};\noutStatsNBI_msgsOverTime.payload = [];\nlet outStatsNBI_msgsSizeOverTime = {};\noutStatsNBI_msgsSizeOverTime.payload = [];\nif (isObjEmpty(statsNBI) || msg.enable == false){\n    outStatsNBI_msgSpeed.payload = 0;\n    outStatsNBI_msgsOverTime.payload = [];\n    outStatsNBI_msgsSizeOverTime.payload = [];\n    \n\n} else {\n    outStatsNBI_msgSpeed.payload = statsNBI.msgSpeed;\n    outStatsNBI_msgsOverTime.payload = statsNBI.msgSpeed;\n    outStatsNBI_msgsSizeOverTime.payload = statsNBI.msgSize;\n    \n}\n\nreturn [outStatsSBI_msgSpeed, outStatsSBI_msgsOverTime, outStatsNBI_msgSpeed, outStatsNBI_msgsOverTime, outStatsNBI_msgsSizeOverTime];",
       "outputs": 5,
       "timeout": "",
       "noerr": 0,
@@ -6631,15 +6631,7 @@
       "segments": [
           {
               "from": "0",
-              "color": "#5cd65c"
-          },
-          {
-              "from": "40",
-              "color": "#ffc800"
-          },
-          {
-              "from": "70",
-              "color": "#ea5353"
+              "color": "#00f900"
           }
       ],
       "min": 0,
@@ -6684,15 +6676,7 @@
       "segments": [
           {
               "from": "0",
-              "color": "#5cd65c"
-          },
-          {
-              "from": "40",
-              "color": "#ffc800"
-          },
-          {
-              "from": "70",
-              "color": "#ea5353"
+              "color": "#00f900"
           }
       ],
       "min": 0,
@@ -6748,10 +6732,10 @@
       "type": "ui-switch",
       "z": "1543d308b342690a",
       "name": "Status",
-      "label": "Staus",
+      "label": "Stats ON/OFF",
       "group": "05a598e787528df2",
       "order": 3,
-      "width": "1",
+      "width": "2",
       "height": "1",
       "passthru": false,
       "topic": "topic",
@@ -6781,7 +6765,7 @@
       "z": "1543d308b342690a",
       "group": "2e560a461d849b04",
       "name": "NorthboundChart2",
-      "label": "msgs/1 min",
+      "label": "B/1 min",
       "order": 3,
       "chartType": "line",
       "category": "topic",
@@ -6840,7 +6824,7 @@
       "segments": [
           {
               "from": "0",
-              "color": "#5cd65c"
+              "color": "#00f900"
           }
       ],
       "min": 0,
