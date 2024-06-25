@@ -14,11 +14,11 @@ The docker command to create the NOVAAS image is the following:
 
 Once the image has been created the followig docker command can be used to start a new container that runs the NOVAAS image:
 
-`docker run -d --env PORT_FORWARDING=1870 --env HOST=localhost --env BROKER_SERVICE_HOST=localhost --env BROKER_SERVICE_PORT=1883 --env REPO_LOCATION=https://gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas -p 1870:1880 name_of_the_image:ver`
+`docker run -d --env PORT_FORWARDING=1875 --env HOST=localhost --env BROKER_SERVICE_HOST=localhost --env BROKER_SERVICE_PORT=1883 --env REPO_LOCATION=https://gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas -p 1875:1880 name_of_the_image:ver`
 
 After executing the above commands, the NOVAAS will be accessible at the following link:
 
-http://localhost:1870/ui 
+http://localhost:1875/ui 
 
 ![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.20.37.png)"NOVAAS Main Screen"
 
@@ -27,7 +27,7 @@ The two environmental variables are needed to properly configure the internal iF
 
 The NOVAAS embeds an MQTT client for pushing out data. This client needs to be configured. To do that it is possible to access the NOVAAS backend by using the following link:
 
-http://localhost:1870
+http://localhost:1875
 
 or by properly configure the following environmental variables: i) $BROKER_SERVICE_HOST that is used to set-up the host where the mqtt broker is running; and ii) $BROKER_SERVICE_PORT that is used to set-up the port used by the mqtt broker. 
 
@@ -48,7 +48,7 @@ To build and run the image. Furthermore, the command:
 
 `docker-compose build`
 
-can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING and HOST in the .env file.
+can be used to build a new image. The started docker container will run on port 1875,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING and HOST in the .env file.
 
 ## Using the pre-built image
 
@@ -59,7 +59,7 @@ https://gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas/c
 ## Run another version of NOVAAS from this base folder
 
 NOVAAS has been designed in order to be as generic as possible, if you want to run your own version of the NOVAAS you should perform the following steps:
-1. Add the environment model file within the folder "files/". Note that the name of the file **must** be kept -> model.aasx. In particular this file follows the data model provided in https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part1_V3.html and can be created by using the aasx-package-explorer tool (https://github.com/admin-shell-io/aasx-package-explorer); **The aasx-package-explorer tool allows to save the environment model in several formats. However, the file format currently supported by NOVAAS is "aasx w/ JSON"**;
+1. Add the environment model file within the folder "files/". Note that the name of the file **must** be kept -> model.aasx. In particular this file follows the data model provided in https://www.plattform-i40.de/PI40/Redaktion/EN/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part1_V3.html and can be created by using the aasx-package-explorer tool (https://github.com/eclipse-aaspe/package-explorer); **The aasx-package-explorer tool allows to save the environment model in several formats. However, the file format currently supported by NOVAAS is "aasx w/ JSON"**;
 1. Change the httpauth file in the folder "files/httpauth" properly;
 1. Run the docker and/or docker-compose commands.
 1. Change the logic to ensure the connection of NOVAAS to the asset (in the example the logic to handle this connection is part of the "DPDM/OperationalData" flow).
