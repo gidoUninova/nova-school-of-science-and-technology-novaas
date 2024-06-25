@@ -20,8 +20,6 @@ After executing the above commands, the NOVAAS will be accessible at the followi
 
 http://localhost:1875/ui 
 
-![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.20.37.png)"NOVAAS Main Screen"
-
 ![Semantic description of image](/source/images/novaas.jpg)"NOVAAS Main Screen"
 
 ### Notes
