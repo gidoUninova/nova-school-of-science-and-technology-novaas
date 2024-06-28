@@ -4,7 +4,7 @@ services:
             context: .
             args: 
                 - "AAS_VERSION=${AAS_VERSION}"
-        image: "registry.gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas-v3:latest"
+        image: "registry.gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas:latest"
         environment:
             - "PORT_FORWARDING=${PORT_FORWARDING}" 
             - "HOST=${HOST}"
