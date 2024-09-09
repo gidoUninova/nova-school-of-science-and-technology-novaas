@@ -17715,7 +17715,7 @@
         "z": "c51c8a4a07d12c08",
         "g": "8e083231929593e2",
         "name": "",
-        "func": "if(msg.host === \"\"){\n    msg.url = \"http://localhost:\" + msg.portfw + \"/flexdash\";\n} else {\n    msg.url = \"http://\" + msg.host + \":\" + msg.portfw + \"/flexdash\";\n}\nreturn msg;",
+        "func": "if(msg.host === \"\"){\n    msg.url = \"http://localhost:\" + msg.portfw + \"/dashboard\";\n} else {\n    msg.url = \"http://\" + msg.host + \":\" + msg.portfw + \"/dashboard\";\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 400,
