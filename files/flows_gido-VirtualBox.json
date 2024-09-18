@@ -15447,7 +15447,7 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "preprocessing and flattening JSON",
-        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch (error) {\n        return false;\n    }\n}\n\nfunction getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    keys = Object.keys(flattenObject);\n    //msg.object = data;\n} else {\n    if(msg.payload.modelType.name == \"Property\"){\n        if(isJSONString(msg.value)){\n            flattenObject = msg.value;\n            keys.push(\"\");\n        }\n    } else if (msg.payload.modelType.name == \"SubmodelElementCollection\"){\n        flattenObject = getFlatObject(JSON.parse(msg.value));\n        keys = Object.keys(flattenObject);\n    }\n    \n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
+        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch (error) {\n        return false;\n    }\n}\n\nfunction getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    keys = Object.keys(flattenObject);\n    //msg.object = data;\n} else {\n    if (msg.payload.modelType == \"Property\") {\n        if (isJSONString(msg.value)) {\n            flattenObject = msg.value;\n            keys.push(\"\");\n        }\n    } else if (msg.payload.modelType == \"SubmodelElementCollection\") {\n        flattenObject = getFlatObject(JSON.parse(msg.value));\n        keys = Object.keys(flattenObject);\n    }\n\n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -19123,9 +19123,7 @@
         "g": "37a4080e.40ed9",
         "name": "7_Out",
         "links": [
-            "144753fb.39796c",
-            "e4cb8d27.54c3e8",
-            "50f49032.079c5"
+            "144753fb.39796c"
         ],
         "x": 985,
         "y": 1302,
@@ -20077,8 +20075,7 @@
         "g": "37a4080e.40ed9",
         "name": "7_In",
         "links": [
-            "7cec632.7e15b9c",
-            "cd8d2219.2a3198"
+            "7cec632.7e15b9c"
         ],
         "x": 1405,
         "y": 1302,
@@ -21616,8 +21613,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "f5d81204558f97fa",
-            "57aec539a62e6dfa"
+            "f5d81204558f97fa"
         ],
         "x": 2320,
         "y": 2000,
@@ -21693,8 +21689,7 @@
         "z": "fd31082e.5487d8",
         "name": "7_In",
         "links": [
-            "2fa79041.17ff8",
-            "17da0b60.6a2f3d"
+            "2fa79041.17ff8"
         ],
         "x": 235,
         "y": 1580,
@@ -21710,8 +21705,7 @@
         "z": "fd31082e.5487d8",
         "name": "8_In",
         "links": [
-            "b859d557.e838d8",
-            "e2af5e8a.78213"
+            "b859d557.e838d8"
         ],
         "x": 235,
         "y": 1800,
@@ -21785,7 +21779,6 @@
         "z": "fd31082e.5487d8",
         "name": "init_model_path_out",
         "links": [
-            "ad8fbd86.506ae8",
             "c9de3df7.c99ee"
         ],
         "x": 1815,
@@ -21812,8 +21805,7 @@
         "z": "fd31082e.5487d8",
         "name": "3_Out",
         "links": [
-            "c4626f7b.fb5ac",
-            "2c990cd.ab65f74"
+            "c4626f7b.fb5ac"
         ],
         "x": 3135,
         "y": 996,
@@ -22004,8 +21996,7 @@
         "z": "fd31082e.5487d8",
         "name": "13_In",
         "links": [
-            "bc2fff91.b20fd",
-            "df1cae54.a6ed38"
+            "bc2fff91.b20fd"
         ],
         "x": 255,
         "y": 2580,
@@ -22037,8 +22028,6 @@
         "z": "fd31082e.5487d8",
         "name": "11_In",
         "links": [
-            "d50a98f1.b0b938",
-            "1e00e0ac.7b7297",
             "cb3ea6e9.72b438"
         ],
         "x": 235,
@@ -22055,8 +22044,7 @@
         "z": "fd31082e.5487d8",
         "name": "12_In",
         "links": [
-            "f42c942d.6d6448",
-            "a0c9ccc4.12d298"
+            "f42c942d.6d6448"
         ],
         "x": 255,
         "y": 2400,
@@ -22238,8 +22226,7 @@
         "z": "fd31082e.5487d8",
         "name": "13_Out",
         "links": [
-            "6e7f5025.a4315",
-            "bcb152e2.608288"
+            "6e7f5025.a4315"
         ],
         "x": 3135,
         "y": 2560,
@@ -22265,8 +22252,7 @@
         "z": "fd31082e.5487d8",
         "name": "10_Out",
         "links": [
-            "345e490a.d99a46",
-            "d5e2a42c.8dffb8"
+            "345e490a.d99a46"
         ],
         "x": 3135,
         "y": 2060,
@@ -22359,8 +22345,7 @@
         "z": "fd31082e.5487d8",
         "name": "12_Out",
         "links": [
-            "4a5f46fc.ea7c08",
-            "c659a5d0.7355b8"
+            "4a5f46fc.ea7c08"
         ],
         "x": 3135,
         "y": 2400,
@@ -22405,7 +22390,6 @@
         "z": "fd31082e.5487d8",
         "name": "9_In",
         "links": [
-            "786ee408.b667c4",
             "ac692a0253f3bdc4"
         ],
         "x": 235,
@@ -22423,8 +22407,7 @@
         "g": "4b4e4270.d440bc",
         "name": "CallbackIn",
         "links": [
-            "e05fcd52.be3ca8",
-            "84b54255.d93878"
+            "e05fcd52.be3ca8"
         ],
         "x": 255,
         "y": 4220,
@@ -22536,8 +22519,7 @@
         "z": "fd31082e.5487d8",
         "name": "4_Out",
         "links": [
-            "8ddc3a56.0b1778",
-            "5304bdc8.6dda34"
+            "8ddc3a56.0b1778"
         ],
         "x": 3135,
         "y": 1068,
@@ -22549,8 +22531,7 @@
         "z": "fd31082e.5487d8",
         "name": "14_In",
         "links": [
-            "9cae29d0.c4e968",
-            "e2cbc28f.14c87"
+            "9cae29d0.c4e968"
         ],
         "x": 255,
         "y": 2740,
@@ -22708,8 +22689,7 @@
         "z": "fd31082e.5487d8",
         "name": "5_In",
         "links": [
-            "bbf9bf7d.66354",
-            "883acf9b.5a7a2"
+            "bbf9bf7d.66354"
         ],
         "x": 235,
         "y": 1216,
@@ -22758,8 +22738,7 @@
         "z": "fd31082e.5487d8",
         "name": "4_In",
         "links": [
-            "c34ae37f.12318",
-            "3bb19eca.92cfd2"
+            "c34ae37f.12318"
         ],
         "x": 235,
         "y": 1068,
@@ -22965,8 +22944,7 @@
         "z": "fd31082e.5487d8",
         "name": "9_Out",
         "links": [
-            "87522ab0.ac1188",
-            "74e66928.59585"
+            "87522ab0.ac1188"
         ],
         "x": 3135,
         "y": 1960,
@@ -23462,8 +23440,7 @@
         "z": "fd31082e.5487d8",
         "name": "7_Out",
         "links": [
-            "9f7abd5a.96875",
-            "caa59972.e5a99"
+            "9f7abd5a.96875"
         ],
         "x": 3135,
         "y": 1580,
@@ -23475,8 +23452,6 @@
         "z": "fd31082e.5487d8",
         "name": "15_In",
         "links": [
-            "bd3936e8.a36fc8",
-            "2f34781a.c3a4b",
             "0bc19d258678bba4"
         ],
         "x": 255,
@@ -23880,8 +23855,7 @@
         "z": "fd31082e.5487d8",
         "name": "10_In",
         "links": [
-            "8c4835ae.20d5b8",
-            "b636e41a.e74f28"
+            "8c4835ae.20d5b8"
         ],
         "x": 235,
         "y": 2080,
@@ -23915,8 +23889,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "f5d81204558f97fa",
-            "57aec539a62e6dfa"
+            "f5d81204558f97fa"
         ],
         "x": 2360,
         "y": 2940,
@@ -24110,8 +24083,7 @@
         "z": "fd31082e.5487d8",
         "name": "8_Out",
         "links": [
-            "54372dd7.ec8b74",
-            "e2acf77b.dc7f68"
+            "54372dd7.ec8b74"
         ],
         "x": 3135,
         "y": 1800,
@@ -24174,8 +24146,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "f5d81204558f97fa",
-            "57aec539a62e6dfa"
+            "f5d81204558f97fa"
         ],
         "x": 2360,
         "y": 2600,
@@ -24220,8 +24191,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "f5d81204558f97fa",
-            "57aec539a62e6dfa"
+            "f5d81204558f97fa"
         ],
         "x": 2340,
         "y": 2100,
@@ -24266,8 +24236,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "f5d81204558f97fa",
-            "57aec539a62e6dfa"
+            "f5d81204558f97fa"
         ],
         "x": 2340,
         "y": 2280,
@@ -24280,8 +24249,6 @@
         "z": "fd31082e.5487d8",
         "name": "11_Out",
         "links": [
-            "d932c8d.cf79c38",
-            "51031ae7.2a3aa4",
             "b47cf61ef147466d"
         ],
         "x": 3135,
@@ -24432,8 +24399,7 @@
         "g": "d366c10f.cbf158",
         "name": "22_In",
         "links": [
-            "568d5f3.624242",
-            "400d9646.413fe8"
+            "568d5f3.624242"
         ],
         "x": 258,
         "y": 3717,
@@ -24576,8 +24542,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "f5d81204558f97fa",
-            "57aec539a62e6dfa"
+            "f5d81204558f97fa"
         ],
         "x": 2360,
         "y": 2760,
@@ -24590,8 +24555,7 @@
         "z": "fd31082e.5487d8",
         "name": "NOVAAS_informChange_UI",
         "links": [
-            "f5d81204558f97fa",
-            "57aec539a62e6dfa"
+            "f5d81204558f97fa"
         ],
         "x": 2980,
         "y": 280,
@@ -24620,8 +24584,7 @@
         "g": "d366c10f.cbf158",
         "name": "22_Out",
         "links": [
-            "d5524b85.c3c27",
-            "7acbb909.02b518"
+            "d5524b85.c3c27"
         ],
         "x": 3134,
         "y": 3717,
@@ -24633,7 +24596,6 @@
         "z": "fd31082e.5487d8",
         "name": "1_In",
         "links": [
-            "21db2b14.d6f9f4",
             "1686c59a.31af6a"
         ],
         "x": 235,
@@ -24817,8 +24779,7 @@
         "g": "d366c10f.cbf158",
         "name": "status_SBI_In",
         "links": [
-            "796fdeb5.8f68b8",
-            "898d8bc.861cc78"
+            "796fdeb5.8f68b8"
         ],
         "x": 255,
         "y": 3877,
@@ -24862,8 +24823,7 @@
         "z": "fd31082e.5487d8",
         "name": "3_In",
         "links": [
-            "acf520d7.dad7a",
-            "2f77b324.8f4834"
+            "acf520d7.dad7a"
         ],
         "x": 235,
         "y": 996,
