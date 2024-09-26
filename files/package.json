@@ -39,7 +39,7 @@
     "node-red-contrib-crypto-js-dynamic": "0.1.22",
     "node-red-contrib-kafka-manager": "0.5.1",
     "node-red-contrib-cron-plus": "1.5.7",
-    "@flowfuse/node-red-dashboard": "1.12.1"
+    "@flowfuse/node-red-dashboard": "1.17.1"
   },
   "node-red": {
     "settings": {
