@@ -35,7 +35,7 @@ Build:
   stage: build
   script:
     # exctract AAS model version from .env
-    - export AAS_VERSION=$(grep '^AAS_VERSION=' .env | cut -d'=' -f2-')
+    - export AAS_VERSION=$(grep '^AAS_VERSION=' .env | cut -d'=' -f2-)
     - echo "AAS_VERSION is $AAS_VERSION"
     # fetches the latest image (not failing if image is not found)
     - docker pull $CI_REGISTRY_IMAGE:latest || true
