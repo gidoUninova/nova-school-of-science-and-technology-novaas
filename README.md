@@ -65,7 +65,7 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 1. Run the docker and/or docker-compose commands.
 1. Change the logic to ensure the connection of NOVAAS to the asset (in the example the logic to handle this connection is part of the "DPDM/OperationalData" flow).
 
-###Notes
+### Notes
 
 - The current aasx model file has been generated using the following version of the AASX Explorer selecting the option aasx w/ JSON, this option is supported by the latest version of the AASX and fully tested.
 
@@ -77,7 +77,7 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 ![Semantic description of image](/source/images/Screenshot 2021-12-08 at 21.18.png)
 ""Submodel Element" property configuration"
 
-###Supported SubmodelElements
+### Supported SubmodelElements
 
 As of now, not all new SubmodelElements of the AAS V3 are supported. Additional elements will be added in future updates. The currently supported SubmodelElements are:
 
