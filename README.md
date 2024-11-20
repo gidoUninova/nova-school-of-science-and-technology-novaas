@@ -6,11 +6,12 @@ The AAS implements the concept of the Digital Twin of a physical object turning 
 This repository contains file that are needed to build a docker image for NOVAAS.
 In order to install and run it, dowload/clone the repository and build and run the dockerfile and/or the docker-compose file.
 The NOVAAS repository is preloaded with a set of files (documentation, asset, manifest) that are used to show the component. For creating a new specific NOVAAS these files need to be substituted with the proper ones.
+The docker-compose file has a set of environment variables that are used during both the build and deploy tasks. Especifically, NOVAAS provides retro compatibility with V2 aas metamodel, this option is the default option. If you want to laod NOVAAS with a V3 model it is important to set "AAS_VERSION" environment variables to the value of "V3".
 
 ## Using dockerfile
 The docker command to create the NOVAAS image is the following:
 
-`docker build -t name_of_the_image:ver .`
+`dokcer build --build-arg AAS_VERSION=V2 -t name_of_the_image:ver .`
 
 Once the image has been created the followig docker command can be used to start a new container that runs the NOVAAS image:
 
@@ -75,6 +76,18 @@ NOVAAS has been designed in order to be as generic as possible, if you want to r
 
 ![Semantic description of image](/source/images/Screenshot 2021-12-08 at 21.18.png)
 ""Submodel Element" property configuration"
+
+###Supported SubmodelElements
+
+As of now, not all new SubmodelElements of the AAS V3 are supported. Additional elements will be added in future updates. The currently supported SubmodelElements are:
+
+    SubmodelElementCollection
+    Property
+    MultiLanguageProperty
+    File
+    Blob
+    Operation
+    BasicElementEvent
 
 
 ## NOVAAS in action (Click on the Image to Show the Video)
