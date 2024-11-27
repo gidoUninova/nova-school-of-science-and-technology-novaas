@@ -39,14 +39,14 @@
         "id": "7585249f.880c0c",
         "type": "tab",
         "label": "AAS - Environment V2",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "76d11e83ac083a40",
         "type": "tab",
         "label": "AAS - Environment V3",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
@@ -61,14 +61,14 @@
         "id": "32c5a22a534a4588",
         "type": "tab",
         "label": "AAS - UserInterface V3",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
         "id": "18bd4aa6085b5dfb",
         "type": "tab",
         "label": "AAS - UserInterface V2",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -9817,7 +9817,7 @@
             },
             {
                 "name": "PropertyLink",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CylinderStatus",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CylinderStatus",
                 "type": "str"
             },
             {
@@ -9827,7 +9827,7 @@
             },
             {
                 "name": "PropertyLinkEvt",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CylinderStatusEvt",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CylinderStatusEvt",
                 "type": "str"
             }
         ],
@@ -10417,7 +10417,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1",
+        "repeat": "2",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -10799,7 +10799,7 @@
             },
             {
                 "name": "PropertyLink",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CurrentOperatingPressure",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CurrentOperatingPressure",
                 "type": "str"
             },
             {
@@ -10809,7 +10809,7 @@
             },
             {
                 "name": "PropertyLinkEvt",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CurrentOperatingPressureEvt",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CurrentOperatingPressureEvt",
                 "type": "str"
             }
         ],
@@ -11037,7 +11037,7 @@
             },
             {
                 "name": "PropertyLink",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimePred",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimePred",
                 "type": "str"
             },
             {
@@ -11047,7 +11047,7 @@
             },
             {
                 "name": "PropertyLinkEvt",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimePredEvt",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimePredEvt",
                 "type": "str"
             }
         ],
@@ -11443,7 +11443,7 @@
             },
             {
                 "name": "PropertyLink",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ValvePosition",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ValvePosition",
                 "type": "str"
             },
             {
@@ -11453,7 +11453,7 @@
             },
             {
                 "name": "PropertyLinkEvt",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ValvePositionEvt",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ValvePositionEvt",
                 "type": "str"
             }
         ],
@@ -11526,7 +11526,7 @@
             },
             {
                 "name": "PropertyLink",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTime",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTime",
                 "type": "str"
             },
             {
@@ -11536,7 +11536,7 @@
             },
             {
                 "name": "PropertyLinkEvt",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimeEvt",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimeEvt",
                 "type": "str"
             }
         ],
@@ -12092,7 +12092,7 @@
             },
             {
                 "name": "PropertyLink",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/Cycle",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/Cycle",
                 "type": "str"
             },
             {
@@ -12102,7 +12102,7 @@
             },
             {
                 "name": "PropertyLinkEvt",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CycleEvt",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/CycleEvt",
                 "type": "str"
             }
         ],
@@ -12166,7 +12166,7 @@
             },
             {
                 "name": "PropertyLink",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimeMovingAvg",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimeMovingAvg",
                 "type": "str"
             },
             {
@@ -12176,7 +12176,7 @@
             },
             {
                 "name": "PropertyLinkEvt",
-                "value": "aHR0cDovL3NtYXJ0LmZlc3RvLmNvbS9pZC9pbnN0YW5jZS9hYXMvNTE0MF8wMTQyXzMwOTFfNDM0MA==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimeMovingAvgEvt",
+                "value": "aHR0cHM6Ly9leGFtcGxlLmNvbS9pZHMvc20vMjA1NF83MDYyXzExNDJfOTg2Mg==/d3d3LmNvbXBhbnkuY29tL2lkcy9zbS85MDU1XzQxMjJfNDAwMl83NTcw/ResponseTimeMovingAvgEvt",
                 "type": "str"
             }
         ],
@@ -16213,7 +16213,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "ReadSubmodelElement",
-        "func": "var iterate = function(submodelElementId, collectionIds, submodelElements){\n    for(var index = 0; index < submodelElements.length; index++) {\n        var submodelElement = submodelElements[index];\n        if ((submodelElement.modelType.name !== \"SubmodelElementCollection\" && collectionIds.length == 0) || (submodelElement.modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1)){\n               if(submodelElement.idShort === submodelElementId){\n                    return submodelElement;\n                    \n                }\n            \n            }  else {\n                for(var collIndex = 0; collIndex < collectionIds.length; collIndex++){\n                    var collectionId = collectionIds[collIndex];\n                    if(submodelElement.idShort === collectionId){\n                        collectionIds.splice(collIndex, 1);\n                        var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                        return result;\n                }\n                }\n                \n            }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelElementId.split(\".\");\n//submodelId = splittedSubmodel[0];\n\nif(splittedSubmodel.length > 1){\n    for(var index = 0; index < splittedSubmodel.length; index++){\n\n        if(index < (splittedSubmodel.length - 1)){\n            submodelCollectionId.push(splittedSubmodel[index]);\n        } else {\n            submodelElementId = splittedSubmodel[index];\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif(msg.jsonataStatus == \"Success\"){\n    var submodels = msg.jsonataResult;\n    for(var index1 = 0; index1 < submodels.length; index1++){\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\"){\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if(selectedSubmodels.length > 0){\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for(var index3 = 0; index3 < shells.length; index3++){\n            if(shells[index3].identification.id === ShellId){\n                var submodelRefs = shells[index3].submodels;\n                for(var index4 = 0; index4 < submodelRefs.length; index4++){\n                    var ref = submodelRefs[index4];\n                    for(var index5 = 0; index5 < selectedSubmodels.length; index5++){\n                        if(ref.keys[0].value === selectedSubmodels[index5].identification.id){\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                        }\n                    }\n                }\n            }\n        }\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [ { \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"SubmodelElement with id:\" + submodelElementId + \" not found\", \"Timestamp\": Date.now() } ] };\n    \n    }\n    \n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [ { \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() } ] };\n}\n\n\n\nreturn msg;",
+        "func": "var iterate = function(submodelElementId, collectionIds, submodelElements){\n    for(var index = 0; index < submodelElements.length; index++) {\n        var submodelElement = submodelElements[index];\n        if ((submodelElement.modelType.name !== \"SubmodelElementCollection\" && collectionIds.length == 0) || (submodelElement.modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1)){\n               if(submodelElement.idShort === submodelElementId){\n                    return submodelElement;\n                    \n                }\n            \n            }  else {\n                for(var collIndex = 0; collIndex < collectionIds.length; collIndex++){\n                    var collectionId = collectionIds[collIndex];\n                    if(submodelElement.idShort === collectionId){\n                        collectionIds.splice(collIndex, 1);\n                        var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                        return result;\n                }\n                }\n                \n            }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelElementId.split(\".\");\n//submodelId = splittedSubmodel[0];\n\nif(splittedSubmodel.length > 1){\n    for(var index = 0; index < splittedSubmodel.length; index++){\n\n        if(index < (splittedSubmodel.length - 1)){\n            submodelCollectionId.push(splittedSubmodel[index]);\n        } else {\n            submodelElementId = splittedSubmodel[index];\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif(msg.jsonataStatus == \"Success\"){\n    var submodels = msg.jsonataResult;\n    for(var index1 = 0; index1 < submodels.length; index1++){\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\"){\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if(selectedSubmodels.length > 0){\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for(var index3 = 0; index3 < shells.length; index3++){\n            if(shells[index3].identification.id === ShellId){\n                var submodelRefs = shells[index3].submodels;\n                for(var index4 = 0; index4 < submodelRefs.length; index4++){\n                    var ref = submodelRefs[index4];\n                    for(var index5 = 0; index5 < selectedSubmodels.length; index5++){\n                        if(ref.keys[0].value === selectedSubmodels[index5].identification.id){\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                            return msg;\n                        }\n                    }\n                }\n            }\n        }\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [ { \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"SubmodelElement with id:\" + submodelElementId + \" not found\", \"Timestamp\": Date.now() } ] };\n    \n    }\n    \n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [ { \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() } ] };\n}\n\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1330,
@@ -17945,7 +17945,7 @@
             },
             {
                 "t": "eq",
-                "v": "404",
+                "v": "400",
                 "vt": "str"
             }
         ],
@@ -18470,7 +18470,7 @@
         "type": "debug",
         "z": "76d11e83ac083a40",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -18742,7 +18742,7 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "Reading SubmodelElement",
-        "func": "var iterate = function (submodelElementId, collectionIds, submodelElements) {\n    for (var index = 0; index < submodelElements.length; index++) {\n        var submodelElement = submodelElements[index];\n        if ((submodelElement.modelType.name !== \"SubmodelElementCollection\" && collectionIds.length == 0) || (submodelElement.modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1)) {\n            if (submodelElement.idShort === submodelElementId) {\n                return submodelElement;\n\n            }\n\n        } else {\n            for (var collIndex = 0; collIndex < collectionIds.length; collIndex++) {\n                var collectionId = collectionIds[collIndex];\n                if (submodelElement.idShort === collectionId) {\n                    collectionIds.splice(collIndex, 1);\n                    var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                    return result;\n                }\n            }\n\n        }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelElementId.split(\".\");\n//submodelId = splittedSubmodel[0];\n\nif (splittedSubmodel.length > 1) {\n    for (var index = 0; index < splittedSubmodel.length; index++) {\n\n        if (index < (splittedSubmodel.length - 1)) {\n            submodelCollectionId.push(splittedSubmodel[index]);\n        } else {\n            submodelElementId = splittedSubmodel[index];\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif (msg.jsonataStatus == \"Success\") {\n    var submodels = msg.jsonataResult;\n    for (var index1 = 0; index1 < submodels.length; index1++) {\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\") {\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if (selectedSubmodels.length > 0) {\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for (var index3 = 0; index3 < shells.length; index3++) {\n            if (shells[index3].id === ShellId) {\n                var submodelRefs = shells[index3].submodels;\n                for (var index4 = 0; index4 < submodelRefs.length; index4++) {\n                    var ref = submodelRefs[index4];\n                    for (var index5 = 0; index5 < selectedSubmodels.length; index5++) {\n                        if (ref.keys[0].value === selectedSubmodels[index5].id) {\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                        }\n                    }\n                }\n            }\n        }\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"SubmodelElement with id:\" + submodelElementId + \" not found\", \"Timestamp\": Date.now() }] };\n\n    }\n\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\n\n\nreturn msg;",
+        "func": "var iterate = function (submodelElementId, collectionIds, submodelElements) {\n    for (var index = 0; index < submodelElements.length; index++) {\n        var submodelElement = submodelElements[index];\n        if ((submodelElement.modelType.name !== \"SubmodelElementCollection\" && collectionIds.length == 0) || (submodelElement.modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1)) {\n            if (submodelElement.idShort === submodelElementId) {\n                return submodelElement;\n\n            }\n\n        } else {\n            for (var collIndex = 0; collIndex < collectionIds.length; collIndex++) {\n                var collectionId = collectionIds[collIndex];\n                if (submodelElement.idShort === collectionId) {\n                    collectionIds.splice(collIndex, 1);\n                    var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                    return result;\n                }\n            }\n\n        }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelElementId.split(\".\");\n//submodelId = splittedSubmodel[0];\n\nif (splittedSubmodel.length > 1) {\n    for (var index = 0; index < splittedSubmodel.length; index++) {\n\n        if (index < (splittedSubmodel.length - 1)) {\n            submodelCollectionId.push(splittedSubmodel[index]);\n        } else {\n            submodelElementId = splittedSubmodel[index];\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif (msg.jsonataStatus == \"Success\") {\n    var submodels = msg.jsonataResult;\n    for (var index1 = 0; index1 < submodels.length; index1++) {\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\") {\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if (selectedSubmodels.length > 0) {\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for (var index3 = 0; index3 < shells.length; index3++) {\n            if (shells[index3].id === ShellId) {\n                var submodelRefs = shells[index3].submodels;\n                for (var index4 = 0; index4 < submodelRefs.length; index4++) {\n                    var ref = submodelRefs[index4];\n                    for (var index5 = 0; index5 < selectedSubmodels.length; index5++) {\n                        if (ref.keys[0].value === selectedSubmodels[index5].id) {\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                            return msg;\n                        }\n                    }\n                }\n            }\n        }\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Aas with id:\" + ShellId + \" not found\", \"Timestamp\": Date.now() }] };\n\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"SubmodelElement with id:\" + submodelElementId + \" not found\", \"Timestamp\": Date.now() }] };\n\n    }\n\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19012,7 +19012,7 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "Getting aass",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].identification.id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell];\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell];\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -19502,8 +19502,9 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "Getting aas submodels",
-        "func": "var submodelId = msg.req.params.submodelId;\nvar submodelCollectionId = [];\nsubmodelCollectionId = msg.req.params.submodelId.split(\".\");\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let idShort = submodels[indexSubmodel].idShort;\n    if (idShort == submodelId){\n        msg.jsonataResult = [];\n        msg.jsonataResult.push(submodels[indexSubmodel]);\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "func": "var submodelId = msg.req.params.submodelId;\nvar submodelCollectionId = [];\nsubmodelCollectionId = msg.req.params.submodelId.split(\".\");\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let id = submodels[indexSubmodel].id;\n    if (id == submodelId){\n        msg.jsonataResult = [];\n        msg.jsonataResult.push(submodels[indexSubmodel]);\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -22234,7 +22235,7 @@
         "type": "function",
         "z": "32c5a22a534a4588",
         "name": "prepareTable",
-        "func": "var prepareData = [];\n\nif (Array.isArray(msg.payload)) {\n    for (var i = 0; i < msg.payload.length; i++) {\n        prepareData.push({\n            identification: msg.payload[i].identification.id,\n            idShort: msg.payload[i].idShort,\n            modelType: msg.payload[i].modelType.name,\n            embeddedDataSpecifications: (msg.payload[i].descriptions && msg.payload[i].descriptions[0]) ? msg.payload[i].descriptions[0].text : \"Unknown\",\n            descriptions: (msg.payload[i].embeddedDataSpecifications && msg.payload[i].embeddedDataSpecifications[0] && msg.payload[i].embeddedDataSpecifications[0].dataSpecificationContent) ? msg.payload[i].embeddedDataSpecifications[0].dataSpecificationContent.dataType : \"Unknown\"\n        });\n    }\n}\n\nmsg.payload = prepareData;\nreturn msg;",
+        "func": "var prepareData = [];\n\nif (Array.isArray(msg.payload)) {\n    for (var i = 0; i < msg.payload.length; i++) {\n        prepareData.push({\n            identification: msg.payload[i].id,\n            idShort: msg.payload[i].idShort,\n            modelType: msg.payload[i].modelType.name,\n            embeddedDataSpecifications: (msg.payload[i].descriptions && msg.payload[i].descriptions[0]) ? msg.payload[i].descriptions[0].text : \"Unknown\",\n            descriptions: (msg.payload[i].embeddedDataSpecifications && msg.payload[i].embeddedDataSpecifications[0] && msg.payload[i].embeddedDataSpecifications[0].dataSpecificationContent) ? msg.payload[i].embeddedDataSpecifications[0].dataSpecificationContent.dataType : \"Unknown\"\n        });\n    }\n}\n\nmsg.payload = prepareData;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22465,7 +22466,7 @@
         "ui": "",
         "name": "counters 2.0",
         "order": 3,
-        "width": "12",
+        "width": "6",
         "height": "1",
         "head": "",
         "format": "<template>\n  <v-card append-icon=\"mdi-counter\" size=\"x-large\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:500px;\">\n    <template v-slot:title>\n      <span class=\"font-weight-black\">Counters</span>\n    </template>\n    <div class=\"text-left\">\n      <v-chip class=\"ma-2\" color=\"indigo\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Asset Administration Shells: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].assetAdministrationShells ?\n        msg.payload[1].assetAdministrationShells.length : 0 }}\n      </v-chip>\n\n      <v-chip prepend-icon=\"mdi-checkbox-marked-circle\" class=\"ma-2\" color=\"orange\" size=\"x-large\">\n        Asset: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].assets ? msg.payload[1].assets.length : 0 }}\n      </v-chip>\n\n      <v-chip prepend-icon=\"mdi-checkbox-marked-circle\" class=\"ma-2\" color=\"primary\" size=\"x-large\">\n        Submodels: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].submodels ? msg.payload[1].submodels.length : 0 }}\n      </v-chip>\n\n      <v-chip class=\"ma-2\" color=\"green\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Submodel Elements: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].submodels ?\n        msg.payload[1].submodels.reduce((sum, submodel) => sum + (submodel.submodelElements ?\n        submodel.submodelElements.length : 0), 0) : 0 }}\n      </v-chip>\n\n      <v-chip class=\"ma-2\" color=\"teal\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Concept Descriptions: {{ msg.original && msg.original[1] && msg.original[1].conceptDescriptions ?\n        msg.original[1].conceptDescriptions.length : 0 }}</b></p>\n      </v-chip>\n    </div>\n\n  </v-card>\n</template>",
@@ -22506,7 +22507,7 @@
         "type": "debug",
         "z": "32c5a22a534a4588",
         "name": "debug 381",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22523,7 +22524,7 @@
         "type": "debug",
         "z": "32c5a22a534a4588",
         "name": "debug 383",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22540,7 +22541,7 @@
         "type": "debug",
         "z": "32c5a22a534a4588",
         "name": "debug 384",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22670,7 +22671,7 @@
         "type": "function",
         "z": "32c5a22a534a4588",
         "name": "Generate Tree from AAS model V3",
-        "func": "function extractData(submodelElements, items, rootName) {\n  function getRandomNumber() {\n    return Math.floor(Math.random() * 2001) + 10000;\n  }\n\n  for (let submodelElementIndex = 0; submodelElementIndex < submodelElements.length; submodelElementIndex++) {\n    let submodelElement = submodelElements[submodelElementIndex];\n\n    if (submodelElement.modelType !== \"SubmodelElementCollection\") {\n      let propertyItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        propertyItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      propertyItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      propertyItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n\n      // Check if valueType and dataObjectType are defined\n      if (submodelElement.valueType && submodelElement.valueType.dataObjectType) {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: \" + submodelElement.valueType.dataObjectType.name });\n      } else {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: undefined\" });\n      }\n\n      if (submodelElement.modelType == \"File\") {\n        propertyItem.children.push({ file: 'txt', to: submodelElement.value });\n      }\n\n\n      propertyItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      propertyItem.children.push({ file: 'txt', title: \"value: \" + submodelElement.value });\n      items.push(propertyItem);\n\n    } else {\n      let collectionItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        collectionItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      collectionItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      collectionItem.children.push({ file: 'txt', title: \"id: \" + submodelElement.id });\n      collectionItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n      collectionItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      items.push(collectionItem);\n      extractData(submodelElement.value, collectionItem.children, \"value\");\n    }\n  }\n\n  return;\n}\n\nfunction filterListByCondition(list1, list2) {\n  // Create a set of IDs from list2 for quick lookup\n  const idSet = new Set(list2.map(item => item.keys[0].value));\n\n  // Filter the elements of list1 based on the presence of the same id in list2\n  return list1.filter(item => idSet.has(item.id));\n}\n\nmsg.properties = [];\nmsg.collections = [];\n\nlet items = [];\nlet item = { title: \"\", children: [] };\nlet children = { title: \"\" };\n\nlet manifest = msg.payload[1];\nlet aass = manifest.assetAdministrationShells;\n\n// Iterate over aas\nfor (let aasIndex = 0; aasIndex < aass.length; aasIndex++) {\n  let item = {};\n  item.title = \"Asset Administration Shell: [\" + aasIndex + \"]\";\n  item.children = [];\n\n  item.children.push({ file: 'txt', title: \"idShort: \" + aass[aasIndex].idShort });\n  item.children.push({ file: 'txt', title: \"id: \" + aass[aasIndex].id });\n  item.children.push({ file: 'txt', title: \"assetInformation: \" + aass[aasIndex].asset.keys[0].value });\n\n  let submodelsItem = {};\n  submodelsItem.title = \"Submodels\";\n  submodelsItem.children = [];\n\n  // Iterate over submodels\n  let submodels = manifest.submodels;\n  let submodelReferences = aass[aasIndex].submodels;\n\n  // Iterate over references\n  let result = filterListByCondition(submodels, submodelReferences);\n  msg.result = result;\n\n  for (let resultIndex = 0; resultIndex < result.length; resultIndex++) {\n    let submodelItem = {};\n    submodelItem.title = \"Submodel: [\" + resultIndex + \"]\";\n    submodelItem.children = [];\n\n    submodelItem.children.push({ file: 'txt', title: \"idShort: \" + result[resultIndex].idShort });\n    submodelItem.children.push({ file: 'txt', title: \"id: \" + result[resultIndex].id });\n\n    if (result[resultIndex].semanticId.keys.length > 0) {\n      submodelItem.children.push({ file: 'txt', title: \"Semantic Id: \" + result[resultIndex].semanticId.keys[0].value });\n    }\n\n    let submodelElementsItem = { title: \"SubmodelElements\", children: [] };\n    submodelItem.children.push(submodelElementsItem);\n\n    let submodelElements = result[resultIndex].submodelElements;\n\n    msg.collections.push(submodelElements);\n    extractData(submodelElements, submodelElementsItem.children);\n    submodelsItem.children.push(submodelItem);\n  }\n\n  item.children.push(submodelsItem);\n  items.push(item);\n}\n\nmsg.items = items;\n\nreturn msg;",
+        "func": "function extractData(submodelElements, items, rootName) {\n  function getRandomNumber() {\n    return Math.floor(Math.random() * 2001) + 10000;\n  }\n\n  for (let submodelElementIndex = 0; submodelElementIndex < submodelElements.length; submodelElementIndex++) {\n    let submodelElement = submodelElements[submodelElementIndex];\n\n    if (submodelElement.modelType !== \"SubmodelElementCollection\") {\n      let propertyItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        propertyItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      propertyItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      propertyItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n\n      // Check if valueType and dataObjectType are defined\n      if (submodelElement.valueType && submodelElement.valueType.dataObjectType) {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: \" + submodelElement.valueType.dataObjectType.name });\n      } else {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: undefined\" });\n      }\n\n      if (submodelElement.modelType == \"File\") {\n        propertyItem.children.push({ file: 'txt', to: submodelElement.value });\n      }\n\n\n      propertyItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      propertyItem.children.push({ file: 'txt', title: \"value: \" + submodelElement.value });\n      items.push(propertyItem);\n\n    } else {\n      let collectionItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        collectionItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      collectionItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      collectionItem.children.push({ file: 'txt', title: \"id: \" + submodelElement.id });\n      collectionItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n      collectionItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      items.push(collectionItem);\n      extractData(submodelElement.value, collectionItem.children, \"value\");\n    }\n  }\n\n  return;\n}\n\nfunction filterListByCondition(list1, list2) {\n  // Create a set of IDs from list2 for quick lookup\n  const idSet = new Set(list2.map(item => item.keys[0].value));\n\n  // Filter the elements of list1 based on the presence of the same id in list2\n  return list1.filter(item => idSet.has(item.id));\n}\n\nmsg.properties = [];\nmsg.collections = [];\n\nlet items = [];\nlet item = { title: \"\", children: [] };\nlet children = { title: \"\" };\n\nlet manifest = msg.payload[1];\nlet aass = manifest.assetAdministrationShells;\n\n// Iterate over aas\nfor (let aasIndex = 0; aasIndex < aass.length; aasIndex++) {\n  let item = {};\n  item.title = \"Asset Administration Shell: [\" + aasIndex + \"]\";\n  item.children = [];\n\n  item.children.push({ file: 'txt', title: \"idShort: \" + aass[aasIndex].idShort });\n  item.children.push({ file: 'txt', title: \"id: \" + aass[aasIndex].id });\n  item.children.push({ file: 'txt', title: \"assetInformation: \" + aass[aasIndex].assetInformation.globalAssetId });\n\n  let submodelsItem = {};\n  submodelsItem.title = \"Submodels\";\n  submodelsItem.children = [];\n\n  // Iterate over submodels\n  let submodels = manifest.submodels;\n  let submodelReferences = aass[aasIndex].submodels;\n\n  // Iterate over references\n  let result = filterListByCondition(submodels, submodelReferences);\n  msg.result = result;\n\n  for (let resultIndex = 0; resultIndex < result.length; resultIndex++) {\n    let submodelItem = {};\n    submodelItem.title = \"Submodel: [\" + resultIndex + \"]\";\n    submodelItem.children = [];\n\n    submodelItem.children.push({ file: 'txt', title: \"idShort: \" + result[resultIndex].idShort });\n    submodelItem.children.push({ file: 'txt', title: \"id: \" + result[resultIndex].id });\n    if (typeof result[resultIndex].semanticId != \"undefined\"){\n      if (result[resultIndex].semanticId.keys.length > 0) {\n        submodelItem.children.push({ file: 'txt', title: \"Semantic Id: \" + result[resultIndex].semanticId.keys[0].value });\n      }\n    }\n\n    let submodelElementsItem = { title: \"SubmodelElements\", children: [] };\n    submodelItem.children.push(submodelElementsItem);\n\n    let submodelElements = result[resultIndex].submodelElements;\n\n    msg.collections.push(submodelElements);\n    extractData(submodelElements, submodelElementsItem.children);\n    submodelsItem.children.push(submodelItem);\n  }\n\n  item.children.push(submodelsItem);\n  items.push(item);\n}\n\nmsg.items = items;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22697,7 +22698,7 @@
         "width": "6",
         "height": "1",
         "head": "",
-        "format": "<template>\n  <v-card size=\"x-large\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:500px;\">\n    <div style=\"display: flex; justify-content: center; align-items: center; padding: 1%\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 3248 1077\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n        <path class=\"fil0\"\n          d=\"M1611 533l-128 321 -107 -271 0 0c-83,-188 -270,-319 -488,-319 -130,0 -248,46 -340,123l97 97c67,-53 151,-84 243,-84 163,0 304,100 364,242l0 -1 177 419 109 0 222 -527 -149 0zm-1611 527l0 -527 137 0 252 322 0 -322 137 0 0 527 -137 0 -252 -322 0 322 -137 0zm2917 -158c30,28 74,54 121,54 28,0 45,-9 54,-18 7,-8 13,-20 13,-34 0,-10 -4,-22 -15,-31 -14,-12 -34,-18 -68,-28l-36 -11c-22,-7 -54,-19 -76,-43 -27,-29 -30,-66 -30,-93 0,-65 25,-105 48,-128 27,-27 72,-50 136,-50 52,0 113,17 163,43l-55 107c-41,-32 -72,-36 -90,-36 -13,0 -32,4 -45,16 -8,8 -14,17 -14,29 0,9 2,16 8,23 4,5 13,15 45,24l42 13c34,10 69,22 96,52 27,29 34,58 34,94 0,49 -12,95 -50,133 -45,45 -99,54 -156,54 -33,0 -64,-3 -103,-17 -9,-3 -42,-16 -80,-42l58 -111zm-482 158l-144 0 202 -527 150 0 198 527 -146 0 -128 -364 -132 364zm-564 0l-145 0 203 -527 149 0 199 527 -146 0 -129 -364 -131 364z\" />\n        <path class=\"fil1\"\n          d=\"M1208 330l123 -91c0,-2 0,-3 0,-4 2,-24 24,-42 48,-40 24,2 42,23 40,48 -2,24 -24,42 -48,40 -3,-1 -5,-1 -8,-2l-111 83c-14,-12 -29,-23 -44,-34zm338 69c-2,25 -23,42 -48,40l-101 111c-8,-16 -17,-33 -27,-49l89 -97c-1,-4 -1,-8 -1,-12 2,-25 24,-42 48,-40 24,2 42,23 40,47zm-658 544c-81,0 -147,-66 -147,-147 0,-81 66,-146 147,-146 81,0 146,65 146,146 0,81 -65,147 -146,147zm147 -486l-88 64c-1,0 -2,0 -3,1 -18,-4 -37,-6 -56,-6 -155,0 -281,125 -281,280 0,155 126,281 281,281 152,0 275,-121 280,-271l39 -44 42 -46c-26,-117 -107,-213 -214,-259zm726 -389c-28,-34 -68,-55 -111,-61 8,12 12,27 10,43 0,5 -1,9 -2,13 24,6 46,20 62,39 21,25 31,56 28,88 -4,39 -26,72 -57,92 -6,-5 -13,-8 -21,-8 -25,-3 -46,15 -48,40 -2,24 16,45 40,47 20,2 37,-9 44,-27 52,-26 89,-77 95,-139 4,-46 -10,-91 -40,-127zm-165 243c1,-5 2,-10 3,-14 -57,-14 -97,-68 -92,-128 3,-32 18,-62 43,-82 4,-4 8,-7 13,-9 6,5 15,9 24,10 24,2 46,-16 48,-40 2,-24 -16,-46 -40,-48 -18,-1 -34,8 -42,23 -13,6 -26,14 -37,23 -36,30 -57,72 -62,118 -8,93 59,176 151,188 -7,-12 -10,-26 -9,-41zm1005 -17c-2,16 -15,27 -31,28 -1,0 -1,0 -2,0 -1,0 -2,0 -4,0 -17,-2 -30,-18 -28,-36 2,-18 19,-31 37,-29 0,0 0,0 0,0l0 0c18,3 30,19 28,37zm53 -4c0,-43 -32,-79 -75,-85 -1,0 -3,0 -4,0l0 0 -679 -143c-6,-14 -19,-24 -34,-26 -24,-3 -46,14 -50,38 -3,25 15,47 39,50 12,1 24,-3 33,-10l614 129c-7,10 -12,23 -14,36 0,4 0,7 0,11l0 0 0 24 -602 -53c-7,-10 -18,-18 -32,-20 -24,-3 -46,14 -49,39 -3,24 14,46 38,49 15,2 29,-4 39,-15l606 53 0 135 52 0 0 -130 18 1c1,1 2,1 4,1 15,2 30,0 43,-6l0 134 53 0 0 -212 0 0zm-1723 510c-2,25 -23,42 -47,40 -24,-2 -42,-23 -40,-47 2,-25 23,-43 48,-40 24,2 42,23 39,47z\" />\n        </svg>\n    </div>\n  </v-card>\n</template>\n<style>\n  .fil0 {\n    fill: #3456A1\n  }\n  .fil1 {\n    fill: #000000\n  }\n</style>",
+        "format": "<template>\n  <v-card size=\"x-large\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:500px;\">\n    <div style=\"display: flex; justify-content: center; align-items: center; padding: 1%\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" :width=\"500\" viewBox=\"0 0 3248 1077\" \n      style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\">\n        <path class=\"fil0\"\n          d=\"M1611 533l-128 321 -107 -271 0 0c-83,-188 -270,-319 -488,-319 -130,0 -248,46 -340,123l97 97c67,-53 151,-84 243,-84 163,0 304,100 364,242l0 -1 177 419 109 0 222 -527 -149 0zm-1611 527l0 -527 137 0 252 322 0 -322 137 0 0 527 -137 0 -252 -322 0 322 -137 0zm2917 -158c30,28 74,54 121,54 28,0 45,-9 54,-18 7,-8 13,-20 13,-34 0,-10 -4,-22 -15,-31 -14,-12 -34,-18 -68,-28l-36 -11c-22,-7 -54,-19 -76,-43 -27,-29 -30,-66 -30,-93 0,-65 25,-105 48,-128 27,-27 72,-50 136,-50 52,0 113,17 163,43l-55 107c-41,-32 -72,-36 -90,-36 -13,0 -32,4 -45,16 -8,8 -14,17 -14,29 0,9 2,16 8,23 4,5 13,15 45,24l42 13c34,10 69,22 96,52 27,29 34,58 34,94 0,49 -12,95 -50,133 -45,45 -99,54 -156,54 -33,0 -64,-3 -103,-17 -9,-3 -42,-16 -80,-42l58 -111zm-482 158l-144 0 202 -527 150 0 198 527 -146 0 -128 -364 -132 364zm-564 0l-145 0 203 -527 149 0 199 527 -146 0 -129 -364 -131 364z\" />\n        <path class=\"fil1\"\n          d=\"M1208 330l123 -91c0,-2 0,-3 0,-4 2,-24 24,-42 48,-40 24,2 42,23 40,48 -2,24 -24,42 -48,40 -3,-1 -5,-1 -8,-2l-111 83c-14,-12 -29,-23 -44,-34zm338 69c-2,25 -23,42 -48,40l-101 111c-8,-16 -17,-33 -27,-49l89 -97c-1,-4 -1,-8 -1,-12 2,-25 24,-42 48,-40 24,2 42,23 40,47zm-658 544c-81,0 -147,-66 -147,-147 0,-81 66,-146 147,-146 81,0 146,65 146,146 0,81 -65,147 -146,147zm147 -486l-88 64c-1,0 -2,0 -3,1 -18,-4 -37,-6 -56,-6 -155,0 -281,125 -281,280 0,155 126,281 281,281 152,0 275,-121 280,-271l39 -44 42 -46c-26,-117 -107,-213 -214,-259zm726 -389c-28,-34 -68,-55 -111,-61 8,12 12,27 10,43 0,5 -1,9 -2,13 24,6 46,20 62,39 21,25 31,56 28,88 -4,39 -26,72 -57,92 -6,-5 -13,-8 -21,-8 -25,-3 -46,15 -48,40 -2,24 16,45 40,47 20,2 37,-9 44,-27 52,-26 89,-77 95,-139 4,-46 -10,-91 -40,-127zm-165 243c1,-5 2,-10 3,-14 -57,-14 -97,-68 -92,-128 3,-32 18,-62 43,-82 4,-4 8,-7 13,-9 6,5 15,9 24,10 24,2 46,-16 48,-40 2,-24 -16,-46 -40,-48 -18,-1 -34,8 -42,23 -13,6 -26,14 -37,23 -36,30 -57,72 -62,118 -8,93 59,176 151,188 -7,-12 -10,-26 -9,-41zm1005 -17c-2,16 -15,27 -31,28 -1,0 -1,0 -2,0 -1,0 -2,0 -4,0 -17,-2 -30,-18 -28,-36 2,-18 19,-31 37,-29 0,0 0,0 0,0l0 0c18,3 30,19 28,37zm53 -4c0,-43 -32,-79 -75,-85 -1,0 -3,0 -4,0l0 0 -679 -143c-6,-14 -19,-24 -34,-26 -24,-3 -46,14 -50,38 -3,25 15,47 39,50 12,1 24,-3 33,-10l614 129c-7,10 -12,23 -14,36 0,4 0,7 0,11l0 0 0 24 -602 -53c-7,-10 -18,-18 -32,-20 -24,-3 -46,14 -49,39 -3,24 14,46 38,49 15,2 29,-4 39,-15l606 53 0 135 52 0 0 -130 18 1c1,1 2,1 4,1 15,2 30,0 43,-6l0 134 53 0 0 -212 0 0zm-1723 510c-2,25 -23,42 -47,40 -24,-2 -42,-23 -40,-47 2,-25 23,-43 48,-40 24,2 42,23 39,47z\" />\n        </svg>\n    </div>\n  </v-card>\n</template>\n<style>\n  .fil0 {\n    fill: #3456A1\n  }\n  .fil1 {\n    fill: #000000\n  }\n</style>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
