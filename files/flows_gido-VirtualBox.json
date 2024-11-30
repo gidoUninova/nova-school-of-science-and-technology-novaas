@@ -21198,36 +21198,6 @@
         ]
     },
     {
-        "id": "9259495cccc00f9b",
-        "type": "unsafe-function",
-        "z": "32c5a22a534a4588",
-        "name": "NotificationMessage",
-        "func": "//Retreiving Libraries from the Settings.json file\nmsg.payload = \"Manifest has been (re)loaded\"\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1000,
-        "y": 620,
-        "wires": [
-            [
-                "5e622feb1c5d8075"
-            ]
-        ]
-    },
-    {
-        "id": "45fc63ccf8d7a8ab",
-        "type": "debug",
-        "z": "32c5a22a534a4588",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1017.5,
-        "y": 658.75,
-        "wires": []
-    },
-    {
         "id": "02d9c1fe7f0dcb05",
         "type": "inject",
         "z": "32c5a22a534a4588",
@@ -21327,24 +21297,6 @@
                 "9b923186acd8fb2b"
             ]
         ]
-    },
-    {
-        "id": "5e622feb1c5d8075",
-        "type": "ui_toast",
-        "z": "32c5a22a534a4588",
-        "position": "bottom right",
-        "displayTime": "1",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "topic": "Manifest",
-        "name": "Notify Manifest Changes",
-        "x": 1390,
-        "y": 620,
-        "wires": []
     },
     {
         "id": "03eb0c8325f9f29d",
@@ -21455,22 +21407,6 @@
         "wires": []
     },
     {
-        "id": "32ab8f2572642ae5",
-        "type": "unsafe-function",
-        "z": "32c5a22a534a4588",
-        "name": "retrievingSubmodels",
-        "func": "var outMsg = {};\nvar administrationShells = msg.payload[1].assetAdministrationShells;\nvar submodels = msg.payload[1].submodels;\nvar shells = [];\nfor(var shellIndex = 0; shellIndex < administrationShells.length; shellIndex++){\n    var element = {};\n    var shell = administrationShells[shellIndex];\n    element.shellIdShort = shell.idShort;\n    element.shellIdentifier = shell.identification.id;\n    element.submodels = [];\n    var shellSubmodels = shell.submodels;\n    for(var submodelIndex = 0; submodelIndex < submodels.length; submodelIndex++){\n        for(var shellSubmodelIndex = 0; shellSubmodelIndex < shellSubmodels.length; shellSubmodelIndex++){\n            if(submodels[submodelIndex].identification.id === shellSubmodels[shellSubmodelIndex].keys[0].value){\n                element.submodels.push(submodels[submodelIndex]);\n            }\n        }\n    }\n    shells.push(element);\n}\n//outMsg.payload = msg.payload[1].submodels;\noutMsg.payload = shells;\noutMsg.subscriptions = context.flow.get(\"subscriptions\") || [];\nreturn outMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 2600,
-        "y": 640,
-        "wires": [
-            [
-                "fde0b643d1d88ced"
-            ]
-        ]
-    },
-    {
         "id": "d8d93e7f8eeebd19",
         "type": "debug",
         "z": "32c5a22a534a4588",
@@ -21516,11 +21452,7 @@
         "x": 360,
         "y": 620,
         "wires": [
-            [
-                "b79317c310b1a58d",
-                "9259495cccc00f9b",
-                "45fc63ccf8d7a8ab"
-            ]
+            []
         ],
         "l": true
     },
@@ -21623,23 +21555,6 @@
         ]
     },
     {
-        "id": "6fb356858880bcc5",
-        "type": "function",
-        "z": "32c5a22a534a4588",
-        "name": "",
-        "func": "\nvar retrieveElementId = function (submodelElement, elementId, elementIds) {\n\n    elementId = elementId + submodelElement.idShort;\n    if (submodelElement.modelType.name == \"SubmodelElementCollection\") {\n        elementId = elementId + \"_\";\n        let values = submodelElement.value;\n        for (let valueIndex = 0; valueIndex < values.length; valueIndex++) {\n            retrieveElementId(values[valueIndex], elementId, elementIds);\n        }\n    } else {\n        elementId = elementId + \":\" + submodelElement.value;\n        elementIds.push(elementId);\n    }\n    return true;\n}\n\nlet elementIds = [];\nlet test = [];\nlet aasList = msg.payload;\nfor (let aasIndex = 0; aasIndex < aasList.length; aasIndex++) {\n    let aas = aasList[aasIndex];\n    let submodelList = aas.submodels;\n    for (let submodelIndex = 0; submodelIndex < submodelList.length; submodelIndex++) {\n        let submodelElementsList = submodelList[submodelIndex].submodelElements;\n        for (let submodelElementIndex = 0; submodelElementIndex < submodelElementsList.length; submodelElementIndex++) {\n            let submodelElement = submodelElementsList[submodelElementIndex];\n            let modelType = submodelElement.modelType.name;\n            if (modelType == \"SubmodelElementCollection\" || submodelElement.category == \"VARIABLE\") {\n                let elementId = aas.shellIdShort + \"_\" + submodelList[submodelIndex].idShort + \"_\";\n                retrieveElementId(submodelElement, elementId, elementIds);\n            }\n        }\n    }\n\n\n}\n\n//msg.payload = \"DPDM_OperationalData_ResponseTimePred:\" + Math.random();\nmsg.payload = elementIds;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2820,
-        "y": 800,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "f77432d1e52ebce9",
         "type": "inject",
         "z": "32c5a22a534a4588",
@@ -21660,46 +21575,12 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1690,
-        "y": 800,
+        "x": 1430,
+        "y": 780,
         "wires": [
             [
                 "3f56764f5dd63cfc"
             ]
-        ]
-    },
-    {
-        "id": "fde0b643d1d88ced",
-        "type": "msg-router",
-        "z": "32c5a22a534a4588",
-        "routerType": "broadcast",
-        "topicDependent": false,
-        "counterReset": false,
-        "msgKeyField": "payload",
-        "undefinedHash": false,
-        "outputsInfo": [
-            {
-                "active": true,
-                "clone": false,
-                "delay": "0",
-                "weight": "0"
-            },
-            {
-                "active": true,
-                "clone": false,
-                "delay": "0",
-                "weight": "0"
-            }
-        ],
-        "name": "",
-        "delaying": "unrelated",
-        "msgControl": false,
-        "outputs": 2,
-        "x": 2970,
-        "y": 640,
-        "wires": [
-            [],
-            []
         ]
     },
     {
@@ -21710,8 +21591,8 @@
         "func": "var msg1 = {};\n\nmsg1.method = 'GET';\nmsg1.url = context.global.get('namespace') + \"/aasServer/env\";\n\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
-        "x": 2160,
-        "y": 800,
+        "x": 1900,
+        "y": 780,
         "wires": [
             [
                 "c3ec2a6348e098e0"
@@ -21731,42 +21612,11 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 2390,
-        "y": 800,
+        "x": 2130,
+        "y": 780,
         "wires": [
             [
-                "6c827f07583d8cc1"
-            ]
-        ]
-    },
-    {
-        "id": "6c827f07583d8cc1",
-        "type": "unsafe-function",
-        "z": "32c5a22a534a4588",
-        "name": "retrievingSubmodels",
-        "func": "var outMsg = {};\nvar administrationShells = msg.payload.assetAdministrationShells;\nvar submodels = msg.payload.submodels;\nvar shells = [];\nfor(var shellIndex = 0; shellIndex < administrationShells.length; shellIndex++){\n    var element = {};\n    var shell = administrationShells[shellIndex];\n    element.shellIdShort = shell.idShort;\n    element.shellIdentifier = shell.identification.id;\n    element.submodels = [];\n    var shellSubmodels = shell.submodels;\n    for(var submodelIndex = 0; submodelIndex < submodels.length; submodelIndex++){\n        for(var shellSubmodelIndex = 0; shellSubmodelIndex < shellSubmodels.length; shellSubmodelIndex++){\n            if(submodels[submodelIndex].identification.id === shellSubmodels[shellSubmodelIndex].keys[0].value){\n                element.submodels.push(submodels[submodelIndex]);\n            }\n        }\n    }\n    shells.push(element);\n}\noutMsg.payload = shells;\nreturn outMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 2620,
-        "y": 800,
-        "wires": [
-            [
-                "6fb356858880bcc5"
-            ]
-        ]
-    },
-    {
-        "id": "989049186c9da6d3",
-        "type": "ui_ui_control",
-        "z": "32c5a22a534a4588",
-        "name": "",
-        "events": "change",
-        "x": 1640,
-        "y": 760,
-        "wires": [
-            [
-                "593e3e444f4b3faf",
-                "fb878cab036af4a2"
+                "8c909b4f998939c7"
             ]
         ]
     },
@@ -21783,8 +21633,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 900,
+        "x": 1510,
+        "y": 880,
         "wires": []
     },
     {
@@ -21801,8 +21651,8 @@
         "statusCmd": "status",
         "persist": false,
         "storeName": "default",
-        "x": 1950,
-        "y": 800,
+        "x": 1690,
+        "y": 780,
         "wires": [
             [
                 "c86eac82bb3b45fa"
@@ -21820,26 +21670,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1780,
-        "y": 860,
+        "x": 1520,
+        "y": 840,
         "wires": [
             [
                 "3f56764f5dd63cfc"
             ]
-        ]
-    },
-    {
-        "id": "db997c419920a963",
-        "type": "unsafe-function",
-        "z": "32c5a22a534a4588",
-        "name": "retrievingSubmodels",
-        "func": "var outMsg = {};\nvar administrationShells = msg.payload[1].assetAdministrationShells;\nvar submodels = msg.payload[1].submodels;\nvar shells = [];\nfor(var shellIndex = 0; shellIndex < administrationShells.length; shellIndex++){\n    var element = {};\n    var shell = administrationShells[shellIndex];\n    element.shellIdShort = shell.idShort;\n    element.shellIdentifier = shell.identification.id;\n    element.submodels = [];\n    var shellSubmodels = shell.submodels;\n    for(var submodelIndex = 0; submodelIndex < submodels.length; submodelIndex++){\n        for(var shellSubmodelIndex = 0; shellSubmodelIndex < shellSubmodels.length; shellSubmodelIndex++){\n            if(submodels[submodelIndex].identification.id === shellSubmodels[shellSubmodelIndex].keys[0].value){\n                element.submodels.push(submodels[submodelIndex]);\n            }\n        }\n    }\n    shells.push(element);\n}\n//outMsg.payload = msg.payload[1].submodels;\noutMsg.payload = shells;\noutMsg.subscriptions = context.flow.get(\"subscriptions\") || [];\nreturn outMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 2600,
-        "y": 600,
-        "wires": [
-            []
         ]
     },
     {
@@ -22218,7 +22054,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n  <v-card append-icon=\"mdi-file-tree\" subtitle=\"\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:200px;\">\n    <template v-slot:title>\n      <span class=\"font-weight-black\">AAS Environment</span>\n    </template>\n    <v-treeview :items=\"items\" :opened=\"initiallyOpen\" item-key=\"name\" open-on-click>\n      <template v-slot:prepend=\"{ item, open }\">\n        <v-icon v-if=\"!item.file\">\n          {{ open ? 'mdi-folder-open' : 'mdi-folder' }}\n        </v-icon>\n        <v-icon v-else>\n          {{ files[item.file] }}\n          <!--<router-link :to=\"item.to\">{{ item.title }}</router-link>!-->\n        </v-icon>\n        <div style=\"margin-left: 15%\">\n          <router-link v-if=\"item.to && !item.to.includes('http')\" :to=\"item.to\" target=\"_blank\">{{item.to}}\n          </router-link>\n          <!-- Use <a> tag if item.to contains 'http' -->\n          <a v-else-if=\"item.to && item.to.includes('http')\" :href=\"item.to\" target=\"_blank\" rel=\"noopener noreferrer\">\n            {{ item.to }}\n          </a>\n        </div>\n        <!--<div><a v-if=\"item.to.includes('http')\" :href=\"item.to\">{{item.to}} </a></div>!-->\n      </template>\n    </v-treeview>\n  </v-card>\n</template>\n\n<script>\n  export default {\n    data: function () {\n      return {\n        initiallyOpen: ['public'],\n        files: {\n          txt: 'mdi-file-document-outline'\n        },\n        items: []\n      }\n    },\n    watch: {\n      msg: function () {\n        this.items = this.msg.items;\n      }\n    }\n  }\n</script>",
+        "format": "<template>\n  <v-card append-icon=\"mdi-file-tree\" subtitle=\"\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:200px;\">\n    <template v-slot:title>\n      <span class=\"font-weight-black\">AAS Environment</span>\n    </template>\n    <v-treeview :items=\"items\" item-key=\"name\" open-on-click>\n      <template v-slot:prepend=\"{ item, open }\">\n        <v-icon v-if=\"!item.file\">\n          {{ open ? 'mdi-folder-open' : 'mdi-folder' }}\n        </v-icon>\n        <v-icon v-else>\n          {{ files[item.file] }}\n          <!--<router-link :to=\"item.to\">{{ item.title }}</router-link>!-->\n        </v-icon>\n        <div style=\"margin-left: 15%\">\n          <router-link v-if=\"item.to && !item.to.includes('http')\" :to=\"item.to\" target=\"_blank\">{{item.to}}\n          </router-link>\n          <!-- Use <a> tag if item.to contains 'http' -->\n          <a v-else-if=\"item.to && (item.to.includes('http') || item.to.includes('https'))\" :href=\"item.to\" target=\"_blank\" rel=\"noopener noreferrer\">\n            {{ item.to }}\n          </a>\n        </div>\n        <!--<div><a v-if=\"item.to.includes('http')\" :href=\"item.to\">{{item.to}} </a></div>!-->\n      </template>\n    </v-treeview>\n  </v-card>\n</template>\n\n<script>\n  export default {\n    data: function () {\n      return {\n        files: {\n          txt: 'mdi-file-document-outline'\n        },\n        items: []\n      }\n    },\n    watch: {\n      msg: function () {\n        this.items = this.msg.items;\n      }\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -22671,7 +22507,7 @@
         "type": "function",
         "z": "32c5a22a534a4588",
         "name": "Generate Tree from AAS model V3",
-        "func": "function extractData(submodelElements, items, rootName) {\n  function getRandomNumber() {\n    return Math.floor(Math.random() * 2001) + 10000;\n  }\n\n  for (let submodelElementIndex = 0; submodelElementIndex < submodelElements.length; submodelElementIndex++) {\n    let submodelElement = submodelElements[submodelElementIndex];\n\n    if (submodelElement.modelType !== \"SubmodelElementCollection\") {\n      let propertyItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        propertyItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      propertyItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      propertyItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n\n      // Check if valueType and dataObjectType are defined\n      if (submodelElement.valueType && submodelElement.valueType.dataObjectType) {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: \" + submodelElement.valueType.dataObjectType.name });\n      } else {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: undefined\" });\n      }\n\n      if (submodelElement.modelType == \"File\") {\n        propertyItem.children.push({ file: 'txt', to: submodelElement.value });\n      }\n\n\n      propertyItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      propertyItem.children.push({ file: 'txt', title: \"value: \" + submodelElement.value });\n      items.push(propertyItem);\n\n    } else {\n      let collectionItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        collectionItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      collectionItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      //collectionItem.children.push({ file: 'txt', title: \"id: \" + submodelElement.id });\n      collectionItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n      collectionItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      items.push(collectionItem);\n      if (typeof submodelElement.value != \"undefined\") {\n        extractData(submodelElement.value, collectionItem.children, \"value\");\n      }\n    }\n  }\n\n\n  return;\n}\n\nfunction filterListByCondition(list1, list2) {\n  // Create a set of IDs from list2 for quick lookup\n  const idSet = new Set(list2.map(item => item.keys[0].value));\n\n  // Filter the elements of list1 based on the presence of the same id in list2\n  return list1.filter(item => idSet.has(item.id));\n}\n\nmsg.properties = [];\nmsg.collections = [];\n\nlet items = [];\nlet item = { title: \"\", children: [] };\nlet children = { title: \"\" };\n\nlet manifest = msg.payload[1];\nlet aass = manifest.assetAdministrationShells;\n\n// Iterate over aas\nfor (let aasIndex = 0; aasIndex < aass.length; aasIndex++) {\n  let item = {};\n  item.title = \"Asset Administration Shell: [\" + aasIndex + \"]\";\n  item.children = [];\n\n  item.children.push({ file: 'txt', title: \"idShort: \" + aass[aasIndex].idShort });\n  item.children.push({ file: 'txt', title: \"id: \" + aass[aasIndex].id });\n  item.children.push({ file: 'txt', title: \"assetInformation: \" + aass[aasIndex].assetInformation.globalAssetId });\n\n  let submodelsItem = {};\n  submodelsItem.title = \"Submodels\";\n  submodelsItem.children = [];\n\n  // Iterate over submodels\n  let submodels = manifest.submodels;\n  let submodelReferences = aass[aasIndex].submodels;\n\n  // Iterate over references\n  let result = filterListByCondition(submodels, submodelReferences);\n  msg.result = result;\n\n  for (let resultIndex = 0; resultIndex < result.length; resultIndex++) {\n    let submodelItem = {};\n    submodelItem.title = \"Submodel: [\" + resultIndex + \"]\";\n    submodelItem.children = [];\n\n    submodelItem.children.push({ file: 'txt', title: \"idShort: \" + result[resultIndex].idShort });\n    submodelItem.children.push({ file: 'txt', title: \"id: \" + result[resultIndex].id });\n    if (typeof result[resultIndex].semanticId != \"undefined\") {\n      if (result[resultIndex].semanticId.keys.length > 0) {\n        submodelItem.children.push({ file: 'txt', title: \"Semantic Id: \" + result[resultIndex].semanticId.keys[0].value });\n      }\n    }\n\n    let submodelElementsItem = { title: \"SubmodelElements\", children: [] };\n    submodelItem.children.push(submodelElementsItem);\n\n    let submodelElements = result[resultIndex].submodelElements;\n\n    msg.collections.push(submodelElements);\n    extractData(submodelElements, submodelElementsItem.children);\n    submodelsItem.children.push(submodelItem);\n  }\n\n  item.children.push(submodelsItem);\n  items.push(item);\n}\n\nmsg.items = items;\n\nreturn msg;",
+        "func": "function extractData(submodelElements, items, rootName) {\n  function getRandomNumber() {\n    return Math.floor(Math.random() * 2001) + 10000;\n  }\n\n  for (let submodelElementIndex = 0; submodelElementIndex < submodelElements.length; submodelElementIndex++) {\n    let submodelElement = submodelElements[submodelElementIndex];\n\n    if (submodelElement.modelType !== \"SubmodelElementCollection\") {\n      let propertyItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        propertyItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      //if(submodelElement.modelType !== \"BasicEventElement\")\n      //  propertyItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      \n      propertyItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n\n      // Check if valueType and dataObjectType are defined\n      if (submodelElement.valueType && submodelElement.valueType.dataObjectType) {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: \" + submodelElement.valueType.dataObjectType.name });\n      } else {\n        //propertyItem.children.push({ file: 'txt', title: \"valueType: undefined\" });\n      }\n\n      propertyItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      if (submodelElement.modelType == \"BasicEventElement\"){\n        let path = \"\";\n        let keys = submodelElement.observed.keys;\n        //for(let key = 0; key < keys.length; key++){\n        //  path = path + keys[key].value + \",\";\n        //}\n        path = keys[keys.length - 1].value;\n        propertyItem.children.push({ file: 'txt', title: \"observed: \" + path });\n      }\n\n      if (submodelElement.modelType == \"File\") {\n        propertyItem.children.push({ file: 'txt', to: submodelElement.value });\n      } else if (submodelElement.value) {\n        propertyItem.children.push({ file: 'txt', title: \"value: \" + submodelElement.value });\n      }\n      items.push(propertyItem);\n\n    } else {\n      let collectionItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        collectionItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      collectionItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      //collectionItem.children.push({ file: 'txt', title: \"id: \" + submodelElement.id });\n      collectionItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n      collectionItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType });\n      items.push(collectionItem);\n      if (typeof submodelElement.value != \"undefined\") {\n        extractData(submodelElement.value, collectionItem.children, \"value\");\n      }\n    }\n  }\n\n\n  return;\n}\n\nfunction filterListByCondition(list1, list2) {\n  // Create a set of IDs from list2 for quick lookup\n  const idSet = new Set(list2.map(item => item.keys[0].value));\n\n  // Filter the elements of list1 based on the presence of the same id in list2\n  return list1.filter(item => idSet.has(item.id));\n}\n\nmsg.properties = [];\nmsg.collections = [];\n\nlet items = [];\nlet item = { title: \"\", children: [] };\nlet children = { title: \"\" };\n\nlet manifest = msg.payload[1];\nlet aass = manifest.assetAdministrationShells;\n\n// Iterate over aas\nfor (let aasIndex = 0; aasIndex < aass.length; aasIndex++) {\n  let item = {};\n  item.title = \"Asset Administration Shell: [\" + aasIndex + \"]\";\n  item.children = [];\n\n  item.children.push({ file: 'txt', title: \"idShort: \" + aass[aasIndex].idShort });\n  item.children.push({ file: 'txt', title: \"id: \" + aass[aasIndex].id });\n  item.children.push({ file: 'txt', title: \"assetInformation: \" + aass[aasIndex].assetInformation.globalAssetId });\n\n  let submodelsItem = {};\n  submodelsItem.title = \"Submodels\";\n  submodelsItem.children = [];\n\n  // Iterate over submodels\n  let submodels = manifest.submodels;\n  let submodelReferences = aass[aasIndex].submodels;\n\n  // Iterate over references\n  let result = filterListByCondition(submodels, submodelReferences);\n  msg.result = result;\n\n  for (let resultIndex = 0; resultIndex < result.length; resultIndex++) {\n    let submodelItem = {};\n    submodelItem.title = \"Submodel: [\" + resultIndex + \"]\";\n    submodelItem.children = [];\n\n    submodelItem.children.push({ file: 'txt', title: \"idShort: \" + result[resultIndex].idShort });\n    submodelItem.children.push({ file: 'txt', title: \"id: \" + result[resultIndex].id });\n    if (typeof result[resultIndex].semanticId != \"undefined\") {\n      if (result[resultIndex].semanticId.keys.length > 0) {\n        submodelItem.children.push({ file: 'txt', title: \"Semantic Id: \" + result[resultIndex].semanticId.keys[0].value });\n      }\n    }\n\n    let submodelElementsItem = { title: \"SubmodelElements\", children: [] };\n    submodelItem.children.push(submodelElementsItem);\n\n    let submodelElements = result[resultIndex].submodelElements;\n\n    msg.collections.push(submodelElements);\n    extractData(submodelElements, submodelElementsItem.children);\n    submodelsItem.children.push(submodelItem);\n  }\n\n  item.children.push(submodelsItem);\n  items.push(item);\n}\n\nmsg.items = items;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22739,6 +22575,60 @@
                 "c513ce07e3f152e4"
             ]
         ]
+    },
+    {
+        "id": "88dc82a68cbdd7be",
+        "type": "ui-control",
+        "z": "32c5a22a534a4588",
+        "name": "",
+        "ui": "3bda63ad6c6ff8b7",
+        "events": "all",
+        "x": 1260,
+        "y": 840,
+        "wires": [
+            [
+                "fb878cab036af4a2",
+                "593e3e444f4b3faf"
+            ]
+        ]
+    },
+    {
+        "id": "8c909b4f998939c7",
+        "type": "function",
+        "z": "32c5a22a534a4588",
+        "name": "",
+        "func": "let newPayload = [];\nnewPayload[0] = \"\";\nnewPayload[1] = msg.payload;\nmsg.payload = newPayload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2340,
+        "y": 780,
+        "wires": [
+            [
+                "2857c72c4a0986ca",
+                "7447aa341630a9fc"
+            ]
+        ]
+    },
+    {
+        "id": "7447aa341630a9fc",
+        "type": "debug",
+        "z": "32c5a22a534a4588",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2490,
+        "y": 820,
+        "wires": []
     },
     {
         "id": "f08e4446f8c56866",
@@ -23459,36 +23349,6 @@
         ]
     },
     {
-        "id": "a86ac9bd3f0298db",
-        "type": "unsafe-function",
-        "z": "18bd4aa6085b5dfb",
-        "name": "NotificationMessage",
-        "func": "//Retreiving Libraries from the Settings.json file\nmsg.payload = \"Manifest has been (re)loaded\"\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1000,
-        "y": 620,
-        "wires": [
-            [
-                "845515b961e8b93f"
-            ]
-        ]
-    },
-    {
-        "id": "fea9fb0955679dd6",
-        "type": "debug",
-        "z": "18bd4aa6085b5dfb",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1017.5,
-        "y": 658.75,
-        "wires": []
-    },
-    {
         "id": "1a092f686d4316f1",
         "type": "inject",
         "z": "18bd4aa6085b5dfb",
@@ -23590,24 +23450,6 @@
         ]
     },
     {
-        "id": "845515b961e8b93f",
-        "type": "ui_toast",
-        "z": "18bd4aa6085b5dfb",
-        "position": "bottom right",
-        "displayTime": "1",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "topic": "Manifest",
-        "name": "Notify Manifest Changes",
-        "x": 1390,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "db36b3bee04968b5",
         "type": "unsafe-function",
         "z": "18bd4aa6085b5dfb",
@@ -23703,20 +23545,6 @@
         ]
     },
     {
-        "id": "30defd3a907bb068",
-        "type": "debug",
-        "z": "18bd4aa6085b5dfb",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1170,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "9edf3c91357ca79b",
         "type": "unsafe-function",
         "z": "18bd4aa6085b5dfb",
@@ -23778,11 +23606,7 @@
         "x": 360,
         "y": 620,
         "wires": [
-            [
-                "0cc48333028ceaa8",
-                "a86ac9bd3f0298db",
-                "fea9fb0955679dd6"
-            ]
+            []
         ],
         "l": true
     },
@@ -23885,23 +23709,6 @@
         ]
     },
     {
-        "id": "5131694f3f443f68",
-        "type": "function",
-        "z": "18bd4aa6085b5dfb",
-        "name": "",
-        "func": "\nvar retrieveElementId = function (submodelElement, elementId, elementIds) {\n\n    elementId = elementId + submodelElement.idShort;\n    if (submodelElement.modelType.name == \"SubmodelElementCollection\") {\n        elementId = elementId + \"_\";\n        let values = submodelElement.value;\n        for (let valueIndex = 0; valueIndex < values.length; valueIndex++) {\n            retrieveElementId(values[valueIndex], elementId, elementIds);\n        }\n    } else {\n        elementId = elementId + \":\" + submodelElement.value;\n        elementIds.push(elementId);\n    }\n    return true;\n}\n\nlet elementIds = [];\nlet test = [];\nlet aasList = msg.payload;\nfor (let aasIndex = 0; aasIndex < aasList.length; aasIndex++) {\n    let aas = aasList[aasIndex];\n    let submodelList = aas.submodels;\n    for (let submodelIndex = 0; submodelIndex < submodelList.length; submodelIndex++) {\n        let submodelElementsList = submodelList[submodelIndex].submodelElements;\n        for (let submodelElementIndex = 0; submodelElementIndex < submodelElementsList.length; submodelElementIndex++) {\n            let submodelElement = submodelElementsList[submodelElementIndex];\n            let modelType = submodelElement.modelType.name;\n            if (modelType == \"SubmodelElementCollection\" || submodelElement.category == \"VARIABLE\") {\n                let elementId = aas.shellIdShort + \"_\" + submodelList[submodelIndex].idShort + \"_\";\n                retrieveElementId(submodelElement, elementId, elementIds);\n            }\n        }\n    }\n\n\n}\n\n//msg.payload = \"DPDM_OperationalData_ResponseTimePred:\" + Math.random();\nmsg.payload = elementIds;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2820,
-        "y": 800,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6c6d7a5a77a6e1d8",
         "type": "inject",
         "z": "18bd4aa6085b5dfb",
@@ -23922,7 +23729,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1690,
+        "x": 1470,
         "y": 800,
         "wires": [
             [
@@ -23972,7 +23779,7 @@
         "func": "var msg1 = {};\n\nmsg1.method = 'GET';\nmsg1.url = context.global.get('namespace') + \"/aasServer/env\";\n\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
-        "x": 2160,
+        "x": 1940,
         "y": 800,
         "wires": [
             [
@@ -23993,27 +23800,11 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 2390,
+        "x": 2170,
         "y": 800,
         "wires": [
             [
-                "33da45b8290eb615"
-            ]
-        ]
-    },
-    {
-        "id": "33da45b8290eb615",
-        "type": "unsafe-function",
-        "z": "18bd4aa6085b5dfb",
-        "name": "retrievingSubmodels",
-        "func": "var outMsg = {};\nvar administrationShells = msg.payload.assetAdministrationShells;\nvar submodels = msg.payload.submodels;\nvar shells = [];\nfor(var shellIndex = 0; shellIndex < administrationShells.length; shellIndex++){\n    var element = {};\n    var shell = administrationShells[shellIndex];\n    element.shellIdShort = shell.idShort;\n    element.shellIdentifier = shell.identification.id;\n    element.submodels = [];\n    var shellSubmodels = shell.submodels;\n    for(var submodelIndex = 0; submodelIndex < submodels.length; submodelIndex++){\n        for(var shellSubmodelIndex = 0; shellSubmodelIndex < shellSubmodels.length; shellSubmodelIndex++){\n            if(submodels[submodelIndex].identification.id === shellSubmodels[shellSubmodelIndex].keys[0].value){\n                element.submodels.push(submodels[submodelIndex]);\n            }\n        }\n    }\n    shells.push(element);\n}\noutMsg.payload = shells;\nreturn outMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 2620,
-        "y": 800,
-        "wires": [
-            [
-                "5131694f3f443f68"
+                "dec64b809b6b36b2"
             ]
         ]
     },
@@ -24030,7 +23821,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
+        "x": 1550,
         "y": 900,
         "wires": []
     },
@@ -24048,7 +23839,7 @@
         "statusCmd": "status",
         "persist": false,
         "storeName": "default",
-        "x": 1950,
+        "x": 1730,
         "y": 800,
         "wires": [
             [
@@ -24067,7 +23858,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1780,
+        "x": 1560,
         "y": 860,
         "wires": [
             [
@@ -24458,7 +24249,7 @@
         "type": "function",
         "z": "18bd4aa6085b5dfb",
         "name": "Generate Tree from AAS model V2",
-        "func": "function extractData(submodelElements, items, rootName) {\n  function getRandomNumber() {\n    return Math.floor(Math.random() * 2001) + 10000;\n  }\n\n  for (let submodelElementIndex = 0; submodelElementIndex < submodelElements.length; submodelElementIndex++) {\n    let submodelElement = submodelElements[submodelElementIndex];\n\n    if (submodelElement.modelType.name !== \"SubmodelElementCollection\") {\n      let propertyItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        propertyItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      propertyItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      propertyItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n\n      // Check if valueType and dataObjectType are defined\n      if (submodelElement.valueType && submodelElement.valueType.dataObjectType) {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: \" + submodelElement.valueType.dataObjectType.name });\n      } else {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: undefined\" });\n      }\n\n      if (submodelElement.modelType.name == \"File\") {\n        propertyItem.children.push({ file: 'txt', to: submodelElement.value });\n      }\n\n\n      propertyItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType.name });\n      propertyItem.children.push({ file: 'txt', title: \"value: \" + submodelElement.value });\n      items.push(propertyItem);\n\n    } else {\n      let collectionItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        collectionItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      collectionItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      collectionItem.children.push({ file: 'txt', title: \"id: \" + submodelElement.id });\n      collectionItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n      collectionItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType.name });\n      items.push(collectionItem);\n      extractData(submodelElement.value, collectionItem.children, \"value\");\n    }\n  }\n\n  return;\n}\n\nfunction filterListByCondition(list1, list2) {\n  // Create a set of IDs from list2 for quick lookup\n  const idSet = new Set(list2.map(item => item.keys[0].value));\n\n  // Filter the elements of list1 based on the presence of the same id in list2\n  return list1.filter(item => idSet.has(item.identification.id));\n}\n\nmsg.properties = [];\nmsg.collections = [];\n\nlet items = [];\nlet item = { title: \"\", children: [] };\nlet children = { title: \"\" };\n\nlet manifest = msg.payload[1];\nlet aass = manifest.assetAdministrationShells;\n\n// Iterate over aas\nfor (let aasIndex = 0; aasIndex < aass.length; aasIndex++) {\n  let item = {};\n  item.title = \"Asset Administration Shell: [\" + aasIndex + \"]\";\n  item.children = [];\n\n  item.children.push({ file: 'txt', title: \"idShort: \" + aass[aasIndex].idShort });\n  item.children.push({ file: 'txt', title: \"id: \" + aass[aasIndex].identification.id });\n  item.children.push({ file: 'txt', title: \"assetInformation: \" + aass[aasIndex].asset.keys[0].value });\n\n  let submodelsItem = {};\n  submodelsItem.title = \"Submodels\";\n  submodelsItem.children = [];\n\n  // Iterate over submodels\n  let submodels = manifest.submodels;\n  let submodelReferences = aass[aasIndex].submodels;\n\n  // Iterate over references\n  let result = filterListByCondition(submodels, submodelReferences);\n  msg.result = result;\n\n  for (let resultIndex = 0; resultIndex < result.length; resultIndex++) {\n    let submodelItem = {};\n    submodelItem.title = \"Submodel: [\" + resultIndex + \"]\";\n    submodelItem.children = [];\n\n    submodelItem.children.push({ file: 'txt', title: \"idShort: \" + result[resultIndex].idShort });\n    submodelItem.children.push({ file: 'txt', title: \"id: \" + result[resultIndex].identification.id });\n\n    if (result[resultIndex].semanticId.keys.length > 0) {\n      submodelItem.children.push({ file: 'txt', title: \"Semantic Id: \" + result[resultIndex].semanticId.keys[0].value });\n    }\n\n    let submodelElementsItem = { title: \"SubmodelElements\", children: [] };\n    submodelItem.children.push(submodelElementsItem);\n\n    let submodelElements = result[resultIndex].submodelElements;\n\n    msg.collections.push(submodelElements);\n    extractData(submodelElements, submodelElementsItem.children);\n    submodelsItem.children.push(submodelItem);\n  }\n\n  item.children.push(submodelsItem);\n  items.push(item);\n}\n\nmsg.items = items;\n\nreturn msg;",
+        "func": "function extractData(submodelElements, items, rootName) {\n  function getRandomNumber() {\n    return Math.floor(Math.random() * 2001) + 10000;\n  }\n\n  for (let submodelElementIndex = 0; submodelElementIndex < submodelElements.length; submodelElementIndex++) {\n    let submodelElement = submodelElements[submodelElementIndex];\n\n    if (submodelElement.modelType.name !== \"SubmodelElementCollection\") {\n      let propertyItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        propertyItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      propertyItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      propertyItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n\n      // Check if valueType and dataObjectType are defined\n      if (submodelElement.valueType && submodelElement.valueType.dataObjectType) {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: \" + submodelElement.valueType.dataObjectType.name });\n      } else {\n        propertyItem.children.push({ file: 'txt', title: \"valueType: undefined\" });\n      }\n\n      propertyItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType.name });\n      if (submodelElement.modelType == \"File\") {\n        propertyItem.children.push({ file: 'txt', to: submodelElement.value });\n      } else if (submodelElement.value) {\n        propertyItem.children.push({ file: 'txt', title: \"value: \" + submodelElement.value });\n      }\n      items.push(propertyItem);\n\n    } else {\n      let collectionItem = { title: \"SubmodelElement: [\" + submodelElementIndex + \"]\", children: [] };\n      if (rootName === \"value\")\n        collectionItem.title = \"Value: [\" + submodelElementIndex + \"]\";\n\n      collectionItem.children.push({ file: 'txt', title: \"category: \" + submodelElement.category });\n      collectionItem.children.push({ file: 'txt', title: \"id: \" + submodelElement.id });\n      collectionItem.children.push({ file: 'txt', title: \"idShort: \" + submodelElement.idShort });\n      collectionItem.children.push({ file: 'txt', title: \"modelType: \" + submodelElement.modelType.name });\n      items.push(collectionItem);\n      extractData(submodelElement.value, collectionItem.children, \"value\");\n    }\n  }\n\n  return;\n}\n\nfunction filterListByCondition(list1, list2) {\n  // Create a set of IDs from list2 for quick lookup\n  const idSet = new Set(list2.map(item => item.keys[0].value));\n\n  // Filter the elements of list1 based on the presence of the same id in list2\n  return list1.filter(item => idSet.has(item.identification.id));\n}\n\nmsg.properties = [];\nmsg.collections = [];\n\nlet items = [];\nlet item = { title: \"\", children: [] };\nlet children = { title: \"\" };\n\nlet manifest = msg.payload[1];\nlet aass = manifest.assetAdministrationShells;\n\n// Iterate over aas\nfor (let aasIndex = 0; aasIndex < aass.length; aasIndex++) {\n  let item = {};\n  item.title = \"Asset Administration Shell: [\" + aasIndex + \"]\";\n  item.children = [];\n\n  item.children.push({ file: 'txt', title: \"idShort: \" + aass[aasIndex].idShort });\n  item.children.push({ file: 'txt', title: \"id: \" + aass[aasIndex].identification.id });\n  item.children.push({ file: 'txt', title: \"assetInformation: \" + aass[aasIndex].asset.keys[0].value });\n\n  let submodelsItem = {};\n  submodelsItem.title = \"Submodels\";\n  submodelsItem.children = [];\n\n  // Iterate over submodels\n  let submodels = manifest.submodels;\n  let submodelReferences = aass[aasIndex].submodels;\n\n  // Iterate over references\n  let result = filterListByCondition(submodels, submodelReferences);\n  msg.result = result;\n\n  for (let resultIndex = 0; resultIndex < result.length; resultIndex++) {\n    let submodelItem = {};\n    submodelItem.title = \"Submodel: [\" + resultIndex + \"]\";\n    submodelItem.children = [];\n\n    submodelItem.children.push({ file: 'txt', title: \"idShort: \" + result[resultIndex].idShort });\n    submodelItem.children.push({ file: 'txt', title: \"id: \" + result[resultIndex].identification.id });\n\n    if (result[resultIndex].semanticId.keys.length > 0) {\n      submodelItem.children.push({ file: 'txt', title: \"Semantic Id: \" + result[resultIndex].semanticId.keys[0].value });\n    }\n\n    let submodelElementsItem = { title: \"SubmodelElements\", children: [] };\n    submodelItem.children.push(submodelElementsItem);\n\n    let submodelElements = result[resultIndex].submodelElements;\n\n    msg.collections.push(submodelElements);\n    extractData(submodelElements, submodelElementsItem.children);\n    submodelsItem.children.push(submodelItem);\n  }\n\n  item.children.push(submodelsItem);\n  items.push(item);\n}\n\nmsg.items = items;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -24481,11 +24272,11 @@
         "page": "",
         "ui": "",
         "name": "treeview",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n  <v-card append-icon=\"mdi-file-tree\" subtitle=\"\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:200px;\">\n    <template v-slot:title>\n      <span class=\"font-weight-black\">AAS Environment</span>\n    </template>\n    <v-treeview :items=\"items\" :opened=\"initiallyOpen\" item-key=\"name\" open-on-click>\n      <template v-slot:prepend=\"{ item, open }\">\n        <v-icon v-if=\"!item.file\">\n          {{ open ? 'mdi-folder-open' : 'mdi-folder' }}\n        </v-icon>\n        <v-icon v-else>\n          {{ files[item.file] }}\n          <!--<router-link :to=\"item.to\">{{ item.title }}</router-link>!-->\n        </v-icon>\n        <div style=\"margin-left: 15%\">\n          <router-link v-if=\"item.to && !item.to.includes('http')\" :to=\"item.to\" target=\"_blank\">{{item.to}}\n          </router-link>\n          <!-- Use <a> tag if item.to contains 'http' -->\n          <a v-else-if=\"item.to && item.to.includes('http')\" :href=\"item.to\" target=\"_blank\" rel=\"noopener noreferrer\">\n            {{ item.to }}\n          </a>\n        </div>\n        <!--<div><a v-if=\"item.to.includes('http')\" :href=\"item.to\">{{item.to}} </a></div>!-->\n      </template>\n    </v-treeview>\n  </v-card>\n</template>\n\n<script>\n  export default {\n    data: function () {\n      return {\n        initiallyOpen: ['public'],\n        files: {\n          txt: 'mdi-file-document-outline'\n        },\n        items: []\n      }\n    },\n    watch: {\n      msg: function () {\n        this.items = this.msg.items;\n      }\n    }\n  }\n</script>",
+        "format": "<template>\n  <v-card append-icon=\"mdi-file-tree\" subtitle=\"\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:200px;\">\n    <template v-slot:title>\n      <span class=\"font-weight-black\">AAS Environment</span>\n    </template>\n    <v-treeview :items=\"items\" item-key=\"name\" open-on-click>\n      <template v-slot:prepend=\"{ item, open }\">\n        <v-icon v-if=\"!item.file\">\n          {{ open ? 'mdi-folder-open' : 'mdi-folder' }}\n        </v-icon>\n        <v-icon v-else>\n          {{ files[item.file] }}\n          <!--<router-link :to=\"item.to\">{{ item.title }}</router-link>!-->\n        </v-icon>\n        <div style=\"margin-left: 15%\">\n          <router-link v-if=\"item.to && !item.to.includes('http')\" :to=\"item.to\" target=\"_blank\">{{item.to}}\n          </router-link>\n          <!-- Use <a> tag if item.to contains 'http' -->\n          <a v-else-if=\"item.to && (item.to.includes('http') || item.to.includes('https'))\" :href=\"item.to\" target=\"_blank\" rel=\"noopener noreferrer\">\n            {{ item.to }}\n          </a>\n        </div>\n        <!--<div><a v-if=\"item.to.includes('http')\" :href=\"item.to\">{{item.to}} </a></div>!-->\n      </template>\n    </v-treeview>\n  </v-card>\n</template>\n\n<script>\n  export default {\n    data: function () {\n      return {\n        files: {\n          txt: 'mdi-file-document-outline'\n        },\n        items: []\n      }\n    },\n    watch: {\n      msg: function () {\n        this.items = this.msg.items;\n      }\n    }\n  }\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -24979,7 +24770,7 @@
         "name": "",
         "ui": "3bda63ad6c6ff8b7",
         "events": "all",
-        "x": 1580,
+        "x": 1360,
         "y": 860,
         "wires": [
             [
@@ -24987,5 +24778,39 @@
                 "32620350201282ba"
             ]
         ]
+    },
+    {
+        "id": "dec64b809b6b36b2",
+        "type": "function",
+        "z": "18bd4aa6085b5dfb",
+        "name": "",
+        "func": "let newPayload = [];\nnewPayload[0] = \"\";\nnewPayload[1] = msg.payload;\nmsg.payload = newPayload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2340,
+        "y": 800,
+        "wires": [
+            [
+                "a4fe0c88137459fa"
+            ]
+        ]
+    },
+    {
+        "id": "30defd3a907bb068",
+        "type": "debug",
+        "z": "18bd4aa6085b5dfb",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1170,
+        "y": 540,
+        "wires": []
     }
 ]
