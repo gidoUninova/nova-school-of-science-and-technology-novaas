@@ -840,64 +840,6 @@
         ]
     },
     {
-        "id": "05a598e787528df2",
-        "type": "ui-group",
-        "name": "Overall Status",
-        "page": "7def1ff8aab60e58",
-        "width": "12",
-        "height": "1",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "16ffbcf4.6cfa43",
-        "type": "ui_group",
-        "name": "Account Logs",
-        "tab": "cb7ccff3.2c214",
-        "order": 2,
-        "disp": true,
-        "width": "34",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "175d54ea.788a73",
-        "type": "ui_group",
-        "name": "Dashboard SBI",
-        "tab": "a1ac21b4.e86f9",
-        "order": 1,
-        "disp": true,
-        "width": "30",
-        "collapse": false
-    },
-    {
-        "id": "28ba0356.ef188c",
-        "type": "ui_group",
-        "name": "Commands",
-        "tab": "e61c2c82.e7e9f",
-        "order": 4,
-        "disp": true,
-        "width": "3",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "2e560a461d849b04",
-        "type": "ui-group",
-        "name": "Northbound",
-        "page": "7def1ff8aab60e58",
-        "width": "12",
-        "height": "1",
-        "order": 3,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "31cac02.f941f4",
         "type": "ui_tab",
         "name": "Concept Descriptions",
@@ -922,19 +864,6 @@
         "titleBarStyle": "fixed"
     },
     {
-        "id": "442bd3202a627b48",
-        "type": "ui-group",
-        "name": "Active Subscriptions",
-        "page": "7def1ff8aab60e58",
-        "width": "12",
-        "height": "1",
-        "order": 4,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "50760f2b4eafd99b",
         "type": "sqlitedb",
         "db": "/app/.node-red/db/inNOVAASdb.db",
@@ -948,17 +877,6 @@
         "order": 9,
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "63d120af.ce7f5",
-        "type": "ui_group",
-        "name": "Logs",
-        "tab": "cb7ccff3.2c214",
-        "order": 1,
-        "disp": true,
-        "width": "34",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "6a4d510d.5de65",
@@ -1017,53 +935,6 @@
         "collapse": false
     },
     {
-        "id": "7def1ff8aab60e58",
-        "type": "ui-page",
-        "name": "Indicators",
-        "ui": "3bda63ad6c6ff8b7",
-        "path": "/gauges",
-        "icon": "gauge",
-        "layout": "grid",
-        "theme": "6ef5fa494778921a",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 6,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "8fc17f5a.38023",
-        "type": "ui_group",
-        "name": "Headers",
-        "tab": "e61c2c82.e7e9f",
-        "order": 1,
-        "disp": true,
-        "width": "15",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "9d66e0f86e14f46d",
         "type": "sqlitedb",
         "db": "/app/.node-red/db/inNOVAASdb.db",
@@ -1101,16 +972,6 @@
         "collapse": false
     },
     {
-        "id": "b9aed87e.bdd0c8",
-        "type": "ui_group",
-        "name": "Commands",
-        "tab": "cb7ccff3.2c214",
-        "order": 3,
-        "disp": true,
-        "width": "3",
-        "collapse": false
-    },
-    {
         "id": "c56f01cc.380dd",
         "type": "ui_group",
         "name": "AAS Concept Descriptions",
@@ -1119,17 +980,6 @@
         "disp": true,
         "width": "30",
         "collapse": false
-    },
-    {
-        "id": "c68d835e.db3b2",
-        "type": "ui_group",
-        "name": "Body",
-        "tab": "e61c2c82.e7e9f",
-        "order": 2,
-        "disp": true,
-        "width": "20",
-        "collapse": false,
-        "className": ""
     },
     {
         "id": "c9852af825b6ea73",
@@ -1314,19 +1164,6 @@
         "className": ""
     },
     {
-        "id": "fa3153f56f0dc028",
-        "type": "ui-group",
-        "name": "Southbound",
-        "page": "7def1ff8aab60e58",
-        "width": "12",
-        "height": "1",
-        "order": 2,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "a219352d4ef265ea",
         "type": "swagger-doc",
         "summary": "Retrieve the current Manifest document",
@@ -1473,118 +1310,144 @@
         "deprecated": false
     },
     {
-        "id": "2966738833ad551e",
-        "type": "ui-group",
-        "name": "Reporting",
-        "page": "c6bd718d6a2e605a",
-        "width": "12",
-        "height": "1",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "id": "6ef5fa494778921a",
+        "type": "ui-theme",
+        "name": "novaas",
+        "colors": {
+            "surface": "#feffff",
+            "primary": "#0094ff",
+            "bgPage": "#feffff",
+            "groupBg": "#feffff",
+            "groupOutline": "#c0c0c0"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "0px",
+            "widgetGap": "12px",
+            "density": "comfortable"
+        }
     },
     {
-        "id": "c1ab4ef42346ea60",
-        "type": "ui-group",
-        "name": "Commands",
-        "page": "f81d2467483deddd",
-        "width": "12",
-        "height": "1",
-        "order": 3,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "a59ec750238a9f6f",
-        "type": "ui-group",
-        "name": "Actual Subscribed Elements",
-        "page": "7282e2c6be48fdc1",
-        "width": "12",
-        "height": "1",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "cd688828bcd815e2",
-        "type": "ui-group",
-        "name": "AAS Concept Descriptions",
-        "page": "52d8317fd6cd415b",
-        "width": "12",
-        "height": "1",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "2d91686a2ba1852c",
-        "type": "ui-group",
-        "name": "Asset",
-        "page": "799504a3eca6f129",
-        "width": "12",
-        "height": "1",
-        "order": 2,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "7db4e47f1c3bd6b8",
-        "type": "ui-group",
-        "name": "Overview",
-        "page": "799504a3eca6f129",
-        "width": "12",
-        "height": "1",
-        "order": 1,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "052f6d23fa4e527a",
-        "type": "ui-group",
-        "name": "AAS Metamodel",
-        "page": "d067e8b811739080",
-        "width": "12",
-        "height": "1",
-        "order": 1,
-        "showTitle": false,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "6a60dba680d2cf0e",
-        "type": "ui-group",
-        "name": "Logs",
-        "page": "f81d2467483deddd",
-        "width": "12",
-        "height": "1",
-        "order": 2,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "b68f0194128bb725",
-        "type": "ui-group",
+        "id": "16ffbcf4.6cfa43",
+        "type": "ui_group",
         "name": "Account Logs",
-        "page": "f81d2467483deddd",
+        "tab": "cb7ccff3.2c214",
+        "order": 2,
+        "disp": true,
+        "width": "34",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "175d54ea.788a73",
+        "type": "ui_group",
+        "name": "Dashboard SBI",
+        "tab": "a1ac21b4.e86f9",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "28ba0356.ef188c",
+        "type": "ui_group",
+        "name": "Commands",
+        "tab": "e61c2c82.e7e9f",
+        "order": 4,
+        "disp": true,
+        "width": "3",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "63d120af.ce7f5",
+        "type": "ui_group",
+        "name": "Logs",
+        "tab": "cb7ccff3.2c214",
+        "order": 1,
+        "disp": true,
+        "width": "34",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7def1ff8aab60e58",
+        "type": "ui-page",
+        "name": "Indicators",
+        "ui": "3bda63ad6c6ff8b7",
+        "path": "/gauges",
+        "icon": "gauge",
+        "layout": "grid",
+        "theme": "6ef5fa494778921a",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 6,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "8fc17f5a.38023",
+        "type": "ui_group",
+        "name": "Headers",
+        "tab": "e61c2c82.e7e9f",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b9aed87e.bdd0c8",
+        "type": "ui_group",
+        "name": "Commands",
+        "tab": "cb7ccff3.2c214",
+        "order": 3,
+        "disp": true,
+        "width": "3",
+        "collapse": false
+    },
+    {
+        "id": "c68d835e.db3b2",
+        "type": "ui_group",
+        "name": "Body",
+        "tab": "e61c2c82.e7e9f",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fa3153f56f0dc028",
+        "type": "ui-group",
+        "name": "Southbound",
+        "page": "7def1ff8aab60e58",
         "width": "12",
         "height": "1",
-        "order": 1,
-        "showTitle": true,
+        "order": 2,
+        "showTitle": false,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1784,23 +1647,160 @@
         "disabled": "false"
     },
     {
-        "id": "6ef5fa494778921a",
-        "type": "ui-theme",
-        "name": "novaas",
-        "colors": {
-            "surface": "#feffff",
-            "primary": "#0094ff",
-            "bgPage": "#feffff",
-            "groupBg": "#feffff",
-            "groupOutline": "#c0c0c0"
-        },
-        "sizes": {
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "0px",
-            "widgetGap": "12px",
-            "density": "comfortable"
-        }
+        "id": "05a598e787528df2",
+        "type": "ui-group",
+        "name": "Overall Status",
+        "page": "7def1ff8aab60e58",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "2e560a461d849b04",
+        "type": "ui-group",
+        "name": "Northbound",
+        "page": "7def1ff8aab60e58",
+        "width": "12",
+        "height": "1",
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "442bd3202a627b48",
+        "type": "ui-group",
+        "name": "Active Subscriptions",
+        "page": "7def1ff8aab60e58",
+        "width": "12",
+        "height": "1",
+        "order": 4,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "2966738833ad551e",
+        "type": "ui-group",
+        "name": "Reporting",
+        "page": "c6bd718d6a2e605a",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c1ab4ef42346ea60",
+        "type": "ui-group",
+        "name": "Commands",
+        "page": "f81d2467483deddd",
+        "width": "12",
+        "height": "1",
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "a59ec750238a9f6f",
+        "type": "ui-group",
+        "name": "Actual Subscribed Elements",
+        "page": "7282e2c6be48fdc1",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "cd688828bcd815e2",
+        "type": "ui-group",
+        "name": "AAS Concept Descriptions",
+        "page": "52d8317fd6cd415b",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "2d91686a2ba1852c",
+        "type": "ui-group",
+        "name": "Asset",
+        "page": "799504a3eca6f129",
+        "width": "12",
+        "height": "1",
+        "order": 2,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7db4e47f1c3bd6b8",
+        "type": "ui-group",
+        "name": "Overview",
+        "page": "799504a3eca6f129",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "052f6d23fa4e527a",
+        "type": "ui-group",
+        "name": "AAS Metamodel",
+        "page": "d067e8b811739080",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "6a60dba680d2cf0e",
+        "type": "ui-group",
+        "name": "Logs",
+        "page": "f81d2467483deddd",
+        "width": "12",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b68f0194128bb725",
+        "type": "ui-group",
+        "name": "Account Logs",
+        "page": "f81d2467483deddd",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "0f6603d9f95134b3",
@@ -2395,7 +2395,7 @@
         "lower": null,
         "upper": null,
         "mode": "increment",
-        "outputs": "1",
+        "outputs": 1,
         "x": 1260,
         "y": 140,
         "wires": [
@@ -2470,7 +2470,9 @@
         "active": false,
         "x": 1710,
         "y": 140,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
         "id": "d4155fc6.2b467",
@@ -14198,7 +14200,7 @@
             [
                 "5d339e7318eb4734",
                 "092c444b39d7671d",
-                "61a1b61a35c98e6c"
+                "c6f95150480b2adf"
             ]
         ]
     },
@@ -14285,23 +14287,6 @@
         "wires": []
     },
     {
-        "id": "61a1b61a35c98e6c",
-        "type": "unsafe-function",
-        "z": "3db1c009.99d51",
-        "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = \"\";\n    msg1.payload = JSON.stringify(observation);\n} else {\n    msg1.topic = \"\";\n    msg1.payload = JSON.stringify(observation);\n}\nreturn msg1;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 630,
-        "y": 880,
-        "wires": [
-            [
-                "d8de01844ad18dbc",
-                "9ce5fa4b1ca22e59"
-            ]
-        ]
-    },
-    {
         "id": "68db3fe56b881c75",
         "type": "inject",
         "z": "3db1c009.99d51",
@@ -14326,7 +14311,7 @@
         "y": 540,
         "wires": [
             [
-                "7f98e5c8bb73a7bd"
+                "198f65a5af418152"
             ]
         ]
     },
@@ -14393,22 +14378,6 @@
             ],
             [
                 "411cbdf2e7b669be"
-            ]
-        ]
-    },
-    {
-        "id": "7f98e5c8bb73a7bd",
-        "type": "unsafe-function",
-        "z": "3db1c009.99d51",
-        "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = \"test\";\nobservation.source = \"myAAS\";\nobservation.direction = \"out\";\nobservation.observableReference = \"msg.observableReference\";\nobservation.timestamp = \"msg.timestamp\";\nobservation.payload = \"msg.payload\";\nobservation.topic = \"msg.topic\";\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = msg.payload.observableReference;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 770,
-        "y": 540,
-        "wires": [
-            [
-                "e33e736251599ab4"
             ]
         ]
     },
@@ -14504,9 +14473,9 @@
         "y": 300,
         "wires": [
             [
-                "ca577eee7145cfb7",
                 "96889178a4b233f6",
-                "cde2fdea5a797ff6"
+                "cde2fdea5a797ff6",
+                "078018eff20964bb"
             ]
         ]
     },
@@ -14745,23 +14714,6 @@
         ]
     },
     {
-        "id": "ca577eee7145cfb7",
-        "type": "unsafe-function",
-        "z": "3db1c009.99d51",
-        "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    let topic_processing = msg.observableReference.replace(\"https://\", \"\");\n    topic_processing = topic_processing.replace(\"http://\", \"\");\n    const regex = /\\./g;\n    let topic = topic_processing.replace(regex, \"/\");\n    msg1.topic = topic;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 790,
-        "y": 420,
-        "wires": [
-            [
-                "a358175dc5be21b6",
-                "e33e736251599ab4"
-            ]
-        ]
-    },
-    {
         "id": "cde2fdea5a797ff6",
         "type": "link out",
         "z": "3db1c009.99d51",
@@ -14934,6 +14886,67 @@
         "wires": [
             [
                 "a89170b27e831c5c"
+            ]
+        ]
+    },
+    {
+        "id": "078018eff20964bb",
+        "type": "function",
+        "z": "3db1c009.99d51",
+        "name": "event Processing",
+        "func": "function splitOnce(str, delimiter) {\n    const index = str.indexOf(delimiter);\n    if (index === -1) {\n        return [str]; // Return the original string in an array if the delimiter is not found\n    }\n    return [str.slice(0, index), str.slice(index + delimiter.length)];\n}\n\nvar msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    let topic_processing = msg.observableReference.replace(\"https://\", \"\");\n    topic_processing = topic_processing.replace(\"http://\", \"\");\n    const regex = /\\./g;\n    topic_processing.replace(regex, \"/\")\n    let topic_processing_splitted = splitOnce(topic_processing, \"/\"); \n    let topic = \"aas/\" + topic_processing_splitted[0] + \"/sm/\" + topic_processing_splitted[1];\n\n    msg1.topic = topic;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 420,
+        "wires": [
+            [
+                "a358175dc5be21b6",
+                "e33e736251599ab4"
+            ]
+        ]
+    },
+    {
+        "id": "198f65a5af418152",
+        "type": "function",
+        "z": "3db1c009.99d51",
+        "name": "event Processing",
+        "func": "function splitOnce(str, delimiter) {\n    const index = str.indexOf(delimiter);\n    if (index === -1) {\n        return [str]; // Return the original string in an array if the delimiter is not found\n    }\n    return [str.slice(0, index), str.slice(index + delimiter.length)];\n}\n\nvar msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    let topic_processing = msg.observableReference.replace(\"https://\", \"\");\n    topic_processing = topic_processing.replace(\"http://\", \"\");\n    const regex = /\\./g;\n    topic_processing.replace(regex, \"/\")\n    let topic_processing_splitted = splitOnce(topic_processing, \"/\");\n    let topic = \"aas/\" + topic_processing_splitted[0] + \"/sm/\" + topic_processing_splitted[1];\n\n    msg1.topic = topic;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 540,
+        "wires": [
+            [
+                "e33e736251599ab4"
+            ]
+        ]
+    },
+    {
+        "id": "c6f95150480b2adf",
+        "type": "function",
+        "z": "3db1c009.99d51",
+        "name": "event Processing",
+        "func": "function splitOnce(str, delimiter) {\n    const index = str.indexOf(delimiter);\n    if (index === -1) {\n        return [str]; // Return the original string in an array if the delimiter is not found\n    }\n    return [str.slice(0, index), str.slice(index + delimiter.length)];\n}\n\nvar msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    let topic_processing = msg.observableReference.replace(\"https://\", \"\");\n    topic_processing = topic_processing.replace(\"http://\", \"\");\n    const regex = /\\./g;\n    topic_processing.replace(regex, \"/\")\n    let topic_processing_splitted = splitOnce(topic_processing, \"/\");\n    let topic = \"aas/\" + topic_processing_splitted[0] + \"/sm/\" + topic_processing_splitted[1];\n\n    msg1.topic = topic;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 860,
+        "wires": [
+            [
+                "9ce5fa4b1ca22e59"
             ]
         ]
     },
