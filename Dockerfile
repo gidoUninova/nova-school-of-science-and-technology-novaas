@@ -13,6 +13,11 @@ RUN npm install --prefix /app/.node-red
 RUN npm i passport
 RUN npm i passport-keycloak-oauth2-oidc
 ADD dist .node-red/node_modules/node-red-dashboard/dist/
+
+WORKDIR /app/.node-red/model
+RUN python3 model_converter.py
+WORKDIR /app
+
 RUN unzip /app/.node-red/model.aasx -d /app/.node-red/
 RUN /usr/bin/sqlite3 /db/inNOVAASdb.db
 #RUN apt install jq -y
