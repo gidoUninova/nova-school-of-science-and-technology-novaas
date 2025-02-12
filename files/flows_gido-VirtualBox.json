@@ -8257,49 +8257,6 @@
         ]
     },
     {
-        "id": "70ce4dbd.b669f4",
-        "type": "switch",
-        "z": "fd31082e.5487d8",
-        "name": "IF_Error_Detected",
-        "property": "payload.errors",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "empty"
-            },
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1350,
-        "y": 5760,
-        "wires": [
-            [
-                "b24156cbc544d284"
-            ],
-            [
-                "1781aac9bafb5028"
-            ]
-        ]
-    },
-    {
-        "id": "c482c970.3a3208",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1330,
-        "y": 5700,
-        "wires": []
-    },
-    {
         "id": "e9b53ce5b28e3eb3",
         "type": "set-defaults",
         "z": "fd31082e.5487d8",
@@ -8326,7 +8283,8 @@
         "y": 5760,
         "wires": [
             [
-                "6d5ab51e605af701"
+                "b24156cbc544d284",
+                "c482c970.3a3208"
             ]
         ]
     },
@@ -8376,91 +8334,6 @@
         "env": [],
         "x": 2790,
         "y": 5780,
-        "wires": [],
-        "icon": "node-red-contrib-viseo-log/log.svg"
-    },
-    {
-        "id": "6d5ab51e605af701",
-        "type": "function",
-        "z": "fd31082e.5487d8",
-        "name": "preparingCheckingRules",
-        "func": "var errors = [];\nmsg.payload = {};\nvar NOVAAS_Overall_St = context.global.get(\"NOVAAS_Overall_St\");\nif((NOVAAS_Overall_St === false))\n   {\n        errors.push(\"Asset Administration Shell not configured\");\n       \n   } \n \nmsg.payload.errors = errors;\n    \n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1050,
-        "y": 5760,
-        "wires": [
-            [
-                "70ce4dbd.b669f4",
-                "c482c970.3a3208"
-            ]
-        ]
-    },
-    {
-        "id": "b24156cbc544d284",
-        "type": "function",
-        "z": "fd31082e.5487d8",
-        "name": "createOutputMsg",
-        "func": "msg.statusCode = 200;\nmsg.payload = \"ok\";\nmsg.headers = {};\nmsg.headers['content-type'] = 'text/plain';\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1710,
-        "y": 5720,
-        "wires": [
-            [
-                "6a57b25a059b255a",
-                "d90428c1f763ac3f"
-            ]
-        ]
-    },
-    {
-        "id": "1781aac9bafb5028",
-        "type": "function",
-        "z": "fd31082e.5487d8",
-        "name": "createOutputMsg",
-        "func": "msg.statusCode = 503;\nmsg.payload = msg.payload.errors;\nmsg.headers = {};\nmsg.headers['content-type'] = 'text/plain';\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1710,
-        "y": 5800,
-        "wires": [
-            [
-                "8ad810695b2eb431",
-                "7b21a18013ec12f3"
-            ]
-        ]
-    },
-    {
-        "id": "8ad810695b2eb431",
-        "type": "http response",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "statusCode": "503",
-        "headers": {},
-        "x": 2800,
-        "y": 5820,
-        "wires": []
-    },
-    {
-        "id": "7b21a18013ec12f3",
-        "type": "subflow:56cb7422.e3d28c",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "env": [],
-        "x": 2790,
-        "y": 5860,
         "wires": [],
         "icon": "node-red-contrib-viseo-log/log.svg"
     },
@@ -9690,6 +9563,41 @@
         "wires": [
             [
                 "343d95b6718c5604"
+            ]
+        ]
+    },
+    {
+        "id": "c482c970.3a3208",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1350,
+        "y": 5700,
+        "wires": []
+    },
+    {
+        "id": "b24156cbc544d284",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "createOutputMsg",
+        "func": "msg.statusCode = 200;\nmsg.payload = {\"status\": \"ok\"};\nmsg.headers = {};\nmsg.headers['content-type'] = 'text/plain';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 5760,
+        "wires": [
+            [
+                "6a57b25a059b255a",
+                "d90428c1f763ac3f"
             ]
         ]
     },
