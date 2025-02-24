@@ -18,7 +18,7 @@ WORKDIR /app/.node-red/model
 RUN python3 model_converter.py
 WORKDIR /app
 
-RUN unzip /app/.node-red/model.aasx -d /app/.node-red/
+RUN unzip /app/.node-red/model/model.aasx -d /app/.node-red/
 RUN /usr/bin/sqlite3 /db/inNOVAASdb.db
 #RUN apt install jq -y
 #RUN jq -s 'flatten | group_by(.id) | map(reduce .[] as $x ({}; . * $x))' \

@@ -7672,7 +7672,7 @@
         "type": "debug",
         "z": "fd31082e.5487d8",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7803,7 +7803,8 @@
         "y": 2940,
         "wires": [
             [
-                "ff1eb89a09f4d162"
+                "ff1eb89a09f4d162",
+                "329b43fa6caf3ff2"
             ]
         ]
     },
@@ -9602,20 +9603,18 @@
         ]
     },
     {
-        "id": "0027cc86b8966e35",
-        "type": "link call",
-        "z": "128ab3134a54f6b4",
+        "id": "329b43fa6caf3ff2",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
         "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 900,
-        "y": 1280,
-        "wires": [
-            []
-        ]
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1010,
+        "y": 2900,
+        "wires": []
     },
     {
         "id": "048ba3a0625e4510",
@@ -9733,22 +9732,6 @@
         "y": 200,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "1216f346d5a223cf",
-        "type": "link call",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 920,
-        "y": 1660,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "12ce6e0bc92395a9",
@@ -9979,7 +9962,7 @@
             ],
             [
                 "d3b25c737224b1cb",
-                "73e57ddb5b800255"
+                "b92d4a6ae54de468"
             ]
         ]
     },
@@ -10081,22 +10064,6 @@
         "x": 1950,
         "y": 2354,
         "wires": []
-    },
-    {
-        "id": "2e02385365895e81",
-        "type": "link call",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 900,
-        "y": 940,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "2ed0ae584bc3e15a",
@@ -10675,22 +10642,6 @@
         ]
     },
     {
-        "id": "5539401569fc87b3",
-        "type": "link call",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 2460,
-        "y": 940,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "5543cf66.c72ba8",
         "type": "Data Analysis",
         "z": "128ab3134a54f6b4",
@@ -11004,7 +10955,7 @@
                 "90d5ba1a50c32e8f"
             ],
             [
-                "1216f346d5a223cf"
+                "39aa28d3e69b6135"
             ]
         ]
     },
@@ -11230,7 +11181,7 @@
                 "98d898ce9e662492"
             ],
             [
-                "0027cc86b8966e35"
+                "4c0699b84be49d5f"
             ]
         ]
     },
@@ -11340,22 +11291,6 @@
         "x": 610,
         "y": 1460,
         "wires": []
-    },
-    {
-        "id": "73e57ddb5b800255",
-        "type": "link call",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 2500,
-        "y": 1280,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "74b1ba8063285d28",
@@ -11484,7 +11419,7 @@
                 "b074660cba99adcf"
             ],
             [
-                "2e02385365895e81"
+                "85ec46c56341942b"
             ]
         ]
     },
@@ -11790,9 +11725,9 @@
         "links": [
             "8cb87649afd62fd8"
         ],
-        "linkType": "static",
+        "linkType": "dynamic",
         "timeout": "30",
-        "x": 900,
+        "x": 1240,
         "y": 620,
         "wires": [
             []
@@ -11996,7 +11931,7 @@
                 "91eeebe1d5234d19"
             ],
             [
-                "95f3474f2f46c76d"
+                "6f4dada601414761"
             ]
         ]
     },
@@ -12209,22 +12144,6 @@
             [
                 "12ce6e0bc92395a9"
             ]
-        ]
-    },
-    {
-        "id": "b0a9cb27cdf5f9af",
-        "type": "link call",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 2460,
-        "y": 620,
-        "wires": [
-            []
         ]
     },
     {
@@ -12534,7 +12453,7 @@
                 "4496aaad104ba6e4"
             ],
             [
-                "5539401569fc87b3"
+                "8885c187509dbcd2"
             ]
         ]
     },
@@ -12766,7 +12685,7 @@
                 "0acf0c089bdaea6a"
             ],
             [
-                "b0a9cb27cdf5f9af"
+                "adebbb35ded9303a"
             ]
         ]
     },
@@ -13370,6 +13289,291 @@
         "wires": [
             [
                 "7982f9ad4b18cdb6"
+            ]
+        ]
+    },
+    {
+        "id": "6f4dada601414761",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 620,
+        "wires": [
+            [
+                "95f3474f2f46c76d"
+            ]
+        ]
+    },
+    {
+        "id": "0a1702837f1d09e8",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 1240,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85ec46c56341942b",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 940,
+        "wires": [
+            [
+                "0a1702837f1d09e8"
+            ]
+        ]
+    },
+    {
+        "id": "2b3770bc94d93b3f",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 1240,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c0699b84be49d5f",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 1280,
+        "wires": [
+            [
+                "2b3770bc94d93b3f"
+            ]
+        ]
+    },
+    {
+        "id": "56efc011e0a7b10d",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 1240,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39aa28d3e69b6135",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 1660,
+        "wires": [
+            [
+                "56efc011e0a7b10d"
+            ]
+        ]
+    },
+    {
+        "id": "e365a60f8999d7cb",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 2800,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adebbb35ded9303a",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2640,
+        "y": 620,
+        "wires": [
+            [
+                "e365a60f8999d7cb"
+            ]
+        ]
+    },
+    {
+        "id": "808e81fab4d6b5ac",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 2780,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8885c187509dbcd2",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2620,
+        "y": 940,
+        "wires": [
+            [
+                "808e81fab4d6b5ac"
+            ]
+        ]
+    },
+    {
+        "id": "5dba782d7e7346ea",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 2860,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b92d4a6ae54de468",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2700,
+        "y": 1280,
+        "wires": [
+            [
+                "5dba782d7e7346ea"
             ]
         ]
     },
@@ -17960,7 +18164,8 @@
         "y": 1620,
         "wires": [
             [
-                "9859f4532779d987"
+                "9859f4532779d987",
+                "8586f3efe90470ad"
             ]
         ]
     },
@@ -18001,22 +18206,23 @@
         "id": "08e30e2c325e7de9",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Preparing aas aaset Information",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor (var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell].assetInformation;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\nmsg.jsonataStatus = \"Failure\";\nreturn msg;",
+        "name": "getAssetInformation",
+        "func": "let ShellId = msg.req.params.aasid;\nlet manifest = context.flow.get('manifest');\nlet shells = manifest.assetAdministrationShells;\n\n// Convert shells array to a Map for O(1) lookup\nlet shellMap = new Map(shells.map(shell => [shell.id, shell]));\n\nif (shellMap.has(ShellId)) {\n    msg.jsonataResult = shellMap.get(ShellId).assetInformation;\n    msg.jsonataStatus = \"Success\";\n} else {\n    msg.jsonataStatus = \"Failure\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
+        "x": 700,
         "y": 360,
         "wires": [
             [
                 "99cf767b7c80650a",
                 "bd0433c5d06b8017"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    Start[\"Start\"]\n    GetShellId[\"Get ShellId from msg.req.params.aasid\"]\n    RetrieveManifest[\"Retrieve 'manifest' from context.flow\"]\n    ExtractShells[\"Extract 'assetAdministrationShells' from manifest\"]\n    ConvertToMap[\"Convert shells array to a Map (shell.id -> shell)\"]\n    CheckShellId[\"Check if ShellId exists in Map\"]\n    Found[\"ShellId found\"]\n    NotFound[\"ShellId not found\"]\n    SetSuccess[\"Set msg.jsonataResult to shell.assetInformation\"]\n    SetFailure[\"Set msg.jsonataStatus to 'Failure'\"]\n    ReturnMsg[\"Return msg\"]\n\n    Start --> GetShellId --> RetrieveManifest --> ExtractShells --> ConvertToMap --> CheckShellId\n    CheckShellId -- Exists --> Found --> SetSuccess --> ReturnMsg\n    CheckShellId -- Does Not Exist --> NotFound --> SetFailure --> ReturnMsg\n\n```"
     },
     {
         "id": "0ac57037dc16c894",
@@ -18101,21 +18307,6 @@
         ]
     },
     {
-        "id": "1033d305f1bacb22",
-        "type": "unsafe-function",
-        "z": "76d11e83ac083a40",
-        "d": true,
-        "name": "BuildingJsonataQuery...",
-        "func": "//var xml_string = msg.payload;\n//var XML = context.global.get('XML');\n\nmsg.submodelElement = msg.payload;\nmsg.submodelElementId = msg.req.params.id;\nmsg.req.params.id = msg.req.params.submodelId;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 470,
-        "y": 1560,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "1203cf3b298fa3fc",
         "type": "link in",
         "z": "76d11e83ac083a40",
@@ -18127,21 +18318,6 @@
             [
                 "bd236aee7c151d99"
             ]
-        ]
-    },
-    {
-        "id": "139e654a46c2dad3",
-        "type": "unsafe-function",
-        "z": "76d11e83ac083a40",
-        "d": true,
-        "name": "BuildingJsonataQuery...",
-        "func": "//var xml_string = msg.payload;\n//var XML = context.global.get('XML');\n\nvar conceptDescription = msg.payload;\nvar manifest = context.flow.get(\"manifest\");\nmsg.conceptDescriptionsJsonStr = JSON.stringify(manifest.conceptDescriptions);\nmsg.jsonata = \"$[identification.id='\" + conceptDescription.identification.id +\"']\";\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 510,
-        "y": 1880,
-        "wires": [
-            []
         ]
     },
     {
@@ -18180,7 +18356,8 @@
         "y": 1680,
         "wires": [
             [
-                "2bdfa22e86a97f83"
+                "2bdfa22e86a97f83",
+                "403864e3159c983f"
             ]
         ]
     },
@@ -18316,7 +18493,7 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "Adding Submodel",
-        "func": "var submodel = msg.payload;\nvar shellId = msg.req.params.aasid;\nif (msg.jsonataStatus == \"Success\") {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Error! submodel already exists!\", \"Timestamp\": Date.now() }] };\n    return msg;\n} else {\n    // Verify IdShort\n    let manifest = context.flow.get(\"manifest\");\n    let submodels = manifest.submodels;\n    for (let index1 = 0; index1 < submodels.length; index1++) {\n        var submodelElement = submodels[index1];\n        if (submodel.idShort == submodelElement.idShort) {\n            msg.statusCode = \"400\";\n            msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Error! submodel with idShort: \" + submodel.idShort + \" already exists!\", \"Timestamp\": Date.now() }] };\n            return msg;\n        }\n    }\n    // Add Submodel after IdShort Verification\n    msg.statusCode = \"200\";\n    //var manifest = context.flow.get(\"manifest\");\n    manifest.submodels.push(msg.payload);\n    var shells = manifest.assetAdministrationShells;\n    for (var element = 0; element < shells.length; element++) {\n        if (shells[element].id == shellId) {\n            var submodelRef = {};\n            submodelRef.type = \"ModelReference\";\n            // @ts-ignore\n            var keys = [];\n            var ref = {};\n            ref.type = \"Submodel\";\n            ref.value = submodel.id;\n            keys.push(ref);\n            submodelRef.keys = keys;\n            shells[element].submodels.push(submodelRef);\n            context.flow.set(\"manifest\", manifest);\n        }\n    }\n}\n\nreturn msg;",
+        "func": "let submodel = msg.payload;\nlet shellId = msg.req.params.aasid;\n\nif (msg.jsonataStatus === \"Success\") {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": \"Error! submodel already exists!\",\n            \"Timestamp\": Date.now()\n        }]\n    };\n    return msg;\n} else {\n    // Verify IdShort with a Set for O(1) lookup\n    let manifest = context.flow.get(\"manifest\");\n    let submodels = manifest.submodels;\n\n    let idShortSet = new Set(submodels.map(sub => sub.idShort));\n\n    if (idShortSet.has(submodel.idShort)) {\n        msg.statusCode = \"400\";\n        msg.payload = {\n            \"Messages\": [{\n                \"Code\": \"BadRequest\",\n                \"CorrelationId\": null,\n                \"MessageType\": \"Error\",\n                \"Text\": `Error! submodel with idShort: ${submodel.idShort} already exists!`,\n                \"Timestamp\": Date.now()\n            }]\n        };\n        return msg;\n    }\n\n    // Add Submodel after IdShort Verification\n    msg.statusCode = \"200\";\n    manifest.submodels.push(msg.payload);\n\n    // Convert shells array to a Map for O(1) lookup\n    let shellMap = new Map(manifest.assetAdministrationShells.map(shell => [shell.id, shell]));\n\n    if (shellMap.has(shellId)) {\n        let shell = shellMap.get(shellId);\n        let submodelRef = {\n            type: \"ModelReference\",\n            keys: [{\n                type: \"Submodel\",\n                value: submodel.id\n            }]\n        };\n\n        shell.submodels.push(submodelRef);\n        context.flow.set(\"manifest\", manifest);\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = {\n            \"Messages\": [{\n                \"Code\": \"BadRequest\",\n                \"CorrelationId\": null,\n                \"MessageType\": \"Error\",\n                \"Text\": `Error! shell with id: ${shellId} does not exist!`,\n                \"Timestamp\": Date.now()\n            }]\n        };\n    }\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18330,7 +18507,8 @@
                 "4c9445026d0dbfe7",
                 "5ecdfea790b38177"
             ]
-        ]
+        ],
+        "info": "```mermaid\nflowchart TD\n    A[Start] --> B[Get submodel and shellId]\n    B --> C{Check if msg.jsonataStatus is Success}\n    C -->|Yes| P[Set msg.statusCode 400]\n    P --> D[Set Error: submodel already exists]\n    C -->|No| E[Get manifest and submodels]\n    E --> F[Create idShortSet from submodels]\n    F --> G{Is submodel.idShort already in idShortSet?}\n    G -->|Yes| Q[Set msg.statusCode 400]\n    Q -->|Yes| H[Set Error: submodel with idShort already exists]\n    G -->|No| I[Add submodel to manifest.submodels]\n    I --> J[Create shellMap from assetAdministrationShells]\n    J --> K{Does shellMap contain shellId?}\n    K -->|No| R[Set msg.statusCode 400]\n    R --> S[Set Error: aas with shellId does not exist]\n    S --> L[return msg]\n    K -->|Yes| T[Set msg.statusCode 200]\n    T --> M[Add submodel reference to shell]\n    M --> N[Set updated manifest in context]\n    N --> L\n    D --> L\n    H --> L\n\n```"
     },
     {
         "id": "27bf9933db808abb",
@@ -18615,7 +18793,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
+        "x": 950,
         "y": 420,
         "wires": []
     },
@@ -18640,22 +18818,23 @@
         "id": "4a0bea662236fa1f",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "check if submodelelement Exists",
-        "func": "var element = msg.payload;\nvar submodelElementId = msg.submodelElement.idShort;\nvar submodelElements = element.submodelElements;\nfor (var submodelElementIndex = 0; submodelElementIndex < submodelElements.length; submodelElementIndex++){\n    if(submodelElementId == submodelElements[submodelElementIndex].id){\n        msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Error submodelElement with ID: \" + submodelElementId + \" already exists\", \"Timestamp\": Date.now() }] };\n        msg.statusCode = \"400\";\n        return msg;\n    }\n}\n\nelement.submodelElements.push(msg.submodelElement);\nmsg.payload = element;\nreturn msg;",
+        "name": "Add submmodel element with existence check",
+        "func": "const element = msg.payload;\nconst submodelElementId = msg.submodelElement.idShort;\n\n// Check if the submodel element already exists\nif (element.submodelElements.some(el => el.id === submodelElementId)) {\n    msg.payload = {\n        Messages: [{\n            Code: \"BadRequest\",\n            MessageType: \"Error\",\n            Text: `Error: SubmodelElement with ID: ${submodelElementId} already exists`,\n            Timestamp: Date.now()\n        }]\n    };\n    msg.statusCode = \"400\";\n    return msg;\n}\n\n// Add the new submodel element\nelement.submodelElements.push(msg.submodelElement);\nmsg.payload = element;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1420,
         "y": 1200,
         "wires": [
             [
                 "702874a8c85b35e3",
                 "27bf9933db808abb"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    Start[Start: Receive msg.payload and msg.submodelElement]\n    CheckExistence{Does submodelElementId exist in submodelElements?}\n    Exists[SubmodelElement already exists]\n    ErrorResponse[Set msg.statusCode = 400]\n    ReturnErrorMessage[Return error message]\n    AddElement[Add submodelElement to submodelElements]\n    SuccessResponse[Set msg.statusCode = 200]\n    ReturnSuccessMessage[Return updated element in msg]\n\n    Start --> CheckExistence\n    CheckExistence -- Yes --> Exists\n    Exists --> ErrorResponse --> ReturnErrorMessage\n    CheckExistence -- No --> AddElement\n    AddElement --> SuccessResponse --> ReturnSuccessMessage\n\n```"
     },
     {
         "id": "4c6a19c3a29c8d31",
@@ -18699,7 +18878,8 @@
         "y": 1380,
         "wires": [
             [
-                "978e9ebc2e68e6a3"
+                "978e9ebc2e68e6a3",
+                "39c76721f3354317"
             ]
         ]
     },
@@ -18745,42 +18925,44 @@
         "id": "52dfa0adfbb4c426",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Returning Submodel",
-        "func": "var ShellId = msg.req.params.aasid;\nvar submodelId = msg.req.params.id;\nif (msg.jsonataStatus == \"Success\") {\n    var keys = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n    for (var index1 = 0; index1 < keys.length; index1++) {\n        var key = keys[index1];\n        for (var index2 = 0; index2 < submodels.length; index2++) {\n            var submodel = submodels[index2];\n            if (submodel.id === key.value) {\n                if (submodel.id === submodelId) {\n                    msg.payload = submodel;\n                    msg.statusCode = \"200\";\n                    return msg;\n                }\n            }\n        }\n    }\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n    msg.statusCode = \"400\";\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Asset Administration Shell with id:\" + ShellId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\nreturn msg;\n",
+        "name": "Fetch Submodel for Asset Administration Shell",
+        "func": "var ShellId = msg.req.params.aasid;\nvar submodelId = msg.req.params.id;\n\nif (msg.jsonataStatus === \"Success\") {\n    var keys = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n\n    // Convert submodels array to a Map for faster lookups\n    var submodelMap = new Map(submodels.map(submodel => [submodel.id, submodel]));\n\n    for (var index1 = 0; index1 < keys.length; index1++) {\n        var key = keys[index1];\n\n        // Check if submodel exists in the map\n        if (submodelMap.has(key.value)) {\n            var submodel = submodelMap.get(key.value);\n\n            if (submodel.id === submodelId) {\n                msg.payload = submodel;\n                msg.statusCode = \"200\";\n                return msg;\n            }\n        }\n    }\n\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `Submodel with id: ${submodelId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n    msg.statusCode = \"400\";\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `Asset Administration Shell with id: ${ShellId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
+        "x": 1320,
         "y": 640,
         "wires": [
             [
                 "93ea0e61cda2ab1d",
                 "fbbd356f292b630f"
             ]
-        ]
+        ],
+        "info": "```mermaid\nflowchart TD\n    A[Start] --> B[Check msg.jsonataStatus]\n    B -->|Success| C[Get keys, manifest, and submodels]\n    B -->|Failure| G[Set error for AAS not found]\n    C --> D[Create submodelMap from submodels]\n    D --> E[Iterate over keys]\n    E --> F{Is submodelMap contains key.value?}\n    F -->|Yes| H[Get submodel from map]\n    H --> I{Does submodel.id match submodelId?}\n    I -->|Yes| J[Set msg.payload to submodel]\n    I -->|No| E\n    F -->|No| E\n    E --> K[Set error: Submodel not found]\n    K --> L[Set msg.statusCode to 400]\n    G --> L\n    L --> N\n    J --> M[set msg.statusCode 200]\n    M --> N[return msg]\n\n\n```"
     },
     {
         "id": "537e4af92871cf60",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Removing Submodel",
-        "func": "var submodel = msg.payload;\nvar submodelId = msg.req.params.id;\nvar shellId = msg.req.params.aasid;\n\nif (msg.jsonataStatus == \"Success\") {\n    var refs = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n    var deletedSubmodelRef = \"\";\n    for (var index1 = 0; index1 < refs.length; index1++) {\n        var ref = refs[index1];\n        for (var index2 = 0; index2 < submodels.length; index2++) {\n            var submodel = submodels[index2];\n            if (submodel.id === ref.keys[0].value) {\n                if (submodel.idShort === submodelId) {\n                    submodels.splice(index2, 1);\n                    deletedSubmodelRef = submodel.id;\n                    break;\n                }\n            }\n        }\n    }\n    if (deletedSubmodelRef !== \"\") {\n        var shells = manifest.assetAdministrationShells;\n        for (var index3 = 0; index3 < shells.length; index3++) {\n            var shell = shells[index3];\n            if (shell.id == shellId) {\n                var submodelRefs = shell.submodels;\n                for (var index4 = 0; index4 < submodelRefs.length; index4++) {\n                    var submodelRef = submodelRefs[index4];\n                    if (submodelRef.keys[0].value === deletedSubmodelRef) {\n                        submodelRefs.splice(index4, 1);\n                        break;\n                    }\n                }\n            }\n        }\n        msg.statusCode = \"200\";\n        context.flow.set(\"manifest\", manifest);\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id: \" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n    }\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Asset Administration Shell with id:\" + shellId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\nreturn msg;",
+        "name": "Delete Submodel from shell",
+        "func": "var submodelId = msg.req.params.id;\nvar shellId = msg.req.params.aasid;\n\nif (msg.jsonataStatus === \"Success\") {\n    var refs = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n    var shells = manifest.assetAdministrationShells;\n\n    // Build a Map for submodels (O(n))\n    var submodelMap = new Map(submodels.map(sm => [sm.id, sm]));\n\n    // Find the submodel to delete (O(1) lookup)\n    var deletedSubmodelRef = \"\";\n    for (const ref of refs) {\n        if (submodelMap.has(ref.keys[0].value) && ref.keys[0].value === submodelId) {\n            deletedSubmodelRef = submodelId;\n            break;\n        }\n    }\n\n    if (deletedSubmodelRef) {\n        // Update manifest.submodels efficiently (O(n))\n        manifest.submodels = submodels.filter(sm => sm.id !== deletedSubmodelRef);\n\n        // Remove submodel reference from the shell (O(n))\n        var shell = shells.find(s => s.id === shellId);\n        shell?.submodels && (shell.submodels = shell.submodels.filter(submodelRef => submodelRef.keys[0].value !== deletedSubmodelRef));\n\n        msg.statusCode = \"200\";\n        context.flow.set(\"manifest\", manifest);\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = {\n            \"Messages\": [{\n                \"Code\": \"BadRequest\",\n                \"CorrelationId\": null,\n                \"MessageType\": \"Error\",\n                \"Text\": `Submodel with id: ${submodelId} not found`,\n                \"Timestamp\": Date.now()\n            }]\n        };\n    }\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `Asset Administration Shell with id: ${shellId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
+        "x": 1220,
         "y": 840,
         "wires": [
             [
                 "fd6884499d28590f"
             ]
-        ]
+        ],
+        "info": "```mermaid\nflowchart TD\n    A[Start] --> B[Get submodelId and shellId from request]\n    B --> C{Is msg.jsonataStatus Success?}\n    C -->|No| D[Set Error: AAS with shellId not found] \n    D --> E[Set msg.statusCode to 400] \n    E --> F[Return msg]\n    \n    C -->|Yes| G[Get refs, manifest, submodels, and shells]\n    G --> H[Create submodelMap from submodels]\n    H --> I[Search refs for submodelId]\n    \n    I --> J{Is submodel found?}\n    J -->|No| K[Set Error: Submodel not found]\n    K --> L[Set msg.statusCode to 400]\n    L --> F\n\n    J -->|Yes| M[Remove submodel from manifest.submodels]\n    M --> N[Find shell with shellId]\n    N --> O{Does shell exist?}\n    O -->|Yes| P[Remove submodel reference from shell]\n    O -->|No| Q[Skip shell update]\n    \n    P --> R[Update manifest in context]\n    Q --> R\n    R --> S[Set msg.statusCode to 200]\n    S --> F\n\n```"
     },
     {
         "id": "560f270810ed1f23",
@@ -18878,8 +19060,8 @@
         "id": "622625b03b85c50a",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Reading SubmodelElement",
-        "func": "var iterate = function (submodelElementId, collectionIds, submodelElements) {\n    for (var index = 0; index < submodelElements.length; index++) {\n        var submodelElement = submodelElements[index];\n        if ((submodelElement.modelType.name !== \"SubmodelElementCollection\" && collectionIds.length == 0) || (submodelElement.modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1)) {\n            if (submodelElement.idShort === submodelElementId) {\n                return submodelElement;\n\n            }\n\n        } else {\n            for (var collIndex = 0; collIndex < collectionIds.length; collIndex++) {\n                var collectionId = collectionIds[collIndex];\n                if (submodelElement.idShort === collectionId) {\n                    collectionIds.splice(collIndex, 1);\n                    var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                    return result;\n                }\n            }\n\n        }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelElementId.split(\".\");\n//submodelId = splittedSubmodel[0];\n\nif (splittedSubmodel.length > 1) {\n    for (var index = 0; index < splittedSubmodel.length; index++) {\n\n        if (index < (splittedSubmodel.length - 1)) {\n            submodelCollectionId.push(splittedSubmodel[index]);\n        } else {\n            submodelElementId = splittedSubmodel[index];\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif (msg.jsonataStatus == \"Success\") {\n    var submodels = msg.jsonataResult;\n    for (var index1 = 0; index1 < submodels.length; index1++) {\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\") {\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if (selectedSubmodels.length > 0) {\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for (var index3 = 0; index3 < shells.length; index3++) {\n            if (shells[index3].id === ShellId) {\n                var submodelRefs = shells[index3].submodels;\n                for (var index4 = 0; index4 < submodelRefs.length; index4++) {\n                    var ref = submodelRefs[index4];\n                    for (var index5 = 0; index5 < selectedSubmodels.length; index5++) {\n                        if (ref.keys[0].value === selectedSubmodels[index5].id) {\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                            return msg;\n                        }\n                    }\n                }\n            }\n        }\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Aas with id:\" + ShellId + \" not found\", \"Timestamp\": Date.now() }] };\n\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"SubmodelElement with id:\" + submodelElementId + \" not found\", \"Timestamp\": Date.now() }] };\n\n    }\n\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\n\n\nreturn msg;",
+        "name": "SubmodelElement Resolver",
+        "func": "const iterate = (submodelElementId, collectionIds, submodelElements) => {\n    for (const submodelElement of submodelElements) {\n        if (submodelElement.modelType.name !== \"SubmodelElementCollection\" && collectionIds.length === 0 ||\n            submodelElement.modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1) {\n            if (submodelElement.idShort === submodelElementId) return submodelElement;\n        } else {\n            const index = collectionIds.indexOf(submodelElement.idShort);\n            if (index !== -1) {\n                collectionIds.splice(index, 1);\n                return iterate(submodelElementId, collectionIds, submodelElement.value);\n            }\n        }\n    }\n    return null;\n};\n\nlet { id: submodelElementId, submodelId, aasid: shellId } = msg.req.params;\nlet collectionIds = submodelElementId.includes(\".\") ? submodelElementId.split(\".\").slice(0, -1) : [];\nsubmodelElementId = submodelElementId.split(\".\").pop();\n\nif (msg.jsonataStatus === \"Success\") {\n    let selectedSubmodelElements = [];\n    let selectedSubmodels = msg.jsonataResult.filter(submodel => {\n        let result = iterate(submodelElementId, [...collectionIds], submodel.submodelElements);\n        if (result) {\n            selectedSubmodelElements.push(result);\n            return true;\n        }\n        return false;\n    });\n\n    if (selectedSubmodels.length) {\n        let manifest = context.flow.get(\"manifest\");\n        let shell = manifest.assetAdministrationShells.find(s => s.id === shellId);\n\n        if (shell) {\n            let submodelRefs = shell.submodels;\n            for (let i = 0; i < selectedSubmodels.length; i++) {\n                if (submodelRefs.some(ref => ref.keys[0].value === selectedSubmodels[i].id)) {\n                    msg.statusCode = \"200\";\n                    msg.payload = selectedSubmodelElements[i];\n                    return msg;\n                }\n            }\n        }\n        msg.statusCode = \"400\";\n        msg.payload = { Messages: [{ Code: \"BadRequest\", MessageType: \"Error\", Text: `AAS with id: ${shellId} not found`, Timestamp: Date.now() }] };\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = { Messages: [{ Code: \"BadRequest\", MessageType: \"Error\", Text: `SubmodelElement with id: ${submodelElementId} not found`, Timestamp: Date.now() }] };\n    }\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { Messages: [{ Code: \"BadRequest\", MessageType: \"Error\", Text: `Submodel with id: ${submodelId} not found`, Timestamp: Date.now() }] };\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18893,7 +19075,8 @@
                 "44447526e761aa78",
                 "90de0dc5d36435be"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    Start[Start: Receive Request] -->|Extract Params| ExtractParams;\n    \n    ExtractParams -->|Check jsonataStatus| CheckStatus;\n    CheckStatus -- Success --> ProcessSubmodels;\n    CheckStatus -- Failure --> SubmodelNotFound;\n\n    ProcessSubmodels -->|Iterate through Submodels| IterateSubmodels;\n    IterateSubmodels -->|Match Found?| CheckMatch;\n    CheckMatch -- Yes --> StoreMatch;\n    CheckMatch -- No --> SubmodelElementNotFound;\n\n    StoreMatch -->|Check AAS Manifest| CheckAAS;\n    CheckAAS -- Found --> ValidateSubmodelRefs;\n    CheckAAS -- Not Found --> AASNotFound;\n\n    ValidateSubmodelRefs -->|Submodel Ref Found?| CheckSubmodelRef;\n    CheckSubmodelRef -- Yes --> ReturnSubmodelElement;\n    CheckSubmodelRef -- No --> AASNotFound;\n\n    ReturnSubmodelElement -->|Set 200 Status| SuccessResponse;\n    AASNotFound -->|Set 400 Status| ErrorResponse;\n    SubmodelElementNotFound -->|Set 400 Status| ErrorResponse;\n    SubmodelNotFound -->|Set 400 Status| ErrorResponse;\n\n    SuccessResponse --> End[\"Return Response\"];\n    ErrorResponse --> End;\n\n```"
     },
     {
         "id": "63f253e2fb041de3",
@@ -18988,21 +19171,6 @@
         "wires": []
     },
     {
-        "id": "68a53bbb4297d1b1",
-        "type": "unsafe-function",
-        "z": "76d11e83ac083a40",
-        "d": true,
-        "name": "BuildingJsonataQuery...",
-        "func": "//var xml_string = msg.payload;\n//var XML = context.global.get('XML');\n\nmsg.submodelElement = msg.payload;\nmsg.submodelElementId = msg.req.params.id;\nmsg.req.params.id = msg.req.params.submodelId;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 2200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6be2bfcf9c4d44d7",
         "type": "link in",
         "z": "76d11e83ac083a40",
@@ -19047,7 +19215,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1690,
+        "x": 1710,
         "y": 1200,
         "wires": [
             [
@@ -19073,7 +19241,7 @@
         "id": "70c639e039cda016",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Returning Environment...",
+        "name": "getManifestAndAASID",
         "func": "msg.payload = context.flow.get(\"manifest\");\nmsg.AASID = context.flow.get('AASIdentifier');\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -19081,13 +19249,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
+        "x": 1220,
         "y": 240,
         "wires": [
             [
                 "703bbb516cbdc03f"
             ]
-        ]
+        ],
+        "info": "```mermaid\n\ngraph TD;\n    Start[\"Start\"]\n    RetrieveManifest[\"Retrieve 'manifest' from context.flow\"]\n    RetrieveAASID[\"Retrieve 'AASIdentifier' from context.flow\"]\n    SetPayload[\"Set msg.payload to manifest\"]\n    SetAASID[\"Set msg.AASID to AASIdentifier\"]\n    ReturnMsg[\"Return msg\"]\n\n    Start --> RetrieveManifest --> SetPayload\n    Start --> RetrieveAASID --> SetAASID\n    SetPayload --> ReturnMsg\n    SetAASID --> ReturnMsg\n\n```"
     },
     {
         "id": "7219e64f62fc6f3a",
@@ -19127,8 +19296,8 @@
         "id": "75d2fb50f033319c",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Getting aas submodels key",
-        "func": "var ShellId = msg.req.params.aasid;\nvar submodelFromPayload = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor (var indexShell = 0; indexShell < shells.length; indexShell++) {\n    let id = shells[indexShell].id;\n    if (id == ShellId) {\n        let submodels = shells[indexShell].submodels;\n        for (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++) {\n            var submodelKeys = submodels[indexSubmodel].keys;\n            for (var indexKey = 0; indexKey < submodelKeys.length; indexKey++) {\n                let keyId = submodelKeys[indexKey].value;\n                if (keyId == submodelFromPayload.id){\n                    msg.jsonataStatus = \"Success\";\n                    return msg;\n                }\n            }\n        }\n    }\n}\n\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "name": "Validate Submodel in Shell",
+        "func": "let ShellId = msg.req.params.aasid;\nlet submodelFromPayload = msg.payload;\nlet manifest = context.flow.get('manifest');\nlet shells = manifest.assetAdministrationShells;\n\n// Convert shells array to a Map for O(1) lookup\nlet shellMap = new Map(shells.map(shell => [shell.id, shell]));\n\nif (shellMap.has(ShellId)) {\n    let submodels = shellMap.get(ShellId).submodels;\n\n    // Convert submodels' keys to a Set for fast lookups\n    let keySet = new Set();\n    for (let submodel of submodels) {\n        for (let key of submodel.keys) {\n            keySet.add(key.value);\n        }\n    }\n\n    // Check if submodelFromPayload.id exists in keySet\n    if (keySet.has(submodelFromPayload.id)) {\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -19142,48 +19311,51 @@
                 "f47bf7b32155ce4b",
                 "25dabe20ebce31f5"
             ]
-        ]
+        ],
+        "info": "```mermaid\nflowchart TD\n    A[Start] --> B[Get ShellId, submodelFromPayload, manifest, and shells]\n    B --> C[Convert shells array to shellMap]\n    C --> D{Does shellMap contain ShellId?}\n    D -->|No| E[Set msg.jsonataStatus to Failure]\n    D -->|Yes| F[Get submodels from the shell]\n    F --> G[Create keySet from submodels' keys]\n    G --> H[Iterate through submodels and add keys to keySet]\n    H --> I{Does keySet contain submodelFromPayload.id?}\n    I -->|Yes| J[Set msg.jsonataStatus to Success]\n    J --> K[return msg]\n    I --> |No| E\n    E --> K\n\n```"
     },
     {
         "id": "76572304e90f0748",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Getting aass",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell];\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "name": "GetAssetAdministrationShellById",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\nvar shellMap = new Map(manifest.assetAdministrationShells.map(shell => [shell.id, shell]));\n\nif (shellMap.has(ShellId)) {\n    msg.jsonataResult = shellMap.get(ShellId);\n    msg.jsonataStatus = \"Success\";\n} else {\n    msg.jsonataStatus = \"Failure\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
+        "x": 740,
         "y": 440,
         "wires": [
             [
                 "4818defa81a58022",
                 "dad22aca5566de5b"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Start] --> B[Get ShellId and Manifest]\n    B --> E[Convert shells array to Map]\n    E --> F{Is ShellId in Map?}\n    F -->|Yes| G[Return Success and Shell]\n    F -->|No| H[Return Failure Shell Not Found]\n    G --> I[End]\n    H --> I\n\n\n\n```"
     },
     {
         "id": "786b809ca8505dba",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Updating Submodel",
-        "func": "var submodel = msg.payload;\n\nif (msg.jsonataStatus == \"Success\") {\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n    for (var element = 0; element < submodels.length; element++) {\n        if (submodels[element].id == submodel.id) {\n            submodels[element] = submodel;\n            msg.statusCode = \"200\";\n            context.flow.set(\"manifest\", manifest);\n            return msg;\n        }\n    }\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Error submodel not found\", \"Timestamp\": Date.now() }] };\n    return msg;\n}",
+        "name": "UpdateSubmodel",
+        "func": "var submodel = msg.payload;\n\nif (msg.jsonataStatus === \"Success\") {\n    var manifest = context.flow.get(\"manifest\");\n\n    // Find the submodel and update it efficiently using `find()`\n    let existingSubmodel = manifest.submodels.find(sm => sm.id === submodel.id);\n\n    if (existingSubmodel) {\n        Object.assign(existingSubmodel, submodel); // Efficient update\n        msg.statusCode = \"200\";\n        context.flow.set(\"manifest\", manifest);\n    } else {\n        msg.statusCode = \"400\";\n        msg.payload = {\n            \"Messages\": [{\n                \"Code\": \"BadRequest\",\n                \"CorrelationId\": null,\n                \"MessageType\": \"Error\",\n                \"Text\": \"Error submodel not found\",\n                \"Timestamp\": Date.now()\n            }]\n        };\n    }\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": \"Error submodel not found\",\n            \"Timestamp\": Date.now()\n        }]\n    };\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
+        "x": 1230,
         "y": 980,
         "wires": [
             [
                 "7219e64f62fc6f3a"
             ]
-        ]
+        ],
+        "info": "```mermaid\nflowchart TD\n    A[Start] --> B[Get submodel from msg.payload]\n    B --> C[Check if jsonataStatus is Success]\n    \n    C -->|No| G[Set statusCode to 400 ]\n    C -->|Yes| D[Retrieve manifest from context]\n\n    D --> E[Find submodel in manifest.submodels]\n    \n    E -->|Found| F[Update submodel and set statusCode to 200]\n    E -->|Not Found| G\n\n    F --> H[Update manifest in context]\n    H --> I[Return msg]\n    G --> I\n\n```"
     },
     {
         "id": "7889ef2f1a11325e",
@@ -19230,8 +19402,8 @@
         "id": "7d32f0cc14c604c4",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Getting aas submodels",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell].submodels;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "name": "GetSubmodelsByShellId",
+        "func": "let ShellId = msg.req.params.aasid;\nlet manifest = context.flow.get('manifest');\nlet shells = manifest.assetAdministrationShells;\n\n// Convert shells array to a Map for O(1) lookup\nlet shellMap = new Map(shells.map(shell => [shell.id, shell]));\n\nif (shellMap.has(ShellId)) {\n    msg.jsonataResult = shellMap.get(ShellId).submodels;\n    msg.jsonataStatus = \"Success\";\n} else {\n    msg.jsonataStatus = \"Failure\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -19245,7 +19417,8 @@
                 "673b2469fad75a4e",
                 "537e4af92871cf60"
             ]
-        ]
+        ],
+        "info": "```mermaid\nflowchart TD\n    A[Start] --> B[Get ShellId from request]\n    B --> C[Retrieve manifest and shells]\n    C --> D[Create shellMap from shells]\n    D --> E{Does shellMap contain ShellId?}\n    E -->|Yes| F[Set msg.jsonataResult to shell.submodels]\n    F --> G[Set msg.jsonataStatus to Success]\n    E -->|No| H[Set msg.jsonataStatus to Failure]\n    G --> I[Return msg]\n    H --> I\n\n```"
     },
     {
         "id": "7f3f34cddc5ae948",
@@ -19276,21 +19449,6 @@
         "timeout": "30",
         "x": 2350,
         "y": 1440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "88085df6f12c3b4b",
-        "type": "unsafe-function",
-        "z": "76d11e83ac083a40",
-        "d": true,
-        "name": "submodelElement",
-        "func": "msg.submodelElement = msg.payload;\nmsg.submodelElementId = msg.req.params.id;\nmsg.req.params.id = msg.req.params.submodelId;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 1740,
         "wires": [
             []
         ]
@@ -19355,22 +19513,23 @@
         "id": "901ba1fde76d7adf",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Getting aas submodels",
-        "func": "var submodelFromPayload = msg.payload;\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let id = submodels[indexSubmodel].id;\n    if (id == submodelFromPayload.id){\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "name": "Check submodel Existence",
+        "func": "var submodelFromPayload = msg.payload;\nvar manifest = context.flow.get(\"manifest\");\n\n// Use `some()` for early exit and better readability\nmsg.jsonataStatus = manifest.submodels.some(sm => sm.id === submodelFromPayload.id)\n    ? \"Success\"\n    : \"Failure\";\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 720,
         "y": 980,
         "wires": [
             [
                 "3c52e2b7ae3d0cad",
                 "786b809ca8505dba"
             ]
-        ]
+        ],
+        "info": "```mermaid\nflowchart TD\n    A[Start] --> B[Get submodelFromPayload from msg.payload]\n    B --> C[Retrieve manifest from context]\n    C --> D[Check if submodelFromPayload.id exists in manifest.submodels]\n    \n    D -->|Exists| E[Set msg.jsonataStatus to Success]\n    D -->|Does not exist| F[Set msg.jsonataStatus to Failure]\n    \n    E --> G[Return msg]\n    F --> G\n```"
     },
     {
         "id": "90de0dc5d36435be",
@@ -19449,8 +19608,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1450,
-        "y": 620,
+        "x": 1650,
+        "y": 600,
         "wires": []
     },
     {
@@ -19531,7 +19690,8 @@
         "y": 1620,
         "wires": [
             [
-                "6441ea80b49bbccd"
+                "6441ea80b49bbccd",
+                "d94aaa140511e6f8"
             ]
         ]
     },
@@ -19638,42 +19798,44 @@
         "id": "a143c3240185a243",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Getting aas submodels",
-        "func": "var submodelId = msg.req.params.submodelId;\nvar submodelCollectionId = [];\nsubmodelCollectionId = msg.req.params.submodelId.split(\".\");\nvar manifest = context.flow.get('manifest');\n\nvar submodels = manifest.submodels;\n\nfor (var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n    let id = submodels[indexSubmodel].id;\n    if (id == submodelId){\n        msg.jsonataResult = [];\n        msg.jsonataResult.push(submodels[indexSubmodel]);\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "name": "GetSubmodelById",
+        "func": "const submodelId = msg.req.params.submodelId;\nif (!submodelId) {\n    msg.jsonataStatus = \"Failure\";\n    return msg;\n}\n\nconst manifest = context.flow.get('manifest');\nconst submodels = manifest.submodels;\n\n// Use a Map for faster lookup if submodels is large\nconst submodelsMap = new Map(submodels.map(submodel => [submodel.id, submodel]));\n\nif (submodelsMap.has(submodelId)) {\n    msg.jsonataResult = [submodelsMap.get(submodelId)];\n    msg.jsonataStatus = \"Success\";\n} else {\n    msg.jsonataStatus = \"Failure\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 690,
         "y": 1100,
         "wires": [
             [
                 "0464b642e2cba8e3",
                 "622625b03b85c50a"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    A[Start] --> B{Check if submodelId exists}\n    B -- No --> C[Set jsonataStatus to Failure] --> D[Return msg]\n    B -- Yes --> E[Retrieve manifest]\n    E --> F[Extract submodels]\n    F --> G[Create submodelsMap]\n    G --> H{Check if submodelId exists in submodelsMap}\n    H -- No --> I[Set jsonataStatus to Failure] --> J[Return msg]\n    H -- Yes --> K[Set jsonataResult with submodel]\n    K --> L[Set jsonataStatus to Success]\n    L --> M[Return msg]\n\n```"
     },
     {
         "id": "abe7b80ff3b124ce",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Getting aas submodels keys",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].id;\n    if(id == ShellId){\n        let submodels = shells[indexShell].submodels;\n        var keys = [];\n        for(var indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++){\n            keys = [...submodels[indexSubmodel].keys, ...keys];\n        }\n        msg.jsonataResult = keys;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "name": "Get Submodel Keys for Asset Administration Shell",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\nvar shells = manifest.assetAdministrationShells;\n\n// Convert shells array to a Map for O(1) lookup\nvar shellMap = new Map(shells.map(shell => [shell.id, shell]));\n\nif (shellMap.has(ShellId)) {\n    let submodels = shellMap.get(ShellId).submodels;\n    let keys = [];\n\n    // Use push instead of spread operator for better performance\n    for (let indexSubmodel = 0; indexSubmodel < submodels.length; indexSubmodel++) {\n        keys.push(...submodels[indexSubmodel].keys);\n    }\n\n    msg.jsonataResult = keys;\n    msg.jsonataStatus = \"Success\";\n} else {\n    msg.jsonataStatus = \"Failure\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
+        "x": 790,
         "y": 640,
         "wires": [
             [
                 "52dfa0adfbb4c426"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Get ShellId from request] --> B[Get manifest from context]\n    B --> C[Convert shells to Map]\n    C --> D[Check if ShellId exists in Map]\n    D -->|Yes| E[Get submodels for ShellId]\n    E --> F[Iterate over submodels and push keys to array]\n    F --> G[Set msg.jsonataResult to keys]\n    G --> H[Set msg.jsonataStatus to Success]\n    D -->|No| I[Set msg.jsonataStatus to Failure]\n    H --> J[Return msg]\n    I --> J\n\n```"
     },
     {
         "id": "ac57850bb4cbfffa",
@@ -19709,22 +19871,23 @@
         "id": "af1e551e330320df",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "preprocessing and flattening JSON",
-        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch (error) {\n        return false;\n    }\n}\n\nfunction getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    keys = Object.keys(flattenObject);\n    //msg.object = data;\n} else {\n    if(msg.payload.modelType == \"Property\"){\n        if(isJSONString(msg.value)){\n            flattenObject = msg.value;\n            keys.push(\"\");\n        }\n    } else if (msg.payload.modelType == \"SubmodelElementCollection\"){\n        flattenObject = getFlatObject(JSON.parse(msg.value));\n        keys = Object.keys(flattenObject);\n    }\n    \n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else if (uniqueKeys.length == 1){\n    if (uniqueKeys[0] === \"\"){\n        uniqueKeys[0] = msg.submodelElementId;\n        pathsToUpdate.push(uniqueKeys[0]);\n    } else {\n        uniqueKeys[0] = msg.submodelElementId + \".\" + uniqueKeys[0];\n        pathsToUpdate.push(uniqueKeys[0]);\n    }\n} \nelse {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
+        "name": "Flatten and Extract paths",
+        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch {\n        return false;\n    }\n}\n\nfunction getFlatObject(obj, path = {}, prefix = \"\") {\n    Object.entries(obj).forEach(([key, value]) => {\n        let newKey = prefix ? `${prefix}.${key}` : key;\n        if (value && typeof value === \"object\") {\n            getFlatObject(value, path, newKey);\n        } else {\n            path[newKey] = value;\n        }\n    });\n    return path;\n}\n\nlet flattenObject = {};\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.blob) {\n    flattenObject = getFlatObject(object.blob);\n    keys = Object.keys(flattenObject);\n} else if (msg.payload.modelType === \"Property\" && isJSONString(msg.value)) {\n    flattenObject = msg.value;\n    keys.push(\"\");\n} else if (msg.payload.modelType === \"SubmodelElementCollection\") {\n    flattenObject = getFlatObject(JSON.parse(msg.value));\n    keys = Object.keys(flattenObject);\n}\n\n\n\n// Remove last segment from each key\nkeys = keys.map(key => key.substring(0, key.lastIndexOf(\".\")) || key);\n\n// Get unique keys\nlet uniqueKeys = [...new Set(keys)];\n\n// Construct pathsToUpdate\nlet pathsToUpdate = uniqueKeys.map(key =>\n    key ? `${msg.submodelElementId}.${key}` : msg.submodelElementId\n);\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1780,
+        "x": 1750,
         "y": 1460,
         "wires": [
             [
                 "49df5ddc331c8aa6",
                 "e7cb9ec4caa6c2d5"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    A[Start] --> B[Parse msg.value as JSON]\n    B -->|Has blob?| C{Check object.blob}\n    C -->|Yes| D[Flatten object.blob]\n    D --> E[Extract keys]\n\n    C -->|No| F{Check modelType}\n    F -->|Property & is JSON?| G[Assign msg.value to flattenObject]\n    G --> H[Push empty key to keys]\n\n    F -->|SubmodelElementCollection?| I[Flatten parsed msg.value]\n    I --> E\n\n    E --> J[Remove last segment from each key]\n    H --> J\n    J --> K[Get unique keys]\n    K --> L[Construct pathsToUpdate]\n    L --> M[Assign values to msg]\n    M --> N[Return msg]\n\n```"
     },
     {
         "id": "b09f91f0408ac6d9",
@@ -19747,7 +19910,7 @@
         "id": "b0e8c7b07d3faae6",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Returning Submodels",
+        "name": "GetSubmodels",
         "func": "var manifest = context.flow.get(\"manifest\");\nmsg.payload = manifest.submodels;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -19755,7 +19918,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
+        "x": 1200,
         "y": 500,
         "wires": [
             [
@@ -19855,21 +20018,22 @@
         "id": "bbab70355f2be65e",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Getting aas submodels",
-        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\n\nfor(var indexShell = 0; indexShell < shells.length; indexShell++){\n    let id = shells[indexShell].id;\n    if(id == ShellId){\n        msg.jsonataResult = shells[indexShell].submodels;\n        msg.jsonataStatus = \"Success\";\n        return msg;\n    }\n}\n\nmsg.jsonataStatus = \"Failure\";\nreturn msg;\n",
+        "name": "fetch Submodels for Asset Administrationn Shell",
+        "func": "let ShellId = msg.req.params.aasid;\nlet manifest = context.flow.get('manifest');\nlet shells = manifest.assetAdministrationShells;\n\n// Convert shells array to a Map for O(1) lookup\nlet shellMap = new Map(shells.map(shell => [shell.id, shell]));\n\nif (shellMap.has(ShellId)) {\n    msg.jsonataResult = shellMap.get(ShellId).submodels;\n    msg.jsonataStatus = \"Success\";\n} else {\n    msg.jsonataStatus = \"Failure\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 780,
         "y": 560,
         "wires": [
             [
                 "c086b1d2bcc6d15f"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Start] --> B[Get ShellId from msg.req.params.aasid]\n    B --> C[Get manifest from context]\n    C --> D[Extract assetAdministrationShells from manifest]\n    D --> E[Convert assetAdministrationShells to shellMap Map with O-1 lookup]\n    E --> F{Check if shellMap has ShellId}\n    F -- Yes --> G[Set msg.jsonataResult to submodels of the ShellId]\n    G --> H[Set msg.jsonataStatus to Success]\n    F -- No --> I[Set msg.jsonataStatus to Failure]\n    H --> J[Return msg]\n    I --> J\n    J --> K[End]\n\n```"
     },
     {
         "id": "bceb994e404c988a",
@@ -19889,21 +20053,22 @@
         "id": "bd0433c5d06b8017",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Returning Asset-Information",
-        "func": "var ShellId = msg.req.params.aasid;\nif (msg.jsonataStatus == \"Success\") {\n    var assetInformation = msg.jsonataResult;\n    msg.payload = assetInformation;\n    msg.statusCode = \"200\";\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Asset Administration Shell with id:\" + ShellId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\nreturn msg;",
+        "name": "Validate and Retrieve Asset-Information",
+        "func": "var ShellId = msg.req.params.aasid;\n\nif (msg.jsonataStatus === \"Success\") {\n    msg.payload = msg.jsonataResult;\n    msg.statusCode = \"200\";\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `Asset Administration Shell with id: ${ShellId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
+        "x": 1260,
         "y": 360,
         "wires": [
             [
                 "8dbd0137992ac4ce"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Start] --> B{Check jsonataStatus}\n    B -->|Success| C[Set msg.payload = jsonataResult]\n    B -->|Failure| D[Set msg.statusCode = 400]\n    D --> E[Set msg.payload with error message]\n    C --> F[Set msg.statusCode = 200]\n    E --> G\n    F --> G[Return msg]\n\n```"
     },
     {
         "id": "bd236aee7c151d99",
@@ -19950,21 +20115,22 @@
         "id": "c086b1d2bcc6d15f",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Returning Submodel by AAS id",
-        "func": "var ShellId = msg.req.params.id;\nif (msg.jsonataStatus == \"Success\") {\n    msg.payload = msg.jsonataResult;\n    msg.statusCode = \"200\";\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Asset Adminsitration Shell with id:\" + ShellId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\nreturn msg;\n",
+        "name": "Handle ShellId Response",
+        "func": "let ShellId = msg.req.params.id;\n\nif (msg.jsonataStatus === \"Success\") {\n    msg.payload = msg.jsonataResult;\n    msg.statusCode = \"200\";\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `Asset Administration Shell with id: ${ShellId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
+        "x": 1210,
         "y": 560,
         "wires": [
             [
                 "d7b711e1c4c262aa"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Start] --> B[Get ShellId from Request]\n    B --> C{Is jsonataStatus Success?}\n    C -- Yes --> D[Set Payload to jsonataResult]\n    D --> E[Set Status Code to 200]\n    E --> F[Return msg]\n    C -- No --> G[Set Status Code to 404]\n    G --> H[Set Error Message]\n    H --> F\n\n```"
     },
     {
         "id": "c24f0c63d44da317",
@@ -20030,7 +20196,7 @@
         "id": "c4810d50aed1b354",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Returning Shells...",
+        "name": "getAssetAdministrationShells",
         "func": "var manifest = context.flow.get(\"manifest\");\nmsg.payload = manifest.assetAdministrationShells;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -20038,13 +20204,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
+        "x": 1260,
         "y": 300,
         "wires": [
             [
                 "0ac57037dc16c894"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    Start[\"Start\"]\n    RetrieveManifest[\"Retrieve 'manifest' from context.flow\"]\n    ExtractAAS[\"Extract 'assetAdministrationShells' from manifest\"]\n    SetPayload[\"Set msg.payload to assetAdministrationShells\"]\n    ReturnMsg[\"Return msg\"]\n\n    Start --> RetrieveManifest --> ExtractAAS --> SetPayload --> ReturnMsg\n\n```"
     },
     {
         "id": "c549646fcbe9247a",
@@ -20127,15 +20294,15 @@
         "id": "d237ae4830b265ec",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Update SubmodelElement",
-        "func": "var verifySubmodelBelongsToAasId = function (aasId, shells, submodel) {\n    for (var index = 0; index < shells.length; index++) {\n        if (shells[index].id === aasId) {\n            var submodelRefs = shells[index].submodels;\n            for (var index2 = 0; index2 < submodelRefs.length; index2++) {\n                var ref = submodelRefs[index2];\n                if (ref.keys[0].value === submodel.id) {\n                    return true;\n                }\n            }\n        }\n    }\n    return false;\n}\n\nvar iterate = function (submodelToUpdate, collectionIds, submodelElements) {\n    for (var index = 0; index < submodelElements.length; index++) {\n        if (submodelElements[index].modelType !== \"SubmodelElementCollection\" || (submodelElements[index].modelType === \"SubmodelElementCollection\" && collectionIds.length < 1)) {\n            if (submodelElements[index].idShort === submodelToUpdate.idShort) {\n                submodelElements[index] = submodelToUpdate;\n                return submodelToUpdate;\n\n            }\n\n        } else {\n            for (var collIndex = 0; collIndex < collectionIds.length; collIndex++) {\n                var collectionId = collectionIds[collIndex];\n                if (submodelElements[index].idShort === collectionId) {\n                    collectionIds.splice(collIndex, 1);\n                    var result = iterate(submodelToUpdate, collectionIds, submodelElements[index].value);\n                    return result;\n                }\n            }\n\n        }\n    }\n    return \"\";\n}\n\nlet manifest = context.flow.get(\"manifest\");\nlet aasid = msg.req.params.aasid;\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar submodelToUpdate = msg.submodelElement;\n\nif (msg.jsonataStatus == \"Success\") {\n\n\n    for (var index1 = 0; index1 < manifest.submodels.length; index1++) {\n\n        let verified = verifySubmodelBelongsToAasId(aasid, manifest.assetAdministrationShells, manifest.submodels[index1]);\n\n        if (verified) {\n            var result = iterate(submodelToUpdate, submodelCollectionId, manifest.submodels[index1].submodelElements);\n            if (result != \"\") {\n                context.flow.set(\"manifest\", manifest);\n                msg.payload = result;\n                msg.statusCode = \"200\";\n                return [msg, null];\n            }\n        }\n    }\n\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"SubmodelElement with id:\" + submodelElementId + \" not found\", \"Timestamp\": Date.now() }] };\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n\n}\n\nreturn [null, msg];",
+        "name": "UpdateSubmodelElement",
+        "func": "const verifySubmodelBelongsToAasId = (aasId, shellMap, submodel) => {\n    if (!shellMap.has(aasId)) return false;\n\n    const submodelRefs = shellMap.get(aasId).submodels;\n    const submodelSet = new Set(submodelRefs.map(ref => ref.keys[0].value));\n\n    return submodelSet.has(submodel.id);\n};\n\nconst iterate = (submodelToUpdate, collectionIds, submodelElements) => {\n    for (let index = 0; index < submodelElements.length; index++) {\n        let element = submodelElements[index];\n\n        if (element.modelType !== \"SubmodelElementCollection\" || collectionIds.length < 1) {\n            if (element.idShort === submodelToUpdate.idShort) {\n                submodelElements[index] = submodelToUpdate;\n                return submodelToUpdate;\n            }\n        } else {\n            let collIndex = collectionIds.findIndex(id => id === element.idShort);\n            if (collIndex !== -1) {\n                collectionIds.splice(collIndex, 1);\n                return iterate(submodelToUpdate, collectionIds, element.value);\n            }\n        }\n    }\n    return \"\";\n};\n\n// Load Manifest & Params\nlet manifest = context.flow.get(\"manifest\");\nlet aasId = msg.req.params.aasid;\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet submodelCollectionId = submodelElementId.split(\".\");\nmsg.collectionIds = submodelCollectionId;\nlet submodelToUpdate = msg.submodelElement;\n\nif (msg.jsonataStatus === \"Success\") {\n    // Convert `shells` & `submodels` to Maps for O(1) lookups\n    let shellMap = new Map(manifest.assetAdministrationShells.map(shell => [shell.id, shell]));\n    let submodelMap = new Map(manifest.submodels.map(sub => [sub.id, sub]));\n\n    for (let submodel of manifest.submodels) {\n        if (verifySubmodelBelongsToAasId(aasId, shellMap, submodel)) {\n            let result = iterate(submodelToUpdate, submodelCollectionId, submodel.submodelElements);\n            if (result) {\n                context.flow.set(\"manifest\", manifest);\n                msg.payload = result;\n                msg.statusCode = \"200\";\n                return [msg, null];\n            }\n        }\n    }\n\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `SubmodelElement with id: ${submodelElementId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `Submodel with id: ${submodelId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n}\n\nreturn [null, msg];\n",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1960,
+        "x": 1970,
         "y": 1580,
         "wires": [
             [
@@ -20145,25 +20312,8 @@
             [
                 "52987851f608cb92"
             ]
-        ]
-    },
-    {
-        "id": "d2a8a0b77ff29088",
-        "type": "function",
-        "z": "76d11e83ac083a40",
-        "name": "setSubmodelElement",
-        "func": "msg.submodelElement = msg.payload;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 630,
-        "y": 1180,
-        "wires": [
-            []
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Load Manifest & Params] --> B{Is JSONata Status Success?}\n    B -->|Yes| C[Convert Shells & Submodels to Maps]\n    C --> D[For each Submodel in Manifest]\n    D --> E{Verify Submodel Belongs to AAS ID?}\n    E -->|Yes| F[Iterate Submodel Elements to Update]\n    F --> G{Is Element Found?}\n    G -->|Yes| H[Update Submodel Element]\n    H --> I[Set Updated Manifest]\n    I --> J[Return 200 Success Response]\n    G -->|No| K[Return Element Not Found Error]\n    E -->|No| K\n    B -->|No| L[Return Submodel Not Found Error]\n    K --> M[Return 400 Error]\n    L --> M\n\n```"
     },
     {
         "id": "d56e50a8d733cd77",
@@ -20192,7 +20342,7 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "Returning AAS",
-        "func": "var ShellId = msg.req.params.id;\nif (msg.jsonataStatus == \"Success\") {\n    msg.payload = msg.jsonataResult;\n    msg.statusCode = \"200\";\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Asset Adminsitration Shell with id:\" + ShellId + \" not found\", \"Timestamp\": Date.now() }] };\n}\n\nreturn msg;",
+        "func": "var ShellId = msg.req.params.id;\n\nif (msg.jsonataStatus === \"Success\") {\n    msg.payload = msg.jsonataResult;\n    msg.statusCode = \"200\";\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"CorrelationId\": null,\n            \"MessageType\": \"Error\",\n            \"Text\": `Asset Administration Shell with id: ${ShellId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -20205,7 +20355,8 @@
             [
                 "ca5a44ae4dac509b"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Start] --> B[Get ShellId from msg.req.params.id]\n    B --> C{Check if msg.jsonataStatus is Success}\n    C -->|Yes| D[Set msg.payload = msg.jsonataResult]\n    D --> E[Set msg.statusCode = 200]\n    E --> F[Return msg]\n    C -->|No| G[Set msg.statusCode = 400]\n    G --> H[Create error payload with BadRequest message]\n    H --> F[Return msg]\n\n```"
     },
     {
         "id": "dba47d338d3e630e",
@@ -20222,21 +20373,22 @@
         "id": "dc5d5ef5fcd4473a",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Remove SubmodelElement",
-        "func": "var manifest = context.flow.get(\"manifest\");\nvar submodels = manifest.submodels;\nfor (var elementSub = 0; elementSub < submodels.length; elementSub++) {\n    var submodelElements = submodels[elementSub].submodelElements;\n    for (var elementSubElem = 0; elementSubElem < submodelElements.length; elementSubElem++) {\n        if (submodelElements[elementSubElem].idShort == msg.payload.idShort) {\n            submodelElements.splice(elementSubElem, 1);\n            context.flow.set(\"manifest\", manifest);\n            msg.statusCode = \"200\";\n            return msg;\n        }\n    }\n}",
+        "name": "Delete SubmodelElement",
+        "func": "const manifest = context.flow.get(\"manifest\");\nconst submodelId = msg.jsonataResult[0].id; // Assuming the submodel ID is provided in the request\nconst idToRemove = msg.payload.idShort;\n\n// Find the specific submodel\nconst submodel = manifest.submodels.find(sm => sm.id === submodelId);\n\nif (!submodel) {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        \"Messages\": [{\n            \"Code\": \"BadRequest\",\n            \"MessageType\": \"Error\",\n            \"Text\": `Submodel with ID: ${submodelId} not found`,\n            \"Timestamp\": Date.now()\n        }]\n    };\n    return msg;\n}\n\n// Recursive function to find and remove a submodelElement by idShort\nconst removeSubmodelElement = (elements, id) => {\n    for (let i = 0; i < elements.length; i++) {\n        const element = elements[i];\n\n        // Check if the current element matches the idShort\n        if (element.idShort === id) {\n            elements.splice(i, 1);\n            return true; // Element found and removed\n        }\n\n        // If the element has a nested structure (SubmodelElementCollection), search inside it\n        if (Array.isArray(element.value)) {\n            const removed = removeSubmodelElement(element.value, id);\n            if (removed) return true; // Stop searching if removed\n        }\n    }\n    return false; // Not found\n};\n\n// Attempt to remove the submodelElement from the specified submodel\nif (removeSubmodelElement(submodel.submodelElements, idToRemove)) {\n    context.flow.set(\"manifest\", manifest);\n    msg.statusCode = \"200\";\n    return msg;\n}\n\n// If no element was found, return an error message\nmsg.statusCode = \"400\";\nmsg.payload = {\n    \"Messages\": [{\n        \"Code\": \"BadRequest\",\n        \"MessageType\": \"Error\",\n        \"Text\": `SubmodelElement with ID: ${idToRemove} not found in Submodel ${submodelId}`,\n        \"Timestamp\": Date.now()\n    }]\n};\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1360,
+        "x": 1350,
         "y": 1360,
         "wires": [
             [
                 "4f30634125ae96c1"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    A[Start] --> B[Retrieve manifest]\n    B --> C[Get submodelId from msg.jsonataResult]\n    C --> D[Get idToRemove from msg.payload]\n    D --> E[Find submodel in manifest.submodels]\n    \n    E -- Not Found --> F[Return 400: Submodel Not Found]\n    \n    E -- Found --> G[Call removeSubmodelElement]\n    \n    subgraph Recursive Function: removeSubmodelElement\n        G --> H[Iterate over elements]\n        H --> I{Element matches idToRemove?}\n        I -- Yes --> J[Remove element & return true]\n        I -- No --> K{Element is a Collection?}\n        K -- Yes --> L[Call removeSubmodelElement recursively]\n        L --> M{Element removed?}\n        M -- Yes --> J\n        M -- No --> H\n        K -- No --> H\n    end\n\n    J --> N[Update manifest in context.flow]\n    N --> O[Return 200: Success]\n\n    M -- No element found --> P[Return 400: SubmodelElement Not Found]\n\n```"
     },
     {
         "id": "dd6d047677cb1b5e",
@@ -20314,15 +20466,15 @@
         "id": "e7cb9ec4caa6c2d5",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Updating SubmodelElement",
-        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                let values = value;\n\n                let keys = Object.keys(values);\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n                    //msg.debug15 = selectedValue;\n                    //return msg;\n                    if (typeof selectedValue != 'object') {\n                        for (let valuesIndex = 0; valuesIndex < submodelElements[submodelElement].value.length; valuesIndex++) {\n                            if (submodelElements[submodelElement].value[valuesIndex].idShort == keys[keyIndex]) {\n                                submodelElements[submodelElement].value[valuesIndex].value = selectedValue;\n                                break;\n                            }\n                        }\n                    }\n\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && (modelType === \"Property\" || modelType === \"Blob\")) {\n                //msg.debug11 = \"Entrei \" + submodelElements[submodelElement].idShort + \" and \" + idPath + \" \" + value;\n\n                submodelElements[submodelElement].value = value;\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nlet manifest = context.flow.get(\"manifest\");\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathsToSubmodelElements = msg.pathsToUpdate;\n\n    let submodelRootIdentifier = submodelRoot.id;\n\n    let manifestSubmodels = manifest.submodels;\n\n    let manifestSubmodelElements = {};\n\n    let stratingJsonDecomposition = msg.submodelElementId.split(\".\");\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n        }\n\n    }\n\n    for (let pathIndex = 0; pathIndex < pathsToSubmodelElements.length; pathIndex++) {\n\n        let collectionIds = pathsToSubmodelElements[pathIndex].split(\".\");\n        msg.collectionIds = collectionIds;\n        let value = msg.submodelElement[msg.submodelElementId];\n        //msg.getValue1 = value;\n        let jsonObjectValue = {};\n\n        let processedValue = {};\n\n        if (collectionIds.length > 1) {\n            jsonObjectValue = JSON.parse(value);\n            let decomposeJsonObj = jsonObjectValue;\n            for (let index = stratingJsonDecomposition.length; index < collectionIds.length; index++) {\n                decomposeJsonObj = decomposeJsonObj[collectionIds[index]];\n            }\n            /*if (typeof decomposeJsonObj === \"string\") {\n                 processedValue = JSON.stringify(decomposeJsonObj.replace(/^\"|\"$/g, ''));\n             } else {\n                 processedValue = decomposeJsonObj;\n             }*/\n            processedValue = decomposeJsonObj;\n            //msg.stringified = decomposeJsonObj;\n\n        } else {\n            if (typeof value == \"object\") {\n                jsonObjectValue = JSON.parse(value);\n            } else {\n                processedValue = value;\n            }\n\n        }\n        //msg.getValue2 = processedValue;\n        //msg.getValue3 = manifestSubmodelElements;\n\n        //msg.getValue4 = collectionIds;\n        //return msg;\n        updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, processedValue);\n\n    }\n    context.flow.set(\"manifest\", manifest);\n\n    if (persist == \"true\") {\n\n        return [msg, null];\n\n    } else {\n\n        return [null, msg];\n    }\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n    return [null, msg];\n}",
+        "name": "UpdateSubmodelElement",
+        "func": "let submodelElement = msg.req.query.content === \"value\"\n    ? { value: msg.submodelElement[msg.submodelElementId] }\n    : msg.submodelElement;\n\nlet persist = msg.req.query.content !== \"value\";\n\nfunction updateSubmodelElementValues(submodelElements, indexIdPath, collectionIds, value) {\n    if (indexIdPath >= collectionIds.length) return false;\n\n    let idPath = collectionIds[indexIdPath];\n\n    for (let submodelElement of submodelElements) {\n        let { idShort, modelType, value: subValue } = submodelElement;\n\n        if (idShort === idPath) {\n            if (modelType === \"SubmodelElementCollection\") {\n                if (indexIdPath === collectionIds.length - 1) {\n                    Object.keys(value).forEach(key => {\n                        let target = subValue.find(el => el.idShort === key);\n                        if (target) target.value = value[key];\n                    });\n                    return true;\n                }\n                return updateSubmodelElementValues(subValue, indexIdPath + 1, collectionIds, value);\n            } else if (modelType === \"Property\" || modelType === \"Blob\") {\n                submodelElement.value = value;\n                return true;\n            }\n        }\n    }\n    return false;\n}\n\nconst manifest = context.flow.get(\"manifest\");\n\nif (msg.jsonataStatus !== \"Success\") {\n    msg.statusCode = \"400\";\n    msg.payload = {\n        Messages: [{\n            Code: \"BadRequest\",\n            CorrelationId: null,\n            MessageType: \"Error\",\n            Text: `Submodel with id: ${msg.req.params.submodelId} not found`,\n            Timestamp: Date.now()\n        }]\n    };\n    return [null, msg];\n}\n\nconst submodelRoot = msg.jsonataResult[0];\nconst submodelRootIdentifier = submodelRoot.id;\nconst manifestSubmodel = manifest.submodels.find(sub => sub.id === submodelRootIdentifier);\nconst manifestSubmodelElements = manifestSubmodel ? manifestSubmodel.submodelElements : {};\n\nmsg.pathsToUpdate.forEach(path => {\n    let collectionIds = path.split(\".\");\n    let value = msg.submodelElement[msg.submodelElementId];\n    let processedValue = collectionIds.length > 1 ? JSON.parse(value) : value;\n\n    if (collectionIds.length > 1) {\n        let jsonObjectValue = JSON.parse(value);\n        processedValue = collectionIds.slice(msg.submodelElementId.split(\".\").length)\n            .reduce((obj, key) => obj[key], jsonObjectValue);\n    }\n\n    updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, processedValue);\n});\n\ncontext.flow.set(\"manifest\", manifest);\n\nreturn persist ? [msg, null] : [null, msg];\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2100,
+        "x": 2090,
         "y": 1460,
         "wires": [
             [
@@ -20332,7 +20484,8 @@
             [
                 "1a1935f08f70c863"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD\n    A[Check if content is value] -->|Yes| B[Create submodelElement with value]\n    A -->|No| C[Use msg.submodelElement as is]\n    \n    B --> D[Set persist to false]\n    C --> D[Set persist to true]\n\n    D --> E[Check if jsonataStatus is Success]\n    E -->|No| F[Return 400 Error: Submodel not found]\n    E -->|Yes| G[Get submodelRoot from jsonataResult]\n\n    G --> H[Find submodel in manifest based on submodelRoot id]\n    H -->|Not found| F[Return 400 Error: Submodel not found]\n    H -->|Found| I[Set manifestSubmodelElements from manifest]\n\n    I --> J[Loop through pathsToUpdate]\n\n    J --> K[Split path into collectionIds]\n    K --> L[Process value from msg.submodelElement]\n\n    L --> M[Update submodel element values recursively]\n    M -->|Updated| N[Return processed value]\n\n    J --> O[Set manifest in context]\n\n    N --> P[Return msg if persist is true or null msg otherwise]\n\n```"
     },
     {
         "id": "e94e5642d24eb440",
@@ -20385,21 +20538,22 @@
         "id": "eacd5ebbca532874",
         "type": "function",
         "z": "76d11e83ac083a40",
-        "name": "Adding Concept Description",
-        "func": "var manifest = context.flow.get(\"manifest\");\nvar descriptions = manifest.conceptDescriptions;\nvar newDescription = msg.conceptDescription;\nfor (let descriptionIndex = 0; descriptionIndex < descriptions.length; descriptionIndex++){\n    if (descriptions[descriptionIndex].id == newDescription.id){\n        msg.payload = \"Error Concept Description with ID already exists\";\n        msg.statusCode = \"400\";\n        return msg;\n    }\n}\nmsg.statusCode = \"200\";\nmanifest.conceptDescriptions.push(msg.payload);\ncontext.flow.set(\"manifest\", manifest);\n\nreturn msg;",
+        "name": "addConceptDescription",
+        "func": "let manifest = context.flow.get(\"manifest\");\nlet descriptions = manifest.conceptDescriptions;\nlet newDescription = msg.conceptDescription;\n\n// Convert descriptions to a Set for O(1) lookup\nlet descriptionSet = new Set(descriptions.map(desc => desc.id));\n\nif (descriptionSet.has(newDescription.id)) {\n    msg.payload = \"Error: Concept Description with ID already exists\";\n    msg.statusCode = \"400\";\n    return msg;\n}\n\n// Add new concept description\nmsg.statusCode = \"200\";\nmanifest.conceptDescriptions.push(newDescription);\ncontext.flow.set(\"manifest\", manifest);\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
+        "x": 970,
         "y": 1820,
         "wires": [
             [
                 "560f270810ed1f23"
             ]
-        ]
+        ],
+        "info": "```mermaid\ngraph TD;\n    A[Start] --> B[Retrieve manifest from context.flow]\n    B --> C[Extract conceptDescriptions and new conceptDescription]\n    C --> D{Does the ID exist in conceptDescriptions?}\n    \n    D -- Yes --> E[Return error: Concept Description with ID already exists]\n    E --> F[Set msg.statusCode to 400]\n    F --> G[End]\n\n    D -- No --> H[Set msg.statusCode to 200]\n    H --> I[Add new conceptDescription to conceptDescriptions]\n    I --> J[Update manifest in context.flow]\n    J --> K[Return success message]\n    K --> L[End]\n```\n\n"
     },
     {
         "id": "ee7a27262c44995f",
@@ -20498,6 +20652,121 @@
                 "60942554797b9963"
             ]
         ]
+    },
+    {
+        "id": "cc6d56c79dbdca9e",
+        "type": "comment",
+        "z": "76d11e83ac083a40",
+        "name": "To work from there",
+        "info": "",
+        "x": 550,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "39c76721f3354317",
+        "type": "debug",
+        "z": "76d11e83ac083a40",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "5278bf964ae5a5bd",
+        "type": "function",
+        "z": "76d11e83ac083a40",
+        "name": "preprocessing and flattening JSON",
+        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch (error) {\n        return false;\n    }\n}\n\nfunction getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    keys = Object.keys(flattenObject);\n    //msg.object = data;\n} else {\n    if (msg.payload.modelType == \"Property\") {\n        if (isJSONString(msg.value)) {\n            flattenObject = msg.value;\n            keys.push(\"\");\n        }\n    } else if (msg.payload.modelType == \"SubmodelElementCollection\") {\n        flattenObject = getFlatObject(JSON.parse(msg.value));\n        keys = Object.keys(flattenObject);\n    }\n\n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else if (uniqueKeys.length == 1) {\n    if (uniqueKeys[0] === \"\") {\n        uniqueKeys[0] = msg.submodelElementId;\n        pathsToUpdate.push(uniqueKeys[0]);\n    } else {\n        uniqueKeys[0] = msg.submodelElementId + \".\" + uniqueKeys[0];\n        pathsToUpdate.push(uniqueKeys[0]);\n    }\n}\nelse {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1780,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d80d7305720dfa2",
+        "type": "function",
+        "z": "76d11e83ac083a40",
+        "name": "Updating SubmodelElement",
+        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                let values = value;\n\n                let keys = Object.keys(values);\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n                    //msg.debug15 = selectedValue;\n                    //return msg;\n                    if (typeof selectedValue != 'object') {\n                        for (let valuesIndex = 0; valuesIndex < submodelElements[submodelElement].value.length; valuesIndex++) {\n                            if (submodelElements[submodelElement].value[valuesIndex].idShort == keys[keyIndex]) {\n                                submodelElements[submodelElement].value[valuesIndex].value = selectedValue;\n                                break;\n                            }\n                        }\n                    }\n\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && (modelType === \"Property\" || modelType === \"Blob\")) {\n                //msg.debug11 = \"Entrei \" + submodelElements[submodelElement].idShort + \" and \" + idPath + \" \" + value;\n\n                submodelElements[submodelElement].value = value;\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nlet manifest = context.flow.get(\"manifest\");\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathsToSubmodelElements = msg.pathsToUpdate;\n\n    let submodelRootIdentifier = submodelRoot.id;\n\n    let manifestSubmodels = manifest.submodels;\n\n    let manifestSubmodelElements = {};\n\n    let stratingJsonDecomposition = msg.submodelElementId.split(\".\");\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n        }\n\n    }\n\n    for (let pathIndex = 0; pathIndex < pathsToSubmodelElements.length; pathIndex++) {\n\n        let collectionIds = pathsToSubmodelElements[pathIndex].split(\".\");\n        msg.collectionIds = collectionIds;\n        let value = msg.submodelElement[msg.submodelElementId];\n        //msg.getValue1 = value;\n        let jsonObjectValue = {};\n\n        let processedValue = {};\n\n        if (collectionIds.length > 1) {\n            jsonObjectValue = JSON.parse(value);\n            let decomposeJsonObj = jsonObjectValue;\n            for (let index = stratingJsonDecomposition.length; index < collectionIds.length; index++) {\n                decomposeJsonObj = decomposeJsonObj[collectionIds[index]];\n            }\n            /*if (typeof decomposeJsonObj === \"string\") {\n                 processedValue = JSON.stringify(decomposeJsonObj.replace(/^\"|\"$/g, ''));\n             } else {\n                 processedValue = decomposeJsonObj;\n             }*/\n            processedValue = decomposeJsonObj;\n            //msg.stringified = decomposeJsonObj;\n\n        } else {\n            if (typeof value == \"object\") {\n                jsonObjectValue = JSON.parse(value);\n            } else {\n                processedValue = value;\n            }\n\n        }\n        //msg.getValue2 = processedValue;\n        //msg.getValue3 = manifestSubmodelElements;\n\n        //msg.getValue4 = collectionIds;\n        //return msg;\n        updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, processedValue);\n\n    }\n    context.flow.set(\"manifest\", manifest);\n\n    if (persist == \"true\") {\n\n        return [msg, null];\n\n    } else {\n\n        return [null, msg];\n    }\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = { \"Messages\": [{ \"Code\": \"BadRequest\", \"CorrelationId\": null, \"MessageType\": \"Error\", \"Text\": \"Submodel with id:\" + submodelId + \" not found\", \"Timestamp\": Date.now() }] };\n    return [null, msg];\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2240,
+        "y": 1400,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "403864e3159c983f",
+        "type": "debug",
+        "z": "76d11e83ac083a40",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "8586f3efe90470ad",
+        "type": "debug",
+        "z": "76d11e83ac083a40",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "d94aaa140511e6f8",
+        "type": "debug",
+        "z": "76d11e83ac083a40",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 1560,
+        "wires": []
     },
     {
         "id": "4c73862aca011a2c",
@@ -22442,7 +22711,7 @@
         "width": "6",
         "height": "1",
         "head": "",
-        "format": "<template>\n  <v-card append-icon=\"mdi-counter\" size=\"x-large\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:500px;\">\n    <template v-slot:title>\n      <span class=\"font-weight-black\">Counters</span>\n    </template>\n    <div class=\"text-left\">\n      <v-chip class=\"ma-2\" color=\"indigo\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Asset Administration Shells: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].assetAdministrationShells ?\n        msg.payload[1].assetAdministrationShells.length : 0 }}\n      </v-chip>\n\n      <v-chip prepend-icon=\"mdi-checkbox-marked-circle\" class=\"ma-2\" color=\"orange\" size=\"x-large\">\n        Asset: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].assets ? msg.payload[1].assets.length : 0 }}\n      </v-chip>\n\n      <v-chip prepend-icon=\"mdi-checkbox-marked-circle\" class=\"ma-2\" color=\"primary\" size=\"x-large\">\n        Submodels: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].submodels ? msg.payload[1].submodels.length : 0 }}\n      </v-chip>\n\n      <v-chip class=\"ma-2\" color=\"green\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Submodel Elements: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].submodels ?\n        msg.payload[1].submodels.reduce((sum, submodel) => sum + (submodel.submodelElements ?\n        submodel.submodelElements.length : 0), 0) : 0 }}\n      </v-chip>\n\n      <v-chip class=\"ma-2\" color=\"teal\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Concept Descriptions: {{ msg.original && msg.original[1] && msg.original[1].conceptDescriptions ?\n        msg.original[1].conceptDescriptions.length : 0 }}</b></p>\n      </v-chip>\n    </div>\n\n  </v-card>\n</template>",
+        "format": "<template>\n  <v-card append-icon=\"mdi-counter\" size=\"x-large\" style=\"padding: 1rem 1.25rem; margin-bottom: 3%; min-height:500px;\">\n    <template v-slot:title>\n      <span class=\"font-weight-black\">Counters</span>\n    </template>\n    <div class=\"text-left\">\n      <v-chip class=\"ma-2\" color=\"indigo\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Asset Administration Shells: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].assetAdministrationShells ?\n        msg.payload[1].assetAdministrationShells.length : 0 }}\n      </v-chip>\n\n      <v-chip prepend-icon=\"mdi-checkbox-marked-circle\" class=\"ma-2\" color=\"primary\" size=\"x-large\">\n        Submodels: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].submodels ? msg.payload[1].submodels.length : 0 }}\n      </v-chip>\n\n      <v-chip class=\"ma-2\" color=\"green\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Submodel Elements: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].submodels ?\n        msg.payload[1].submodels.reduce((sum, submodel) => sum + (submodel.submodelElements ?\n        submodel.submodelElements.length : 0), 0) : 0 }}\n      </v-chip>\n\n      <v-chip class=\"ma-2\" color=\"teal\" prepend-icon=\"mdi-checkbox-marked-circle\" size=\"x-large\">\n        Concept Descriptions: {{ msg.original && msg.original[1] && msg.original[1].conceptDescriptions ?\n        msg.original[1].conceptDescriptions.length : 0 }}</b></p>\n      </v-chip>\n    </div>\n\n      <v-chip prepend-icon=\"mdi-checkbox-marked-circle\" class=\"ma-2\" color=\"orange\" size=\"x-large\">\n        Asset Info: {{ msg.payload && msg.payload[1]\n        && msg.payload[1].assetAdministrationShells ?\n        msg.payload[1].assetAdministrationShells.length : 0 }}\n      </v-chip>\n\n  </v-card>\n</template>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
