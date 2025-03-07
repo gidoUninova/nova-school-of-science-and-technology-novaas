@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.11-nodejs18
+FROM nikolaik/python-nodejs:python3.13-nodejs22-slim
 LABEL org.opencontainers.image.authors="gido@uninova.pt"
 ARG AAS_VERSION=V2
 RUN apt-get update && apt-get install -y apt-utils && apt install unzip && apt-get install -y git && apt install -y sqlite3 && apt-get install -y netcat-traditional && apt-get -y install jq \
@@ -9,17 +9,14 @@ ADD files .node-red/
 # Adding Flexdash dependecies and core widgets ************************
 #RUN npm i @flexdash/node-red-fd-corewidgets --prefix /app/.node-red
 # *********************************************************************
-RUN npm install --prefix /app/.node-red
-RUN npm i passport
-RUN npm i passport-keycloak-oauth2-oidc
+RUN npm install --prefix /app/.node-red && npm i passport && npm i passport-keycloak-oauth2-oidc
 ADD dist .node-red/node_modules/node-red-dashboard/dist/
 
 WORKDIR /app/.node-red/model
 RUN python3 model_converter.py
 WORKDIR /app
 
-RUN unzip /app/.node-red/model/model.aasx -d /app/.node-red/
-RUN /usr/bin/sqlite3 /db/inNOVAASdb.db
+RUN unzip /app/.node-red/model/model.aasx -d /app/.node-red/ && /usr/bin/sqlite3 /db/inNOVAASdb.db
 #RUN apt install jq -y
 #RUN jq -s 'flatten | group_by(.id) | map(reduce .[] as $x ({}; . * $x))' \
 #    /app/.node-red/flows_gido-VirtualBox.json /app/.node-red/flow_asset_user_interface.json > /app/.node-red/flows_aux.json \
