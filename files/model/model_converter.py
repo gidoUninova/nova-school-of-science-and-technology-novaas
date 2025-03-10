@@ -91,41 +91,41 @@ def process_flows(model_json_path):
     new_values = []
     print("Processing nodes...")
     # Find and replace "PropertyLink" and "PropertyLinkEvt" inside "subflow:41b3a1439ccec2c1"
-    index = 0
-    for node in nodes:
-        if node.get("type") == "subflow:41b3a1439ccec2c1":  # Check subflow type
-            if index < len(observed_elements):  
-                property_name_value = observed_elements[index]  # Safe access
-                index += 1
-            else:
-                property_name_value = ""
+    #index = 0
+    #for node in nodes:
+    #    if node.get("type") == "subflow:41b3a1439ccec2c1":  # Check subflow type
+    #        if index < len(observed_elements):  
+    #            property_name_value = observed_elements[index]  # Safe access
+    #            index += 1
+    #        else:
+    #            property_name_value = ""
 
             # Now, replace "PropertyLink" and "PropertyLinkEvt" using the extracted values
-            for env_var in node.get("env", []):
-                if property_name_value == "":
-                    if env_var.get("name") == "PropertyName":
-                        property_name_value = env_var.get("value")
-                elif env_var.get("name") == "PropertyName":
-                    new_value = f"{property_name_value}"
-                    print(f"Replacing PropertyName in node {node['id']} with {new_value}")
-                    env_var["value"] = new_value  # Replace with new formatted value
-                if env_var.get("name") == "PropertyLink":
-                    new_value = f"{aas_id_b64}/{submodelOpDataIdB64}/{property_name_value}"
-                    print(f"Replacing PropertyLink in node {node['id']} with {new_value}")
-                    env_var["value"] = new_value  # Replace with new formatted value
-                    new_values.append(new_value)  # Store for switch rule updates
-                elif env_var.get("name") == "PropertyLinkEvt":
-                    new_evt_value = f"{aas_id_b64}/{submodelOpDataIdB64}/{property_name_value}Evt"
-                    print(f"Replacing PropertyLinkEvt in node {node['id']} with {new_evt_value}")
-                    env_var["value"] = new_evt_value  # Replace with new formatted value
+    #        for env_var in node.get("env", []):
+    #            if property_name_value == "":
+    #                if env_var.get("name") == "PropertyName":
+    #                    property_name_value = env_var.get("value")
+    #            elif env_var.get("name") == "PropertyName":
+    #                new_value = f"{property_name_value}"
+    #               print(f"Replacing PropertyName in node {node['id']} with {new_value}")
+    #                env_var["value"] = new_value  # Replace with new formatted value
+    #            if env_var.get("name") == "PropertyLink":
+    #                new_value = f"{aas_id_b64}/{submodelOpDataIdB64}/{property_name_value}"
+    #                print(f"Replacing PropertyLink in node {node['id']} with {new_value}")
+    #                env_var["value"] = new_value  # Replace with new formatted value
+    #                new_values.append(new_value)  # Store for switch rule updates
+    #            elif env_var.get("name") == "PropertyLinkEvt":
+    #                new_evt_value = f"{aas_id_b64}/{submodelOpDataIdB64}/{property_name_value}Evt"
+    #                print(f"Replacing PropertyLinkEvt in node {node['id']} with {new_evt_value}")
+    #                env_var["value"] = new_evt_value  # Replace with new formatted value
 
     # Find the "switch" node and update its rules with the new values
     for node in nodes:
         if node.get("type") == "switch" and node.get("property") == "payload.link":
-            print(f"Updating switch node {node['id']} with {len(new_values)} rules")
+            print(f"Updating switch node {node['id']} with {len(observed_elements)} rules")
             node["rules"] = [{"t": "eq", "v": "activeSubscriptions", "vt": "str"}]
-            for value in new_values:
-                node["rules"].append({"t": "eq", "v": value, "vt": "str"})
+            for value in observed_elements:
+                node["rules"].append({"t": "eq", "v": f"{aas_id_b64}/{submodelOpDataIdB64}/{value}", "vt": "str"})
             
     print("Processing complete.")
     # Save the modified JSON back to file
