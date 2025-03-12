@@ -293,7 +293,8 @@
             "e8f3a993c3f7c730",
             "09c675c2a2ee0d9c",
             "e470e541de1883e1",
-            "550bb7dbcd65bfbb"
+            "550bb7dbcd65bfbb",
+            "5c365e906d734a1f"
         ],
         "x": 2454,
         "y": 3299,
@@ -12348,7 +12349,7 @@
         "y": 1720,
         "wires": [
             [
-                "97eb5d291643c514"
+                "ab6759f66a906482"
             ]
         ],
         "l": true
@@ -12361,9 +12362,9 @@
         "links": [
             "72693a70ea801745"
         ],
-        "linkType": "dynamic",
+        "linkType": "static",
         "timeout": "30",
-        "x": 1090,
+        "x": 1130,
         "y": 1720,
         "wires": [
             [
@@ -12669,33 +12670,6 @@
         "x": 1855,
         "y": 1840,
         "wires": []
-    },
-    {
-        "id": "97eb5d291643c514",
-        "type": "change",
-        "z": "670d9c89.6d0424",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "target",
-                "pt": "msg",
-                "to": "driver.send.commands",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 1720,
-        "wires": [
-            [
-                "ab6759f66a906482"
-            ]
-        ]
     },
     {
         "id": "012ebb5641006b90",
@@ -17955,7 +17929,7 @@
         "y": 3380,
         "wires": [
             [
-                "09c675c2a2ee0d9c"
+                "5c365e906d734a1f"
             ]
         ]
     },
@@ -18490,9 +18464,9 @@
         "links": [
             "8cb87649afd62fd8"
         ],
-        "linkType": "static",
+        "linkType": "dynamic",
         "timeout": "30",
-        "x": 3480,
+        "x": 3600,
         "y": 3460,
         "wires": [
             []
@@ -20008,6 +19982,34 @@
         "x": 2490,
         "y": 820,
         "wires": []
+    },
+    {
+        "id": "5c365e906d734a1f",
+        "type": "change",
+        "z": "32c5a22a534a4588",
+        "g": "102e2f75f3511731",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3420,
+        "y": 3460,
+        "wires": [
+            [
+                "09c675c2a2ee0d9c"
+            ]
+        ]
     },
     {
         "id": "f08e4446f8c56866",
