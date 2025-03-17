@@ -31,7 +31,7 @@ Build:
 
     # Build and push a multi-arch image
     - >
-      docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7
+      docker buildx build --platform linux/amd64,linux/arm64
       --pull
       --build-arg http_proxy=$http_proxy
       --build-arg https_proxy=$https_proxy
