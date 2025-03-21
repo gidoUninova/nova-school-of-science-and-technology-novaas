@@ -10,7 +10,6 @@ services:
 
 variables:
   DOCKER_BUILDKIT: 1  # Enable BuildKit
-  BUILDX_BUILDER: uninova-builder  # Custom Buildx builder name
 
 before_script:
   # Enable Buildx in Docker
