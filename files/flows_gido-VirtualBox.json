@@ -8348,89 +8348,6 @@
         ]
     },
     {
-        "id": "686cce1cad45487e",
-        "type": "switch",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "property": "req.query.async",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "false",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "true",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2370,
-        "y": 3280,
-        "wires": [
-            [
-                "17e8e4783374b268"
-            ],
-            [
-                "874a674b3bb07867"
-            ]
-        ]
-    },
-    {
-        "id": "cb224e8d1149b335",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [],
-        "linkType": "dynamic",
-        "timeout": "30",
-        "x": 2700,
-        "y": 3260,
-        "wires": [
-            [
-                "411a49d448b119d2"
-            ]
-        ]
-    },
-    {
-        "id": "17e8e4783374b268",
-        "type": "change",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "target",
-                "pt": "msg",
-                "to": "southbound.send.commands",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "api",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2540,
-        "y": 3260,
-        "wires": [
-            [
-                "cb224e8d1149b335"
-            ]
-        ]
-    },
-    {
         "id": "343d95b6718c5604",
         "type": "link call",
         "z": "fd31082e.5487d8",
@@ -8441,7 +8358,9 @@
         "x": 2700,
         "y": 3300,
         "wires": [
-            []
+            [
+                "411a49d448b119d2"
+            ]
         ]
     },
     {
@@ -8551,7 +8470,7 @@
         "y": 3320,
         "wires": [
             [
-                "686cce1cad45487e"
+                "874a674b3bb07867"
             ],
             [
                 "411a49d448b119d2"
@@ -10336,7 +10255,7 @@
         "type": "switch",
         "z": "128ab3134a54f6b4",
         "name": "",
-        "property": "asycn",
+        "property": "req.query.async",
         "propertyType": "msg",
         "rules": [
             {
