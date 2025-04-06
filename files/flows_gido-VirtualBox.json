@@ -12562,28 +12562,10 @@
         "y": 1720,
         "wires": [
             [
-                "ab6759f66a906482"
+                "97eb5d291643c514"
             ]
         ],
         "l": true
-    },
-    {
-        "id": "ab6759f66a906482",
-        "type": "link call",
-        "z": "670d9c89.6d0424",
-        "name": "",
-        "links": [
-            "72693a70ea801745"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1130,
-        "y": 1720,
-        "wires": [
-            [
-                "cd6f2a247f2e7f66"
-            ]
-        ]
     },
     {
         "id": "af4b6639.02a008",
@@ -12883,6 +12865,51 @@
         "x": 1855,
         "y": 1840,
         "wires": []
+    },
+    {
+        "id": "8d55c12f0dfaf326",
+        "type": "link call",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "links": [
+            "72693a70ea801745"
+        ],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 1160,
+        "y": 1720,
+        "wires": [
+            [
+                "cd6f2a247f2e7f66"
+            ]
+        ]
+    },
+    {
+        "id": "97eb5d291643c514",
+        "type": "change",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "driver.send.commands",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 1720,
+        "wires": [
+            [
+                "8d55c12f0dfaf326"
+            ]
+        ]
     },
     {
         "id": "03a40b9def235c79",
