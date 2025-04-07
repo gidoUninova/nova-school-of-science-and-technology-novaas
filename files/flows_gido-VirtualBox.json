@@ -10259,13 +10259,17 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "true"
+                "t": "eq",
+                "v": "true",
+                "vt": "str"
             },
             {
-                "t": "false"
+                "t": "eq",
+                "v": "false",
+                "vt": "str"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 1530,
@@ -13329,31 +13333,6 @@
         ]
     },
     {
-        "id": "2c32db0f315b4bd4",
-        "type": "function",
-        "z": "76d11e83ac083a40",
-        "name": "Process Operation In/out",
-        "func": "let errorMessage = {\n    \"messages\": [{\n        \"Code\": \"BadRequest\",\n        \"CorrelationId\": null,\n        \"MessageType\": \"Error\",\n        \"Text\": `the request parameters of the format of the request body is wrong`,\n        \"Timestamp\": Date.now()\n    }]\n};\n\nlet body = msg.req.body;\nlet operation_from_model = msg.payload;\n\n// Verify InputVariable\nif (operation_from_model.inputVariables.length == body.inputArguments.length && operation_from_model.inoutputVariables.length == body.inoutputArguments.length) {\n\n    //Process InputVariable\n    for (let index0 = 0; index0 < operation_from_model.inputVariables.length; index0++) {\n        for (let index1 = 0; index1 < body.inputArguments.length; index1++) {\n            if (body.inputArguments[index1].value.submodelElement.idShort == operation_from_model.inputVariable[index0].value.submodelElement.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n\n        }\n    }\n\n    //Process InoutputVariable\n    for (let index2 = 0; index2 < operation_from_model.inoutputVariables.length; index2++) {\n        for (let index3 = 0; index3 < body.inoutputArguments.length; index3++) {\n            if (body.inoutputArguments[index3].value.submodelElement.idShort == operation_from_model.inoutputVariable[index2].value.submodelElement.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n        }\n    }\n    return [msg, null];\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = errorMessage;\n    return [null, msg];\n}",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2050,
-        "y": 2080,
-        "wires": [
-            [
-                "96bd8a4c06332a0f",
-                "18963fe75ba0e9c8"
-            ],
-            [
-                "561e9541c27f78bc",
-                "18963fe75ba0e9c8"
-            ]
-        ]
-    },
-    {
         "id": "2e941c31bfadc617",
         "type": "wait-paths",
         "z": "76d11e83ac083a40",
@@ -15774,6 +15753,31 @@
         "x": 2330,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "2c32db0f315b4bd4",
+        "type": "function",
+        "z": "76d11e83ac083a40",
+        "name": "Process Operation In/out",
+        "func": "let errorMessage = {\n    \"messages\": [{\n        \"Code\": \"BadRequest\",\n        \"CorrelationId\": null,\n        \"MessageType\": \"Error\",\n        \"Text\": `the request parameters of the format of the request body is wrong`,\n        \"Timestamp\": Date.now()\n    }]\n};\n\nlet body = msg.req.body;\nlet operation_from_model = msg.payload;\n\n// Verify InputVariable\nif (operation_from_model.inputVariables.length == body.inputArguments.length && operation_from_model.inoutputVariables.length == body.inoutputArguments.length) {\n\n    //Process InputVariable\n    for (let index0 = 0; index0 < operation_from_model.inputVariables.length; index0++) {\n        for (let index1 = 0; index1 < body.inputArguments.length; index1++) {\n            if (body.inputArguments[index1].value.idShort == operation_from_model.inputVariables[index0].value.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n\n        }\n    }\n\n    //Process InoutputVariable\n    for (let index2 = 0; index2 < operation_from_model.inoutputVariables.length; index2++) {\n        for (let index3 = 0; index3 < body.inoutputArguments.length; index3++) {\n            if (body.inoutputArguments[index3].value.submodelElement.idShort == operation_from_model.inoutputVariables[index2].value.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n        }\n    }\n    return [msg, null];\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = errorMessage;\n    return [null, msg];\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2050,
+        "y": 2080,
+        "wires": [
+            [
+                "96bd8a4c06332a0f",
+                "18963fe75ba0e9c8"
+            ],
+            [
+                "561e9541c27f78bc",
+                "18963fe75ba0e9c8"
+            ]
+        ]
     },
     {
         "id": "012ebb5641006b90",
