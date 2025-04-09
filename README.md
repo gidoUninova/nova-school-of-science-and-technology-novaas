@@ -11,15 +11,15 @@ The docker-compose file has a set of environment variables that are used during 
 ## Using dockerfile
 The docker command to create the NOVAAS image is the following:
 
-`dokcer build --build-arg AAS_VERSION=V2 -t name_of_the_image:ver .`
+`dokcer build --build-arg AAS_VERSION=V3 -t name_of_the_image:ver .`
 
 Once the image has been created the followig docker command can be used to start a new container that runs the NOVAAS image:
 
-`docker run -d --env PORT_FORWARDING=1875 --env HOST=localhost --env BROKER_SERVICE_HOST=localhost --env BROKER_SERVICE_PORT=1883 --env REPO_LOCATION=https://gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas -p 1875:1880 name_of_the_image:ver`
+`docker run -d --env PORT_FORWARDING=1872 --env HOST=localhost --env BROKER_SERVICE_HOST=localhost --env BROKER_SERVICE_PORT=1883 --env REPO_LOCATION=https://gitlab.com/novaas/catalog/nova-school-of-science-and-technology/novaas -p 1872:1880 name_of_the_image:ver`
 
 After executing the above commands, the NOVAAS will be accessible at the following link:
 
-http://localhost:1875/ui 
+http://localhost:1872/dashboard
 
 ![Semantic description of image](/source/images/novaas.jpg)"NOVAAS Main Screen"
 
@@ -28,16 +28,18 @@ The two environmental variables are needed to properly configure the internal iF
 
 The NOVAAS embeds an MQTT client for pushing out data. This client needs to be configured. To do that it is possible to access the NOVAAS backend by using the following link:
 
-http://localhost:1875
+http://localhost:1872
 
 or by properly configure the following environmental variables: i) $BROKER_SERVICE_HOST that is used to set-up the host where the mqtt broker is running; and ii) $BROKER_SERVICE_PORT that is used to set-up the port used by the mqtt broker. 
 
-![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.40.31.png)"NOVAAS Backend once user is logged in"
+![Semantic description of image](/source/images/aasAssetConnection.png)"NOVAAS Backend once user is logged in"
 
 To access the backend the user needs to insert username and password. These are the default username and password from the node-red settings file, namely:
 
 - username: admin
 - password: password
+
+
 
 ## Using Docker-compose
 
@@ -49,7 +51,7 @@ To build and run the image. Furthermore, the command:
 
 `docker-compose build`
 
-can be used to build a new image. The started docker container will run on port 1875,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING and HOST in the .env file.
+can be used to build a new image. The started docker container will run on port 1872,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING and HOST in the .env file.
 
 ## Using the pre-built image
 
