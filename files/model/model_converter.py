@@ -1,3 +1,4 @@
+from tokenize import group
 import zipfile
 import os
 import shutil
@@ -9,6 +10,7 @@ import json
 import base64
 import os
 import glob
+import uuid
 
 # Function to convert a string to Base64
 def covertIdB64(text):
@@ -126,6 +128,52 @@ def process_flows(model_json_path):
             node["rules"] = [{"t": "eq", "v": "activeSubscriptions", "vt": "str"}]
             for value in observed_elements:
                 node["rules"].append({"t": "eq", "v": f"{aas_id_b64}/{submodelOpDataIdB64}/{value}", "vt": "str"})
+    # Removing inject_nodes
+    #get tab id
+    group = [node for node in nodes if node.get("type") == "group" and node.get("id") == "6aa9beecbf5f8d23"]
+    tab_id = group[0]["z"]
+    print("Tab id:", tab_id)
+    inject_nodes = [node for node in nodes if node.get("type") == "inject" and node.get("topic") == "command" and node.get("z") in tab_id and node.get("g") == "6aa9beecbf5f8d23"]
+    print("Inject nodes:", inject_nodes)
+    for inject_node in inject_nodes:
+        nodes.remove(inject_node)
+        group[0]["nodes"].remove(inject_node["id"])
+    # Adding an inject node for each observed_elements
+    for i in range(len(observed_elements)):
+        new_inject_node_id = uuid.uuid4().hex[:16]
+        inject_node = {
+            "id": new_inject_node_id,
+            "type": "inject",
+            "z": tab_id,
+            "g": "6aa9beecbf5f8d23",
+            "name": "",
+            "props": [
+                {
+                    "p": "payload"
+                },
+                {
+                    "p": "topic",
+                    "vt": "str"
+                }
+            ],
+            "repeat": "",
+            "crontab": "",
+            "once": False,
+            "onceDelay": 0.1,
+            "topic": "command",
+            "payload": str(i),
+            "payloadType": "num",
+            "x": 250,
+            "y": 360 + i*40,
+            "wires": [
+                [
+                    "1c9bb22c58e8a418"
+                ]
+            ]
+        }
+        nodes.append(inject_node)
+        group[0]["nodes"].append(new_inject_node_id)
+    print(group[0])
             
     print("Processing complete.")
     # Save the modified JSON back to file
