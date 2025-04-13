@@ -20,7 +20,6 @@ def covertIdB64(text):
 
 def extract_observed_elements(data):
     observed_elements = []
-    
     for element in data:
         if element.get("modelType") == "SubmodelElementCollection":
             observed_elements.extend(extract_observed_elements(element.get("value", [])))
@@ -58,15 +57,18 @@ def process_flows(model_json_path):
     # Extract submodel OperationalData and convert its ID to Base64
     submodelOpDataIdB64 = ""
     aas_opdata = None
-    observed_elements = ""
+    observed_elements = []
     for submodel in model_data.get("submodels", []):
-        if submodel.get("idShort") == "OperationalData":
-            submodelOpDataIdB64 = covertIdB64(submodel["id"])
-            aas_opdata = submodel.get("submodelElements", [])
-            #print("aas_opdata", aas_opdata)
-            observed_elements = extract_observed_elements(aas_opdata)
-            print("observed_elements", observed_elements)
-            break  # Stop after finding the first match
+        #if submodel.get("idShort") == "OperationalData":
+        submodelOpDataIdB64 = covertIdB64(submodel["id"])
+        aas_opdata = submodel.get("submodelElements", [])
+        #print("aas_opdata", aas_opdata)
+        row = []
+        row.append(submodelOpDataIdB64)
+        row.append(extract_observed_elements(aas_opdata))
+        observed_elements.append(row)
+        print("observed_elements", observed_elements)
+        #break  # Stop after finding the first match
 
     print("Operational Data ID b64:", submodelOpDataIdB64)
 
@@ -126,8 +128,11 @@ def process_flows(model_json_path):
         if node.get("type") == "switch" and node.get("property") == "payload.link":
             print(f"Updating switch node {node['id']} with {len(observed_elements)} rules")
             node["rules"] = [{"t": "eq", "v": "activeSubscriptions", "vt": "str"}]
-            for value in observed_elements:
-                node["rules"].append({"t": "eq", "v": f"{aas_id_b64}/{submodelOpDataIdB64}/{value}", "vt": "str"})
+            for row in observed_elements:
+                if(len(row[1]) > 0):
+                    for value in row[1]:
+                        node["rules"].append({"t": "eq", "v": f"{aas_id_b64}/{row[0]}/{value}", "vt": "str"})
+                        print(f"Adding rule for {aas_id_b64}/{row[0]}/{value}")
     # Removing inject_nodes
     #get tab id
     group = [node for node in nodes if node.get("type") == "group" and node.get("id") == "6aa9beecbf5f8d23"]
@@ -139,40 +144,43 @@ def process_flows(model_json_path):
         nodes.remove(inject_node)
         group[0]["nodes"].remove(inject_node["id"])
     # Adding an inject node for each observed_elements
-    for i in range(len(observed_elements)):
-        new_inject_node_id = uuid.uuid4().hex[:16]
-        inject_node = {
-            "id": new_inject_node_id,
-            "type": "inject",
-            "z": tab_id,
-            "g": "6aa9beecbf5f8d23",
-            "name": "",
-            "props": [
-                {
-                    "p": "payload"
-                },
-                {
-                    "p": "topic",
-                    "vt": "str"
-                }
-            ],
-            "repeat": "",
-            "crontab": "",
-            "once": False,
-            "onceDelay": 0.1,
-            "topic": "command",
-            "payload": str(i),
-            "payloadType": "num",
-            "x": 250,
-            "y": 360 + i*40,
-            "wires": [
-                [
-                    "1c9bb22c58e8a418"
+    counter = 0
+    for row in observed_elements:
+        for val in row:
+            new_inject_node_id = uuid.uuid4().hex[:16]
+            inject_node = {
+                "id": new_inject_node_id,
+                "type": "inject",
+                "z": tab_id,
+                "g": "6aa9beecbf5f8d23",
+                "name": "",
+                "props": [
+                    {
+                        "p": "payload"
+                    },
+                    {
+                        "p": "topic",
+                        "vt": "str"
+                    }
+                ],
+                "repeat": "",
+                "crontab": "",
+                "once": False,
+                "onceDelay": 0.1,
+                "topic": "command",
+                "payload": str(counter),
+                "payloadType": "num",
+                "x": 250,
+                "y": 360 + counter*40,
+                "wires": [
+                    [
+                        "1c9bb22c58e8a418"
+                    ]
                 ]
-            ]
-        }
-        nodes.append(inject_node)
-        group[0]["nodes"].append(new_inject_node_id)
+            }
+            nodes.append(inject_node)
+            group[0]["nodes"].append(new_inject_node_id)
+            counter += 1
     print(group[0])
             
     print("Processing complete.")
