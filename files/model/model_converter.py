@@ -146,41 +146,42 @@ def process_flows(model_json_path):
     # Adding an inject node for each observed_elements
     counter = 0
     for row in observed_elements:
-        for val in row:
-            new_inject_node_id = uuid.uuid4().hex[:16]
-            inject_node = {
-                "id": new_inject_node_id,
-                "type": "inject",
-                "z": tab_id,
-                "g": "6aa9beecbf5f8d23",
-                "name": "",
-                "props": [
-                    {
-                        "p": "payload"
-                    },
-                    {
-                        "p": "topic",
-                        "vt": "str"
-                    }
-                ],
-                "repeat": "",
-                "crontab": "",
-                "once": False,
-                "onceDelay": 0.1,
-                "topic": "command",
-                "payload": str(counter),
-                "payloadType": "num",
-                "x": 250,
-                "y": 360 + counter*40,
-                "wires": [
-                    [
-                        "1c9bb22c58e8a418"
+        if(len(row[1]) > 0):
+            for val in row[1]:
+                new_inject_node_id = uuid.uuid4().hex[:16]
+                inject_node = {
+                    "id": new_inject_node_id,
+                    "type": "inject",
+                    "z": tab_id,
+                    "g": "6aa9beecbf5f8d23",
+                    "name": "",
+                    "props": [
+                        {
+                            "p": "payload"
+                        },
+                        {
+                            "p": "topic",
+                            "vt": "str"
+                        }
+                    ],
+                    "repeat": "",
+                    "crontab": "",
+                    "once": False,
+                    "onceDelay": 0.1,
+                    "topic": "command",
+                    "payload": str(counter),
+                    "payloadType": "num",
+                    "x": 250,
+                    "y": 360 + counter*40,
+                    "wires": [
+                        [
+                            "1c9bb22c58e8a418"
+                        ]
                     ]
-                ]
-            }
-            nodes.append(inject_node)
-            group[0]["nodes"].append(new_inject_node_id)
-            counter += 1
+                }
+                nodes.append(inject_node)
+                group[0]["nodes"].append(new_inject_node_id)
+                counter += 1
     print(group[0])
             
     print("Processing complete.")
