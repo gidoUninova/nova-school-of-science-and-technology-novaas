@@ -4,9 +4,6 @@ import os
 import shutil
 import xml.etree.ElementTree as ET
 import json
-import glob
-
-import json
 import base64
 import os
 import glob
