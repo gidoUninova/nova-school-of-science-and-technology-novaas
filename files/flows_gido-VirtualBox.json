@@ -146,13 +146,13 @@
             "9394ae28e14ff07b",
             "b929858d9ce0983a",
             "d01e806812896548",
-            "7bb2520f9e544abe",
-            "ba73d7c41080449e",
-            "932faad0c74740e6",
-            "f1b842e85a92492c",
-            "72f95b49b8fa402a",
-            "158fb1a05a594ff7",
-            "034794050a77493a"
+            "149974cc4e184176",
+            "d89932a1047449c6",
+            "dfd73ecbe81941ea",
+            "365270510b3b48f0",
+            "ac87c94e236d42ea",
+            "e063f71137974d26",
+            "1b2749428135428b"
         ],
         "x": 114,
         "y": 59,
@@ -10333,7 +10333,7 @@
         ]
     },
     {
-        "id": "7bb2520f9e544abe",
+        "id": "149974cc4e184176",
         "type": "inject",
         "z": "128ab3134a54f6b4",
         "g": "6aa9beecbf5f8d23",
@@ -10363,7 +10363,7 @@
         ]
     },
     {
-        "id": "ba73d7c41080449e",
+        "id": "d89932a1047449c6",
         "type": "inject",
         "z": "128ab3134a54f6b4",
         "g": "6aa9beecbf5f8d23",
@@ -10393,7 +10393,7 @@
         ]
     },
     {
-        "id": "932faad0c74740e6",
+        "id": "dfd73ecbe81941ea",
         "type": "inject",
         "z": "128ab3134a54f6b4",
         "g": "6aa9beecbf5f8d23",
@@ -10423,7 +10423,7 @@
         ]
     },
     {
-        "id": "f1b842e85a92492c",
+        "id": "365270510b3b48f0",
         "type": "inject",
         "z": "128ab3134a54f6b4",
         "g": "6aa9beecbf5f8d23",
@@ -10453,7 +10453,7 @@
         ]
     },
     {
-        "id": "72f95b49b8fa402a",
+        "id": "ac87c94e236d42ea",
         "type": "inject",
         "z": "128ab3134a54f6b4",
         "g": "6aa9beecbf5f8d23",
@@ -10483,7 +10483,7 @@
         ]
     },
     {
-        "id": "158fb1a05a594ff7",
+        "id": "e063f71137974d26",
         "type": "inject",
         "z": "128ab3134a54f6b4",
         "g": "6aa9beecbf5f8d23",
@@ -10513,7 +10513,7 @@
         ]
     },
     {
-        "id": "034794050a77493a",
+        "id": "1b2749428135428b",
         "type": "inject",
         "z": "128ab3134a54f6b4",
         "g": "6aa9beecbf5f8d23",
@@ -15799,7 +15799,7 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "Process Operation In/out",
-        "func": "let errorMessage = {\n    \"messages\": [{\n        \"Code\": \"BadRequest\",\n        \"CorrelationId\": null,\n        \"MessageType\": \"Error\",\n        \"Text\": `the request parameters of the format of the request body is wrong`,\n        \"Timestamp\": Date.now()\n    }]\n};\n\nlet body = msg.req.body;\nlet operation_from_model = msg.payload;\n\n// Verify InputVariable\nif (operation_from_model.inputVariables.length == body.inputArguments.length && operation_from_model.inoutputVariables.length == body.inoutputArguments.length) {\n\n    //Process InputVariable\n    for (let index0 = 0; index0 < operation_from_model.inputVariables.length; index0++) {\n        for (let index1 = 0; index1 < body.inputArguments.length; index1++) {\n            if (body.inputArguments[index1].value.idShort == operation_from_model.inputVariables[index0].value.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n\n        }\n    }\n\n    //Process InoutputVariable\n    for (let index2 = 0; index2 < operation_from_model.inoutputVariables.length; index2++) {\n        for (let index3 = 0; index3 < body.inoutputArguments.length; index3++) {\n            if (body.inoutputArguments[index3].value.submodelElement.idShort == operation_from_model.inoutputVariables[index2].value.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n        }\n    }\n    return [msg, null];\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = errorMessage;\n    return [null, msg];\n}",
+        "func": "let errorMessage = {\n    \"messages\": [{\n        \"Code\": \"BadRequest\",\n        \"CorrelationId\": null,\n        \"MessageType\": \"Error\",\n        \"Text\": `the request parameters of the format of the request body is wrong`,\n        \"Timestamp\": Date.now()\n    }]\n};\n\nlet body = msg.req.body;\nlet operation_from_model = msg.payload;\n\n// Verify InputVariable\nif (operation_from_model.inputVariables && body.inputArguments) {\n    if (operation_from_model.inputVariables.length === body.inputArguments.length) {\n\n        //Process InputVariable\n        for (let index0 = 0; index0 < operation_from_model.inputVariables.length; index0++) {\n            var var_found = false;\n            for (let index1 = 0; index1 < body.inputArguments.length; index1++) {\n\n                if (body.inputArguments[index1].value.idShort === operation_from_model.inputVariables[index0].value.idShort) {\n                    var_found = true;\n                    break;\n                }\n                else\n                    node.warn(body.inputArguments[index1].value.idShort + \" !==\" + operation_from_model.inputVariables[index0].value.idShort)\n            }\n            if (!var_found) {\n                msg.statusCode = \"400\";\n                msg.payload = errorMessage;\n                node.warn(\"INPUT\");\n                return [null, msg];\n            }\n        }\n    }\n    else {\n        msg.statusCode = \"400\";\n        msg.payload = errorMessage;\n        return [null, msg];\n    }\n}\n\n// Verify InOutputVariable\nif (operation_from_model.inoutputVariables && body.inoutputArguments) {\n\n    if (operation_from_model.inoutputVariables.length == body.inoutputArguments.length) {\n        //Process InOutputVariable\n        for (let index2 = 0; index2 < operation_from_model.inoutputVariables.length; index2++) {\n            var var_found = false;\n            for (let index3 = 0; index3 < body.inoutputArguments.length; index3++) {\n                if (body.inoutputArguments[index3].value.submodelElement.idShort == operation_from_model.inoutputVariables[index2].value.idShort) {\n                    var_found = true;\n                    break;\n                }\n            }\n            if (!var_found) {\n                msg.statusCode = \"400\";\n                msg.payload = errorMessage;\n                node.warn(\"INOUT\");\n                return [null, msg];\n            }\n        }\n    }\n    else {\n        msg.statusCode = \"400\";\n        msg.payload = errorMessage;\n        return [null, msg];\n    }\n}\n\nreturn [msg, null];",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
