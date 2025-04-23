@@ -94,7 +94,7 @@ As of now, not all new SubmodelElements of the AAS V3 are supported. Additional 
 
 ## NOVAAS in action (Click on the Image to Show the Video)
 
-[![Watch the video](/source/videos/NOVAAS_myMovie.mp4)](https://gitlab.com/gidouninova/novaas/-/blob/master/source/videos/NOVAAS_myMovie.mp4)
+▶️ [Watch the video](https://gitlab.com/gidouninova/novaas/-/raw/master/source/videos/NOVAAS_myMovie.mp4)
 
 [![Watch the video](source/videos/thumbnail.png)](https://gitlab.com/gidouninova/novaas/-/raw/master/source/videos/NOVAAS_myMovie.mp4)
 
