@@ -92,9 +92,6 @@ As of now, not all new SubmodelElements of the AAS V3 are supported. Additional 
     BasicElementEvent
 
 
-## NOVAAS in action (Click on the Image to Show the Video)
+## NOVAAS in action (Full tutorial below)
 
 ▶️ [Watch the video](https://gitlab.com/gidouninova/novaas/-/raw/master/source/videos/NOVAAS_myMovie.mp4)
-
-[![Watch the video](source/videos/thumbnail.png)](https://gitlab.com/gidouninova/novaas/-/raw/master/source/videos/NOVAAS_myMovie.mp4)
-
