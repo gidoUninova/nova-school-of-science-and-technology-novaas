@@ -10040,7 +10040,7 @@
         "type": "function",
         "z": "128ab3134a54f6b4",
         "name": "create Evt",
-        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nvar outMsg = {};\nvar ObsObj = {};\nObsObj.id = uuid;\nObsObj.timestamp = msg.payload.tstamp;\nObsObj.direction = \"Output\";\nObsObj.observableReference = msg.payload.link;\nObsObj.source = msg.payload.source;\nObsObj.payload = msg.payload.data;\n\noutMsg.payload = ObsObj;\noutMsg.topic = msg.payload.link;\nreturn outMsg;",
+        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nvar outMsg = {};\nvar ObsObj = {};\nObsObj.id = uuid;\nObsObj.timestamp = msg.payload.tstamp;\nObsObj.direction = \"Output\";\nObsObj.observableReference = msg.payload.link;\nObsObj.source = msg.payload.source;\nlet jsonObjectData = JSON.parse(msg.payload.data);\nlet splittedLinkByDot = msg.payload.link.split(\".\");\nif (splittedLinkByDot.length > 1){\n    ObsObj.payload = JSON.stringify(jsonObjectData[splittedLinkByDot[splittedLinkByDot.length - 1]]);\n} else {\n    let splittedLinkBySlash = msg.payload.link.split(\"/\");\n    ObsObj.payload = JSON.stringify(jsonObjectData[splittedLinkBySlash[splittedLinkBySlash.length - 1]]);\n}\noutMsg.payload = ObsObj;\noutMsg.topic = msg.payload.link;\nreturn outMsg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
