@@ -18,7 +18,7 @@ def covertIdB64(text):
 def extract_observed_elements(data):
     observed_elements = []
     for element in data:
-        if element.get("modelType") == "SubmodelElementCollection":
+        if element.get("modelType") == "SubmodelElementCollection" or element.get("modelType") == "SubmodelElementList":
             observed_elements.extend(extract_observed_elements(element.get("value", [])))
         elif element.get("modelType") == "BasicEventElement":
             observed = element.get("observed", {}).get("keys", [])
