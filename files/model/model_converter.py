@@ -29,6 +29,19 @@ def extract_observed_elements(data):
     
     return observed_elements
 
+def transform_path(input_string):
+    parts = input_string.split(".")
+    result = []
+
+    for i, part in enumerate(parts):
+        if part.isdigit() and i > 0:
+            # Convert number to index on the previous string
+            prev = result.pop()
+            result.append(f"{prev}[{part}]")
+        else:
+            result.append(part)
+
+    return ".".join(result)
 
 def process_flows(model_json_path):
     """
@@ -128,8 +141,8 @@ def process_flows(model_json_path):
             for row in observed_elements:
                 if(len(row[1]) > 0):
                     for value in row[1]:
-                        node["rules"].append({"t": "eq", "v": f"{aas_id_b64}/{row[0]}/{value}", "vt": "str"})
-                        print(f"Adding rule for {aas_id_b64}/{row[0]}/{value}")
+                        node["rules"].append({"t": "eq", "v": f"{aas_id_b64}/{row[0]}/{transform_path(value)}", "vt": "str"})
+                        print(f"Adding rule for {aas_id_b64}/{row[0]}/{transform_path(value)}")
     # Removing inject_nodes
     #get tab id
     group = [node for node in nodes if node.get("type") == "group" and node.get("id") == "6aa9beecbf5f8d23"]
@@ -189,7 +202,6 @@ def process_flows(model_json_path):
 
     print(f"Updated JSON file saved as {updated_flows_file}")
     print("Finalized updating base64 id and properties")
-
 
 
 ############################    MAIN SCRIPT    ############################
